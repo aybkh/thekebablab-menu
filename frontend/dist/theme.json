@@ -1,0 +1,36 @@
+{
+    "restaurantName": "Snack Tanger",
+    "restaurantSuffix": "303",
+    "seo": {
+        "title": "Snack Tanger 303 | Tacos, Pizzas & Platos en Mataró",
+        "description": "Descubre los mejores Tacos Franceses, Pizzas Artesanas y Platos Combinados en Mataró. Snack Tanger 303: Sabor auténtico, calidad Halal y ambiente único. ¡Pide online o visita nuestro local!",
+        "keywords": "tacos franceses, pizza mataro, snacks mataro, comida rapida, halal, kebab, hamburguesas gourmet, batidos naturales, delivery mataro",
+        "favicon": "/images/snack-logo.png"
+    },
+    "brand": {
+        "logoHeader": "/logo_303.svg",
+        "logoFallback": "/images/snack-logo.png",
+        "heroBadge": "📍 SNACK TANGER 303",
+        "footerText": "© 2026 Snack Tanger 303."
+    },
+    "contact": {
+        "address": "Restaurant Snack Tanger 303, Mataró",
+        "mapsIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2986.4049283663367!2d2.4203880755420304!3d41.5388289865887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4b51a22542a71%3A0x6932e4c0ba7430bd!2sRestaurant%20Snack%20Tanger%2C%20303!5e0!3m2!1sca!2ses!4v1770400135417!5m2!1sca!2ses",
+        "phone": "+34 600 000 000"
+    },
+    "socials": {
+        "instagram": "https://www.instagram.com/snack.tanger.303",
+        "tiktok": "https://www.tiktok.com/@snack.tanger.303",
+        "uberEats": "https://www.ubereats.com/es/store/snack-tanger-303/_O0Bw1suXgiMdIj4m__Lhw",
+        "uberEatsLabel": "Pide en Uber Eats"
+    },
+    "colors": {
+        "bg-base": "#265b36",
+        "primary": "#D65A65",
+        "secondary": "#F1C40F",
+        "surface": "#FDFBF7",
+        "text-main": "#142818",
+        "text-on-bg": "#FFFFFF",
+        "ticket-bg": "#FAFAFA"
+    }
+}

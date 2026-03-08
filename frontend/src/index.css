@@ -1,0 +1,1452 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Palette */
+  --bg-base: #265b36;
+  /* Chalkboard Green */
+  --primary: #D65A65;
+  /* Coral Red - Action/Prices */
+  --secondary: #F1C40F;
+  /* Golden Yellow - Branding */
+  --surface: #FDFBF7;
+  /* Cream/Bone - Cards */
+  --text-main: #142818;
+  /* Dark Green - Readable Text on Cards */
+  --text-on-bg: #FFFFFF;
+  /* Text on Green Background */
+  --ticket-bg: #FAFAFA;
+  /* Receipt Paper White */
+
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  --shadow-float: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1E3F28;
+  /* Deep Chalkboard Green */
+  color: var(--text-on-bg);
+  min-height: 100vh;
+  min-height: 100dvh;
+  /* Mobile strict height */
+  -webkit-font-smoothing: antialiased;
+
+  /* Background Pattern & Texture Overlay */
+  /* Using a very dark overlay to ensure the texture is subtle and not distracting */
+  background-image: linear-gradient(rgba(30, 63, 40, 0.9), rgba(30, 63, 40, 0.9)), url('/images/zellige-bg.webp');
+  background-repeat: repeat;
+  background-size: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  /* Blend mode helps integrate the texture into the green color */
+  background-blend-mode: overlay;
+}
+
+/* Stencil Headers */
+h1,
+h2,
+h3,
+h4,
+.brand-title,
+.price-tag,
+.btn-stencil {
+  font-family: 'Black Ops One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Layout Structure --- */
+.app-container {
+  display: flex;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  /* Desktop only - override in mobile query */
+}
+
+/* --- Sidebar Categories (Tabs Style) --- */
+/* --- Sidebar Categories (Desktop Cards Style) --- */
+.category-sidebar {
+  width: 270px;
+  /* Narrower sidebar for tighter fit */
+  background: rgba(20, 40, 24, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* More breathing room */
+  overflow-y: auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 4px 0 25px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.brand-title {
+  color: var(--secondary);
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-shadow: 3px 3px 0px #000;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+  padding-bottom: 25px;
+}
+
+.cat-btn {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0;
+  /* Zero padding for max size */
+  /* Reduced from 140px to 80px */
+  height: 80px;
+  width: 100%;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  /* CRITICAL: Prevent buttons from squashing in the column flex layout */
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'Black Ops One', cursive;
+  /* Match headers */
+  letter-spacing: 1px;
+}
+
+.cat-btn:hover {
+  border-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cat-btn.active {
+  background: var(--secondary);
+  color: var(--text-main);
+  border-color: var(--secondary);
+  box-shadow: 0 0 15px rgba(241, 196, 15, 0.6);
+  transform: scale(1.02);
+}
+
+/* Image Styling within Category Button */
+/* Image Styling within Category Button */
+.cat-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  transform: scale(1.05);
+  /* Moderate Zoom */
+}
+
+/* Zoom effect on hover */
+.cat-btn:hover .cat-img {
+  transform: scale(1.1);
+}
+
+/* Fallback Text (centered absolute or flex) */
+.cat-text-fallback {
+  padding: 10px;
+}
+
+/* --- Main Product Grid --- */
+.product-area {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) transparent;
+}
+
+.product-grid {
+  display: grid;
+  /* Reduced min-width to 150px to ensure 2 columns fit on standard mobile screens (360px+) */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  padding-bottom: 40px;
+}
+
+/* --- Product Cards (Cream Surface) --- */
+.product-card {
+  background: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid rgba(214, 90, 101, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-float);
+  border-color: var(--primary);
+}
+
+.product-image-container {
+  height: 140px;
+  background: #fff;
+  /* White background for cleaner look with contain */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* Ensures the whole image fits in the box */
+  transition: transform 0.5s ease;
+  padding: 5px;
+  /* Slight padding */
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.1);
+}
+
+.product-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: 8px;
+}
+
+.product-name {
+  color: var(--text-main);
+  font-family: 'Black Ops One', cursive;
+  /* Stencil */
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.product-price {
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1.3rem;
+  align-self: flex-end;
+  font-family: 'Black Ops One', cursive;
+}
+
+/* --- Order Panel (Ticket Style) --- */
+.order-panel {
+  width: 380px;
+  background: var(--ticket-bg);
+  /* Ticket Paper */
+  color: var(--text-main);
+  border-left: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto Mono', monospace;
+  /* Monospaced for receipt feel */
+  position: relative;
+  flex-shrink: 0;
+  height: 100vh;
+}
+
+.cart-header {
+  background: #222;
+  color: var(--secondary);
+  padding: 20px;
+  text-align: center;
+}
+
+.cart-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.cart-items {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  border-top: 2px dashed #ccc;
+  /* Perforated effect */
+  border-bottom: 2px dashed #ccc;
+  font-family: 'Roboto Mono', monospace;
+  /* Ticket font */
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px dashed #ddd;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.item-qty {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-name {
+  font-weight: 700;
+  display: block;
+}
+
+.item-notes {
+  font-size: 0.8rem;
+  color: #666;
+  font-style: italic;
+  display: block;
+  margin-top: 4px;
+}
+
+.item-price {
+  font-weight: bold;
+  margin-left: 10px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* Cart Footer */
+.cart-footer {
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+.total-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: 'Black Ops One', cursive;
+  color: var(--text-main);
+}
+
+
+/* Standard Primary Button (Modal Add) */
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Black Ops One', cursive;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 6px rgba(192, 57, 43, 0.4);
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background: #b94a53;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(192, 57, 43, 0.5);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+/* Checkout Button */
+.btn-checkout {
+  width: 100%;
+  background: var(--primary);
+  /* Coral Red */
+  color: #fff;
+  border: none;
+  padding: 16px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Black Ops One', cursive;
+  /* Stencil Font */
+  letter-spacing: 1.5px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 10px rgba(192, 57, 43, 0.4);
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.btn-checkout:hover {
+  background: #b94a53;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(192, 57, 43, 0.6);
+}
+
+.btn-checkout:active {
+  transform: translateY(1px);
+}
+
+/* --- Modal Overrides --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  /* Must be higher than mobile header (2100) and sidebar (2500) */
+}
+
+.modal-content {
+  background: var(--surface);
+  color: var(--text-main);
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  padding: 25px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border: 4px solid var(--secondary);
+  /* Golden border */
+}
+
+.modal-title {
+  color: var(--text-main);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 15px;
+  font-family: 'Black Ops One', cursive;
+}
+
+.section-title {
+  font-family: 'Black Ops One', cursive;
+  color: var(--text-main);
+  opacity: 0.7;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Custom Grid Buttons in Modal */
+.selection-grid button {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.2s;
+  flex: 1 1 auto;
+  min-width: 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.selection-grid button:hover {
+  background: #fdfdfd;
+  border-color: #bbb;
+  transform: translateY(-2px);
+}
+
+.selection-grid button.selected {
+  background: var(--secondary);
+  border-color: #b7950b;
+  color: var(--text-main);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.selection-grid button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #eee;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 4px;
+}
+
+.mobile-header {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
+/* --- Responsive Design --- */
+
+.brand-logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 180px;
+  /* Big on desktop */
+  display: block;
+  margin: 0 auto 10px auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Tablet & Mobile (Max Width 1024px) */
+@media (max-width: 1024px) {
+  body {
+    /* Reduced opacity to show tiles */
+    background-image: linear-gradient(rgba(30, 63, 40, 0.75), rgba(30, 63, 40, 0.75)), url('/images/zellige-bg.webp');
+    /* Force Normal blend mode to ensure opacity works correctly */
+    background-blend-mode: normal;
+    /* Force Fixed per user request */
+    background-attachment: fixed !important;
+    background-size: 250px;
+    /* Smaller tiles for mobile */
+  }
+
+  .type-select-screen,
+  .details-screen,
+  .welcome-screen {
+    background-size: 250px !important;
+    background-attachment: fixed !important;
+  }
+
+  .app-container {
+    flex-direction: column;
+    height: auto !important;
+    /* Allow content to dictate height */
+    min-height: 100dvh;
+    /* Fill at least the screen */
+    overflow: visible;
+    /* Prevent any clipping */
+  }
+
+  /* ... rest of existing media query ... */
+
+  /* Sidebar becomes Drawer on Mobile */
+  .category-sidebar {
+    position: fixed;
+    top: 80px;
+    /* Below mobile header */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 80px);
+    /* Fallback */
+    height: calc(100dvh - 80px);
+    /* Modern mobile height */
+    background: #142818;
+    z-index: 2500;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: normal;
+    padding: 20px 10px;
+    padding-bottom: 80px;
+    /* EXTRA PADDING TO FIX SCROLL ISSUE */
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%);
+    /* Start hidden */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .category-sidebar.mobile-visible {
+    transform: translateX(0);
+    /* Slide in */
+  }
+
+  /* Mobile Header */
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #142818;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 80px;
+    /* Increased for bigger logo */
+    position: fixed;
+    /* Fixed position */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Add shadow for depth */
+  }
+
+  .mobile-menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .mobile-logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .mobile-logo {
+    height: 100%;
+    max-height: 70px;
+    /* Bigger logo */
+    width: auto;
+    object-fit: contain;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .brand-title {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    margin-right: 15px;
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-right: 15px;
+    border-right: 1px dashed rgba(255, 255, 255, 0.2);
+    min-width: max-content;
+    display: flex;
+    /* Flex layout for logo */
+    align-items: center;
+  }
+
+  .brand-logo {
+    max-height: 80px;
+    /* Smaller on mobile */
+    margin: 0;
+    /* Remove auto margin */
+    width: auto;
+  }
+
+  .cat-btn {
+    padding: 0;
+    width: 100%;
+    /* Full width in drawer */
+    max-width: 200px;
+    /* Prevent huge buttons */
+    margin: 0 auto;
+    height: 80px;
+    /* Taller for mobile visibility */
+    flex-shrink: 0;
+    font-size: 0.9rem;
+  }
+
+  /* --- Order Panel becomes Side Drawer on Mobile --- */
+  .order-panel {
+    position: fixed;
+    top: 80px;
+    /* Below header */
+    right: 0;
+    width: 85%;
+    max-width: 400px;
+    height: calc(100dvh - 80px);
+    /* Fill remaining space */
+    z-index: 2000;
+    background: var(--ticket-bg);
+    border-left: 1px solid #ccc;
+    border-top: none;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: env(safe-area-inset-bottom);
+    /* iOS Safe Area */
+  }
+
+  .cart-footer {
+    padding: 15px;
+    /* Reduce padding on mobile */
+    background: #f0f0f0;
+    flex-shrink: 0;
+    /* Prevent shrinking */
+  }
+
+  .total-display {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  .btn-checkout {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+
+  .order-panel.mobile-open {
+    transform: translateX(0);
+    /* Slide In */
+  }
+
+  /* Close Button in Ticket Header */
+  .mobile-close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.2);
+    /* Darker for visibility inside header */
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Ticket Header - adjust for mobile close button */
+  .ticket-header {
+    background: #222;
+    color: var(--secondary);
+    padding: 15px;
+    margin: 0;
+  }
+
+  .ticket-header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  .cart-items {
+    padding: 10px;
+  }
+
+  /* Mobile FAB (Floating Action Button) */
+  .mobile-fab-container {
+    display: flex;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--primary);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(214, 90, 101, 0.6);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: bounceIn 0.5s ease-out;
+  }
+
+  .mobile-fab-container:active {
+    transform: scale(0.95);
+  }
+
+  .fab-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Black Ops One', cursive;
+    font-size: 1.2rem;
+  }
+
+  .fab-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--secondary);
+    color: var(--text-main);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Backdrop Overlay */
+  .mobile-cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1500;
+    backdrop-filter: blur(2px);
+    animation: fadeIn 0.3s;
+  }
+
+  /* Ensure product area has padding on tablet/mobile where header is visible */
+  .product-area {
+    padding-top: 100px;
+  }
+}
+
+/* Desktop Defaults (Hide Mobile Elements) */
+@media (min-width: 1025px) {
+
+  .mobile-fab-container,
+  .mobile-cart-overlay,
+  .mobile-close-btn {
+    display: none !important;
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-stagger-1 {
+  animation: fadeInUp 0.4s ease-out forwards;
+  animation-delay: 0.05s;
+  opacity: 0;
+}
+
+.animate-stagger-2 {
+  animation: fadeInUp 0.4s ease-out forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.animate-stagger-3 {
+  animation: fadeInUp 0.4s ease-out forwards;
+  animation-delay: 0.15s;
+  opacity: 0;
+}
+
+.animate-stagger-4 {
+  animation: fadeInUp 0.4s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.animate-stagger-5 {
+  animation: fadeInUp 0.4s ease-out forwards;
+  animation-delay: 0.25s;
+  opacity: 0;
+}
+
+/* Default fallback */
+.animate-fade-in>* {
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* Apply efficient loop delay if possible, but hardcoded classes are safer for CSS-only */
+
+/* Mobile (Max Width 600px) */
+@media (max-width: 600px) {
+  .brand-title {
+    display: none;
+    /* Hide expensive title on small screens to save space */
+  }
+
+  .product-area {
+    padding: 15px;
+    padding-top: 100px;
+    /* 80px Header + 20px Space */
+
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* Force 2 columns */
+    gap: 15px;
+  }
+
+  .product-info {
+    padding: 10px;
+  }
+
+  .product-name {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- PRINT STYLES --- */
+@media print {
+
+  /* Hide Everything by Default */
+  body * {
+    visibility: hidden;
+  }
+
+  .app-container,
+  .mobile-fab-container,
+  .mobile-cart-overlay,
+  .modal-overlay {
+    display: none !important;
+  }
+
+  /* Show Print Area */
+  #printable-receipt,
+  #printable-receipt * {
+    visibility: visible;
+  }
+
+  #printable-receipt {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* For 80mm thermal printers usually 80mm width is key but 100% works for browser handling controls */
+    margin: 0;
+    padding: 0;
+    color: black;
+    background: white;
+    font-family: 'Roboto Mono', monospace;
+    /* Match Cart Style */
+  }
+
+  /* Ticket Styling Mimic */
+  #printable-receipt h2 {
+    font-family: 'Black Ops One', cursive;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  #printable-receipt p {
+    margin: 2px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  #printable-receipt table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  #printable-receipt th {
+    border-bottom: 2px dashed black;
+    padding: 5px 0;
+    text-align: left;
+  }
+
+  #printable-receipt td {
+    padding: 5px 0;
+    vertical-align: top;
+  }
+
+  /* Totals */
+  .receipt-total {
+    margin-top: 20px;
+    border-top: 2px dashed black;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Black Ops One', cursive;
+  }
+
+  /* Reset Backgrounds */
+  body {
+    background: white;
+  }
+}
+
+/* --- WELCOME WIZARD STYLES --- */
+
+/* Welcome Screen */
+.welcome-screen {
+  height: 100vh;
+  height: 100dvh;
+  width: 100vw;
+  width: 100vw;
+  /* Green tint like other screens */
+  background-image: linear-gradient(rgba(20, 40, 24, 0.95), rgba(20, 40, 24, 0.95)), url('/images/zellige-bg.webp');
+  background-repeat: repeat;
+  background-size: 500px;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Black Ops One', cursive;
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-logo {
+  width: 200px;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+}
+
+.welcome-title {
+  font-size: 4rem;
+  margin: 0 0 40px 0;
+  text-shadow: 2px 2px 4px black;
+}
+
+.welcome-btn {
+  padding: 25px 80px;
+  font-size: 2.5rem;
+  border-radius: 15px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  font-family: 'Black Ops One', cursive;
+  animation: pulse 2s infinite;
+  transition: transform 0.2s;
+}
+
+.welcome-btn:active {
+  transform: scale(0.95);
+}
+
+/* Type Select Screen */
+/* Type Select Screen */
+/* Type Select Screen */
+.type-select-screen,
+.details-screen {
+  height: 100dvh;
+  /* Strict full screen */
+  width: 100vw;
+  /* background: linear-gradient(rgba(20, 40, 24, 0.95), rgba(20, 40, 24, 0.95)), url('/zellige-bg.jpg') center/cover; REMOVE COVER */
+  background-image: linear-gradient(rgba(20, 40, 24, 0.95), rgba(20, 40, 24, 0.95)), url('/images/zellige-bg.webp');
+  background-repeat: repeat;
+  background-size: 500px;
+  /* Match body desktop size */
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Tighter packing */
+  gap: 20px;
+  /* Controlled gap */
+  color: white;
+  font-family: 'Black Ops One', cursive;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.screen-title {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin-bottom: 10px;
+  /* Reduced space */
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.type-buttons-container {
+  display: flex;
+  gap: 15px;
+  /* Tighter gap */
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  flex: 0 1 auto;
+  /* Do NOT grow, shrink if needed */
+  align-items: center;
+  max-width: 800px;
+}
+
+.big-type-btn {
+  /* Fluid sizing matches Image aspect ratio (3:2) */
+  width: clamp(250px, 45vw, 450px);
+  aspect-ratio: 3 / 1.68;
+  border-radius: 12px;
+
+  /* DBZ Yellow Theme */
+  background: linear-gradient(135deg, #FFDE00 0%, #F39C12 100%);
+  border: 4px solid #1b3f1b;
+  /* Deep Red Border */
+
+  color: #333;
+  /* Dark text if any */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Black Ops One', cursive;
+
+  /* Super Saiyan Glow */
+  box-shadow:
+    0 0 15px rgba(243, 156, 18, 0.6),
+    inset 0 0 20px rgba(255, 255, 255, 0.5);
+
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+.big-type-btn:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 0 25px rgba(255, 222, 0, 0.8),
+    inset 0 0 30px rgba(255, 255, 255, 0.7);
+  border-color: #E74C3C;
+}
+
+/* Mobile Type Button Override */
+@media (max-width: 768px) {
+  .type-buttons-container {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    /* Ensure centering */
+  }
+
+  .big-type-btn {
+    width: 70vw !important;
+    /* Smaller size */
+    height: auto !important;
+    aspect-ratio: 3 / 1.68 !important;
+    max-width: 350px !important;
+    min-height: unset !important;
+    flex: none !important;
+    margin-bottom: 10px;
+    /* Less space between buttons */
+  }
+
+  .big-type-btn img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.big-type-btn:active {
+  transform: scale(0.95);
+}
+
+.dine-in-btn {
+  background: #e74c3c;
+}
+
+.take-away-btn {
+  background: #27ae60;
+}
+
+.back-btn {
+  margin-top: 30px;
+  background: transparent;
+  border: 1px solid #666;
+  color: #999;
+  padding: 10px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Details Screen (Grid) */
+.number-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.table-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.takeaway-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-num-btn {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  background: var(--surface);
+  color: var(--text-main);
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.grid-num-btn:active {
+  background: var(--primary);
+  color: white;
+}
+
+
+/* --- RESPONSIVE ADJUSTMENTS FOR WIZARD --- */
+@media (max-width: 768px) {
+
+  /* Welcome */
+  .welcome-logo {
+    width: 150px;
+  }
+
+  .welcome-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .welcome-btn {
+    padding: 20px 50px;
+    font-size: 1.8rem;
+  }
+
+  /* Type Select */
+  .screen-title {
+    font-size: 1.8rem;
+  }
+
+  .type-buttons-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .big-type-btn {
+    width: 250px;
+    height: 180px;
+    /* Rectangular on mobile to save vertical space */
+    font-size: 1.5rem;
+    flex-direction: row;
+    /* Icon left, text right */
+    gap: 20px;
+  }
+
+  /* Details Grid */
+  .grid-num-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+  }
+
+  .table-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .takeaway-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- Language Selector Component --- */
+.lang-selector-container {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+}
+
+.lang-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(5px);
+  min-width: 90px;
+  justify-content: space-between;
+}
+
+.lang-toggle-btn:hover,
+.lang-toggle-btn.open {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.current-flag {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.current-code {
+  font-family: 'Black Ops One', cursive;
+  font-size: 0.9rem;
+  padding-top: 2px;
+}
+
+.chevron-icon {
+  transition: transform 0.2s ease;
+  opacity: 0.7;
+}
+
+.chevron-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 8px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 5000;
+}
+
+/* Welcome screen specifics */
+.lang-selector-container.welcome-mode .lang-dropdown-menu {
+  right: auto;
+  left: 0;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  color: var(--text-main);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-align: left;
+  position: relative;
+  width: 100%;
+}
+
+.lang-option:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.lang-option.active {
+  background: rgba(214, 90, 101, 0.1);
+  /* Primary color low opacity */
+  color: var(--primary);
+}
+
+.option-flag {
+  font-size: 1.4rem;
+}
+
+.option-label {
+  flex: 1;
+}
+
+.active-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.animate-fade-in-fast {
+  animation: fadeIn 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Mobile specific for selector */
+@media (max-width: 1024px) {
+  .lang-toggle-btn {
+    padding: 6px 10px;
+    min-width: unset;
+  }
+
+  .current-code {
+    display: none;
+    /* Hide code on mobile to save space if needed, or keep */
+  }
+
+  .lang-dropdown-menu {
+    position: fixed;
+    /* Make it more robust on mobile */
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+    transform: translateY(0);
+    animation: slideUp 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border: none;
+  }
+
+  .lang-selector-container {
+    position: static;
+    /* Allows fixed positioning relative to viewport */
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
