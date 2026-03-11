@@ -1,25 +1,25 @@
 /* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap');
 
 :root {
-  /* Palette The Kebab Lab */
-  --bg-base: #111111;
-  /* Dark Industrial */
-  --primary: #F26122;
-  /* Naranja Lab */
-  --secondary: #F26122;
-  /* Branding */
-  --surface: #1a1a1a;
-  /* Dark Cards */
-  --text-main: #ffffff;
-  /* White Text */
+  /* Palette */
+  --bg-base: #265b36;
+  /* Chalkboard Green */
+  --primary: #D65A65;
+  /* Coral Red - Action/Prices */
+  --secondary: #F1C40F;
+  /* Golden Yellow - Branding */
+  --surface: #FDFBF7;
+  /* Cream/Bone - Cards */
+  --text-main: #142818;
+  /* Dark Green - Readable Text on Cards */
   --text-on-bg: #FFFFFF;
-  /* Text on Dark Background */
+  /* Text on Green Background */
   --ticket-bg: #FAFAFA;
   /* Receipt Paper White */
 
-  --shadow-card: 4px 4px 0px 0px rgba(0, 0, 0, 1);
-  --shadow-float: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  --shadow-float: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -29,19 +29,22 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: #0d0603; /* Tinte oscuro base */
+  background-color: #1E3F28;
+  /* Deep Chalkboard Green */
   color: var(--text-on-bg);
   min-height: 100vh;
   min-height: 100dvh;
+  /* Mobile strict height */
   -webkit-font-smoothing: antialiased;
 
-  /* Fondo Ladrillo Naranja Translúcido */
-  background-image: 
-    linear-gradient(rgba(18, 5, 0, 0.95), rgba(71, 28, 9, 0.85)),
-    url('/ladrillo.jpg');
-  background-size: cover;
+  /* Background Pattern & Texture Overlay */
+  /* Using a very dark overlay to ensure the texture is subtle and not distracting */
+  background-image: linear-gradient(rgba(30, 63, 40, 0.9), rgba(30, 63, 40, 0.9)), url('/images/zellige-bg.webp');
+  background-repeat: repeat;
+  background-size: 500px;
   background-attachment: fixed;
   background-position: center;
+  /* Blend mode helps integrate the texture into the green color */
   background-blend-mode: overlay;
 }
 
@@ -119,7 +122,7 @@ h4,
   /* CRITICAL: Prevent buttons from squashing in the column flex layout */
   position: relative;
   text-transform: uppercase;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Black Ops One', cursive;
   /* Match headers */
   letter-spacing: 1px;
 }
@@ -132,10 +135,10 @@ h4,
 
 .cat-btn.active {
   background: var(--secondary);
-  color: #000;
-  border-color: #000;
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
-  transform: translate(-2px, -2px);
+  color: var(--text-main);
+  border-color: var(--secondary);
+  box-shadow: 0 0 15px rgba(241, 196, 15, 0.6);
+  transform: scale(1.02);
 }
 
 /* Image Styling within Category Button */
@@ -176,24 +179,24 @@ h4,
   padding-bottom: 40px;
 }
 
-/* --- Product Cards (Sticker Style) --- */
+/* --- Product Cards (Cream Surface) --- */
 .product-card {
-  background: #ffffff;
+  background: var(--surface);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: var(--shadow-card);
   transition: all 0.2s ease;
   cursor: pointer;
   position: relative;
-  border: 3px solid #000;
+  border: 1px solid rgba(214, 90, 101, 0.2);
   display: flex;
   flex-direction: column;
 }
 
 .product-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
-  border-color: #000;
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-float);
+  border-color: var(--primary);
 }
 
 .product-image-container {
@@ -232,7 +235,7 @@ h4,
 
 .product-name {
   color: var(--text-main);
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Black Ops One', cursive;
   /* Stencil */
   font-size: 1.1rem;
   line-height: 1.2;
@@ -243,7 +246,7 @@ h4,
   font-weight: bold;
   font-size: 1.3rem;
   align-self: flex-end;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Black Ops One', cursive;
 }
 
 /* --- Order Panel (Ticket Style) --- */
@@ -342,62 +345,60 @@ h4,
 }
 
 
-/* Standard Primary Button (Sticker Style) */
+/* Standard Primary Button (Modal Add) */
 .btn-primary {
   background: var(--primary);
-  color: #000;
-  border: 3px solid #000;
+  color: #fff;
+  border: none;
   padding: 12px 20px;
-  font-size: 1.2rem;
-  font-weight: 900;
+  font-size: 1.1rem;
   cursor: pointer;
   text-transform: uppercase;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Black Ops One', cursive;
   letter-spacing: 1px;
   transition: all 0.2s;
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
-  border-radius: 0px;
+  box-shadow: 0 4px 6px rgba(192, 57, 43, 0.4);
+  border-radius: 4px;
 }
 
 .btn-primary:hover {
-  background: #ff7233;
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+  background: #b94a53;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(192, 57, 43, 0.5);
 }
 
 .btn-primary:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 1);
+  transform: translateY(1px);
 }
 
-/* Checkout Button (Sticker Style) */
+/* Checkout Button */
 .btn-checkout {
   width: 100%;
   background: var(--primary);
-  color: #000;
-  border: 3px solid #000;
+  /* Coral Red */
+  color: #fff;
+  border: none;
   padding: 16px;
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: 1.3rem;
   cursor: pointer;
   text-transform: uppercase;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Black Ops One', cursive;
+  /* Stencil Font */
   letter-spacing: 1.5px;
   transition: all 0.2s;
-  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0 4px 10px rgba(192, 57, 43, 0.4);
   margin-top: 10px;
-  border-radius: 0px;
+  border-radius: 4px;
 }
 
 .btn-checkout:hover {
-  background: #ff7233;
-  transform: translate(-2px, -2px);
-  box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 1);
+  background: #b94a53;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(192, 57, 43, 0.6);
 }
 
 .btn-checkout:active {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+  transform: translateY(1px);
 }
 
 /* --- Modal Overrides --- */

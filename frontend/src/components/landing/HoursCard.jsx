@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
 const schedule = [
-    { name: 'Lunes', open: 12, close: 23, label: '12:00 - 23:00' },
-    { name: 'Martes', open: 12, close: 23, label: '12:00 - 23:00' },
-    { name: 'Miércoles', open: 12, close: 23, label: '12:00 - 23:00' },
-    { name: 'Jueves', open: 12, close: 23, label: '12:00 - 23:00' },
-    { name: 'Viernes', open: 12, close: 23, label: '12:00 - 23:00' },
-    { name: 'Sábado', open: 12, close: 23, label: '12:00 - 23:00' },
-    { name: 'Domingo', open: 12, close: 23, label: '12:00 - 23:00' },
+    { name: 'Lunes', open: 16, close: 24, label: '16:00 - 00:00' },
+    { name: 'Martes', closed: true, label: 'CERRADO (Descanso)' },
+    { name: 'Miércoles', open: 16, close: 24, label: '16:00 - 00:00' },
+    { name: 'Jueves', open: 16, close: 24, label: '16:00 - 00:00' },
+    { name: 'Viernes', open: 18, close: 24, label: '18:00 - 00:00' },
+    { name: 'Sábado', open: 14, close: 24, label: '14:00 - 00:00' },
+    { name: 'Domingo', open: 14, close: 24, label: '14:00 - 00:00' },
 ];
 
 const HoursCard = () => {

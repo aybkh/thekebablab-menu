@@ -3,43 +3,43 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const featuredData = [
     {
-        title: "ENTRANTES Y TAPAS",
-        subtitle: "Para abrir el apetito",
+        title: "TACOS FRANCESES",
+        subtitle: "Salsas de caseras",
         images: [
-            { src: "/products/nuestras-patatas-fritas.webp", label: "Patatas Fritas" },
-            { src: "/products/nuestras-patatas-bravas.webp", label: "Patatas Bravas" },
-            { src: "/products/nugguets-de-pollo.webp", label: "Nuggets" },
-            { src: "/products/tenders-de-pollo.webp", label: "Tenders" }
-        ]
-    },
-    {
-        title: "DÜRÜM",
-        subtitle: "Enrollados deliciosos",
-        images: [
-            { src: "/products/durum-de-pollo.webp", label: "Dürüm Pollo" },
-            { src: "/products/durum-de-ternera.webp", label: "Dürüm Ternera" },
-            { src: "/products/durum-de-falafel.webp", label: "Dürüm Falafel" },
-            { src: "/products/durum-mix.webp", label: "Dürüm Mixto" }
-        ]
-    },
-    {
-        title: "PITA",
-        subtitle: "El clásico irresistible",
-        images: [
-            { src: "/products/pita-de-pollo.webp", label: "Pita Pollo" },
-            { src: "/products/pita-de-ternera.webp", label: "Pita Ternera" },
-            { src: "/products/pita-falafel.webp", label: "Pita Falafel" },
-            { src: "/products/pita-mix.webp", label: "Pita Mixto" }
+            { src: "/products/taco-s.webp", label: "Tamaño S" },
+            { src: "/products/taco-m.webp", label: "Tamaño M" },
+            { src: "/products/taco-l.webp", label: "Tamaño L" },
+            { src: "/products/taco-xl.webp", label: "Tamaño XL" }
         ]
     },
     {
         title: "PIZZAS ARTESANAS",
-        subtitle: "Masa fresca del día",
+        subtitle: "Masa fresca hecha al día",
         images: [
-            { src: "/products/pizza-margarita.webp", label: "Margarita" },
-            { src: "/products/pizza-kebab.webp", label: "Pizza Kebab" },
-            { src: "/products/pizza-tonno.webp", label: "Atún" },
-            { src: "/products/pizza-barbacoa.webp", label: "Barbacoa" }
+            { src: "/products/margarita.webp", label: "Margarita" },
+            { src: "/products/tanger-303-pizza.webp", label: "Tanger 303 Esp." },
+            { src: "/products/atun.webp", label: "Atún" },
+            { src: "/products/marisco-pizza.webp", label: "Marisco" }
+        ]
+    },
+    {
+        title: "PLATOS COMBINADOS",
+        subtitle: "Generosos y auténticos",
+        images: [
+            { src: "/products/pollo-plato.webp", label: "Plato de Pollo" },
+            { src: "/products/maxi-tenders-plato.webp", label: "Maxi Tenders" },
+            { src: "/products/emince-de-pollo-plato.webp", label: "Emincé Pollo" },
+            { src: "/products/plato-de-marisco.webp", label: "Plato Marisco" }
+        ]
+    },
+    {
+        title: "BATIDOS NATURALES",
+        subtitle: "Fruta 100% Fresca",
+        images: [
+            { src: "/products/aguacate-batido.webp", label: "Aguacate" },
+            { src: "/products/fresa-batido.webp", label: "Fresa" },
+            { src: "/products/platano-batido.webp", label: "Plátano" },
+            { src: "/products/tropical.webp", label: "Tropical" }
         ]
     }
 ];
@@ -104,6 +104,11 @@ const FeaturedMenu = () => {
     return (
         <section style={{
             padding: '40px 10px',
+            backgroundImage: "linear-gradient(rgba(20, 40, 24, 0.85), rgba(20, 40, 24, 0.85)), url('/images/zellige-bg.webp')",
+            backgroundSize: '150px',
+            backgroundRepeat: 'repeat',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed',
             position: 'relative',
             zIndex: 10
         }}>
@@ -130,10 +135,10 @@ const FeaturedMenu = () => {
                 .featured-card {
                     position: relative;
                     width: 100%; /* Fill Grid Cell */
-                    background: #ffffff; /* Solid White */
-                    border-radius: 12px;
-                    border: 4px solid #000; /* Thick Black Border */
-                    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1); /* Hard Shadow */
+                    background: #142818;
+                    border-radius: 16px;
+                    border: 2px solid #F1C40F;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
                     overflow: hidden;
                     transition: all 0.3s ease;
                     cursor: pointer;
@@ -151,8 +156,7 @@ const FeaturedMenu = () => {
                         margin: 10px;
                     }
                     .featured-card:hover {
-                        transform: translate(-3px, -3px) rotate(-2deg);
-                        box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+                        transform: rotate(0deg) scale(1.05);
                         z-index: 10;
                     }
                 }
@@ -162,7 +166,7 @@ const FeaturedMenu = () => {
                     width: 100%;
                     height: 150px; /* Smaller height on mobile */
                     overflow: hidden;
-                    border-bottom: 4px solid #000;
+                    border-bottom: 2px solid #F1C40F;
                 }
 
                 @media (min-width: 768px) {
@@ -173,9 +177,9 @@ const FeaturedMenu = () => {
 
                 .card-badge {
                     position: absolute; bottom: 5px; right: 5px;
-                    background: var(--primary); color: #000; border: 2px solid #000;
-                    padding: 2px 8px; borderRadius: 0;
-                    font-size: 0.8rem; font-weight: bold; text-transform: uppercase;
+                    background: rgba(241, 196, 15, 0.9); color: black;
+                    padding: 2px 8px; borderRadius: 8px;
+                    font-size: 0.7rem; font-weight: bold; text-transform: uppercase;
                 }
 
                 .card-arrow {
@@ -192,17 +196,16 @@ const FeaturedMenu = () => {
                 }
 
                 .card-content h3 {
-                    font-family: 'Bebas Neue', sans-serif;
-                    color: #000;
-                    font-size: 1.2rem; /* Mobile font */
+                    font-family: 'Black Ops One', cursive;
+                    color: #F1C40F;
+                    font-size: 0.9rem; /* Smaller font on mobile */
                     margin: 0 0 4px 0;
                     text-transform: uppercase;
                     line-height: 1.1;
-                    letter-spacing: 1px;
                 }
 
                 .card-content p {
-                    color: #444;
+                    color: #ccc;
                     font-size: 0.75rem; /* Smaller subtitle on mobile */
                     margin: 0;
                     font-family: 'Montserrat', sans-serif;
@@ -217,9 +220,9 @@ const FeaturedMenu = () => {
                 }
             `}</style>
 
-            <div className="section-head" style={{ marginBottom: '30px', textAlign: 'center' }}>
-                <h2 style={{ fontSize: '3rem', margin: 0 }}>NUESTROS FAVORITOS</h2>
-                <h3 style={{ display: 'block', fontSize: '1.2rem', color: 'var(--primary)', marginTop: '5px', fontFamily: "'Bebas Neue', sans-serif", letterSpacing: '2px' }}>
+            <div className="section-head" style={{ marginBottom: '30px' }}>
+                <h2>NUESTROS FAVORITOS</h2>
+                <h3 style={{ display: 'block', fontSize: '0.9rem', color: '#F1C40F', marginTop: '5px', fontFamily: "'Montserrat', sans-serif" }}>
                     DESCUBRE LO MEJOR
                 </h3>
             </div>

@@ -96,30 +96,35 @@ const LandingPage = () => {
 
                         <div className="hero-buttons" style={{ justifyContent: 'center', marginTop: '20px' }}>
                             <Link to="/menu" style={{ textDecoration: 'none', width: '100%', maxWidth: '350px' }}>
-                                {/* NEW BUTTON STYLE: Sticker Style */}
+                                {/* NEW BUTTON STYLE: Hero Badge Style (Outline Gold + Glass) */}
                                 <button className="btn-primary" style={{
                                     width: '100%',
                                     padding: '20px 40px',
-                                    fontSize: '1.8rem',
-                                    borderRadius: '12px',
-                                    background: 'var(--primary)',
-                                    color: '#000',
-                                    border: '4px solid #000', // Solid Black Border
+                                    fontSize: '1.4rem',
+                                    borderRadius: '50px',
+                                    background: 'rgba(0, 0, 0, 0.3)', // Glass Dark
+                                    backdropFilter: 'blur(4px)',
+                                    color: '#F1C40F', // Gold Text
+                                    border: '2px solid #F1C40F', // Gold Border
                                     cursor: 'pointer',
-                                    fontFamily: "'Bebas Neue', sans-serif",
+                                    fontFamily: "'Black Ops One', cursive",
                                     letterSpacing: '2px',
-                                    boxShadow: '6px 6px 0px 0px rgba(0,0,0,1)', // Hard Shadow
-                                    transition: 'all 0.2s ease',
+                                    boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
+                                    transition: 'all 0.3s ease',
                                     fontWeight: 'bold',
                                     textTransform: 'uppercase'
                                 }}
                                     onMouseEnter={(e) => {
-                                        e.currentTarget.style.transform = 'translate(-2px, -2px)';
-                                        e.currentTarget.style.boxShadow = '8px 8px 0px 0px rgba(0,0,0,1)';
+                                        e.currentTarget.style.background = '#F1C40F'; // Fill Gold on Hover
+                                        e.currentTarget.style.color = '#142818'; // Dark Text
+                                        e.currentTarget.style.transform = 'scale(1.05)';
+                                        e.currentTarget.style.boxShadow = '0 0 20px rgba(241, 196, 15, 0.6)';
                                     }}
                                     onMouseLeave={(e) => {
-                                        e.currentTarget.style.transform = 'translate(0px, 0px)';
-                                        e.currentTarget.style.boxShadow = '6px 6px 0px 0px rgba(0,0,0,1)';
+                                        e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)';
+                                        e.currentTarget.style.color = '#F1C40F';
+                                        e.currentTarget.style.transform = 'scale(1)';
+                                        e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.5)';
                                     }}
                                 >
                                     VER CARTA
@@ -135,11 +140,11 @@ const LandingPage = () => {
                             {/* FRAME OVERLAY (Reduces bleeding) */}
                             <div style={{
                                 position: 'absolute', inset: -2,
-                                border: '6px solid #000',
+                                border: '5px solid #F1C40F',
                                 borderRadius: '30px',
                                 pointerEvents: 'none',
                                 zIndex: 60,
-                                boxShadow: '8px 8px 0px 0px #000'
+                                boxShadow: 'inset 0 0 10px rgba(0,0,0,0.8)'
                             }}></div>
 
                             {/* Video Container */}
@@ -259,11 +264,7 @@ const LandingPage = () => {
                             <div className="delivery-grid" style={{ gridTemplateColumns: '1fr' }}>
                                 {theme.socials.uberEats && (
                                     <a href={theme.socials.uberEats} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
-                                        <button className="delivery-btn" style={{ 
-                                            background: '#06C167', width: '100%', height: '100%', 
-                                            border: '3px solid #000', borderRadius: '8px', boxShadow: '4px 4px 0px 0px #000', 
-                                            fontFamily: "'Bebas Neue', sans-serif", fontSize: '1.4rem', color: '#fff', textShadow: '1px 1px 0px #000' 
-                                        }}>
+                                        <button className="delivery-btn" style={{ background: '#06C167', width: '100%', height: '100%' }}>
                                             {theme.socials.uberEatsLabel || 'PEDIR EN UBER EATS'}
                                         </button>
                                     </a>
@@ -299,13 +300,13 @@ const LandingPage = () => {
 
                     <div style={{ textAlign: 'center' }}>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '20px' }}>
-                            <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: '1.8rem', color: 'white', letterSpacing: '2px' }}>{theme.restaurantName} <span style={{ color: 'var(--secondary)' }}>{theme.restaurantSuffix}</span></span>
+                            <span style={{ fontFamily: "'Black Ops One', cursive", fontSize: '1.2rem', color: 'white' }}>{theme.restaurantName} <span style={{ color: 'var(--secondary)' }}>{theme.restaurantSuffix}</span></span>
                             <img src={theme.brand.logoHeader || theme.brand.logoFallback} alt={theme.restaurantName} style={{ height: '40px' }} onError={(e) => e.target.src = theme.brand.logoFallback} />
                         </div>
 
                         <p style={{ margin: 0 }}>{theme.brand.footerText}</p>
                         <p style={{ fontSize: '0.8rem', marginTop: '10px', margin: '10px 0 0' }}>
-                            Dev by <a href="https://ayoubjerari.com" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 'bold' }}>AyoubDev</a>
+                            Dev by <a href="https://ayoubjerari.com" style={{ color: '#F1C40F', textDecoration: 'none' }}>AyoubDev</a>
                         </p>
                     </div>
                 </div>

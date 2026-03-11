@@ -61,7 +61,7 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
         <div className="modal-overlay">
             <div className="modal-content">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
-                    <h2 className="modal-title" style={{ margin: 0, border: 0, fontFamily: "'Bebas Neue', sans-serif", letterSpacing: '1px', fontSize: '2rem' }}>{currentProduct.name}</h2>
+                    <h2 className="modal-title" style={{ margin: 0, border: 0 }}>{currentProduct.name}</h2>
                     <X size={28} style={{ cursor: 'pointer' }} onClick={onClose} />
                 </div>
 
@@ -189,7 +189,7 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
                     </div>
                 )}
 
-                <button className="btn-primary" style={{ width: '100%', marginTop: '10px', padding: '15px', border: '3px solid #000', borderRadius: '0', boxShadow: '4px 4px 0px #000', fontFamily: "'Bebas Neue', sans-serif", fontSize: '1.4rem', letterSpacing: '1px' }} onClick={onClose}>
+                <button className="btn-primary" style={{ width: '100%', marginTop: '10px' }} onClick={onClose}>
                     {t('close_total')}: {calculateTotal()}€
                 </button>
             </div>
