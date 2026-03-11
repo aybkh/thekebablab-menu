@@ -27,281 +27,526 @@ export const resources = {
         },
         "direction": "ltr",
         "categories": {
-            "Pizzas": "Pizzas",
-            "Tacos 303": "Tacos 303",
-            "Tajins": "Tajines",
-            "Bocadillos Tanger": "Bocadillos",
+            "Tapas y Entrantes": "Tapas y Entrantes",
+            "Pita": "Pita",
             "Hamburguesas": "Hamburguesas",
-            "Platos Combinados": "Platos",
-            "Ensaladas": "Ensaladas",
-            "Wraps": "Wraps",
-            "Refrescos": "Refrescos",
-            "Café": "Café",
-            "Batidos": "Batidos",
+            "Dürüm": "Dürüm",
+            "Tacos": "Tacos",
+            "Pizzas 32cm Aprox": "Pizzas 32cm Aprox",
+            "Nuestros Platos": "Nuestros Platos",
             "Postres": "Postres",
+            "Bebidas Frías": "Bebidas Frías",
+            "Nuestros Batidos": "Nuestros Batidos",
+            "Bebidas Calientes": "Bebidas Calientes",
+            "Menús y Combos": "Menús y Combos",
+            "Salsas": "Salsas",
             "Suplementos": "Suplementos",
-            "Salsas": "Salsas"
+            "Otros": "Otros"
         },
         "products": {
-            "Pizza Margarita": {
-                "name": "Pizza Margarita",
-                "description": "La esencia de la tradición: base de tomate natural, doble capa de mozzarella fundida, aceite de oliva virgen y orégano aromático."
+            "Mozzarella Sticks": {
+                "name": "Mozzarella Sticks",
+                "description": "Bastoncitos de queso mozzarella rebozados y fritos hasta quedar crujientes. (6 unidades)"
             },
-            "Pizza Atún": {
-                "name": "Pizza Atún",
-                "description": "Equilibrio perfecto de sabor con láminas de atún claro, cebolla roja crujiente y aceitunas negras deshuesadas sobre mozzarella."
+            "Alitas de Pollo": {
+                "name": "Alitas de Pollo",
+                "description": "Alitas de pollo enteras marinadas y fritas al estilo tradicional. (6 unidades)"
             },
-            "Pizza Pollo": {
-                "name": "Pizza Pollo",
-                "description": "Dados de pechuga de pollo marinados en especias suaves, acompañados de pimientos rojos asados y base de queso fundido."
+            "Croquetas de Pollo": {
+                "name": "Croquetas de Pollo",
+                "description": "Croquetas cremosas rellenas de suave bechamel y trocitos de pollo. (6 unidades)"
             },
-            "Pizza Carne Picada": {
-                "name": "Pizza Carne Picada",
-                "description": "Sabrosa carne de ternera picada y sazonada con finas hierbas, cocinada lentamente para mantener su jugosidad."
+            "Croquetas de Pescado Maxi": {
+                "name": "Croquetas de Pescado Maxi",
+                "description": "Croquetas de pescado de tamaño superior con rebozado exterior crujiente. (4 unidades)"
             },
-            "Pizza Marisco": {
-                "name": "Pizza Marisco",
-                "description": "Una selección premium del mar: gambas peladas, mejillones seleccionados, anillas de calamar y almejas sobre base de tomate."
+            "Nugguets de Pollo": {
+                "name": "Nugguets de Pollo",
+                "description": "Bocados de pechuga de pollo empanados y fritos. (6 unidades)"
             },
-            "Pizza Tanger 303": {
-                "name": "Pizza Tanger 303",
-                "description": "Nuestra creación exclusiva. Una combinación contundente de pollo marinado, carne picada sazonada y una selección de mariscos."
+            "Tenders de Pollo": {
+                "name": "Tenders de Pollo",
+                "description": "Solomillos o tiras de pollo marinadas y cubiertas con un rebozado extra crujiente. (6 unidades)"
             },
-            "Taco de Nuggets": {
-                "name": "Taco de Nuggets",
-                "description": "Deliciosa tortilla sellada a la plancha rellena de nuggets de pollo crujientes, patatas fritas y nuestra salsa quesera artesanal."
+            "Ensalada Mixta": {
+                "name": "Ensalada Mixta",
+                "description": "Base refrescante de lechuga con tomate, cebolla y una selección de vegetales de temporada."
             },
-            "Taco Cordon Bleu": {
-                "name": "Taco Cordon Bleu",
-                "description": "Receta clásica envuelta en tortilla: pechuga de pollo rellena de jamón y queso fundido, patatas y salsa cremosa de queso."
+            "Nuestras Patatas Bravas": {
+                "name": "Nuestras Patatas Bravas",
+                "description": "Dados de patata frita servidos con una clásica salsa brava especial con un toque picante."
             },
-            "Taco Maxi Tenders": {
-                "name": "Taco Maxi Tenders",
-                "description": "Para amantes del crujiente: tiras de solomillo de pollo empanadas al estilo tradicional, acompañadas de patatas y queso fundido."
+            "Nuestras Patatas Fritas": {
+                "name": "Nuestras Patatas Fritas",
+                "description": "Ración de patatas cortadas en bastón y fritas en su punto óptimo de sal."
             },
-            "Tajin de Kefta": {
-                "name": "Tajin de Kefta",
-                "description": "Albóndigas de ternera especiadas al estilo marroquí, cocinadas en salsa de tomate reducida con un huevo escalfado al punto."
+            "Huevos Estrellados con Dürüm": {
+                "name": "Huevos Estrellados con Dürüm",
+                "description": "Cama de patatas fritas coronadas con huevos fritos rotos y acompañados de carne especiada de kebab estilo dürüm."
             },
-            "Tajin de Gambas 'Pil Pil'": {
-                "name": "Tajin de Gambas 'Pil Pil'",
-                "description": "Gambas frescas salteadas en aceite de oliva virgen extra, ajo laminado y un toque de guindilla. Servido burbujeante."
+            "Pita de Pollo": {
+                "name": "Pita de Pollo",
+                "description": "Bocadillo en pan turco esponjoso relleno de jugosa carne de pollo asada, verduras frescas, ensalada variada y selección de salsas de la casa."
             },
-            "Kapsalon": {
-                "name": "Kapsalon",
-                "description": "Plato gratinado por capas: base de patatas fritas, carne de shawarma especiada, queso Gouda fundido y cobertura de ensalada fresca."
+            "Pita de Ternera": {
+                "name": "Pita de Ternera",
+                "description": "Bocadillo en pan turco esponjoso relleno de finas láminas de carne de ternera asada, vegetales frescos, ensalada y salsas."
             },
-            "Pinchos de Pollo": {
-                "name": "Pinchos de Pollo",
-                "description": "Brochetas de pollo marinadas en una mezcla secreta de especias morunas y asadas al fuego para un acabado ahumado."
+            "Pita Mix": {
+                "name": "Pita Mix",
+                "description": "Bocadillo en pan turco relleno de una combinación de carne asada de pollo y ternera, verduras frescas, ensalada y salsas."
             },
-            "Pinchos Ternera": {
-                "name": "Pinchos Ternera",
-                "description": "Tiernos dados de ternera de primera calidad, marinados en hierbas aromáticas y cocinados a la parrilla."
+            "Pita Falafel": {
+                "name": "Pita Falafel",
+                "description": "Opción vegetariana en bocadillo de pan turco con croquetas fritas de garbanzos y especias (falafel), verduras, ensalada y salsas."
             },
-            "Salchichas": {
-                "name": "Salchichas",
-                "description": "Salchichas de carnicería asadas a la plancha, servidas con cebolla caramelizada y un toque de nuestra salsa especial."
+            "Hamburguesa Americana con Patatas Fritas": {
+                "name": "Hamburguesa Americana con Patatas Fritas",
+                "description": "Hamburguesa en pan rústico con 200g de carne de ternera, acompañada de bacon crujiente, pepinillo, queso cheddar fundido, cebolla caramelizada y salsa americana especial. Incluye ración de patatas fritas."
             },
-            "Vegetal": {
-                "name": "Vegetal",
-                "description": "Opción fresca y equilibrada con lechuga selección, tomate natural, huevo duro, atún claro y mayonesa suave."
+            "Hamburguesa Clássica con Patatas Fritas": {
+                "name": "Hamburguesa Clássica con Patatas Fritas",
+                "description": "Hamburguesa en pan rústico con 200g de carne de ternera, cama de lechuga, rodajas de tomate, queso edam derretido y un jugoso huevo frito. Incluye ración de patatas fritas."
             },
-            "Gambas": {
-                "name": "Gambas",
-                "description": "Gambas de la costa salteadas al momento con ajo picado y perejil fresco en pan crujiente."
+            "Hamburguesa de Queso de Cabra con Patatas Fritas": {
+                "name": "Hamburguesa de Queso de Cabra con Patatas Fritas",
+                "description": "Hamburguesa gourmet en pan rústico con 200g de ternera, hojas de rúcula fresca, medallón de queso de cabra a la plancha, cebolla caramelizada y salsa de miel y mostaza. Incluye ración de patatas fritas."
             },
-            "Mixto (2 carnes)": {
-                "name": "Mixto (2 carnes)",
-                "description": "La unión perfecta de sabores: combinación de pollo especiado y ternera a la plancha con doble de queso fundido."
+            "Hamburguesa Chicken Crispy con Patatas Fritas": {
+                "name": "Hamburguesa Chicken Crispy con Patatas Fritas",
+                "description": "Hamburguesa en pan brioche suave rellena de 200g de pollo con un rebozado crujiente de la casa, rúcula, queso cheddar fundido, salsa ranchera y rodajas de pepinillo. Incluye ración de patatas fritas."
             },
-            "Hamburguesa Ternera": {
-                "name": "Hamburguesa Ternera",
-                "description": "Carne 100% vacuno a la parrilla, servida con queso cheddar, vegetales frescos y pan brioche ligeramente tostado."
+            "Dürüm de Pollo": {
+                "name": "Dürüm de Pollo",
+                "description": "Rollo grande hecho con una fina tortilla de trigo relleno de finas láminas de carne de pollo asada, verduras, ensalada y salsas de la casa."
             },
-            "Hamburguesa Pollo": {
-                "name": "Hamburguesa Pollo",
-                "description": "Pechuga de pollo a la plancha marinada en cítricos y hierbas, servida con lechuga fresca y salsa de la casa."
+            "Dürüm de Ternera": {
+                "name": "Dürüm de Ternera",
+                "description": "Rollo de tortilla de trigo relleno de carne de ternera asada en el clásico torno de kebab, verduras frescas, ensalada y salsas."
             },
-            "Hamburguesa Tenders": {
-                "name": "Hamburguesa Tenders",
-                "description": "Solomillos de pollo extra crujientes en pan burger, acompañados de cheddar fundido y nuestra salsa especial."
+            "Dürüm Mix": {
+                "name": "Dürüm Mix",
+                "description": "Rollo de tortilla de trigo relleno con una mezcla generosa de carne de pollo y ternera asadas, acompañamiento de verduras, ensalada y salsas."
             },
-            "Plato de Pollo": {
-                "name": "Plato de Pollo",
-                "description": "Pechugas de pollo marinadas y asadas a la plancha. Incluye arroz, patatas, ensalada y acompañamientos del día."
+            "Dürüm de Falafel": {
+                "name": "Dürüm de Falafel",
+                "description": "Rollo vegetal en tortilla de trigo relleno de croquetas crujientes de falafel, ensalada fresca, verduras y salsas."
             },
-            "Plato Carne Picada": {
-                "name": "Plato Carne Picada",
-                "description": "Carne de ternera sazonada al momento. Servido con una completa variedad de guarniciones tradicionales."
+            "Taco de Pollo": {
+                "name": "Taco de Pollo",
+                "description": "Estilo 'French Taco': tortilla grande de trigo sellada a la plancha y rellena de jugoso pollo marinado, salsa francesa algeriene o andalouse, fundido de mozzarella, salsa de queso y patatas fritas integradas dentro del taco."
             },
-            "Plato Gambas": {
-                "name": "Plato Gambas",
-                "description": "Ración generosa de gambas salteadas al estilo tradicional. Acompañado de ensalada mixta y guarniciones frescas."
+            "Taco de Ternera": {
+                "name": "Taco de Ternera",
+                "description": "Estilo 'French Taco': tortilla sellada rellena de carne picada de ternera sazonada, patatas fritas interiores, mozzarella, salsa de queso cremosa y elección de salsa algeriene o andalouse."
             },
-            "Plato de Calamares": {
-                "name": "Plato de Calamares",
-                "description": "Anillas de calamar seleccionadas, rebozadas en harina fina y fritas hasta su punto óptimo de crujencia. Con guarnición."
+            "Taco Mix": {
+                "name": "Taco Mix",
+                "description": "Estilo 'French Taco': tortilla sellada con una combinación de carnes mixtas, patatas fritas, rica salsa de queso, queso mozzarella fundido y salsa algeriene o andalouse."
             },
-            "Plato Maxi Tenders": {
-                "name": "Plato Maxi Tenders",
-                "description": "Selección de tenders de pollo crujientes servidos con patatas, arroz y ensaladas de temporada."
+            "Taco de Nugguets": {
+                "name": "Taco de Nugguets",
+                "description": "Original 'French Taco' relleno de trozos de nuggets de pollo crujientes combinados con patatas fritas, queso mozzarella, salsa de queso y salsa algeriene o andalouse."
             },
-            "Ensalada Pequeña": {
-                "name": "Ensalada Pequeña",
-                "description": "Mezcla de hojas verdes, tomate, cebolla roja, maíz y aceitunas con aliño de la casa."
+            "Taco de Tenders": {
+                "name": "Taco de Tenders",
+                "description": "Contundente 'French Taco' relleno de tiras de pollo rebozadas (tenders), patatas fritas, abundante queso mozzarella fundido, salsa de queso y salsa algeriene o andalouse."
             },
-            "Ensalada Familiar": {
-                "name": "Ensalada Familiar",
-                "description": "Nuestra ensalada completa en formato XL, ideal para compartir como centro de mesa."
+            "Margarita": {
+                "name": "Margarita",
+                "description": "Masa de pizza clásica italiana cubierta con base de salsa de tomate, queso mozzarella fundido y hojas de albahaca fresca."
             },
-            "Wrap de Pollo": {
-                "name": "Wrap de Pollo",
-                "description": "Tortilla de trigo enrollada con tiras de pollo asado, mix de vegetales y salsa cremosa ligera."
+            "Italia": {
+                "name": "Italia",
+                "description": "Masa de pizza cubierta con base de salsa de tomate, dados de tomate fresco troceado, hojas de rúcula y queso mozzarella."
             },
-            "Wrap Carne Picada": {
-                "name": "Wrap Carne Picada",
-                "description": "Ternera picada con especias tradicionales, vegetales frescos y salsa especial envueltos en tortilla tostada."
+            "Pizza Kebab": {
+                "name": "Pizza Kebab",
+                "description": "Fusión italo-turca: Masa de pizza con base de tomate y mozzarella, cubierta con carne de kebab a elegir (pollo, ternera o mixto), aceitunas y un toque de salsa blanca típica de kebab."
             },
-            "Café solo": {
-                "name": "Café solo",
-                "description": "Café de tueste natural con cuerpo intenso y capa de crema persistente."
+            "Pizza de Pollo": {
+                "name": "Pizza de Pollo",
+                "description": "Masa de pizza con base de tomate y mozzarella, coronada con sabrosa cebolla caramelizada, pimientos y trozos tiernos de pollo."
             },
-            "Cortado": {
-                "name": "Cortado",
-                "description": "Equilibrio entre un espresso corto y una nube de leche vaporizada."
+            "Pizza Barbacoa": {
+                "name": "Pizza Barbacoa",
+                "description": "Masa de pizza cubierta con base de tomate, mozzarella fundida, carne picada de ternera, tiras de bacon ahumado, pimiento rojo y un característico espiral de salsa barbacoa."
+            },
+            "Pizza Tonno": {
+                "name": "Pizza Tonno",
+                "description": "Masa de pizza marinera con base de salsa de tomate, mozzarella, trozos de atún claro, cebolla, rodajas de huevo duro y olivas negras."
+            },
+            "Pizza Vegetal": {
+                "name": "Pizza Vegetal",
+                "description": "Masa de pizza cubierta con base de salsa de tomate y abundantes verduras: hojas de espinaca, rodajas de calabacín y berenjena, pimiento y aceitunas."
+            },
+            "Pizza 4 Quesos": {
+                "name": "Pizza 4 Quesos",
+                "description": "Masa de pizza para amantes del queso, con base de tomate y una mezcla fundida de gorgonzola potente, suave queso brie, queso de cabra y clásica mozzarella."
+            },
+            "Pizza Infierno": {
+                "name": "Pizza Infierno",
+                "description": "Masa de pizza picante cubierta con salsa de tomate, rodajas de chorizo, salsa o condimento picante y queso mozzarella."
+            },
+            "Pizza Mediterránea": {
+                "name": "Pizza Mediterránea",
+                "description": "Masa de pizza con base de tomate, acompañada de colas de gambas, lomos de anchoa, un ligero toque picante y queso mozzarella."
+            },
+            "Pizza Hawaiana": {
+                "name": "Pizza Hawaiana",
+                "description": "Masa de pizza tropical con base de salsa de tomate, fiambre de pavo, trozos de piña dulce, granos de maíz y un toque de nata."
+            },
+            "Plato Kebab de Pollo": {
+                "name": "Plato Kebab de Pollo",
+                "description": "Ración generosa servida directamente en plato (sin pan) con láminas de carne asada de pollo, acompañada de un lado de ensalada mixta y una guarnición de patatas fritas."
+            },
+            "Plato Kebab de Ternera": {
+                "name": "Plato Kebab de Ternera",
+                "description": "Ración servida en plato con sabrosas láminas de carne de ternera asada, acompañada de ensalada mixta fresca y guarnición de patatas fritas."
+            },
+            "Plato Kebab Mix": {
+                "name": "Plato Kebab Mix",
+                "description": "Plato combinado que ofrece lo mejor de ambos mundos: una mezcla de carne asada de pollo y ternera, acompañada de ensalada mixta y patatas fritas."
+            },
+            "Plato Falafel": {
+                "name": "Plato Falafel",
+                "description": "Alternativa vegetariana servida en plato, compuesta por varias unidades de falafel (croquetas de garbanzo especiadas), ensalada mixta de acompañamiento y patatas fritas."
+            },
+            "Tarta de Queso": {
+                "name": "Tarta de Queso",
+                "description": "Porción de tarta de queso suave y cremosa para terminar con un toque dulce."
+            },
+            "Refrescos": {
+                "name": "Refrescos",
+                "description": "Variedad de latas de refresco frío (Coca-cola, Pepsi, Fanta, Poms, Hawai, etc.)."
+            },
+            "Agua Mineral 0,5L": {
+                "name": "Agua Mineral 0,5L",
+                "description": "Botella de agua mineral natural sin gas. Formato de 0,5L."
+            },
+            "Agua Mineral 1,5L": {
+                "name": "Agua Mineral 1,5L",
+                "description": "Botella de agua mineral natural sin gas. Formato familiar de 1,5L."
+            },
+            "Vichy": {
+                "name": "Vichy",
+                "description": "Botellín clásico de agua mineral carbónica (con gas)."
+            },
+            "Zumo de Melocotón": {
+                "name": "Zumo de Melocotón",
+                "description": "Botellín individual de néctar o zumo sabor melocotón."
+            },
+            "Cacaolat": {
+                "name": "Cacaolat",
+                "description": "Batido lácteo tradicional de chocolate servido frío."
+            },
+            "Batido de Aguacate": {
+                "name": "Batido de Aguacate",
+                "description": "Batido denso, suave y nutritivo preparado a base de aguacate fresco."
+            },
+            "Mango Lassi": {
+                "name": "Mango Lassi",
+                "description": "Refrescante bebida tradicional de origen indio elaborada con yogur cremoso y pulpa de mango."
             },
             "Café con leche": {
                 "name": "Café con leche",
-                "description": "Café espresso combinado con leche cremosa a la temperatura perfecta."
+                "description": "Taza de café expreso largo mezclado con leche vaporizada."
             },
-            "Naranja": {
-                "name": "Naranja",
-                "description": "Zumo de naranjas seleccionadas, recién exprimido para conservar todas sus vitaminas."
+            "Cortado": {
+                "name": "Cortado",
+                "description": "Taza pequeña de café expreso con un 'corte' o pequeño chorrito de leche."
             },
-            "Plátano": {
-                "name": "Plátano",
-                "description": "Elaborado con fruta madura y leche fresca, consiguiendo una textura densa y dulce."
+            "Café solo": {
+                "name": "Café solo",
+                "description": "Un shot directo de café expreso negro sin adiciones."
             },
-            "Aguacate": {
-                "name": "Aguacate",
-                "description": "Especialidad tradicional: batido ultra cremoso de aguacate natural con un toque de dulzor."
+            "Infusiones": {
+                "name": "Infusiones",
+                "description": "Servicio de agua caliente acompañado del sobrecito de té o infusión herbal a elegir."
             },
-            "Fresa": {
-                "name": "Fresa",
-                "description": "Batido refrescante elaborado con fresas naturales de temporada y base láctea."
+            "Menú Dürüm": {
+                "name": "Menú Dürüm",
+                "description": "Menú completo para una persona que incluye un rollo dürüm a elegir, acompañado de una ración de patatas fritas y un refresco."
             },
-            "Dragón": {
-                "name": "Dragón",
-                "description": "Exótico y vibrante: batido de pitaya rosa con propiedades antioxidantes y sabor suave."
+            "Menú Pita": {
+                "name": "Menú Pita",
+                "description": "Menú completo individual que incluye un bocadillo de pan de pita a elegir, una ración de patatas fritas y un refresco."
             },
-            "Mango": {
-                "name": "Mango",
-                "description": "Sabor intenso a mango maduro en una textura suave y refrescante."
+            "Menú Hamburguesa": {
+                "name": "Menú Hamburguesa",
+                "description": "Menú completo individual con una hamburguesa a elegir de la carta (burguer), acompañada de patatas fritas y un refresco."
             },
-            "Copa de Tiramisú": {
-                "name": "Copa de Tiramisú",
-                "description": "Postre artesano con capas de bizcocho café, crema de mascarpone y cacao puro."
+            "Menú Taco": {
+                "name": "Menú Taco",
+                "description": "Menú completo individual compuesto por un French Taco de la carta a elegir, una guarnición de patatas fritas y un refresco."
             },
-            "Flan Casero": {
-                "name": "Flan Casero",
-                "description": "Elaborado según la receta clásica con leche, huevos frescos y caramelo artesano."
+            "Menú Pizza": {
+                "name": "Menú Pizza",
+                "description": "Menú individual con una pizza de 32cm (mediana) a elegir de la carta, acompañada de un refresco."
             },
-            "Helado '3 bolas'": {
-                "name": "Helado '3 bolas'",
-                "description": "Tres bolas de helado artesano a elegir entre nuestra selección de sabores clásicos."
+            "Menú Pizza Grande": {
+                "name": "Menú Pizza Grande",
+                "description": "Menú individual o para compartir compuesto por una pizza en tamaño grande a elegir de la carta y un refresco."
             },
-            "Tarta": {
-                "name": "Tarta",
-                "description": "Selección de repostería diaria elaborada por nuestros maestros pasteleros."
+            "Combo 2 Dürüms": {
+                "name": "Combo 2 Dürüms",
+                "description": "Oferta para compartir que incluye dos rollos dürüm a elegir, acompañados de dos raciones individuales de patatas fritas y dos refrescos."
             },
-            "Tajin Marisco": {
-                "name": "Tajin Marisco",
-                "description": "Guiso tradicional en barro con una variada selección de mariscos en salsa de especias y azafrán."
+            "Combo 2 Pitas": {
+                "name": "Combo 2 Pitas",
+                "description": "Oferta para compartir que incluye dos bocadillos de pan pita a elegir, junto con dos raciones de patatas fritas y dos refrescos."
             },
-            "Sopa de pescado": {
-                "name": "Sopa de pescado",
-                "description": "Receta reconfortante elaborada con fumet de pescado fresco y picada de marisco."
+            "Combo 2 Tacos": {
+                "name": "Combo 2 Tacos",
+                "description": "Oferta para compartir que trae dos French Tacos a elegir de la carta, más dos guarniciones de patatas fritas y dos refrescos."
             },
-            "Emince de Pollo": {
-                "name": "Emince de Pollo",
-                "description": "Finas tiras de pechuga salteadas y terminadas en una reducción de crema de leche con champiñones."
+            "Combo 2 Pizzas": {
+                "name": "Combo 2 Pizzas",
+                "description": "Menú ahorro que incluye dos pizzas de tamaño mediano (32cm) a elegir de la carta y una botella de refresco familiar (1L - 1.5L)."
             },
-            "Emince de Carne": {
-                "name": "Emince de Carne",
-                "description": "Tiras de ternera seleccionadas cocinadas en salsa de crema de pimienta suave o champiñones."
+            "Combo Family": {
+                "name": "Combo Family",
+                "description": "El paquete más grande para grupos o familias. Incluye: 1 Dürüm, 1 pan de Pita, 1 Hamburguesa a elegir, 1 Pizza de tamaño mediano a elegir, 3 raciones de patatas fritas y 1 botella de refresco familiar de 1L."
             },
-            "Plato de Marisco": {
-                "name": "Plato de Marisco",
-                "description": "Surtido variado de productos del mar cocinados a la plancha con aliño de ajo y perejil."
+            "Combo Infantil": {
+                "name": "Combo Infantil",
+                "description": "Menú pensado para los más pequeños. Incluye un plato de 10 nuggets crujientes de pollo acompañados de patatas fritas y un zumo de frutas."
             },
-            "Tropical": {
-                "name": "Tropical",
-                "description": "Combinación refrescante de frutas exóticas seleccionadas, ideal para acompañar su comida."
+            "Aqua Deus": {
+                "name": "Aqua Deus",
+                "description": "Refresco individual frío (Aqua Deus)."
             },
-            "Huevo Frito": {
-                "name": "Huevo Frito",
-                "description": "Huevo de granja preparado a la plancha con puntilla crujiente."
+            "Aquarius": {
+                "name": "Aquarius",
+                "description": "Refresco individual frío (Aquarius)."
             },
-            "Huevo Duro": {
-                "name": "Huevo Duro",
-                "description": "Huevo cocinado en su punto para complementar ensaladas o bocadillos."
+            "Bezoya": {
+                "name": "Bezoya",
+                "description": "Refresco individual frío (Bezoya)."
             },
-            "Lonchas de Queso": {
-                "name": "Lonchas de Queso",
-                "description": "Loncha extra de queso fundente para realzar el sabor de su plato."
+            "Coca-Cola": {
+                "name": "Coca-Cola",
+                "description": "Refresco individual frío (Coca-Cola)."
             },
-            "Mortadela": {
-                "name": "Mortadela",
-                "description": "Mortadela seleccionada cortada en finas láminas para un sabor delicado."
+            "Coca-Cola Zero": {
+                "name": "Coca-Cola Zero",
+                "description": "Refresco individual frío (Coca-Cola Zero)."
+            },
+            "Don Simon": {
+                "name": "Don Simon",
+                "description": "Refresco individual frío (Don Simon)."
+            },
+            "Fanta": {
+                "name": "Fanta",
+                "description": "Refresco individual frío (Fanta)."
+            },
+            "Font Vella": {
+                "name": "Font Vella",
+                "description": "Refresco individual frío (Font Vella)."
+            },
+            "Hawai": {
+                "name": "Hawai",
+                "description": "Refresco individual frío (Hawai)."
+            },
+            "Nestea": {
+                "name": "Nestea",
+                "description": "Refresco individual frío (Nestea)."
+            },
+            "Nestea Maracuyá": {
+                "name": "Nestea Maracuyá",
+                "description": "Refresco individual frío (Nestea Maracuyá)."
+            },
+            "Oasis Tropical": {
+                "name": "Oasis Tropical",
+                "description": "Refresco individual frío (Oasis Tropical)."
+            },
+            "Poms": {
+                "name": "Poms",
+                "description": "Refresco individual frío (Poms)."
+            },
+            "Red Bull": {
+                "name": "Red Bull",
+                "description": "Refresco individual frío (Red Bull)."
+            },
+            "Schweppes": {
+                "name": "Schweppes",
+                "description": "Refresco individual frío (Schweppes)."
+            },
+            "Sprite": {
+                "name": "Sprite",
+                "description": "Refresco individual frío (Sprite)."
+            },
+            "Vichy Catalán": {
+                "name": "Vichy Catalán",
+                "description": "Refresco individual frío (Vichy Catalán)."
+            },
+            "Descafeinado": {
+                "name": "Descafeinado",
+                "description": "Café descafeinado de máquina."
             },
             "Salsa Algerian": {
                 "name": "Salsa Algerian",
-                "description": "Salsa cremosa con base de tomate, cebolla picada y un equilibrado toque picante."
+                "description": "Pote adicional de Salsa Algerian."
             },
             "Salsa Andaluza": {
                 "name": "Salsa Andaluza",
-                "description": "Salsa tradicional a base de mayonesa, tomate y pimientos dulces."
+                "description": "Pote adicional de Salsa Andaluza."
             },
             "Salsa Barbacoa": {
                 "name": "Salsa Barbacoa",
-                "description": "Salsa con notas dulces y esencia de madera ahumada, ideal para carnes."
+                "description": "Pote adicional de Salsa Barbacoa."
             },
             "Salsa Biggie": {
                 "name": "Salsa Biggie",
-                "description": "Salsa especial para hamburguesas con un toque agridulce y especiado."
+                "description": "Pote adicional de Salsa Biggie."
             },
             "Salsa Brazil": {
                 "name": "Salsa Brazil",
-                "description": "Salsa exótica con un perfil de sabor dulce y afrutado único."
+                "description": "Pote adicional de Salsa Brazil."
             },
             "Salsa Chilli Thai": {
                 "name": "Salsa Chilli Thai",
-                "description": "Salsa agridulce con ligeros copos de chile picante al estilo oriental."
+                "description": "Pote adicional de Salsa Chilli Thai."
             },
             "Salsa Curry": {
                 "name": "Salsa Curry",
-                "description": "Mezcla aromática de especias orientales en una base suave y cremosa."
+                "description": "Pote adicional de Salsa Curry."
             },
             "Salsa Ketchup": {
                 "name": "Salsa Ketchup",
-                "description": "Salsa de tomate dulce elaborada con tomates maduros seleccionados."
+                "description": "Pote adicional de Salsa Ketchup."
             },
             "Salsa Marocaine": {
                 "name": "Salsa Marocaine",
-                "description": "Receta propia con especias tradicionales del Magreb."
+                "description": "Pote adicional de Salsa Marocaine."
             },
             "Salsa Mayonesa": {
                 "name": "Salsa Mayonesa",
-                "description": "Salsa clásica emulsionada con un toque de limón y sal."
+                "description": "Pote adicional de Salsa Mayonesa."
             },
             "Salsa Pita Kebab": {
                 "name": "Salsa Pita Kebab",
-                "description": "Salsa refrescante de yogur griego, ajo y hierbas aromáticas."
+                "description": "Pote adicional de Salsa Pita Kebab."
             },
             "Salsa Samurai": {
                 "name": "Salsa Samurai",
-                "description": "Salsa intensamente picante para paladares atrevidos. Nivel alto de picor."
+                "description": "Pote adicional de Salsa Samurai."
+            },
+            "Huevo Duro": {
+                "name": "Huevo Duro",
+                "description": "Extra de Huevo Duro."
+            },
+            "Huevo Frito": {
+                "name": "Huevo Frito",
+                "description": "Extra de Huevo Frito."
+            },
+            "Lonchas de Queso": {
+                "name": "Lonchas de Queso",
+                "description": "Extra de Lonchas de Queso."
+            },
+            "Mortadela": {
+                "name": "Mortadela",
+                "description": "Extra de Mortadela."
+            },
+            "Cafe Con Leche": {
+                "name": "Cafe Con Leche",
+                "description": "Producto adicional: Cafe Con Leche."
+            },
+            "Cafe Solo": {
+                "name": "Cafe Solo",
+                "description": "Producto adicional: Cafe Solo."
+            },
+            "Coca Cola Zero": {
+                "name": "Coca Cola Zero",
+                "description": "Producto adicional: Coca Cola Zero."
+            },
+            "Durum De Falafel": {
+                "name": "Durum De Falafel",
+                "description": "Producto adicional: Durum De Falafel."
+            },
+            "Durum De Pollo": {
+                "name": "Durum De Pollo",
+                "description": "Producto adicional: Durum De Pollo."
+            },
+            "Durum De Ternera": {
+                "name": "Durum De Ternera",
+                "description": "Producto adicional: Durum De Ternera."
+            },
+            "Durum Mix": {
+                "name": "Durum Mix",
+                "description": "Producto adicional: Durum Mix."
+            },
+            "Hamburguesa Americana": {
+                "name": "Hamburguesa Americana",
+                "description": "Producto adicional: Hamburguesa Americana."
+            },
+            "Hamburguesa Chicken Crispy": {
+                "name": "Hamburguesa Chicken Crispy",
+                "description": "Producto adicional: Hamburguesa Chicken Crispy."
+            },
+            "Hamburguesa Classica": {
+                "name": "Hamburguesa Classica",
+                "description": "Producto adicional: Hamburguesa Classica."
+            },
+            "Hamburguesa Queso Cabra": {
+                "name": "Hamburguesa Queso Cabra",
+                "description": "Producto adicional: Hamburguesa Queso Cabra."
+            },
+            "Hawaii": {
+                "name": "Hawaii",
+                "description": "Producto adicional: Hawaii."
+            },
+            "Huevos Estrellados Con Durum": {
+                "name": "Huevos Estrellados Con Durum",
+                "description": "Producto adicional: Huevos Estrellados Con Durum."
+            },
+            "Menu Durum": {
+                "name": "Menu Durum",
+                "description": "Producto adicional: Menu Durum."
+            },
+            "Menu Hamburguesa": {
+                "name": "Menu Hamburguesa",
+                "description": "Producto adicional: Menu Hamburguesa."
+            },
+            "Menu Pita": {
+                "name": "Menu Pita",
+                "description": "Producto adicional: Menu Pita."
+            },
+            "Menu Pizza": {
+                "name": "Menu Pizza",
+                "description": "Producto adicional: Menu Pizza."
+            },
+            "Menu Taco": {
+                "name": "Menu Taco",
+                "description": "Producto adicional: Menu Taco."
+            },
+            "Nestea Maracuya": {
+                "name": "Nestea Maracuya",
+                "description": "Producto adicional: Nestea Maracuya."
+            },
+            "Pizza Italia": {
+                "name": "Pizza Italia",
+                "description": "Producto adicional: Pizza Italia."
+            },
+            "Pizza Margarita": {
+                "name": "Pizza Margarita",
+                "description": "Producto adicional: Pizza Margarita."
+            },
+            "Pizza Mediterranea": {
+                "name": "Pizza Mediterranea",
+                "description": "Producto adicional: Pizza Mediterranea."
+            },
+            "Redbull": {
+                "name": "Redbull",
+                "description": "Producto adicional: Redbull."
+            },
+            "Tarta": {
+                "name": "Tarta",
+                "description": "Producto adicional: Tarta."
+            },
+            "Vichy Catalan": {
+                "name": "Vichy Catalan",
+                "description": "Producto adicional: Vichy Catalan."
             }
         }
     },

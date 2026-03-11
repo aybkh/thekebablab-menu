@@ -2,34 +2,36 @@
     "restaurantName": "The Kebab",
     "restaurantSuffix": "Lab",
     "seo": {
-        "title": "The Kebab Lab | Kebabs, Durum & Platos en Mataró",
-        "description": "Descubre los mejores Kebabs, Durum, Lahmacun y Falafel en Mataró. The Kebab Lab: Sabor auténtico, calidad Halal y ambiente único. ¡Pide online o visita nuestro local!",
-        "keywords": "kebab mataro, durum, lahmacun, falafel, comida rapida, halal, hamburguesas gourmet, batidos naturales, delivery mataro",
+        "title": "The Kebab Lab | Dale un GIRO al Kebab en Blanes",
+        "description": "El auténtico street food en Blanes. Descubre nuestros French Tacos, Smash Burgers, Dürüms y Kebabs. ¡Haz tu pedido online!",
+        "keywords": "kebab blanes, french tacos, smash burgers, durum, lahmacun, falafel, comida rapida, halal, delivery blanes, the kebab lab",
         "favicon": "/images/kebab-logo.png"
     },
     "brand": {
         "logoHeader": "/logo_303.svg",
         "logoFallback": "/images/kebab-logo.png",
-        "heroBadge": "📍 THE KEBAB LAB",
-        "footerText": "© 2026 The Kebab Lab."
+        "heroBadge": "📍 DALE UN GIRO AL KEBAB",
+        "footerText": "KHURRAM SHEHZAD - X7202138X | © 2026 The Kebab Lab."
     },
     "contact": {
-        "address": "The Kebab Lab, Mataró",
-        "mapsIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2986.4049283663367!2d2.4203880755420304!3d41.5388289865887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4b51a22542a71%3A0x6932e4c0ba7430bd!2sThe%20Kebab%20Lab!5e0!3m2!1sca!2ses!4v1770400135417!5m2!1sca!2ses",
-        "phone": "+34 631 000 858"
+        "address": "Carrer de Sant Vicenç Ferrer, 37, 17300 Blanes, Girona",
+        "mapsIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.3406326265086!2d2.7885472!3d41.6753046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb15f2ac0ab44d%3A0xe7448d30e06acc91!2sCarrer%20de%20Sant%20Vicen%C3%A7%20Ferrer%2C%2037%2C%2017300%20Blanes%2C%20Girona!5e0!3m2!1ses!2ses!4v1715000000000!5m2!1ses!2ses",
+        "phone": "+34 647 95 20 45",
+        "phone2": "972 94 70 25",
+        "email": "thekebablab1@gmail.com"
     },
     "socials": {
-        "instagram": "https://www.instagram.com/thekebablab",
-        "tiktok": "https://www.tiktok.com/@thekebablab",
-        "uberEats": "",
-        "uberEatsLabel": "Pide en Uber Eats"
+        "instagram": "https://www.instagram.com/the.kebab.lab/",
+        "tiktok": "https://www.tiktok.com/@the.kebab.lab",
+        "uberEats": "https://www.ubereats.com/es/store/the-kebab-lab-girona/OX7idNCNSCO225GnUz9nmw",
+        "uberEatsLabel": "PEDIR EN UBER EATS"
     },
     "colors": {
-        "bg-base": "#265b36",
-        "primary": "#D65A65",
-        "secondary": "#F1C40F",
-        "surface": "#FDFBF7",
-        "text-main": "#142818",
+        "bg-base": "#111111",
+        "primary": "#F26122",
+        "secondary": "#F26122",
+        "surface": "#1a1a1a",
+        "text-main": "#ffffff",
         "text-on-bg": "#FFFFFF",
         "ticket-bg": "#FAFAFA"
     }
