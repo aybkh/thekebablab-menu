@@ -1,0 +1,143 @@
+/* VideoCard.css - Estilos del reproductor de video */
+
+.video-card-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+}
+
+.video-card {
+    width: 280px;
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 8px 8px 0px var(--color-shadow);
+    overflow: hidden !important;
+    position: relative;
+    transform: rotate(3deg);
+    transition: transform 0.5s ease;
+}
+
+.video-card:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+@media (min-width: 768px) {
+    .video-card {
+        width: 320px;
+    }
+}
+
+.video-frame-overlay {
+    position: absolute;
+    inset: -2px;
+    border: 6px solid var(--color-border);
+    border-radius: 30px;
+    pointer-events: none;
+    z-index: 60;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+}
+
+.video-inner-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    overflow: hidden;
+    border-radius: 26px;
+}
+
+.video-inner-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    pointer-events: none;
+    z-index: 10;
+    border-radius: 0 0 26px 26px;
+}
+
+.video-controls-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 70;
+    pointer-events: none;
+}
+
+.arrow-btn {
+    pointer-events: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 30;
+}
+
+.arrow-btn:hover {
+    background: var(--color-primary);
+    color: white;
+    border: 3px solid var(--color-border);
+}
+
+.arrow-prev { left: 10px; }
+.arrow-next { right: 10px; }
+
+.video-info-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    pointer-events: auto;
+}
+
+.video-title {
+    font-family: 'Black Ops One', cursive;
+    font-size: 1.1rem;
+    color: #fff;
+    text-shadow: 2px 2px 0px var(--color-border);
+    margin-bottom: 10px;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.dot.active {
+    background: var(--color-primary);
+    transform: scale(1.2);
+}
+

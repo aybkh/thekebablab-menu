@@ -3,9 +3,10 @@ import Navbar from '../components/layout/Navbar';
 import FeaturedMenu from '../components/landing/FeaturedMenu'; // NEW IMPORT
 import ReviewsSection from '../components/landing/ReviewsSection';
 import HoursCard from '../components/landing/HoursCard';
+import DeliverySection from '../components/landing/DeliverySection';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Instagram, ChevronLeft, ChevronRight } from 'lucide-react';
-import './LandingPage.css';
+import '../styles/LandingPage.css'; 
 import { useTenant } from '../context/TenantContext';
 
 const videos = [
@@ -65,27 +66,15 @@ const LandingPage = () => {
                     {/* Left: Text & Image Slider - NOW CENTERED ON PC TOO */}
                     <div className="text-center">
 
-                        <div className="hero-badge">{theme.brand.heroBadge}</div>
-
                         <h1 className="hero-title">{theme.restaurantName.toUpperCase()}<br /><span>{theme.restaurantSuffix}</span></h1>
 
-                        {/* HERO IMAGE SLIDER (Class-based Responsive Alignment) */}
                         <div className="hero-slider-container">
                             {bannerImages.map((src, index) => (
                                 <img
                                     key={index}
                                     src={src}
                                     alt="Hero Slide"
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover',
-                                        position: 'absolute',
-                                        top: 0,
-                                        left: 0,
-                                        opacity: currentBanner === index ? 1 : 0,
-                                        transition: 'opacity 1s ease-in-out' // Clean Fade
-                                    }}
+                                    className={`hero-slide ${currentBanner === index ? 'active' : ''}`}
                                 />
                             ))}
                         </div>
@@ -94,34 +83,10 @@ const LandingPage = () => {
                             {theme.seo.description}
                         </p>
 
-                        <div className="hero-buttons" style={{ justifyContent: 'center', marginTop: '20px' }}>
-                            <Link to="/menu" style={{ textDecoration: 'none', width: '100%', maxWidth: '350px' }}>
+                        <div className="hero-buttons">
+                            <Link to="/menu" className="hero-link-wrapper">
                                 {/* NEW BUTTON STYLE: Hero Badge Style (Outline Gold + Glass) */}
-                                <button className="btn-primary" style={{
-                                    width: '100%',
-                                    padding: '20px 40px',
-                                    fontSize: '1.4rem',
-                                    borderRadius: '50px',
-                                    background: 'var(--primary)', // Orange
-                                    color: 'white', 
-                                    border: '3px solid #000', // Black Border
-                                    cursor: 'pointer',
-                                    fontFamily: "'Black Ops One', cursive",
-                                    letterSpacing: '2px',
-                                    boxShadow: '8px 8px 0px rgba(0,0,0,1)',
-                                    transition: 'all 0.2s ease',
-                                    fontWeight: 'bold',
-                                    textTransform: 'uppercase'
-                                }}
-                                    onMouseEnter={(e) => {
-                                        e.currentTarget.style.transform = 'translate(-4px, -4px)';
-                                        e.currentTarget.style.boxShadow = '12px 12px 0px rgba(0,0,0,1)';
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        e.currentTarget.style.transform = 'translate(0, 0)';
-                                        e.currentTarget.style.boxShadow = '8px 8px 0px rgba(0,0,0,1)';
-                                    }}
-                                >
+                                <button className="hero-main-btn">
                                     VER CARTA
                                 </button>
                             </Link>
@@ -130,20 +95,11 @@ const LandingPage = () => {
 
                     {/* Right: Video Player Slide */}
                     <div className="video-card-container">
-                        <div className="video-card" style={{ border: 'none', position: 'relative', borderRadius: '30px' }}>
-
-                            {/* FRAME OVERLAY (Reduces bleeding) */}
-                            <div style={{
-                                position: 'absolute', inset: -2,
-                                border: '4px solid #000',
-                                borderRadius: '30px',
-                                pointerEvents: 'none',
-                                zIndex: 60,
-                                boxShadow: '8px 8px 0px rgba(0,0,0,1)'
-                            }}></div>
+                        <div className="video-card">
+                            <div className="video-frame-overlay"></div>
 
                             {/* Video Container */}
-                            <div style={{ position: 'absolute', top: 0, bottom: 0, left: 0, right: 0, background: '#000', overflow: 'hidden', borderRadius: '26px' }}>
+                            <div className="video-inner-container">
                                 <video
                                     key={videos[currentVideoIndex]}
                                     src={videos[currentVideoIndex]}
@@ -151,15 +107,14 @@ const LandingPage = () => {
                                     muted
                                     playsInline
                                     onEnded={handleVideoEnd}
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                 />
                             </div>
 
                             {/* Gradient Overlay */}
-                            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '30%', background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)', pointerEvents: 'none', zIndex: 10, borderRadius: '0 0 26px 26px' }}></div>
+                            <div className="video-gradient-overlay"></div>
 
                             {/* CONTROLS LAYER */}
-                            <div style={{ position: 'absolute', inset: 0, zIndex: 70, pointerEvents: 'none' }}>
+                            <div className="video-controls-layer">
 
                                 {/* Left Arrow */}
                                 <button onClick={(e) => { e.stopPropagation(); prevVideo(); }} className="arrow-btn arrow-prev">
@@ -172,25 +127,18 @@ const LandingPage = () => {
                                 </button>
 
                                 {/* Title & Dots */}
-                                <div style={{ position: 'absolute', bottom: '20px', left: 0, right: 0, textAlign: 'center', pointerEvents: 'auto' }}>
-
-                                    {/* Title */}
-                                    <p style={{ fontFamily: "'Black Ops One', cursive", fontSize: '1.1rem', color: '#fff', textShadow: '0 2px 4px rgba(0,0,0,0.8)', marginBottom: '10px' }}>
+                                <div className="video-info-overlay">
+                                    <p className="video-title">
                                         {videoTitles[currentVideoIndex]}
                                     </p>
 
                                     {/* Dots Indicator */}
-                                    <div style={{ display: 'flex', justifyContent: 'center', gap: '8px' }}>
+                                    <div className="dots-container">
                                         {videos.map((_, idx) => (
                                             <button
                                                 key={idx}
                                                 onClick={() => setCurrentVideoIndex(idx)}
-                                                style={{
-                                                    width: '8px', height: '8px', borderRadius: '50%', border: 'none', padding: 0,
-                                                    background: idx === currentVideoIndex ? 'var(--primary)' : 'rgba(255,255,255,0.4)',
-                                                    cursor: 'pointer', transition: 'all 0.3s',
-                                                    transform: idx === currentVideoIndex ? 'scale(1.2)' : 'scale(1)'
-                                                }}
+                                                className={`dot ${idx === currentVideoIndex ? 'active' : ''}`}
                                             />
                                         ))}
                                     </div>
@@ -210,69 +158,56 @@ const LandingPage = () => {
 
             {/* LOCATION & MAP */}
             <section id="location" className="location-section">
-                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-
-                    {/* Main Title H2 */}
-                    <div className="section-head">
+                <div className="max-w-[1200px] mx-auto">
+                    <div className="section-head mb-12">
                         <h2>UBICACIÓN</h2>
                     </div>
 
-                    {/* LOCATION CONTAINER (Forces Stack Layout on PC) */}
                     <div className="location-stack-container">
-                        {/* MAP (Column 1) */}
                         <div className="map-frame">
                             <iframe
                                 title="Mapa" width="100%" height="100%" frameBorder="0"
-                                style={{ border: 0 }}
+                                className="map-iframe"
                                 src={theme.contact.mapsIframe}
                                 allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
                             ></iframe>
 
                             <div className="map-overlay">
-                                <div style={{ background: '#142818', padding: '10px', borderRadius: '50%', color: 'white', display: 'flex' }}>
+                                <div className="map-pin-icon">
                                     <MapPin size={22} />
                                 </div>
-                                <div style={{ flex: 1 }}>
-                                    <p style={{ fontWeight: 'bold', margin: 0, color: 'black' }}>{theme.restaurantName} {theme.restaurantSuffix}</p>
-                                    <p style={{ fontSize: '0.85rem', color: '#555', margin: 0 }}>{theme.contact.address}</p>
+                                <div className="flex-1">
+                                    <p className="font-bold m-0 text-black">{theme.restaurantName} {theme.restaurantSuffix}</p>
+                                    <p className="text-sm text-gray-600 m-0">{theme.contact.address}</p>
                                 </div>
                                 <a href={theme.contact.mapsIframe} target="_blank" rel="noreferrer"
-                                    style={{ background: 'var(--secondary)', color: 'var(--text-main)', padding: '8px 12px', borderRadius: '8px', fontWeight: 'bold', textDecoration: 'none', fontSize: '0.8rem', whiteSpace: 'nowrap' }}>
+                                    className="map-view-btn">
                                     VER MAPA ➔
                                 </a>
-                            </div>
-                        </div>
-
-                        {/* HOURS & DELIVERY (Column 2 -> Now Stacked) */}
-                        <div style={{ width: '100%', padding: '20px 0' }}>
-
-                            <div className="section-head" style={{ marginBottom: '15px' }}>
-                                <h2>HORARIOS</h2>
-                            </div>
-
-                            <HoursCard />
-
-                            <div id="delivery" className="section-head" style={{ marginTop: '40px', marginBottom: '15px' }}>
-                                <h2>PEDIR A DOMICILIO</h2>
-                            </div>
-
-                            <div className="delivery-grid" style={{ gridTemplateColumns: '1fr' }}>
-                                {theme.socials.uberEats && (
-                                    <a href={theme.socials.uberEats} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
-                                        <button className="delivery-btn" style={{ background: '#06C167', width: '100%', height: '100%' }}>
-                                            {theme.socials.uberEatsLabel || 'PEDIR EN UBER EATS'}
-                                        </button>
-                                    </a>
-                                )}
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
+            {/* HOURS SECTION */}
+            <section id="hours" className="location-section">
+                <div className="max-w-[1200px] mx-auto">
+                    <div className="section-head mb-12">
+                        <h2>HORARIOS</h2>
+                    </div>
+                    <div className="location-stack-container">
+                        <HoursCard />
+                    </div>
+                </div>
+            </section>
+
+            {/* DELIVERY SECTION */}
+            <DeliverySection />
+
             {/* FOOTER */}
             <footer id="contact" className="landing-footer">
-                <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div className="max-w-[1200px] mx-auto flex flex-col items-center">
 
                     <div className="social-links">
                         {theme.socials.instagram && <a href={theme.socials.instagram} target="_blank" rel="noreferrer" className="social-btn"><Instagram size={22} /></a>}
@@ -293,15 +228,13 @@ const LandingPage = () => {
                         {theme.contact.phone && <a href={`tel:${theme.contact.phone.replace(/\s+/g, '')}`} className="social-btn"><Phone size={22} /></a>}
                     </div>
 
-                    <div style={{ textAlign: 'center' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '20px' }}>
-                            <span style={{ fontFamily: "'Black Ops One', cursive", fontSize: '1.2rem', color: 'white' }}>{theme.restaurantName} <span style={{ color: 'var(--secondary)' }}>{theme.restaurantSuffix}</span></span>
-                            <img src={theme.brand.logoHeader || theme.brand.logoFallback} alt={theme.restaurantName} style={{ height: '40px' }} onError={(e) => e.target.src = theme.brand.logoFallback} />
-                        </div>
+                    <div className="text-center">
 
-                        <p style={{ margin: 0 }}>{theme.brand.footerText}</p>
-                        <p style={{ fontSize: '0.8rem', marginTop: '10px', margin: '10px 0 0' }}>
-                            Dev by <a href="https://ayoubjerari.com" style={{ color: 'var(--primary)', textDecoration: 'none' }}>AyoubDev</a>
+                        <p className="m-0">{theme.brand.footerText}</p>
+                        <p className="footer-dev-text">
+                            <a href="https://ayoubjerari.com" target="_blank" rel="noreferrer" className="dev-link">
+                                DESIGNED & DEVELOPED BY <span className="dev-name">AYOUBDEV</span>
+                            </a>
                         </p>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ function App() {
   const { theme, isLoading, error } = useTenant();
 
   if (isLoading) {
-    return <div style={{ display: 'flex', height: '100vh', justifyContent: 'center', alignItems: 'center', background: '#1a1a1a', color: 'var(--primary)', fontFamily: "'Black Ops One', cursive", fontSize: '1.5rem' }}>CARGANDO...</div>;
+    return <div style={{ display: 'flex', height: '100vh', justifyContent: 'center', alignItems: 'center', background: 'var(--color-sidebar)', color: 'var(--color-primary)', fontFamily: "'Montserrat', sans-serif", fontWeight: 'bold', fontSize: '1.5rem' }}>CARGANDO...</div>;
   }
 
   if (error) {

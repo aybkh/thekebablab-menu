@@ -1,0 +1,373 @@
+/* POSPage.css - Main layout and header styles */
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-base);
+}
+
+.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px; /* Removed vertical padding to control height via fixed value */
+    background-color: var(--color-sidebar);
+    border-bottom: 2px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 60px; /* Force consistent height for sticky calculations */
+}
+
+.mobile-menu-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.mobile-logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-logo {
+    height: 40px;
+    object-fit: contain;
+}
+
+.product-area {
+    flex: 1;
+    padding-left: 250px; /* Sidebar width matching CategorySidebar */
+    background-image: linear-gradient(rgba(244, 145, 102, 0.555), rgba(244, 145, 102, 0.555)), url('/ladrillo.jpg');
+    background-blend-mode: multiply;
+    background-size: 150px;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.updating-menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.updating-menu-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.updating-menu-title {
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.updating-menu-text {
+    color: #ecf0f1;
+    font-size: 1.2rem;
+    max-width: 500px;
+}
+
+.category-section-header {
+    position: sticky;
+    top: 60px; /* Offset to stay below main header on all devices */
+    background-image: linear-gradient(rgba(244, 145, 102, 0.555), rgba(244, 145, 102, 0.555)), url('/ladrillo.jpg');
+    background-blend-mode: multiply;
+    background-size: 150px;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(8px);
+    z-index: 20;
+    padding: 16px 0;
+    margin-bottom: 32px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.category-title {
+    font-family: 'Black Ops One', cursive;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    color: var(--color-text-main);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 0 15px 40px;
+}
+
+.empty-category-msg {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    padding: 40px 0;
+}
+
+.pos-footer-spacer {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pos-footer-link {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* --- Order Panel (Ticket Style) --- */
+.order-panel {
+    width: 380px;
+    background-color: #f7f3e9; /* Off-white ticket color */
+    color: #333;
+    border-left: 4px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto Mono', monospace;
+    position: relative;
+    flex-shrink: 0;
+    height: 100vh;
+    z-index: 60;
+}
+
+.cart-header {
+    background: var(--color-sidebar);
+    color: var(--color-primary);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--color-border);
+}
+
+.cart-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-family: 'Black Ops One', cursive;
+}
+
+.cart-items {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    border-bottom: 2px dashed #ccc;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px dashed #ddd;
+    font-size: 0.9rem;
+}
+
+.item-qty {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-name {
+    font-weight: 700;
+}
+
+.item-notes {
+    font-size: 0.8rem;
+    color: #666;
+    font-style: italic;
+    display: block;
+    margin-top: 4px;
+}
+
+.item-price {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.cart-footer {
+    padding: 20px;
+    background: #f0f0f0;
+    border-top: 4px solid var(--color-border);
+}
+
+.total-display {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: 'Black Ops One', cursive;
+    color: #000;
+}
+
+.btn-checkout {
+    width: 100%;
+    background: var(--color-primary);
+    color: #fff;
+    border: 4px solid var(--color-border);
+    padding: 16px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Black Ops One', cursive;
+    letter-spacing: 1.5px;
+    transition: all 0.2s;
+    box-shadow: 6px 6px 0px var(--color-shadow);
+    border-radius: 4px;
+}
+
+.btn-checkout:hover {
+    background: var(--color-primary-hover);
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0px var(--color-shadow);
+}
+
+/* Tablet & Mobile Overrides for POS Layout */
+@media (max-width: 1024px) {
+    .mobile-header {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .product-area {
+        padding-left: 0;
+    }
+
+    .category-section-header {
+        top: 60px; /* Match mobile header height */
+        padding: 12px 0;
+        margin-bottom: 20px;
+    }
+
+    .category-title {
+        font-size: 1.4rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Force 2 columns on mobile */
+        gap: 12px;
+        padding: 0 12px 40px;
+    }
+
+    .order-panel {
+        position: fixed;
+        right: 0;
+        top: 60px; /* Below mobile header */
+        width: 85%;
+        max-width: 380px;
+        height: calc(100vh - 60px);
+        transform: translateX(100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 2000;
+    }
+
+    .order-panel.mobile-open {
+        transform: translateX(0);
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 column on tiny screens */
+    }
+}
+
+/* --- PRINT STYLES --- */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .app-container,
+    .mobile-fab-container,
+    .mobile-cart-overlay,
+    .modal-overlay {
+        display: none !important;
+    }
+
+    #printable-receipt,
+    #printable-receipt * {
+        visibility: visible;
+    }
+
+    #printable-receipt {
+        display: block !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        color: black;
+        background: white;
+        font-family: 'Roboto Mono', monospace;
+    }
+
+    #printable-receipt h2 {
+        font-family: 'Black Ops One', cursive;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    #printable-receipt p {
+        margin: 2px 0;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    #printable-receipt table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    #printable-receipt th {
+        border-bottom: 2px dashed black;
+        padding: 5px 0;
+        text-align: left;
+    }
+
+    #printable-receipt td {
+        padding: 5px 0;
+        vertical-align: top;
+    }
+
+    .receipt-total {
+        margin-top: 20px;
+        border-top: 2px dashed black;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        font-size: 1.2rem;
+        font-family: 'Black Ops One', cursive;
+    }
+
+    body {
+        background: white;
+    }
+}

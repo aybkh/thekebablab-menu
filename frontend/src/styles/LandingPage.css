@@ -1,0 +1,15 @@
+/* LandingPage.css - Punto de entrada de estilos modulares */
+
+@import './landing/Base.css';
+@import './landing/Navbar.css';
+@import './landing/Hero.css';
+@import './landing/FeaturedMenu.css';
+@import './landing/VideoCard.css';
+@import './landing/Reviews.css';
+@import './landing/Location.css';
+@import './landing/Hours.css';
+@import './landing/Delivery.css';
+@import './landing/Footer.css';
+
+/* Los estilos específicos de la página que no encajen en módulos pueden ir aquí, 
+   pero se recomienda mantener la estructura modular. */

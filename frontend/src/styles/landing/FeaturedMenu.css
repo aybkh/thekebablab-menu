@@ -1,0 +1,163 @@
+/* FeaturedMenu.css - Estilos de la sección de Favoritos */
+
+.featured-section {
+    padding: 60px 20px;
+    background-image: linear-gradient(rgba(41, 12, 0, 0.82), rgba(41, 12, 0, 0.82)), url('/ladrillo.jpg');
+    background-size: 200px;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 10;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+    .featured-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+.featured-card {
+    position: relative;
+    width: 100%;
+    background: var(--color-sidebar);
+    border-radius: 16px;
+    border: 4px solid var(--color-primary);
+    box-shadow: 8px 8px 0px var(--color-shadow);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transform: rotate(-3deg);
+}
+
+.featured-card:nth-child(even) {
+    transform: rotate(-3deg);
+}
+
+@media (min-width: 768px) {
+    .featured-card {
+        width: 280px;
+        transform: rotate(-2deg);
+        margin: 10px;
+    }
+    .featured-card:hover {
+        transform: rotate(0deg) scale(1.05);
+        z-index: 10;
+    }
+}
+
+.card-image-container {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-bottom: 4px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+    .card-image-container {
+        height: 220px;
+    }
+}
+
+.featured-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.featured-slide.active {
+    opacity: 1;
+}
+
+.featured-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: var(--color-primary);
+    color: var(--color-sidebar);
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 2px solid var(--color-border);
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    z-index: 20;
+}
+
+.card-arrow.prev { left: 5px; }
+.card-arrow.next { right: 5px; }
+
+.card-content {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-family: 'Black Ops One', cursive;
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    margin: 0 0 4px 0;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-shadow: 2px 2px 0px var(--color-shadow);
+}
+
+.card-content p {
+    color: #ccc;
+    font-size: 0.75rem;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (min-width: 768px) {
+    .card-content { padding: 20px; }
+    .card-content h3 { font-size: 1.4rem; margin-bottom: 5px; }
+    .card-content p { font-size: 0.9rem; display: block; }
+    .card-badge { bottom: 10px; right: 10px; padding: 4px 10px; font-size: 0.8rem; }
+}
+
+.featured-subtitle-head {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}

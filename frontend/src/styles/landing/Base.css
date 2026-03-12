@@ -1,0 +1,145 @@
+/* Base.css - Estilos base y utilidades de la Landing Page */
+
+.landing-page {
+    background-color: var(--color-bg-global);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* --- Utilities --- */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.w-full { width: 100%; }
+.text-center { text-align: center; }
+.hidden { display: none; }
+
+/* Grid System Base (Mobile First) */
+.landing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+@media (min-width: 768px) {
+    .landing-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 40px;
+    }
+    .text-md-left { text-align: left; }
+}
+
+@media (min-width: 992px) {
+    .landing-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 80px;
+        align-items: center;
+    }
+}
+
+/* Unified Section Headings */
+.section-head {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-head h2 {
+    font-family: 'Black Ops One', cursive;
+    font-size: 2.5rem;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    text-shadow: 4px 4px 0px var(--color-shadow);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.section-head h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--color-sidebar);
+    margin: 15px auto 0;
+}
+
+.section-head h3 {
+    font-family: 'Black Ops One', cursive;
+    font-size: 1.8rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .section-head h2 { font-size: 2rem; }
+    .section-head h3 { font-size: 1.5rem; }
+}
+
+/* Reviews Section Base (Small Styles) */
+.reviews-section {
+    padding: 60px 0;
+    background: var(--color-sidebar);
+    overflow: hidden;
+}
+
+.marquee-container {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+    padding: 0 20px;
+}
+
+.review-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+    position: relative;
+}
+
+.google-icon-absolute {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.hero-link-wrapper {
+    text-decoration: none;
+    width: 100%;
+    max-width: 350px;
+    display: inline-block;
+}
+
+.map-iframe {
+    border: 0;
+}
+

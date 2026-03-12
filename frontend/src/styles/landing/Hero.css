@@ -1,0 +1,151 @@
+/* Hero.css - Estilos de la sección principal */
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 100px 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(242, 97, 34, 0.4), rgba(132, 21, 0, 0.861)), url('/ladrillo.jpg');
+    background-blend-mode: multiply;
+    background-size: 150px;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 4px solid var(--color-border);
+    color: var(--color-sidebar);
+    font-weight: bold;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-title {
+    font-family: 'Black Ops One', cursive;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 6px 6px 0px var(--color-shadow);
+}
+
+.hero-title span {
+    color: var(--color-primary);
+    text-shadow: 6px 6px px var(--color-shadow);
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    .hero-section {
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    font-weight: 600;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.hero-slider-container {
+    width: 100%;
+    max-width: 450px;
+    height: 250px;
+    margin: 25px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 6px solid var(--color-border);
+    box-shadow: 10px 10px 0px var(--color-shadow);
+    position: relative;
+    background: #000;
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.hero-slider-container:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+@media (min-width: 768px) {
+    .hero-slider-container {
+        margin: 30px auto;
+    }
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.hero-main-btn {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    border-radius: 50px;
+    background: var(--color-primary);
+    backdrop-filter: blur(4px);
+    color: var(--color-sidebar);
+    border: 3px solid var(--color-border);
+    cursor: pointer;
+    font-family: 'Black Ops One', cursive;
+    letter-spacing: 2px;
+    box-shadow: 6px 6px 0px var(--color-shadow);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero-main-btn:hover {
+    background: var(--color-primary) !important;
+    color: var(--color-sidebar) !important;
+    transform: scale(1.05);
+    box-shadow: 6px 6px 0px var(--color-shadow) !important;
+}
+
+.hero-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+

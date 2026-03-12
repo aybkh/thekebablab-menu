@@ -1,0 +1,26 @@
+/* Reviews.css - Estilos de la sección de reseñas */
+
+.reviews-section {
+    padding: 60px 0;
+    background: var(--color-sidebar);
+    overflow: hidden;
+    position: relative;
+}
+
+.reviews-google-summary {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.marquee-container:hover {
+    animation-play-state: paused;
+}
+
+/* Las utilidades marquee y review-card ya están en Base.css, 
+   aquí añadimos ajustes específicos si son necesarios. */

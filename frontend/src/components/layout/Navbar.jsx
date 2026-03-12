@@ -50,87 +50,58 @@ const Navbar = () => {
     };
 
     return (
-        <nav style={{
-            position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 1000,
-            background: scrolled || isOpen ? 'rgba(26, 26, 26, 0.98)' : 'rgba(26, 26, 26, 0.5)',
-            backdropFilter: 'blur(10px)',
-            transition: 'all 0.3s ease',
-            borderBottom: scrolled ? '1px solid rgba(242, 97, 34, 0.2)' : 'none',
-            padding: '10px 0'
-        }}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className={`landing-nav ${scrolled || isOpen ? 'scrolled' : 'transparent'} ${isOpen ? 'open' : ''}`}>
+            <div className="nav-container">
                 {/* Header Container */}
-                <div style={{ height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'relative' }}>
+                <div className="nav-content">
 
-                    {/* 1. LEFT: Mobile Menu Button */}
-                    <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
-                        <div className="md:hidden">
-                            <button onClick={() => setIsOpen(!isOpen)} style={{ background: 'none', border: 'none', color: 'white', padding: '8px', display: 'flex' }}>
-                                {isOpen ? <X size={30} /> : <Menu size={30} />}
-                            </button>
+                    {/* Left Section: Mobile Menu Button + Brand Title */}
+                    <div className="nav-left-section">
+                        <button onClick={() => setIsOpen(!isOpen)} className="nav-btn-mobile md:hidden">
+                            {isOpen ? <X size={30} /> : <Menu size={30} />}
+                        </button>
+                        
+                        <div className="nav-brand-container" onClick={() => navigate('/')}>
+                            <span className="nav-brand-text">
+                                {theme.restaurantName} {theme.restaurantSuffix && <span>{theme.restaurantSuffix}</span>}
+                            </span>
                         </div>
                     </div>
 
-                    {/* 2. CENTER: TEXT BRANDING (Absolute Center) */}
-                    <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', zIndex: 10, width: 'max-content' }} onClick={() => navigate('/')}>
-                        <span style={{
-                            fontFamily: "'Black Ops One', cursive",
-                            fontSize: '1.4rem',
-                            color: 'white',
-                            lineHeight: 1,
-                            textShadow: '0 2px 4px rgba(0,0,0,0.5)',
-                            cursor: 'pointer'
-                        }}>
-                            {theme.restaurantName} {theme.restaurantSuffix && <span style={{ color: 'var(--secondary)' }}>{theme.restaurantSuffix}</span>}
-                        </span>
-                    </div>
-
-                    {/* 3. RIGHT: LOGO and Desktop Menu */}
-                    <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '20px' }}>
-
-                        {/* Desktop Menu Items */}
-                        <div className="hidden md:flex items-center space-x-6">
-                            {navItems.map((item, idx) => {
-                                const hash = getHash(item);
-                                return (
-                                    <button key={idx} onClick={() => handleNavClick(hash)}
-                                        style={{
-                                            background: 'none', border: 'none', color: 'white',
-                                            fontFamily: "'Montserrat', sans-serif", fontWeight: '600', fontSize: '0.85rem', cursor: 'pointer',
-                                            letterSpacing: '1px', transition: 'color 0.2s'
-                                        }}
-                                        className="hover:text-[var(--primary)]">
-                                        {item}
-                                    </button>
-                                );
-                            })}
-
-                            <Link to="/menu" style={{ textDecoration: 'none' }}>
-                                <button className="btn-primary" style={{
-                                    padding: '8px 20px', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '8px',
-                                    background: 'var(--primary)', color: 'white', border: 'none', borderRadius: '50px',
-                                    fontFamily: "'Black Ops One', cursive", cursor: 'pointer'
-                                }}>
-                                    PEDIR
+                    {/* Center/Main Section: Desktop Menu Links */}
+                    <div className="nav-menu-section desktop-only">
+                        {navItems.map((item, idx) => {
+                            const hash = getHash(item);
+                            return (
+                                <button key={idx} onClick={() => handleNavClick(hash)}
+                                    className="nav-link-btn">
+                                    {item}
                                 </button>
-                            </Link>
-                        </div>
+                            );
+                        })}
 
-                        {/* Logo on the Absolute Right */}
-                        <img src={theme.brand.logoHeader || theme.brand.logoFallback} alt="Logo" style={{ height: '50px', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))', cursor: 'pointer', marginRight: '15px' }}
-                            onError={(e) => e.target.src = theme.brand.logoFallback} onClick={() => navigate('/')} />
+                        <Link to="/menu" className="no-underline">
+                            <button className="nav-link-btn btn-order-style">
+                                VER CARTA
+                            </button>
+                        </Link>
+                    </div>
 
+                    {/* Right Section: Brand Logo */}
+                    <div className="nav-logo-section">
+                        <img 
+                            src={theme.brand.logoHeader || theme.brand.logoFallback} 
+                            alt="Logo" 
+                            className="nav-logo-right"
+                            onError={(e) => e.target.src = theme.brand.logoFallback} 
+                            onClick={() => navigate('/')} 
+                        />
                     </div>
                 </div>
             </div>
 
             {/* Mobile Sidebar/Drawer */}
-            <div style={{
-                position: 'fixed', top: '81px', left: 0, width: '100%', height: 'calc(100vh - 81px)',
-                background: '#1a1a1a', transform: isOpen ? 'translateX(0)' : 'translateX(-100%)',
-                transition: 'transform 0.3s ease-in-out', padding: '20px', display: 'flex', flexDirection: 'column', gap: '15px',
-                zIndex: 999
-            }}>
+            <div className={`nav-mobile-sidebar ${isOpen ? 'open' : ''}`}>
                 {navItems.map((item, idx) => {
                     const hash = getHash(item);
                     let Icon = null;
@@ -140,24 +111,15 @@ const Navbar = () => {
                     else if (item === 'CONTACTO') Icon = Phone;
 
                     return (
-                        <button key={idx} onClick={() => handleNavClick(hash)}
-                            style={{
-                                background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'white',
-                                fontFamily: "'Black Ops One', cursive", fontSize: '1.2rem', padding: '16px',
-                                letterSpacing: '1px', textAlign: 'left', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '15px'
-                            }}>
-                            {Icon && <Icon size={24} color="var(--primary)" />}
+                        <button key={idx} onClick={() => handleNavClick(hash)} className="nav-mobile-item">
+                            {Icon && <Icon size={24} color="var(--color-primary)" />}
                             {item}
                         </button>
                     );
                 })}
-                <div style={{ marginTop: 'auto', marginBottom: '20px' }}>
-                    <Link to="/menu" style={{ width: '100%', textDecoration: 'none' }} onClick={() => setIsOpen(false)}>
-                        <button style={{
-                            width: '100%', padding: '16px', fontSize: '1.4rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '12px',
-                            background: 'var(--primary)', color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer',
-                            fontFamily: "'Black Ops One', cursive"
-                        }}>
+                <div className="mt-auto mb-5">
+                    <Link to="/menu" className="w-full no-underline" onClick={() => setIsOpen(false)}>
+                        <button className="nav-mobile-order-btn">
                             <Utensils size={28} /> VER CARTA
                         </button>
                     </Link>

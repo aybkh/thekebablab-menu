@@ -12,6 +12,8 @@ import CategorySidebar from '../components/pos/CategorySidebar';
 import ProductCard from '../components/pos/ProductCard';
 import ProductModal from '../components/pos/ProductModal';
 
+import '../styles/pos/POSPage.css';
+
 // Helper normalization function requested by user
 const normalizeId = (str) => {
     if (!str) return '';
@@ -19,7 +21,7 @@ const normalizeId = (str) => {
 };
 
 const POSPage = () => {
-    const { t, getCategoryName, getTranslatedProduct, language, setLanguage } = useLanguage();
+    const { t, getCategoryName, language, setLanguage } = useLanguage();
     const { theme } = useTenant();
 
     // App Flow State
@@ -91,7 +93,9 @@ const POSPage = () => {
         const normalizedStr = normalizeId(cat.name);
         const el = document.getElementById(`category-${normalizedStr}`);
         if (el) {
-            const yOffset = -20;
+            // Smaller offset for mobile to account for smaller header
+            const isMobile = window.innerWidth <= 1024;
+            const yOffset = isMobile ? -62 : -20;
             const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
@@ -140,21 +144,38 @@ const POSPage = () => {
                 isMobileVisible={isMobileMenuOpen}
             />
 
+            {/* Mobile Menu Backdrop */}
+            {isMobileMenuOpen && (
+                <div 
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        background: 'rgba(0,0,0,0.6)',
+                        zIndex: 40,
+                        backdropFilter: 'blur(2px)'
+                    }}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                />
+            )}
+
             <main className="product-area" ref={mainContainerRef}>
                 {categories.length === 0 ? (
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '50vh', padding: '20px', textAlign: 'center' }}>
-                        <div style={{ fontSize: '60px', marginBottom: '20px' }}>🚧</div>
-                        <h2 className="font-black-ops" style={{ color: 'var(--primary)', fontSize: '2.3rem', marginBottom: '10px' }}>ESTAMOS ACTUALIZANDO NUESTRO MENÚ</h2>
-                        <p style={{ color: '#ecf0f1', fontSize: '1.2rem', maxWidth: '500px' }}>El catálogo se está sincronizando en estos momentos. Por favor, vuelve a intentarlo en unos minutos.</p>
+                    <div className="updating-menu-container">
+                        <div className="updating-menu-icon">🚧</div>
+                        <h2 className="updating-menu-title font-black-ops">ESTAMOS ACTUALIZANDO NUESTRO MENÚ</h2>
+                        <p className="updating-menu-text">El catálogo se está sincronizando en estos momentos. Por favor, vuelve a intentarlo en unos minutos.</p>
                     </div>
                 ) : (
                     categories.map((category) => {
                         const normalizedStr = normalizeId(category.name);
                         return (
-                            <section key={category.id} id={`category-${normalizedStr}`} className="mb-8 p-4">
+                            <section key={category.id} id={`category-${normalizedStr}`} className="mb-0">
                                 {/* Sticky Header */}
-                                <div className="sticky top-0 bg-[var(--bg-base)]/95 backdrop-blur-md z-20 py-4 mb-8 text-center border-y-4 border-[#000] shadow-[8px_8px_0px_rgba(0,0,0,1)]">
-                                    <h2 className="font-black font-black-ops tracking-widest m-0 uppercase" style={{ fontSize: '1.8rem', color: 'var(--primary)', textShadow: '4px 4px 0px #000' }}>
+                                <div className="category-section-header">
+                                    <h2 className="category-title">
                                         | {getCategoryName(category)}
                                     </h2>
                                 </div>
@@ -162,7 +183,7 @@ const POSPage = () => {
                                 {/* Products Grid */}
                                 <div className="product-grid">
                                     {category.products.length === 0 ? (
-                                        <div className="col-span-full text-center text-white/50 italic py-10">
+                                        <div className="empty-category-msg">
                                             {t('empty_category')}
                                         </div>
                                     ) : (
@@ -183,11 +204,8 @@ const POSPage = () => {
                 )}
 
                 {/* Footer Spacer */}
-                <div style={{
-                    width: '100%', textAlign: 'center', padding: '40px 0',
-                    color: 'rgba(255, 255, 255, 0.4)', fontSize: '0.7rem', fontFamily: 'Montserrat, sans-serif'
-                }}>
-                    Dev by <a href="https://ayoubjerari.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>AyoubDev</a>
+                <div className="pos-footer-spacer">
+                    Dev by <a href="https://ayoubjerari.com" target="_blank" rel="noopener noreferrer" className="pos-footer-link">AyoubDev</a>
                 </div>
             </main>
 

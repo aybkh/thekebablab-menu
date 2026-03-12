@@ -1,0 +1,105 @@
+/* WelcomeScreen.css - Reset styles for the welcome splash */
+
+.welcome-screen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(244, 145, 102, 0.555), rgba(244, 145, 102, 0.555)), url('/ladrillo.jpg');
+    background-blend-mode: multiply;
+    background-size: 150px;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.welcome-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.welcome-brand {
+    font-family: 'Black Ops One', cursive;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-brand-suffix {
+    color: var(--color-primary);
+}
+
+.welcome-full-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcome-start-img {
+    max-width: 90%;
+    max-height: 60%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+}
+
+.welcome-start-text {
+    color: var(--color-text-main);
+    font-size: 2.5rem;
+    margin-top: 20px;
+    font-family: 'Black Ops One', cursive;
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 10px rgb(42, 42, 42);
+}
+
+.welcome-footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 5;
+}
+
+.welcome-footer-link {
+    color: inherit;
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .welcome-brand {
+        font-size: 1rem;
+    }
+
+    .welcome-start-text {
+        font-size: 1.8rem;
+    }
+
+    .welcome-start-img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 360px) {
+    .welcome-start-text {
+        font-size: 1.4rem;
+    }
+}

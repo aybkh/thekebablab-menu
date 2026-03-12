@@ -1,41 +1,50 @@
 import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { useTenant } from '../../context/TenantContext';
+import '../../styles/pos/CategorySidebar.css';
 
 const CategorySidebar = ({ categories, selectedCategory, onSelectCategory, isMobileVisible }) => {
     const { getCategoryName } = useLanguage();
     const { theme } = useTenant();
 
+    const getCategoryIcon = (name) => {
+        const lowerName = (name || "").toLowerCase();
+        if (lowerName.includes('taco')) return '/categories/tacos.webp';
+        if (lowerName.includes('dürüm')) return '/categories/durum.webp';
+        if (lowerName.includes('pita')) return '/categories/pita.webp';
+        if (lowerName.includes('batidos')) return '/categories/batidos.webp';
+        if (lowerName.includes('menús')) return '/categories/menus.webp';
+        if (lowerName.includes('entrantes')) return '/categories/tapas.webp';
+        if (lowerName.includes('burger') || lowerName.includes('hamburguesa')) return '/categories/burger.webp';
+        if (lowerName.includes('pizza')) return '/categories/pizza.webp';
+        if (lowerName.includes('café') || lowerName.includes('cafe')) return '/categories/coffee.webp';
+        if (lowerName.includes('postre') || lowerName.includes('tarta') || lowerName.includes('helado')) return '/categories/postres.webp';
+        if (lowerName.includes('refresco') || lowerName.includes('agua') || lowerName.includes('bebida')) return '/categories/bebidas.webp';
+        if (lowerName.includes('plato')) return '/categories/platos.webp';
+        if (lowerName.includes('ensalada')) return '/categories/ensaladas.webp';
+        if (lowerName.includes('salsa')) return '/categories/salsas.webp';
+        if (lowerName.includes('batido')) return '/categories/batidos.webp';
+        if (lowerName.includes('suplemento') || lowerName.includes('extra')) return '/categories/suplementos.webp';
+        return '/categories/default.webp';
+    };
+
     return (
-        <aside className={`category-sidebar ${isMobileVisible ? 'mobile-visible' : ''}`} style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ flex: 1, overflowY: 'auto' }}>
-                <div className="brand-title desktop-only">
-                    <img src={theme.brand.logoFallback} alt={theme.restaurantName} className="brand-logo"
-                        onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+        <aside className={`category-sidebar ${isMobileVisible ? 'mobile-visible' : ''}`}>
+            <div className="brand-title desktop-only">
+                <img src={theme.brand.logoFallback} alt={theme.restaurantName} className="brand-logo"
+                    onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+            </div>
+
+            {categories.map(cat => (
+                <div key={cat.id} className={`cat-btn ${selectedCategory?.id === cat.id ? 'active' : ''}`}
+                    onClick={() => onSelectCategory(cat)}>
+                    <img src={getCategoryIcon(cat.name)} alt="" className="cat-img-svg"
+                        onError={(e) => { e.target.src = '/categories/default.svg'; }} />
                 </div>
+            ))}
 
-                {categories.map(cat => {
-                    const cleanCatName = (cat.name || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
-
-                    return (
-                        <div key={cat.id} className={`cat-btn ${selectedCategory?.id === cat.id ? 'active' : ''}`}
-                            onClick={() => onSelectCategory(cat)}
-                            style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '5px', height: '90px' }}>
-
-                            <img src={cat.image ? `/categories/${cat.image}` : '/categories/default.webp'} 
-                                alt="" className="cat-img-svg"
-                                style={{ width: '100%', height: '100%', objectFit: 'contain', opacity: '0.9' }}
-                                onError={(e) => { 
-                                    e.target.style.display = 'none';
-                                    e.target.nextSibling.style.display = 'block'; 
-                                }} />
-                        </div>
-                    );
-                })}
-
-                <div style={{ padding: '20px 10px', textAlign: 'center', fontSize: '0.7rem', color: 'rgba(255,255,255,0.4)', marginTop: 'auto' }}>
-                    Dev by <a href="https://ayoubjerari.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>AyoubDev</a>
-                </div>
+            <div className="sidebar-footer">
+                Dev by <a href="https://ayoubjerari.com" target="_blank" rel="noopener noreferrer" className="sidebar-footer-link">AyoubDev</a>
             </div>
         </aside>
     );

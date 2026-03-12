@@ -1,6 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
+import '../styles/LanguageSelector.css';
 
 const LANGUAGES = [
     { code: 'es', label: 'Español', flag: '🇪🇸' },

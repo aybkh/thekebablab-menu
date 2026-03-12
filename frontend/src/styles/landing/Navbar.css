@@ -1,0 +1,211 @@
+/* Navbar.css - Estilos de la barra de navegación */
+
+.landing-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    padding: 10px 0;
+}
+
+.landing-nav.transparent {
+    background: rgba(17, 17, 17, 0.5);
+}
+
+.landing-nav.scrolled,
+.landing-nav.open {
+    background: var(--color-sidebar);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-content {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav-brand-container {
+    text-align: left;
+    z-index: 10;
+    width: max-content;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .nav-brand-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
+
+.nav-brand-text {
+    font-family: 'Black Ops One', cursive;
+    font-size: 1.4rem;
+    color: white;
+    line-height: 1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.nav-brand-text span {
+    color: var(--color-primary);
+}
+
+.nav-btn-mobile {
+    background: none;
+    border: none;
+    color: white;
+    padding: 8px;
+    display: flex;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .nav-btn-mobile {
+        display: none !important;
+    }
+}
+
+.nav-desktop-menu {
+    display: none;
+    align-items: center;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .nav-desktop-menu {
+        display: flex;
+    }
+}
+
+.nav-link-btn {
+    background: none;
+    border: 3px solid transparent;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+.nav-link-btn:hover {
+    background: var(--color-primary);
+    border-color: var(--color-border);
+    box-shadow: 4px 4px 0px var(--color-shadow);
+    transform: translate(-2px, -2px);
+}
+
+.btn-order-style {
+    background: var(--color-primary);
+    border-color: var(--color-border);
+    box-shadow: 4px 4px 0px var(--color-shadow);
+    color: var(--color-sidebar);
+}
+
+.nav-left-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.nav-menu-section {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.nav-logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: max-content;
+}
+
+.nav-logo-right {
+    height: 50px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .nav-menu-section {
+        display: none;
+    }
+    
+    .nav-left-section {
+        flex: 1;
+        justify-content: flex-start;
+    }
+}
+
+.nav-mobile-sidebar {
+    position: fixed;
+    top: 81px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 81px);
+    background: var(--color-sidebar);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+}
+
+.nav-mobile-sidebar.open {
+    transform: translateX(0);
+}
+
+.nav-mobile-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: 'Black Ops One', cursive;
+    font-size: 1.2rem;
+    padding: 16px;
+    letter-spacing: 1px;
+    text-align: left;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.nav-mobile-order-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    background: var(--color-primary);
+    border: none;
+    color: white;
+    font-family: 'Black Ops One', cursive;
+}

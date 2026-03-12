@@ -2,27 +2,29 @@
     "restaurantName": "The Kebab",
     "restaurantSuffix": "Lab",
     "seo": {
-        "title": "The Kebab Lab | Kebabs, Durum & Platos en Mataró",
-        "description": "Descubre los mejores Kebabs, Durum, Lahmacun y Falafel en Mataró. The Kebab Lab: Sabor auténtico, calidad Halal y ambiente único. ¡Pide online o visita nuestro local!",
-        "keywords": "kebab mataro, durum, lahmacun, falafel, comida rapida, halal, hamburguesas gourmet, batidos naturales, delivery mataro",
+        "title": "The Kebab Lab | Dale un GIRO al Kebab en Blanes",
+        "description": "Descubre los mejores Kebabs, French Tacos, Pizzas y Durums en Blanes. The Kebab Lab: Calidad 100% Halal, sabor único y ambiente moderno. ¡Pide online!",
+        "keywords": "kebab blanes, french tacos, pizzas artesanas, durum, comida rapida, halal, delivery blanes, the kebab lab blanes",
         "favicon": "/images/kebab-logo.png"
     },
     "brand": {
         "logoHeader": "/logo_303.svg",
         "logoFallback": "/images/kebab-logo.png",
-        "heroBadge": "📍 THE KEBAB LAB",
+        "heroBadge": "📍 THE KEBAB LAB BLANES",
         "footerText": "© 2026 The Kebab Lab."
     },
     "contact": {
-        "address": "The Kebab Lab, Mataró",
-        "mapsIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2986.4049283663367!2d2.4203880755420304!3d41.5388289865887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4b51a22542a71%3A0x6932e4c0ba7430bd!2sThe%20Kebab%20Lab!5e0!3m2!1sca!2ses!4v1770400135417!5m2!1sca!2ses",
-        "phone": "+34 631 000 858"
+        "address": "Blanes - Girona",
+        "mapsIframe": "https://www.google.com/maps?q=The%20Kebab%20Lab%20Carrer%20de%20Sant%20Vicenç%20Ferrer,%2037,%2017300%20Blanes,%20Girona&output=embed",
+        "phone": "+34 972 94 70 25"
     },
     "socials": {
-        "instagram": "https://www.instagram.com/thekebablab",
-        "tiktok": "https://www.tiktok.com/@thekebablab",
-        "uberEats": "",
-        "uberEatsLabel": "Pide en Uber Eats"
+        "instagram": "https://www.instagram.com/the.kebab.lab/",
+        "tiktok": "https://www.tiktok.com/@the.kebab.lab",
+        "uberEats": "https://www.ubereats.com/es/store/the-kebab-lab-girona/OX7idNCNSCO225GnUz9nmw",
+        "uberEatsLabel": "Pide en Uber Eats",
+        "glovo": "",
+        "glovoLabel": "Pide en Glovo"
     },
     "colors": {
         "bg-base": "#265b36",
