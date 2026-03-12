@@ -8,7 +8,7 @@
         "favicon": "/images/kebab-logo.png"
     },
     "brand": {
-        "logoHeader": "/logo_303.svg",
+        "logoHeader": "/images/kebab-logo.png",
         "logoFallback": "/images/kebab-logo.png",
         "heroBadge": "📍 THE KEBAB LAB BLANES",
         "footerText": "© 2026 The Kebab Lab."
@@ -23,7 +23,7 @@
         "tiktok": "https://www.tiktok.com/@the.kebab.lab",
         "uberEats": "https://www.ubereats.com/es/store/the-kebab-lab-girona/OX7idNCNSCO225GnUz9nmw",
         "uberEatsLabel": "Pide en Uber Eats",
-        "glovo": "",
+        "glovo": "https://glovoapp.com/es/es/calella-malgrat-de-mar-santa-susanna/stores/the-kebab-lab-calella",
         "glovoLabel": "Pide en Glovo"
     },
     "colors": {

@@ -21,11 +21,18 @@
 }
 
 .mobile-menu-btn {
+    display: none; /* Hidden by default (desktop) */
     background: transparent;
     border: none;
     color: white;
     padding: 5px;
     cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .mobile-menu-btn {
+        display: block; /* Show only on mobile/tablet */
+    }
 }
 
 .mobile-logo-container {
