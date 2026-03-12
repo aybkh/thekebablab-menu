@@ -104,11 +104,6 @@ const FeaturedMenu = () => {
     return (
         <section style={{
             padding: '40px 10px',
-            backgroundImage: "linear-gradient(rgba(20, 40, 24, 0.85), rgba(20, 40, 24, 0.85)), url('/images/zellige-bg.webp')",
-            backgroundSize: '150px',
-            backgroundRepeat: 'repeat',
-            backgroundPosition: 'center',
-            backgroundAttachment: 'fixed',
             position: 'relative',
             zIndex: 10
         }}>
@@ -135,10 +130,10 @@ const FeaturedMenu = () => {
                 .featured-card {
                     position: relative;
                     width: 100%; /* Fill Grid Cell */
-                    background: #142818;
+                    background: #1a1a1a;
                     border-radius: 16px;
-                    border: 2px solid #F1C40F;
-                    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+                    border: 3px solid #000;
+                    box-shadow: 10px 10px 0px rgba(0,0,0,1);
                     overflow: hidden;
                     transition: all 0.3s ease;
                     cursor: pointer;
@@ -163,10 +158,10 @@ const FeaturedMenu = () => {
 
                 .card-image-container {
                     position: relative;
-                    width: 100%;
+                    width: '100%';
                     height: 150px; /* Smaller height on mobile */
                     overflow: hidden;
-                    border-bottom: 2px solid #F1C40F;
+                    border-bottom: 3px solid #000;
                 }
 
                 @media (min-width: 768px) {
@@ -177,7 +172,7 @@ const FeaturedMenu = () => {
 
                 .card-badge {
                     position: absolute; bottom: 5px; right: 5px;
-                    background: rgba(241, 196, 15, 0.9); color: black;
+                    background: var(--primary); color: white;
                     padding: 2px 8px; borderRadius: 8px;
                     font-size: 0.7rem; font-weight: bold; text-transform: uppercase;
                 }
@@ -197,7 +192,7 @@ const FeaturedMenu = () => {
 
                 .card-content h3 {
                     font-family: 'Black Ops One', cursive;
-                    color: #F1C40F;
+                    color: var(--primary);
                     font-size: 0.9rem; /* Smaller font on mobile */
                     margin: 0 0 4px 0;
                     text-transform: uppercase;
@@ -222,7 +217,7 @@ const FeaturedMenu = () => {
 
             <div className="section-head" style={{ marginBottom: '30px' }}>
                 <h2>NUESTROS FAVORITOS</h2>
-                <h3 style={{ display: 'block', fontSize: '0.9rem', color: '#F1C40F', marginTop: '5px', fontFamily: "'Montserrat', sans-serif" }}>
+                <h3 style={{ display: 'block', fontSize: '0.9rem', color: 'var(--primary)', marginTop: '5px', fontFamily: "'Montserrat', sans-serif" }}>
                     DESCUBRE LO MEJOR
                 </h3>
             </div>

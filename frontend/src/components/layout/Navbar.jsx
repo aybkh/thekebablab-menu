@@ -52,10 +52,10 @@ const Navbar = () => {
     return (
         <nav style={{
             position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 1000,
-            background: scrolled || isOpen ? 'rgba(20, 40, 24, 0.98)' : 'rgba(20, 40, 24, 0.5)',
+            background: scrolled || isOpen ? 'rgba(26, 26, 26, 0.98)' : 'rgba(26, 26, 26, 0.5)',
             backdropFilter: 'blur(10px)',
             transition: 'all 0.3s ease',
-            borderBottom: scrolled ? '1px solid rgba(241, 196, 15, 0.2)' : 'none',
+            borderBottom: scrolled ? '1px solid rgba(242, 97, 34, 0.2)' : 'none',
             padding: '10px 0'
         }}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,7 +99,7 @@ const Navbar = () => {
                                             fontFamily: "'Montserrat', sans-serif", fontWeight: '600', fontSize: '0.85rem', cursor: 'pointer',
                                             letterSpacing: '1px', transition: 'color 0.2s'
                                         }}
-                                        className="hover:text-[#F1C40F]">
+                                        className="hover:text-[var(--primary)]">
                                         {item}
                                     </button>
                                 );
@@ -108,7 +108,7 @@ const Navbar = () => {
                             <Link to="/menu" style={{ textDecoration: 'none' }}>
                                 <button className="btn-primary" style={{
                                     padding: '8px 20px', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '8px',
-                                    background: '#D65A65', color: 'white', border: 'none', borderRadius: '50px',
+                                    background: 'var(--primary)', color: 'white', border: 'none', borderRadius: '50px',
                                     fontFamily: "'Black Ops One', cursive", cursor: 'pointer'
                                 }}>
                                     PEDIR
@@ -127,7 +127,7 @@ const Navbar = () => {
             {/* Mobile Sidebar/Drawer */}
             <div style={{
                 position: 'fixed', top: '81px', left: 0, width: '100%', height: 'calc(100vh - 81px)',
-                background: '#142818', transform: isOpen ? 'translateX(0)' : 'translateX(-100%)',
+                background: '#1a1a1a', transform: isOpen ? 'translateX(0)' : 'translateX(-100%)',
                 transition: 'transform 0.3s ease-in-out', padding: '20px', display: 'flex', flexDirection: 'column', gap: '15px',
                 zIndex: 999
             }}>
@@ -146,7 +146,7 @@ const Navbar = () => {
                                 fontFamily: "'Black Ops One', cursive", fontSize: '1.2rem', padding: '16px',
                                 letterSpacing: '1px', textAlign: 'left', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '15px'
                             }}>
-                            {Icon && <Icon size={24} color="#F1C40F" />}
+                            {Icon && <Icon size={24} color="var(--primary)" />}
                             {item}
                         </button>
                     );
@@ -155,7 +155,7 @@ const Navbar = () => {
                     <Link to="/menu" style={{ width: '100%', textDecoration: 'none' }} onClick={() => setIsOpen(false)}>
                         <button style={{
                             width: '100%', padding: '16px', fontSize: '1.4rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '12px',
-                            background: '#D65A65', color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer',
+                            background: 'var(--primary)', color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer',
                             fontFamily: "'Black Ops One', cursive"
                         }}>
                             <Utensils size={28} /> VER CARTA

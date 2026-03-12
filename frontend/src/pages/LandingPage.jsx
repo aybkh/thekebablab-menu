@@ -102,29 +102,24 @@ const LandingPage = () => {
                                     padding: '20px 40px',
                                     fontSize: '1.4rem',
                                     borderRadius: '50px',
-                                    background: 'rgba(0, 0, 0, 0.3)', // Glass Dark
-                                    backdropFilter: 'blur(4px)',
-                                    color: '#F1C40F', // Gold Text
-                                    border: '2px solid #F1C40F', // Gold Border
+                                    background: 'var(--primary)', // Orange
+                                    color: 'white', 
+                                    border: '3px solid #000', // Black Border
                                     cursor: 'pointer',
                                     fontFamily: "'Black Ops One', cursive",
                                     letterSpacing: '2px',
-                                    boxShadow: '0 10px 25px rgba(0,0,0,0.5)',
-                                    transition: 'all 0.3s ease',
+                                    boxShadow: '8px 8px 0px rgba(0,0,0,1)',
+                                    transition: 'all 0.2s ease',
                                     fontWeight: 'bold',
                                     textTransform: 'uppercase'
                                 }}
                                     onMouseEnter={(e) => {
-                                        e.currentTarget.style.background = '#F1C40F'; // Fill Gold on Hover
-                                        e.currentTarget.style.color = '#142818'; // Dark Text
-                                        e.currentTarget.style.transform = 'scale(1.05)';
-                                        e.currentTarget.style.boxShadow = '0 0 20px rgba(241, 196, 15, 0.6)';
+                                        e.currentTarget.style.transform = 'translate(-4px, -4px)';
+                                        e.currentTarget.style.boxShadow = '12px 12px 0px rgba(0,0,0,1)';
                                     }}
                                     onMouseLeave={(e) => {
-                                        e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)';
-                                        e.currentTarget.style.color = '#F1C40F';
-                                        e.currentTarget.style.transform = 'scale(1)';
-                                        e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.5)';
+                                        e.currentTarget.style.transform = 'translate(0, 0)';
+                                        e.currentTarget.style.boxShadow = '8px 8px 0px rgba(0,0,0,1)';
                                     }}
                                 >
                                     VER CARTA
@@ -140,11 +135,11 @@ const LandingPage = () => {
                             {/* FRAME OVERLAY (Reduces bleeding) */}
                             <div style={{
                                 position: 'absolute', inset: -2,
-                                border: '5px solid #F1C40F',
+                                border: '4px solid #000',
                                 borderRadius: '30px',
                                 pointerEvents: 'none',
                                 zIndex: 60,
-                                boxShadow: 'inset 0 0 10px rgba(0,0,0,0.8)'
+                                boxShadow: '8px 8px 0px rgba(0,0,0,1)'
                             }}></div>
 
                             {/* Video Container */}
@@ -192,7 +187,7 @@ const LandingPage = () => {
                                                 onClick={() => setCurrentVideoIndex(idx)}
                                                 style={{
                                                     width: '8px', height: '8px', borderRadius: '50%', border: 'none', padding: 0,
-                                                    background: idx === currentVideoIndex ? '#F1C40F' : 'rgba(255,255,255,0.4)',
+                                                    background: idx === currentVideoIndex ? 'var(--primary)' : 'rgba(255,255,255,0.4)',
                                                     cursor: 'pointer', transition: 'all 0.3s',
                                                     transform: idx === currentVideoIndex ? 'scale(1.2)' : 'scale(1)'
                                                 }}
@@ -306,7 +301,7 @@ const LandingPage = () => {
 
                         <p style={{ margin: 0 }}>{theme.brand.footerText}</p>
                         <p style={{ fontSize: '0.8rem', marginTop: '10px', margin: '10px 0 0' }}>
-                            Dev by <a href="https://ayoubjerari.com" style={{ color: '#F1C40F', textDecoration: 'none' }}>AyoubDev</a>
+                            Dev by <a href="https://ayoubjerari.com" style={{ color: 'var(--primary)', textDecoration: 'none' }}>AyoubDev</a>
                         </p>
                     </div>
                 </div>
