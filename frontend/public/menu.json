@@ -253,7 +253,7 @@
     },
     {
       "id": 6,
-      "name": "Pizzas 32cm Aprox",
+      "name": "Pizzas",
       "image": "",
       "products": [
         {
@@ -348,7 +348,7 @@
     },
     {
       "id": 7,
-      "name": "Nuestros Platos",
+      "name": "Platos",
       "image": "",
       "products": [
         {
@@ -402,7 +402,7 @@
     },
     {
       "id": 9,
-      "name": "Bebidas Fr\u00EDas",
+      "name": "Bebidas",
       "image": "",
       "products": [
         {

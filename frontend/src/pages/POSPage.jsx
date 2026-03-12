@@ -144,7 +144,7 @@ const POSPage = () => {
                 {categories.length === 0 ? (
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '50vh', padding: '20px', textAlign: 'center' }}>
                         <div style={{ fontSize: '60px', marginBottom: '20px' }}>🚧</div>
-                        <h2 className="font-black-ops" style={{ color: '#F1C40F', fontSize: '2rem', marginBottom: '10px' }}>ESTAMOS ACTUALIZANDO NUESTRO MENÚ</h2>
+                        <h2 className="font-black-ops" style={{ color: 'var(--primary)', fontSize: '2.3rem', marginBottom: '10px' }}>ESTAMOS ACTUALIZANDO NUESTRO MENÚ</h2>
                         <p style={{ color: '#ecf0f1', fontSize: '1.2rem', maxWidth: '500px' }}>El catálogo se está sincronizando en estos momentos. Por favor, vuelve a intentarlo en unos minutos.</p>
                     </div>
                 ) : (
@@ -153,8 +153,8 @@ const POSPage = () => {
                         return (
                             <section key={category.id} id={`category-${normalizedStr}`} className="mb-8 p-4">
                                 {/* Sticky Header */}
-                                <div className="sticky top-0 bg-[var(--bg-base)]/95 backdrop-blur-md z-20 py-4 mb-8 text-center border-y-4 border-[#F1C40F] shadow-lg">
-                                    <h2 className="font-black font-black-ops tracking-widest m-0 uppercase" style={{ fontSize: '1.8rem', color: '#F1C40F', textShadow: '4px 4px 0px #000' }}>
+                                <div className="sticky top-0 bg-[var(--bg-base)]/95 backdrop-blur-md z-20 py-4 mb-8 text-center border-y-4 border-[#000] shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+                                    <h2 className="font-black font-black-ops tracking-widest m-0 uppercase" style={{ fontSize: '1.8rem', color: 'var(--primary)', textShadow: '4px 4px 0px #000' }}>
                                         | {getCategoryName(category)}
                                     </h2>
                                 </div>

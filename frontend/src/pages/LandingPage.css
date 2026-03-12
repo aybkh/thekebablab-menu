@@ -107,7 +107,7 @@
     right: 0;
     bottom: 0;
     /* ZELLIGE BACKGROUND VISIBLE (0.85 opacity) */
-    background-image: linear-gradient(rgba(20, 40, 24, 0.85), rgba(20, 40, 24, 0.85)), url('/images/zellige-bg.webp');
+    background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('/images/zellige-bg.webp');
     background-size: 150px;
     background-repeat: repeat;
     background-position: center;
@@ -122,8 +122,8 @@
 .hero-badge {
     display: inline-block;
     padding: 5px 15px;
-    border: 1px solid #F1C40F;
-    color: #F1C40F;
+    border: 3px solid #000;
+    color: var(--primary);
     font-weight: bold;
     border-radius: 50px;
     margin-bottom: 20px;
@@ -144,7 +144,7 @@
 }
 
 .hero-title span {
-    color: #F1C40F;
+    color: var(--primary);
     text-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
 }
 
@@ -172,7 +172,7 @@
     /* Default Centered (Mobile) */
     border-radius: 20px;
     overflow: hidden;
-    border: 4px solid #F1C40F;
+    border: 3px solid #000;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     position: relative;
     background: #000;
@@ -295,7 +295,7 @@
 .location-section {
     padding: 80px 20px;
     /* ZELLIGE BACKGROUND (Consistent with Hero) */
-    background-image: linear-gradient(rgba(20, 40, 24, 0.85), rgba(20, 40, 24, 0.85)), url('/images/zellige-bg.webp');
+    background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('/images/zellige-bg.webp');
     background-size: 150px;
     background-repeat: repeat;
     background-position: center;
@@ -334,7 +334,7 @@
     display: block;
     width: 60px;
     height: 3px;
-    background: #F1C40F;
+    background: var(--primary);
     margin: 10px auto 0;
 }
 
@@ -420,7 +420,7 @@
 }
 
 .social-btn:hover {
-    background: #F1C40F;
+    background: var(--primary);
     color: black;
 }
 
@@ -442,7 +442,7 @@
 }
 
 .arrow-btn:hover {
-    background: #F1C40F;
+    background: var(--primary);
     color: black;
 }
 
@@ -489,7 +489,7 @@
     display: block;
     width: 80px;
     height: 3px;
-    background: #F1C40F;
+    background: var(--primary);
     margin: 15px auto 0;
 }
 

@@ -3,11 +3,11 @@
 
 :root {
   /* Palette */
-  --bg-base: #265b36;
-  /* Chalkboard Green */
-  --primary: #D65A65;
-  /* Coral Red - Action/Prices */
-  --secondary: #F1C40F;
+  --bg-base: #1a1a1a;
+  --bg-dark: #121212;
+  --primary: #F26122;
+  --primary-hover: #e0531a;
+  --secondary: #F26122;
   /* Golden Yellow - Branding */
   --surface: #FDFBF7;
   /* Cream/Bone - Cards */
@@ -15,7 +15,7 @@
   /* Dark Green - Readable Text on Cards */
   --text-on-bg: #FFFFFF;
   /* Text on Green Background */
-  --ticket-bg: #FAFAFA;
+  --ticket-bg: #ffffff;
   /* Receipt Paper White */
 
   --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
@@ -75,7 +75,7 @@ h4,
 .category-sidebar {
   width: 270px;
   /* Narrower sidebar for tighter fit */
-  background: rgba(20, 40, 24, 0.95);
+  background: rgba(26, 26, 26, 0.95);
   backdrop-filter: blur(10px);
   padding: 25px 20px;
   display: flex;
@@ -1015,7 +1015,7 @@ h4,
   width: 100vw;
   width: 100vw;
   /* Green tint like other screens */
-  background-image: linear-gradient(rgba(20, 40, 24, 0.95), rgba(20, 40, 24, 0.95)), url('/images/zellige-bg.webp');
+  background-image: linear-gradient(rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.95)), url('/images/zellige-bg.webp');
   background-repeat: repeat;
   background-size: 500px;
   background-position: center;
@@ -1067,8 +1067,8 @@ h4,
   height: 100dvh;
   /* Strict full screen */
   width: 100vw;
-  /* background: linear-gradient(rgba(20, 40, 24, 0.95), rgba(20, 40, 24, 0.95)), url('/zellige-bg.jpg') center/cover; REMOVE COVER */
-  background-image: linear-gradient(rgba(20, 40, 24, 0.95), rgba(20, 40, 24, 0.95)), url('/images/zellige-bg.webp');
+  /* background: linear-gradient(rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.95)), url('/zellige-bg.jpg') center/cover; REMOVE COVER */
+  background-image: linear-gradient(rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.95)), url('/images/zellige-bg.webp');
   background-repeat: repeat;
   background-size: 500px;
   /* Match body desktop size */

@@ -26,7 +26,7 @@ const HoursCard = () => {
                 if (hour >= today.open && hour < today.close) {
                     setStatus({ isOpen: true, text: 'ABIERTO AHORA', color: '#2ECC71' });
                 } else if (hour < today.open) {
-                    setStatus({ isOpen: false, text: `ABRE A LAS ${today.open}:00`, color: '#F1C40F' });
+                    setStatus({ isOpen: false, text: `ABRE A LAS ${today.open}:00`, color: 'var(--primary)' });
                 } else {
                     setStatus({ isOpen: false, text: 'CERRADO', color: '#E74C3C' });
                 }
