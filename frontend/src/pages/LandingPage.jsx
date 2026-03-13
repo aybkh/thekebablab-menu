@@ -141,6 +141,12 @@ const LandingPage = () => {
 
                             {/* CONTROLS LAYER */}
                             <div className="video-controls-layer">
+                                {/* Victor Prous Badge */}
+                                <img 
+                                    src="/images/victorprous_badge.webp" 
+                                    alt="Victor Prous Badge" 
+                                    className="victor-badge"
+                                />
 
                                 {/* Left Arrow */}
                                 <button onClick={(e) => { e.stopPropagation(); prevSocialVideo(); }} className="arrow-btn arrow-prev">
