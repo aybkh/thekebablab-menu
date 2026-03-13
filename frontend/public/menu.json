@@ -133,7 +133,7 @@
       "products": [
         {
           "id": 15,
-          "name": "Hamburguesa Americana con Patatas Fritas",
+          "name": "Hamburguesa Americana",
           "price": 7.95,
           "description": "Hamburguesa en pan r\u00FAstico con 200g de carne de ternera, acompa\u00F1ada de bacon crujiente, pepinillo, queso cheddar fundido, cebolla caramelizada y salsa americana especial. Incluye raci\u00F3n de patatas fritas.",
           "isAvailable": true,
@@ -141,7 +141,7 @@
         },
         {
           "id": 16,
-          "name": "Hamburguesa Cl\u00E1ssica con Patatas Fritas",
+          "name": "Hamburguesa Cl\u00E1ssica",
           "price": 6.95,
           "description": "Hamburguesa en pan r\u00FAstico con 200g de carne de ternera, cama de lechuga, rodajas de tomate, queso edam derretido y un jugoso huevo frito. Incluye raci\u00F3n de patatas fritas.",
           "isAvailable": true,
@@ -149,7 +149,7 @@
         },
         {
           "id": 17,
-          "name": "Hamburguesa de Queso de Cabra con Patatas Fritas",
+          "name": "Hamburguesa Queso de Cabra",
           "price": 7.95,
           "description": "Hamburguesa gourmet en pan r\u00FAstico con 200g de ternera, hojas de r\u00FAcula fresca, medall\u00F3n de queso de cabra a la plancha, cebolla caramelizada y salsa de miel y mostaza. Incluye raci\u00F3n de patatas fritas.",
           "isAvailable": true,
@@ -157,7 +157,7 @@
         },
         {
           "id": 18,
-          "name": "Hamburguesa Chicken Crispy con Patatas Fritas",
+          "name": "Hamburguesa Chicken Crispy",
           "price": 7.95,
           "description": "Hamburguesa en pan brioche suave rellena de 200g de pollo con un rebozado crujiente de la casa, r\u00FAcula, queso cheddar fundido, salsa ranchera y rodajas de pepinillo. Incluye raci\u00F3n de patatas fritas.",
           "isAvailable": true,
@@ -410,7 +410,7 @@
           "name": "Agua Mineral 0,5L",
           "price": 1,
           "description": "Botella de agua mineral natural sin gas. Formato de 0,5L.",
-          "isAvailable": true,
+          "isAvailable": false,
           "image": ""
         },
         {
@@ -418,7 +418,7 @@
           "name": "Agua Mineral 1,5L",
           "price": 1.7,
           "description": "Botella de agua mineral natural sin gas. Formato familiar de 1,5L.",
-          "isAvailable": true,
+          "isAvailable": false,
           "image": ""
         },
         {
@@ -426,7 +426,7 @@
           "name": "Zumo de Melocot\u00F3n",
           "price": 1.8,
           "description": "Botell\u00EDn individual de n\u00E9ctar o zumo sabor melocot\u00F3n.",
-          "isAvailable": true,
+          "isAvailable": false,
           "image": ""
         },
         {
@@ -632,7 +632,7 @@
           "name": "Infusiones",
           "price": 1.4,
           "description": "Servicio de agua caliente acompa\u00F1ado del sobrecito de t\u00E9 o infusi\u00F3n herbal a elegir.",
-          "isAvailable": true,
+          "isAvailable": false,
           "image": ""
         },
         {
@@ -703,7 +703,7 @@
           "name": "Combo 2 D\u00FCr\u00FCms",
           "price": 15.95,
           "description": "Oferta para compartir que incluye dos rollos d\u00FCr\u00FCm a elegir, acompa\u00F1ados de dos raciones individuales de patatas fritas y dos refrescos.",
-          "isAvailable": true,
+          "isAvailable": false,
           "image": ""
         },
         {
@@ -711,7 +711,7 @@
           "name": "Combo 2 Pitas",
           "price": 14.95,
           "description": "Oferta para compartir que incluye dos bocadillos de pan pita a elegir, junto con dos raciones de patatas fritas y dos refrescos.",
-          "isAvailable": true,
+          "isAvailable": false,
           "image": ""
         },
         {
@@ -719,7 +719,7 @@
           "name": "Combo 2 Tacos",
           "price": 16.95,
           "description": "Oferta para compartir que trae dos French Tacos a elegir de la carta, m\u00E1s dos guarniciones de patatas fritas y dos refrescos.",
-          "isAvailable": true,
+          "isAvailable": false,
           "image": ""
         },
         {
@@ -727,7 +727,7 @@
           "name": "Combo 2 Pizzas",
           "price": 18.95,
           "description": "Men\u00FA ahorro que incluye dos pizzas de tama\u00F1o mediano (32cm) a elegir de la carta y una botella de refresco familiar (1L - 1.5L).",
-          "isAvailable": true,
+          "isAvailable": false,
           "image": ""
         },
         {
@@ -735,7 +735,7 @@
           "name": "Combo Family",
           "price": 29.95,
           "description": "El paquete m\u00E1s grande para grupos o familias. Incluye: 1 D\u00FCr\u00FCm, 1 pan de Pita, 1 Hamburguesa a elegir, 1 Pizza de tama\u00F1o mediano a elegir, 3 raciones de patatas fritas y 1 botella de refresco familiar de 1L.",
-          "isAvailable": true,
+          "isAvailable": false,
           "image": ""
         },
         {
@@ -743,7 +743,7 @@
           "name": "Combo Infantil",
           "price": 6.95,
           "description": "Men\u00FA pensado para los m\u00E1s peque\u00F1os. Incluye un plato de 10 nuggets crujientes de pollo acompa\u00F1ados de patatas fritas y un zumo de frutas.",
-          "isAvailable": true,
+          "isAvailable": false,
           "image": ""
         }
       ]
