@@ -3,18 +3,17 @@
     "restaurantSuffix": "Lab",
     "seo": {
         "title": "The Kebab Lab | Dale un GIRO al Kebab en Blanes",
-        "description": "Descubre los mejores Kebabs, French Tacos, Pizzas y Durums en Blanes. The Kebab Lab: Calidad 100% Halal, sabor único y ambiente moderno. ¡Pide online!",
+        "description": "Descubre los mejores Kebabs, French Tacos, Pizza, Pita, Hamburguesas y Durums en Blanes",
         "keywords": "kebab blanes, french tacos, pizzas artesanas, durum, comida rapida, halal, delivery blanes, the kebab lab blanes",
-        "favicon": "/images/kebab-logo.png"
+        "favicon": "/images/kebab-logo.webp"
     },
     "brand": {
-        "logoHeader": "/images/kebab-logo.png",
-        "logoFallback": "/images/kebab-logo.png",
-        "heroBadge": "📍 THE KEBAB LAB BLANES",
+        "logoHeader": "/images/kebab-logo.webp",
+        "logoFallback": "/images/kebab-logo.webp",
         "footerText": "© 2026 The Kebab Lab."
     },
     "contact": {
-        "address": "Blanes - Girona",
+        "address": "Carrer de Sant Vicenç Ferrer, 37, 17300 Blanes, Girona",
         "mapsIframe": "https://www.google.com/maps?q=The%20Kebab%20Lab%20Carrer%20de%20Sant%20Vicenç%20Ferrer,%2037,%2017300%20Blanes,%20Girona&output=embed",
         "phone": "+34 972 94 70 25"
     },

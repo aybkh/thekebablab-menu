@@ -4,13 +4,12 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(rgba(244, 145, 102, 0.555), rgba(244, 145, 102, 0.555)), url('/ladrillo.jpg');
+    background-image: linear-gradient(rgba(223, 119, 74, 0.738), rgba(223, 119, 74, 0.738)), url('/ladrillo.webp');
     background-blend-mode: multiply;
     background-size: 150px;
     background-repeat: repeat;
     background-position: center;
     background-attachment: fixed;
-    overflow: hidden;
 }
 
 .welcome-header {

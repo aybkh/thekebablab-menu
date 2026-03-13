@@ -850,45 +850,6 @@
           "image": ""
         }
       ]
-    },
-    {
-      "id": 14,
-      "name": "Suplementos",
-      "image": "",
-      "products": [
-        {
-          "id": 96,
-          "name": "Huevo Duro",
-          "price": 1,
-          "description": "Extra de Huevo Duro.",
-          "isAvailable": true,
-          "image": ""
-        },
-        {
-          "id": 97,
-          "name": "Huevo Frito",
-          "price": 1,
-          "description": "Extra de Huevo Frito.",
-          "isAvailable": true,
-          "image": ""
-        },
-        {
-          "id": 98,
-          "name": "Lonchas de Queso",
-          "price": 1,
-          "description": "Extra de Lonchas de Queso.",
-          "isAvailable": true,
-          "image": ""
-        },
-        {
-          "id": 99,
-          "name": "Mortadela",
-          "price": 1,
-          "description": "Extra de Mortadela.",
-          "isAvailable": true,
-          "image": ""
-        }
-      ]
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 .delivery-section {
     padding: 40px;
-    background-image: linear-gradient(rgba(223, 119, 74, 0.738), rgba(223, 119, 74, 0.738)), url('/ladrillo.jpg');
+    background-image: linear-gradient(rgba(223, 119, 74, 0.738), rgba(223, 119, 74, 0.738)), url('/ladrillo.webp');
     background-blend-mode: multiply;
     background-size: 150px;
     background-repeat: repeat;
@@ -32,12 +32,12 @@
 
 .delivery-card.glovo {
     background: #ffc244; /* Amarillo Glovo */
-    color: #111;
+    color: var(--color-sidebar);
 }
 
 .delivery-card.uber-eats {
     background: #06C167; /* Verde Uber Eats */
-    color: white;
+    color: var(--color-sidebar);
 }
 
 .delivery-logo-wrapper {
@@ -103,6 +103,6 @@
         width: 45px;
         height: 45px;
         left: 12px;
-        padding: 6px;
+        overflow: hidden;
     }
 }

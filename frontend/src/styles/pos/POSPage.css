@@ -49,7 +49,7 @@
 .product-area {
     flex: 1;
     padding-left: 250px; /* Sidebar width matching CategorySidebar */
-    background-image: linear-gradient(rgba(244, 145, 102, 0.555), rgba(244, 145, 102, 0.555)), url('/ladrillo.jpg');
+    background-image: linear-gradient(rgba(244, 145, 102, 0.555), rgba(244, 145, 102, 0.555)), url('/ladrillo.webp');
     background-blend-mode: multiply;
     background-size: 150px;
     background-repeat: repeat;
@@ -87,7 +87,7 @@
 .category-section-header {
     position: sticky;
     top: 60px; /* Offset to stay below main header on all devices */
-    background-image: linear-gradient(rgba(244, 145, 102, 0.555), rgba(244, 145, 102, 0.555)), url('/ladrillo.jpg');
+    background-image: linear-gradient(rgba(244, 145, 102, 0.555), rgba(244, 145, 102, 0.555)), url('/ladrillo.webp');
     background-blend-mode: multiply;
     background-size: 150px;
     background-repeat: repeat;
@@ -98,7 +98,6 @@
     padding: 16px 0;
     margin-bottom: 32px;
     text-align: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .category-title {

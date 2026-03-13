@@ -62,8 +62,8 @@
 }
 
 .hours-row.today {
-    background: rgba(174, 96, 41, 0.337);
-    border: 2px solid #ff6200;
+    background: rgba(255, 129, 39, 0.189);
+    border: 2px solid var(--color-primary);
     transform: scale(1.02);
 }
 
@@ -96,7 +96,7 @@
 }
 
 .hours-row.today .day-time {
-    color: #cc6b2e;
+    color: var(--color-text-light);
     font-weight: bold;
 }
 
@@ -106,7 +106,7 @@
 }
 
 .today-dot {
-    color: #cc6b2e;
+    color: var(--color-primary);
     font-size: 13px;
     margin-right: 8px;
     margin-left: 0px;

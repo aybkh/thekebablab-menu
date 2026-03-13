@@ -2,7 +2,7 @@
 
 .location-section {
     padding: 20px;
-    background-image: linear-gradient(rgba(223, 119, 74, 0.738), rgba(223, 119, 74, 0.738)), url('/ladrillo.jpg');
+    background-image: linear-gradient(rgba(223, 119, 74, 0.738), rgba(223, 119, 74, 0.738)), url('/ladrillo.webp');
     background-blend-mode: multiply;
     background-size: 150px;
     background-repeat: repeat;
@@ -35,7 +35,7 @@
 .map-overlay {
     position: absolute;
     bottom: 15px;
-    left: 15px;
+    left: 60px;
     right: 15px;
     background: rgba(255, 255, 255, 0.95);
     color: black;
@@ -45,6 +45,7 @@
     align-items: center;
     gap: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: small;
 }
 
 .map-pin-icon {
@@ -53,17 +54,26 @@
     border-radius: 50%;
     color: var(--color-text-dark);
     display: flex;
+    border: 3px solid var(--color-border);
 }
 
 .map-view-btn {
     background: var(--color-primary);
-    color: var(--color-text-light);
+    color: var(--color-sidebar);
     border: 3px solid var(--color-border);
     box-shadow: 4px 4px 0px var(--color-shadow);
-    padding: 8px 12px;
+    padding: 8px 10px;
     border-radius: 8px;
     font-weight: bold;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     white-space: nowrap;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .map-overlay {
+        font-size: 9px;
+
+    }
 }

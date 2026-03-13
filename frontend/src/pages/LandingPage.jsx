@@ -9,51 +9,62 @@ import { MapPin, Phone, Instagram, ChevronLeft, ChevronRight } from 'lucide-reac
 import '../styles/LandingPage.css'; 
 import { useTenant } from '../context/TenantContext';
 
-const videos = [
-    "/videos/kebab_tour.mp4",
-    "/videos/video_reydelacomida.mp4",
-    "/videos/video_plato_calamares_tajin_gambas.mp4"
+const socialVideos = [
+    "/videos/victorprous_9-16.mp4",
+    "/videos/Pizza_9-16.mp4",
+    "/videos/Tenders_9-16.mp4"
 ];
 
-const videoTitles = [
-    "TOUR DEL LOCAL 📍",
-    "EL REY DE LA COMIDA 👑",
-    "PLATOS DELICIOSOS 🍤"
+const socialVideoTitles = [
+    "VICTOR PROUS 🏆",
+    "PIZZA TIME 🍕",
+    "TENDERS CRUNCHY 🍗"
 ];
 
-// Updated Banner Images with Absolute Paths
-const bannerImages = [
-    "/hero/banner3.webp",
-    "/hero/banner1.webp",
-    "/hero/banner4.webp",
-    "/hero/banner.webp",
-    "/hero/banner2.webp"
+const heroMedia = [
+    { type: 'video', src: "/hero/Tour_local_3-2.mp4" },
+    { type: 'video', src: "/hero/Patatas_Fritas.mp4" },
+    { type: 'video', src: "/hero/Tacos_Mixto_3-2.mp4" },
+    { type: 'video', src: "/hero/Burger_Cabra.mp4" },
+    { type: 'video', src: "/hero/Plato_Kebab_3-2.mp4" },
+    { type: 'video', src: "/hero/Patatas_Bravas.mp4" },
+    { type: 'video', src: "/hero/Entrantes.mp4" },
+    { type: 'video', src: "/hero/Burger_Clasica.mp4" },
+    { type: 'video', src: "/hero/Mango_Lassi.mp4" }
 ];
+
+// Banner logic now uses heroMedia
+
 
 const LandingPage = () => {
     const { theme } = useTenant();
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
     const [currentBanner, setCurrentBanner] = useState(0);
 
-    // Auto-slide Banner Logic (3s interval)
+    // Auto-slide Hero Media Logic (4s interval for images, videos handle their own onEnded)
     React.useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentBanner((prev) => (prev + 1) % bannerImages.length);
-        }, 3000);
-        return () => clearInterval(interval);
-    }, []);
+        const currentItem = heroMedia[currentBanner];
+        if (currentItem.type === 'image') {
+            const timeout = setTimeout(() => {
+                setCurrentBanner((prev) => (prev + 1) % heroMedia.length);
+            }, 4000);
+            return () => clearTimeout(timeout);
+        }
+    }, [currentBanner]);
 
-    const handleVideoEnd = () => {
-        nextVideo();
+    const handleHeroVideoEnd = () => {
+        setCurrentBanner((prev) => (prev + 1) % heroMedia.length);
     };
 
-    const nextVideo = () => {
-        setCurrentVideoIndex((prev) => (prev + 1) % videos.length);
+
+    const nextSocialVideo = () => {
+        setCurrentVideoIndex((prev) => (prev + 1) % socialVideos.length);
     };
 
-    const prevVideo = () => {
-        setCurrentVideoIndex((prev) => (prev - 1 + videos.length) % videos.length);
+    const prevSocialVideo = () => {
+        setCurrentVideoIndex((prev) => (prev - 1 + socialVideos.length) % socialVideos.length);
     };
+
 
     return (
         <div className="landing-page">
@@ -69,13 +80,28 @@ const LandingPage = () => {
                         <h1 className="hero-title">{theme.restaurantName.toUpperCase()}<br /><span>{theme.restaurantSuffix}</span></h1>
 
                         <div className="hero-slider-container">
-                            {bannerImages.map((src, index) => (
-                                <img
-                                    key={index}
-                                    src={src}
-                                    alt="Hero Slide"
-                                    className={`hero-slide ${currentBanner === index ? 'active' : ''}`}
-                                />
+                            {heroMedia.map((item, index) => (
+                                index === currentBanner && (
+                                    item.type === 'image' ? (
+                                        <img
+                                            key={index}
+                                            src={item.src}
+                                            alt="Hero Slide"
+                                            className="hero-slide active"
+                                        />
+                                    ) : (
+                                        <video
+                                            key={index}
+                                            src={item.src}
+                                            autoPlay
+                                            muted
+                                            playsInline
+                                            onEnded={handleHeroVideoEnd}
+                                            className="hero-slide active"
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                    )
+                                )
                             ))}
                         </div>
 
@@ -101,12 +127,12 @@ const LandingPage = () => {
                             {/* Video Container */}
                             <div className="video-inner-container">
                                 <video
-                                    key={videos[currentVideoIndex]}
-                                    src={videos[currentVideoIndex]}
+                                    key={socialVideos[currentVideoIndex]}
+                                    src={socialVideos[currentVideoIndex]}
                                     autoPlay
                                     muted
                                     playsInline
-                                    onEnded={handleVideoEnd}
+                                    onEnded={nextSocialVideo}
                                 />
                             </div>
 
@@ -117,24 +143,24 @@ const LandingPage = () => {
                             <div className="video-controls-layer">
 
                                 {/* Left Arrow */}
-                                <button onClick={(e) => { e.stopPropagation(); prevVideo(); }} className="arrow-btn arrow-prev">
+                                <button onClick={(e) => { e.stopPropagation(); prevSocialVideo(); }} className="arrow-btn arrow-prev">
                                     <ChevronLeft size={24} />
                                 </button>
 
                                 {/* Right Arrow */}
-                                <button onClick={(e) => { e.stopPropagation(); nextVideo(); }} className="arrow-btn arrow-next">
+                                <button onClick={(e) => { e.stopPropagation(); nextSocialVideo(); }} className="arrow-btn arrow-next">
                                     <ChevronRight size={24} />
                                 </button>
 
                                 {/* Title & Dots */}
                                 <div className="video-info-overlay">
                                     <p className="video-title">
-                                        {videoTitles[currentVideoIndex]}
+                                        {socialVideoTitles[currentVideoIndex]}
                                     </p>
 
                                     {/* Dots Indicator */}
                                     <div className="dots-container">
-                                        {videos.map((_, idx) => (
+                                        {socialVideos.map((_, idx) => (
                                             <button
                                                 key={idx}
                                                 onClick={() => setCurrentVideoIndex(idx)}
@@ -174,10 +200,9 @@ const LandingPage = () => {
 
                             <div className="map-overlay">
                                 <div className="map-pin-icon">
-                                    <MapPin size={22} />
+                                    <MapPin size={16} />
                                 </div>
                                 <div className="flex-1">
-                                    <p className="font-bold m-0 text-black">{theme.restaurantName} {theme.restaurantSuffix}</p>
                                     <p className="text-sm text-gray-600 m-0">{theme.contact.address}</p>
                                 </div>
                                 <a href={theme.contact.mapsIframe} target="_blank" rel="noreferrer"

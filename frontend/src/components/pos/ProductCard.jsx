@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChefHat } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
+import PriceDisplay from '../shared/PriceDisplay';
 import '../../styles/pos/ProductCard.css';
 
 const ProductCard = ({ originalProd, category, onClick }) => {
@@ -72,9 +73,11 @@ const ProductCard = ({ originalProd, category, onClick }) => {
             <div className="product-info">
                 <h3 className="product-name">{prod.name}</h3>
                 <div className="product-price">
-                    {(prod.variants || []).length > 0
-                        ? `${Math.min(...prod.variants.map(v => v.price))}€`
-                        : `${(prod.price || prod.base_price || 0).toFixed(2)}€`}
+                    <PriceDisplay 
+                        price={(prod.variants || []).length > 0
+                            ? Math.min(...prod.variants.map(v => v.price))
+                            : (prod.price || prod.base_price || 0)} 
+                    />
                 </div>
             </div>
         </div>

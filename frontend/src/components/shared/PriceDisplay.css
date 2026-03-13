@@ -1,0 +1,41 @@
+.price-display {
+    display: inline-flex;
+    align-items: baseline;
+    font-weight: inherit;
+    color: inherit;
+    font-family: inherit;
+}
+
+.price-integer {
+    font-size: 1.1em;
+    line-height: 1;
+}
+
+.price-decimal {
+    font-size: 0.75em;
+    vertical-align: super;
+    margin-left: 1px;
+}
+
+.price-currency {
+    font-size: 1.1em;
+    margin-left: 1px;
+}
+
+/* Specific adjustments for different contexts */
+.product-card .price-display {
+    color: var(--color-primary);
+}
+
+.option-btn.selected .price-display {
+    color: white;
+}
+
+.modal-footer-btn .price-display {
+    color: white;
+    font-size: 1.1em;
+}
+
+.total-price .price-display {
+    font-size: 1.5rem;
+}

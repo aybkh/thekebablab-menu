@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
+import PriceDisplay from '../shared/PriceDisplay';
 import '../../styles/pos/ProductModal.css';
-
-const KNOWN_MEATS = [
-    "Carne Picada", "Pollo", "Nuggets", "Cordon Bleu",
-    "Tenders", "Kefta", "Salchicha", "Kebab"
-];
 
 const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSauces }) => {
     const { t, getTranslatedProduct } = useLanguage();
@@ -14,7 +10,6 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
     // Internal State
     const [currentProduct, setCurrentProduct] = useState(null);
     const [selectedVariant, setSelectedVariant] = useState(null);
-    const [selectedMeats, setSelectedMeats] = useState([]);
     const [selectedSauces, setSelectedSauces] = useState([]);
     const [isMenuUpgrade, setIsMenuUpgrade] = useState(false);
     const [hasDrink, setHasDrink] = useState(false);
@@ -29,13 +24,6 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
             // Set default variant
             const defaultVariant = translated.variants && translated.variants.length > 0 ? translated.variants[0] : null;
             setSelectedVariant(defaultVariant);
-
-            // Set default meats
-            if (KNOWN_MEATS.includes(originalProduct.name)) {
-                setSelectedMeats([originalProduct.name]);
-            } else {
-                setSelectedMeats([]);
-            }
 
             // Reset selection
             setIsMenuUpgrade(false);
@@ -54,8 +42,7 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
         const drinkExtra = hasDrink ? 1.50 : 0;
         const sauceExtra = Math.max(0, selectedSauces.length - 2) * 0.25;
         const batidoExtra = (category?.name === "Batidos" && selectedLiquidBase === "Zumo de Naranja") ? 0.50 : 0;
-        const tendersExtra = selectedMeats.includes("Tenders") ? 1.00 : 0;
-        return (base + menuExtra + drinkExtra + sauceExtra + batidoExtra + tendersExtra).toFixed(2);
+        return (base + menuExtra + drinkExtra + sauceExtra + batidoExtra).toFixed(2);
     };
 
     return (
@@ -91,42 +78,9 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
                             {currentProduct.variants.map(v => (
                                 <button key={v.id} className={`option-btn ${selectedVariant?.id === v.id ? 'selected' : ''}`}
                                     onClick={() => setSelectedVariant(v)}>
-                                    {v.name} - {v.price}€
+                                    {v.name} - <PriceDisplay price={v.price} />
                                 </button>
                             ))}
-                        </div>
-                    </div>
-                )}
-
-                {/* Meats Logic */}
-                {(((category?.name || "").includes("Tacos")) || ((category?.name || "").includes("Bocadillos") && originalProduct.name?.includes("Mixto")) || (originalProduct?.name || "").toLowerCase().includes("taco")) && (
-                    <div className="selection-container">
-                        <span className="section-title">{t('meats_label')}</span>
-                        <div className="selection-grid">
-                            {["Carne Picada", "Pollo", "Nuggets", "Cordon Bleu", "Tenders"].map(meat => {
-                                const isSelected = selectedMeats.includes(meat);
-                                const translatedMeat = getTranslatedProduct({ name: meat })?.name || meat;
-                                return (
-                                    <button key={meat} className={`option-btn ${isSelected ? 'selected' : ''}`}
-                                        onClick={() => {
-                                            const currentName = (selectedVariant?.name || originalProduct.name || "").toUpperCase();
-                                            let maxAllowed = 1;
-
-                                            if (currentName.includes("MIXTO")) maxAllowed = 2;
-                                            else if (currentName.includes("XXL") || currentName.includes("MAXI")) maxAllowed = 3;
-                                            else if (currentName.includes("XL")) maxAllowed = 3;
-                                            else if (currentName.includes(" L") || currentName.endsWith("L") || currentName.includes("LARGE") || currentName.includes("DOBLE") || currentName.includes("DOUBLE")) maxAllowed = 2;
-
-                                            if (isSelected) setSelectedMeats(selectedMeats.filter(m => m !== meat));
-                                            else if (selectedMeats.length < maxAllowed) {
-                                                setSelectedMeats([...selectedMeats, meat]);
-                                            }
-                                        }}>
-                                        {translatedMeat}
-                                        {meat === "Tenders" && <span className="extra-price">(+1.00€)</span>}
-                                    </button>
-                                );
-                            })}
                         </div>
                     </div>
                 )}
@@ -142,7 +96,7 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
                                     <button key={base} className={`option-btn ${selectedLiquidBase === base ? 'selected' : ''}`}
                                         onClick={() => setSelectedLiquidBase(base)}>
                                         {translatedBase}
-                                        {base === "Zumo de Naranja" && <span className="extra-price">(+0.50€)</span>}
+                                        {base === "Zumo de Naranja" && <span className="extra-price">(+<PriceDisplay price={0.50} />)</span>}
                                     </button>
                                 );
                             })}
@@ -180,7 +134,7 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
                 )}
 
                 <button className="btn-primary modal-footer-btn" onClick={onClose}>
-                    {t('close_total')}: {calculateTotal()}€
+                    {t('close_total')}: <PriceDisplay price={calculateTotal()} />
                 </button>
             </div>
         </div>

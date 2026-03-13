@@ -24,7 +24,7 @@ const WelcomeScreen = ({ onStart }) => {
                 <LanguageSelector currentLang={language} onLanguageChange={setLanguage} isWelcomeScreen={true} />
             </div>
             <button onClick={onStart} className="welcome-full-btn">
-                <img src="/images/kebab-logo.png" alt="EMPEZAR" className="welcome-start-img" />
+                <img src="/images/kebab-logo.webp" alt="EMPEZAR" className="welcome-start-img" />
                 <span className="welcome-start-text">
                     {t('start')}
                 </span>

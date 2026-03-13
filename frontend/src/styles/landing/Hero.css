@@ -15,7 +15,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(rgba(242, 97, 34, 0.4), rgba(132, 21, 0, 0.861)), url('/ladrillo.jpg');
+    background-image: linear-gradient(rgba(242, 97, 34, 0.4), rgba(132, 21, 0, 0.861)), url('/ladrillo.webp');
     background-blend-mode: multiply;
     background-size: 150px;
     background-repeat: repeat;
