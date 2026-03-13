@@ -426,7 +426,7 @@
           "name": "Zumo de Melocot\u00F3n",
           "price": 1.8,
           "description": "Botell\u00EDn individual de n\u00E9ctar o zumo sabor melocot\u00F3n.",
-          "isAvailable": false,
+          "isAvailable": true,
           "image": ""
         },
         {
