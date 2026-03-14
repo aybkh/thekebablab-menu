@@ -60,12 +60,6 @@ const Navbar = () => {
                         <button onClick={() => setIsOpen(!isOpen)} className="nav-btn-mobile md:hidden">
                             {isOpen ? <X size={30} /> : <Menu size={30} />}
                         </button>
-                        
-                        <div className="nav-brand-container" onClick={() => navigate('/')}>
-                            <span className="nav-brand-text">
-                                {theme.restaurantName} {theme.restaurantSuffix && <span>{theme.restaurantSuffix}</span>}
-                            </span>
-                        </div>
                     </div>
 
                     {/* Center/Main Section: Desktop Menu Links */}
