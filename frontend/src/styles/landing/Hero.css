@@ -49,12 +49,12 @@
     line-height: 1.1;
     margin-bottom: 20px;
     text-transform: uppercase;
-    text-shadow: 6px 6px 0px var(--color-shadow);
+    text-shadow: 2px 2px 2px var(--color-shadow);
 }
 
 .hero-title span {
     color: var(--color-primary);
-    text-shadow: 6px 6px px var(--color-shadow);
+    text-shadow: 2px 2px 2px var(--color-shadow);
 }
 
 @media (min-width: 768px) {
@@ -69,11 +69,12 @@
 
 .hero-subtitle {
     font-size: 1.2rem;
-    color: var(--color-sidebar);
+    color: var(--color-text-light);
     font-weight: 600;
     max-width: 500px;
     margin: 0 auto 30px;
     line-height: 1.6;
+    text-shadow: 2px 2px 0px var(--color-shadow);
 }
 
 .hero-slider-container {
