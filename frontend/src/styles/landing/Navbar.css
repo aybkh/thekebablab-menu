@@ -56,11 +56,12 @@
     font-size: 1.4rem;
     color: white;
     line-height: 1;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 1px var(--color-shadow);
 }
 
 .nav-brand-text span {
     color: var(--color-primary);
+    text-shadow: 1px 1px 1px var(--color-shadow);
 }
 
 .nav-btn-mobile {
@@ -205,8 +206,12 @@
     border-radius: 12px;
     cursor: pointer;
     background: var(--color-primary);
-    border: none;
-    color: white;
+    color: var(--color-sidebar);
     font-family: 'Black Ops One', cursive;
-    text-decoration: none;
+    border: 3px solid var(--color-border);
+    box-shadow: 4px 4px 0px var(--color-shadow);
+}
+
+.no-underline {
+    text-decoration: none !important;
 }
