@@ -80,7 +80,7 @@ const Navbar = () => {
                             );
                         })}
 
-                        <Link to="/menu" className="no-underline">
+                        <Link to="/menu" target="_blank" rel="noopener noreferrer" className="no-underline">
                             <button className="nav-link-btn btn-order-style">
                                 VER CARTA
                             </button>
@@ -118,7 +118,7 @@ const Navbar = () => {
                     );
                 })}
                 <div className="mt-auto mb-5">
-                    <Link to="/menu" className="w-full no-underline" onClick={() => setIsOpen(false)}>
+                    <Link to="/menu" target="_blank" rel="noopener noreferrer" className="no-underline" onClick={() => setIsOpen(false)}>
                         <button className="nav-mobile-order-btn">
                             <Utensils size={28} /> VER CARTA
                         </button>
