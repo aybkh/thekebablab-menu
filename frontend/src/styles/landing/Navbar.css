@@ -43,12 +43,7 @@
 }
 
 @media (max-width: 767px) {
-    .nav-brand-container {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-    }
+    /* El contenedor de brand se eliminó en JSX, pero mantenemos lógica de centrado para el logo */
 }
 
 .nav-brand-text {
@@ -154,8 +149,16 @@
     }
     
     .nav-left-section {
-        flex: 1;
+        flex: 0 0 auto;
         justify-content: flex-start;
+    }
+
+    .nav-logo-section {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        width: auto;
     }
 }
 
