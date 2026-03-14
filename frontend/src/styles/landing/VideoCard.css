@@ -161,7 +161,9 @@
 
 @media (max-width: 768px) {
     .victor-badge {
-        width: 50px;
+        width: 60px;
+        left: 240px;
+        top: 97%;
     }
 }
 
