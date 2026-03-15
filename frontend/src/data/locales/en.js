@@ -453,4 +453,31 @@ export const en = {
             "description": "Additional ingredient topping."
         }
     }
+,
+    "pizza_custom": {
+    "title": "BUILD YOUR PIZZA",
+    "bases": "Bases (Choose 1)",
+    "quesos": "Cheeses (Multiple)",
+    "carnes": "Meats (Multiple)",
+    "verduras": "Vegetables (Multiple)",
+    "items": {
+        "Tomate": "Tomato",
+        "Barbacoa": "BBQ",
+        "Crema/Nata": "Cream",
+        "Mozzarella": "Mozzarella",
+        "Gorgonzola": "Gorgonzola",
+        "Queso de Cabra": "Goat Cheese",
+        "Pollo": "Chicken",
+        "Ternera": "Beef",
+        "Bacón": "Bacon",
+        "Jamón York": "Ham",
+        "Peperoni": "Pepperoni",
+        "Atún": "Tuna",
+        "Cebolla": "Onion",
+        "Pimiento": "Pepper",
+        "Champiñones": "Mushrooms",
+        "Olivas Negras": "Black Olives",
+        "Piña": "Pineapple"
+    }
+}
 };
