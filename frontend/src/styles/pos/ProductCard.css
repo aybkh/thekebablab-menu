@@ -49,6 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .product-image {
@@ -101,3 +102,12 @@
     font-family: 'Black Ops One', cursive;
     text-align: right;
 }
+
+/* Overlay para Alérgenos */
+.allergen-overlay {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    z-index: 10;
+}
+

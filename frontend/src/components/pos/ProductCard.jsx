@@ -2,6 +2,7 @@ import React from 'react';
 import { ChefHat } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import PriceDisplay from '../shared/PriceDisplay';
+import AllergenIcons from '../landing/AllergenIcons';
 import '../../styles/pos/ProductCard.css';
 
 const ProductCard = ({ originalProd, category, onClick }) => {
@@ -53,6 +54,7 @@ const ProductCard = ({ originalProd, category, onClick }) => {
                         <ChefHat size={48} />
                     </div>
                 )}
+                <AllergenIcons allergenIds={originalProd.alergenos} />
             </div>
         );
     };
