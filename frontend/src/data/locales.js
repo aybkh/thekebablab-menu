@@ -5,11 +5,14 @@ import { ar } from './locales/ar.js';
 import { de } from './locales/de.js';
 import { nl } from './locales/nl.js';
 
+import { ca } from './locales/ca.js';
+
 export const resources = {
     es,
     en,
     fr,
     ar,
     de,
-    nl
+    nl,
+    ca
 };
