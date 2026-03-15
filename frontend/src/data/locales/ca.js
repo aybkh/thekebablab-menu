@@ -454,4 +454,31 @@ export const ca = {
             "description": "Suplement d'ingredient addicional."
         }
     }
+,
+    "pizza_custom": {
+    "title": "CREA LA TEVA PIZZA",
+    "bases": "Bases (Tria 1)",
+    "quesos": "Formatges (Múltiple)",
+    "carnes": "Carns (Múltiple)",
+    "verduras": "Verdures (Múltiple)",
+    "items": {
+        "Tomate": "Tomàquet",
+        "Barbacoa": "Barbacoa",
+        "Crema/Nata": "Crema/Nata",
+        "Mozzarella": "Mozzarella",
+        "Gorgonzola": "Gorgonzola",
+        "Queso de Cabra": "Formatge de Cabra",
+        "Pollo": "Pollastre",
+        "Ternera": "Vedella",
+        "Bacón": "Bacó",
+        "Jamón York": "Pernil Dolç",
+        "Peperoni": "Peperoni",
+        "Atún": "Tonyina",
+        "Cebolla": "Ceba",
+        "Pimiento": "Pebrot",
+        "Champiñones": "Xampinyons",
+        "Olivas Negras": "Olives Negres",
+        "Piña": "Pinya"
+    }
+}
 };
