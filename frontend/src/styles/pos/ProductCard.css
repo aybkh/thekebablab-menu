@@ -42,7 +42,7 @@
 
 .product-image-container {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
     background-color: #f7f7f7;
     border-bottom: 2px solid var(--color-border);
@@ -103,11 +103,14 @@
     text-align: right;
 }
 
-/* Overlay para Alérgenos */
-.allergen-overlay {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    z-index: 10;
+/* Franja para Alérgenos */
+.product-allergens-strip {
+    background-color: #fff;
+    padding: 2px 8px; /* Reducido padding ya que los iconos son de 12px */
+    border-bottom: 2px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    min-height: 20px; /* Asegura espacio mínimo */
 }
+/* No absolute position needed anymore for overlay, layout handled by strip */
 
