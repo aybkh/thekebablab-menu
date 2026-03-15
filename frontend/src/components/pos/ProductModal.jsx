@@ -5,6 +5,13 @@ import PriceDisplay from '../shared/PriceDisplay';
 import { ALLERGEN_MAP } from '../landing/AllergenIcons';
 import '../../styles/pos/ProductModal.css';
 
+const PIZZA_CUSTOM_GROUPS = [
+    { key: "bases", type: "radio", items: ["Tomate", "Barbacoa", "Crema/Nata"] },
+    { key: "quesos", type: "checkbox", items: ["Mozzarella", "Gorgonzola", "Queso de Cabra"] },
+    { key: "carnes", type: "checkbox", items: ["Pollo", "Ternera", "Peperoni", "Atún"] },
+    { key: "verduras", type: "checkbox", items: ["Cebolla", "Pimiento", "Champiñones", "Olivas Negras", "Piña"] }
+];
+
 const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSauces }) => {
     const { t, getTranslatedProduct } = useLanguage();
 
@@ -15,6 +22,9 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
     const [isMenuUpgrade, setIsMenuUpgrade] = useState(false);
     const [hasDrink, setHasDrink] = useState(false);
     const [selectedLiquidBase, setSelectedLiquidBase] = useState(null);
+    const [pizzaSelections, setPizzaSelections] = useState({});
+
+    const isPizzaAtuGusto = currentProduct?.id === 106 || currentProduct?.name === "Pizza a tu Gusto";
 
     // Initialize state when product changes
     useEffect(() => {
@@ -31,6 +41,7 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
             setHasDrink(false);
             setSelectedSauces([]);
             setSelectedLiquidBase(null);
+            setPizzaSelections({});
         }
     }, [isOpen, originalProduct, getTranslatedProduct]);
 
@@ -43,7 +54,21 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
         const drinkExtra = hasDrink ? 1.50 : 0;
         const sauceExtra = Math.max(0, selectedSauces.length - 2) * 0.25;
         const batidoExtra = (category?.name === "Batidos" && selectedLiquidBase === "Zumo de Naranja") ? 0.50 : 0;
-        return (base + menuExtra + drinkExtra + sauceExtra + batidoExtra).toFixed(2);
+
+        let pizzaExtra = 0;
+        if (isPizzaAtuGusto) {
+            let count = 0;
+            Object.entries(pizzaSelections).forEach(([key, val]) => {
+                if (key !== "bases" && Array.isArray(val)) {
+                    count += val.length;
+                }
+            });
+            if (count > 3) {
+                pizzaExtra = (count - 3) * 1.00; // 1€ por ingrediente extra después de 3
+            }
+        }
+
+        return (base + menuExtra + drinkExtra + sauceExtra + batidoExtra + pizzaExtra).toFixed(2);
     };
 
     return (
@@ -112,6 +137,53 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
                                 </button>
                             ))}
                         </div>
+                    </div>
+                )}
+
+                {/* CREA TU PIZZA (WEB) */}
+                {isPizzaAtuGusto && (
+                    <div className="selection-container">
+                        <span className="section-title" style={{ color: 'var(--primary)', fontWeight: 'bold' }}>
+                            {t('pizza_custom.title')}
+                        </span>
+                        
+                        {PIZZA_CUSTOM_GROUPS.map(group => (
+                            <div key={group.key} style={{ marginBottom: '15px' }}>
+                                <span className="section-title" style={{ fontSize: '0.9rem', opacity: 0.8, marginBottom: '5px' }}>
+                                    {t(`pizza_custom.${group.key}`).toUpperCase()}
+                                </span>
+                                <div className="selection-grid">
+                                    {group.items.map(item => {
+                                        const isSelected = group.type === "radio" 
+                                            ? pizzaSelections[group.key] === item
+                                            : (pizzaSelections[group.key] || []).includes(item);
+
+                                        return (
+                                            <button 
+                                                key={item} 
+                                                className={`option-btn ${isSelected ? 'selected' : ''}`}
+                                                style={isSelected ? { background: 'var(--primary)', color: 'white' } : {}}
+                                                onClick={() => {
+                                                    const current = pizzaSelections[group.key];
+                                                    if (group.type === "radio") {
+                                                        setPizzaSelections({ ...pizzaSelections, [group.key]: item });
+                                                    } else {
+                                                        const list = current || [];
+                                                        if (list.includes(item)) {
+                                                            setPizzaSelections({ ...pizzaSelections, [group.key]: list.filter(i => i !== item) });
+                                                        } else {
+                                                            setPizzaSelections({ ...pizzaSelections, [group.key]: [...list, item] });
+                                                        }
+                                                    }
+                                                }}
+                                            >
+                                                {t(`pizza_custom.items.${item}`) || item}
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 )}
 
