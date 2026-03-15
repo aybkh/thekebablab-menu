@@ -102,6 +102,23 @@
     font-size: 1.4rem;
 }
 
+.current-flag-img {
+    width: 22px;
+    height: 15px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    display: inline-block;
+}
+
+.option-flag-img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+    display: inline-block;
+}
+
 .option-label {
     flex: 1;
 }
