@@ -27,18 +27,20 @@ export const de = {
     "direction": "ltr",
     "categories": {
         "Tapas y Entrantes": "Tapas & Vorspeisen",
-        "Pita": "Pita",
-        "Hamburguesas": "Burger",
         "Dürüm": "Dürüm",
-        "Tacos": "Tacos",
+        "Pita": "Pita",
+        "Combo Box": "Combo Box",
+        "Tacos 303": "Tacos 303",
+        "Hamburguesas": "Burger",
         "Pizzas": "Pizzen",
         "Platos": "Tellergerichte",
         "Postres": "Desserts",
-        "Bebidas": "Getränke",
-        "Nuestros Batidos": "Unsere Shakes",
+        "Bebidas Frías": "Bebidas Frías",
+        "Batidos": "Batidos",
         "Bebidas Calientes": "Heißgetränke",
         "Menús y Combos": "Menüs & Combos",
-        "Salsas": "Saucen"
+        "Salsas": "Saucen",
+        "Suplementos": "Suplementos"
     },
     "products": {
         "Mozzarella Sticks": {
@@ -69,6 +71,10 @@ export const de = {
             "name": "Gemischter Salat",
             "description": "Erfrischende Salatbasis mit Tomaten, Zwiebeln und einer Auswahl an saisonalem Gemüse."
         },
+        "Ensalada Mix Queso Cabra": {
+            "name": "Ensalada Mix Queso Cabra",
+            "description": ""
+        },
         "Nuestras Patatas Bravas": {
             "name": "Unsere Patatas Bravas",
             "description": "Frittierte Kartoffelwürfel, serviert mit einer klassischen, leicht scharfen Spezialsauce."
@@ -80,6 +86,22 @@ export const de = {
         "Huevos rotos con Dürüm": {
             "name": "Spiegeleier mit Dürüm",
             "description": "Bett aus Pommes Frites mit zerschlagenen Spiegeleiern und würzigem Kebabfleisch nach Dürüm-Art."
+        },
+        "Dürüm de Pollo": {
+            "name": "Hähnchen-Dürüm",
+            "description": "Große Weizentortilla-Rolle, gefüllt mit dünnen Scheiben gebratenem Hähnchenfleisch, Gemüse, Salat und Haussaucen."
+        },
+        "Dürüm de Ternera": {
+            "name": "Rindfleisch-Dürüm",
+            "description": "Weizentortilla-Rolle, gefüllt mit gebratenem Rindfleisch vom klassischen Drehspieß, frischem Gemüse, Salat und Saucen."
+        },
+        "Dürüm Mix": {
+            "name": "Mix-Dürüm",
+            "description": "Weizentortilla-Rolle, gefüllt mit einer großzügigen Mischung aus Hähnchen- und Rindfleisch, Gemüse, Salat und Saucen."
+        },
+        "Dürüm de Falafel": {
+            "name": "Falafel-Dürüm",
+            "description": "Vegetarische Weizentortilla-Rolle, gefüllt mit knusprigen Falafel-Bällchen, frischem Salat, Gemüse und Saucen."
         },
         "Pita de Pollo": {
             "name": "Hähnchen-Pita",
@@ -97,37 +119,17 @@ export const de = {
             "name": "Falafel-Pita",
             "description": "Vegetarische Option im türkischen Brot mit frittierten Bällchen aus Kichererbsen und Gewürzen (Falafel), Gemüse und Saucen."
         },
-        "Hamburguesa Americana": {
-            "name": "American Burger",
-            "description": "Burger auf rustikalem Brot mit 200g Rindfleisch, Gewürzgurken, geschmolzenem Cheddar, karamellisierten Zwiebeln und spezieller American-Sauce. Inklusive Pommes."
+        "Combo Box Nugguets": {
+            "name": "Combo Box Nugguets",
+            "description": "Patatas, Nugguets, Salsa Queso"
         },
-        "Hamburguesa Clássica": {
-            "name": "Classic Burger",
-            "description": "Burger auf rustikalem Brot mit 200g Rindfleisch, Salat, Tomatenscheiben, geschmolzenem Edamer und einem saftigen Spiegelei. Inklusive Pommes."
+        "Combo Box Tenders": {
+            "name": "Combo Box Tenders",
+            "description": "Patatas, Tenders, Salsa Queso"
         },
-        "Hamburguesa Queso de Cabra": {
-            "name": "Ziegenkäse-Burger",
-            "description": "Gourmet-Burger auf rustikalem Brot mit 200g Rindfleisch, frischem Rucola, gegrilltem Ziegenkäsetaler, karamellisierten Zwiebeln und Honig-Senf-Sauce. Inklusive Pommes."
-        },
-        "Hamburguesa Chicken Crispy": {
-            "name": "Chicken Crispy Burger",
-            "description": "Burger im weichen Brioche-Brötchen, gefüllt mit 200g knusprig paniertem Hähnchenfleisch nach Hausart, Rucola, geschmolzenem Cheddar, Ranch-Sauce und Gurkenscheiben. Inklusive Pommes."
-        },
-        "Dürüm de Pollo": {
-            "name": "Hähnchen-Dürüm",
-            "description": "Große Weizentortilla-Rolle, gefüllt mit dünnen Scheiben gebratenem Hähnchenfleisch, Gemüse, Salat und Haussaucen."
-        },
-        "Dürüm de Ternera": {
-            "name": "Rindfleisch-Dürüm",
-            "description": "Weizentortilla-Rolle, gefüllt mit gebratenem Rindfleisch vom klassischen Drehspieß, frischem Gemüse, Salat und Saucen."
-        },
-        "Dürüm Mix": {
-            "name": "Mix-Dürüm",
-            "description": "Weizentortilla-Rolle, gefüllt mit einer großzügigen Mischung aus Hähnchen- und Rindfleisch, Gemüse, Salat und Saucen."
-        },
-        "Dürüm de Falafel": {
-            "name": "Falafel-Dürüm",
-            "description": "Vegetarische Weizentortilla-Rolle, gefüllt mit knusprigen Falafel-Bällchen, frischem Salat, Gemüse und Saucen."
+        "Combo Box Mix": {
+            "name": "Combo Box Mix",
+            "description": "Patatas, Nugguets, Tenders, Salsa Queso"
         },
         "Taco de Pollo": {
             "name": "Hähnchen-Taco (Französisch)",
@@ -148,6 +150,22 @@ export const de = {
         "Taco de Tenders": {
             "name": "Tenders-Taco (Französisch)",
             "description": "Herzhafter französischer Taco, gefüllt mit panierten Hähnchenstreifen (Tenders), Pommes, reichlich geschmolzenem Mozzarella, Käsesauce und Algerienne- oder Andalouse-Sauce."
+        },
+        "Hamburguesa Americana": {
+            "name": "American Burger",
+            "description": "Burger auf rustikalem Brot mit 200g Rindfleisch, Gewürzgurken, geschmolzenem Cheddar, karamellisierten Zwiebeln und spezieller American-Sauce. Inklusive Pommes."
+        },
+        "Hamburguesa Clássica": {
+            "name": "Classic Burger",
+            "description": "Burger auf rustikalem Brot mit 200g Rindfleisch, Salat, Tomatenscheiben, geschmolzenem Edamer und einem saftigen Spiegelei. Inklusive Pommes."
+        },
+        "Hamburguesa Queso de Cabra": {
+            "name": "Ziegenkäse-Burger",
+            "description": "Gourmet-Burger auf rustikalem Brot mit 200g Rindfleisch, frischem Rucola, gegrilltem Ziegenkäsetaler, karamellisierten Zwiebeln und Honig-Senf-Sauce. Inklusive Pommes."
+        },
+        "Hamburguesa Chicken Crispy": {
+            "name": "Chicken Crispy Burger",
+            "description": "Burger im weichen Brioche-Brötchen, gefüllt mit 200g knusprig paniertem Hähnchenfleisch nach Hausart, Rucola, geschmolzenem Cheddar, Ranch-Sauce und Gurkenscheiben. Inklusive Pommes."
         },
         "Pizza Margarita": {
             "name": "Pizza Margherita",
@@ -193,6 +211,10 @@ export const de = {
             "name": "Pizza Hawaii",
             "description": "Tropischer Pizzateig mit Tomatensauce, Putenschinken, süßen Ananasstücken, Mais und einem Schuss Sahne."
         },
+        "Pizza a tu Gusto": {
+            "name": "Pizza a tu Gusto",
+            "description": ""
+        },
         "Plato Kebab de Pollo": {
             "name": "Kebab-Teller Hähnchen",
             "description": "Großzügige Portion auf dem Teller (ohne Brot) mit Hähnchenfleisch-Scheiben, serviert mit gemischtem Salat und Pommes Frites."
@@ -229,18 +251,6 @@ export const de = {
             "name": "Cacaolat",
             "description": "Traditionelles Schokoladengetränk, kalt serviert."
         },
-        "Aqua Deus": {
-            "name": "Aqua Deus",
-            "description": "Kaltes Erfrischungsgetränk (Aqua Deus)."
-        },
-        "Aquarius": {
-            "name": "Aquarius",
-            "description": "Kaltes Erfrischungsgetränk (Aquarius)."
-        },
-        "Bezoya": {
-            "name": "Bezoya",
-            "description": "Kaltes Erfrischungsgetränk (Bezoya)."
-        },
         "Coca-Cola": {
             "name": "Coca-Cola",
             "description": "Kaltes Erfrischungsgetränk (Coca-Cola)."
@@ -249,33 +259,49 @@ export const de = {
             "name": "Coca-Cola Zero",
             "description": "Kaltes Erfrischungsgetränk (Coca-Cola Zero)."
         },
-        "Don Simon": {
-            "name": "Don Simon",
-            "description": "Kaltes Erfrischungsgetränk (Don Simon)."
+        "Fanta Naranja": {
+            "name": "Fanta Naranja",
+            "description": ""
         },
-        "Fanta": {
-            "name": "Fanta",
-            "description": "Kaltes Erfrischungsgetränk (Fanta)."
+        "Fanta Limón": {
+            "name": "Fanta Limón",
+            "description": ""
         },
-        "Font Vella": {
-            "name": "Font Vella",
-            "description": "Kaltes Erfrischungsgetränk (Font Vella)."
+        "Aquarius Naranja": {
+            "name": "Aquarius Naranja",
+            "description": ""
         },
-        "Hawai": {
-            "name": "Hawai",
-            "description": "Kaltes Erfrischungsgetränk (Hawai)."
+        "Aquarius Limón": {
+            "name": "Aquarius Limón",
+            "description": ""
         },
-        "Nestea": {
-            "name": "Nestea",
-            "description": "Kaltes Erfrischungsgetränk (Nestea)."
+        "Nestea Limón": {
+            "name": "Nestea Limón",
+            "description": ""
         },
         "Nestea Maracuyá": {
             "name": "Nestea Maracuja",
             "description": "Kaltes Erfrischungsgetränk (Nestea Maracuja)."
         },
-        "Oasis Tropical": {
-            "name": "Oasis Tropical",
-            "description": "Kaltes Erfrischungsgetränk (Oasis Tropical)."
+        "Trina Naranja": {
+            "name": "Trina Naranja",
+            "description": ""
+        },
+        "Pepsi": {
+            "name": "Pepsi",
+            "description": ""
+        },
+        "Sprite": {
+            "name": "Sprite",
+            "description": "Kaltes Erfrischungsgetränk (Sprite)."
+        },
+        "7UP": {
+            "name": "7UP",
+            "description": ""
+        },
+        "Hawai": {
+            "name": "Hawai",
+            "description": "Kaltes Erfrischungsgetränk (Hawai)."
         },
         "Poms": {
             "name": "Poms",
@@ -285,21 +311,17 @@ export const de = {
             "name": "Red Bull",
             "description": "Kaltes Erfrischungsgetränk (Red Bull)."
         },
-        "Schweppes": {
-            "name": "Schweppes",
-            "description": "Kaltes Erfrischungsgetränk (Schweppes)."
-        },
-        "Sprite": {
-            "name": "Sprite",
-            "description": "Kaltes Erfrischungsgetränk (Sprite)."
+        "Monster": {
+            "name": "Monster",
+            "description": ""
         },
         "Vichy Catalán": {
             "name": "Vichy Catalán",
             "description": "Kaltes Erfrischungsgetränk (Vichy Catalán)."
         },
-        "Batido de Aguacate": {
-            "name": "Avocado-Shake",
-            "description": "Cremiger und nahrhafter Shake aus frischen Avocados."
+        "Schweppes": {
+            "name": "Schweppes",
+            "description": "Kaltes Erfrischungsgetränk (Schweppes)."
         },
         "Mango Lassi": {
             "name": "Mango Lassi",
@@ -321,10 +343,6 @@ export const de = {
             "name": "Tee / Kräutertee",
             "description": "Heißes Wasser mit einem Teebeutel nach Wahl."
         },
-        "Descafeinado": {
-            "name": "Koffeinfreier Kaffee",
-            "description": "Koffeinfreier Kaffee aus der Maschine."
-        },
         "Menú Dürüm": {
             "name": "Dürüm-Menü",
             "description": "Komplettes Menü für eine Person inklusive einem Dürüm nach Wahl, Pommes und einem Erfrischungsgetränk."
@@ -333,21 +351,17 @@ export const de = {
             "name": "Pita-Menü",
             "description": "Komplettes Einzelmenü inklusive einem Pita-Sandwich nach Wahl, Pommes und einem Erfrischungsgetränk."
         },
-        "Menú Hamburguesa": {
-            "name": "Burger-Menü",
-            "description": "Komplettes Einzelmenü mit einem Burger nach Wahl, Pommes und einem Erfrischungsgetränk."
-        },
         "Menú Taco": {
             "name": "Taco-Menü",
             "description": "Komplettes Einzelmenü mit einem französischen Taco nach Wahl, Pommes und einem Erfrischungsgetränk."
         },
+        "Menú Hamburguesa": {
+            "name": "Burger-Menü",
+            "description": "Komplettes Einzelmenü mit einem Burger nach Wahl, Pommes und einem Erfrischungsgetränk."
+        },
         "Menú Pizza": {
             "name": "Pizza-Menü",
             "description": "Einzelmenü mit einer 32cm-Pizza nach Wahl und einem Erfrischungsgetränk."
-        },
-        "Menú Pizza Grande": {
-            "name": "Großes Pizza-Menü",
-            "description": "Einzel- oder Partnermenü mit einer großen Pizza nach Wahl und einem Erfrischungsgetränk."
         },
         "Combo 2 Dürüms": {
             "name": "2 Dürüms-Kombi",
@@ -357,21 +371,17 @@ export const de = {
             "name": "2 Pitas-Kombi",
             "description": "Angebot zum Teilen: Zwei Pita-Sandwiches nach Wahl, zwei Portionen Pommes und zwei Erfrischungsgetränke."
         },
-        "Combo 2 Tacos": {
-            "name": "2 Tacos-Kombi",
-            "description": "Angebot zum Teilen: Zwei französische Tacos nach Wahl, zwei Portionen Pommes und zwei Erfrischungsgetränke."
-        },
-        "Combo 2 Pizzas": {
-            "name": "2 Pizzen-Kombi",
-            "description": "Sparmenü inklusive zwei 32cm-Pizzen nach Wahl und einer großen Flasche Getränk (1L - 1,5L)."
+        "Combo 2 Pizzas Medianas": {
+            "name": "Combo 2 Pizzas Medianas",
+            "description": ""
         },
         "Combo Family": {
             "name": "Familien-Kombi",
             "description": "Das größte Paket für Gruppen oder Familien. Enthält: 1 Dürüm, 1 Pita, 1 Burger nach Wahl, 1 32cm-Pizza, 3 Portionen Pommes und eine große Flasche Getränk."
         },
-        "Combo Infantil": {
-            "name": "Kindermenü",
-            "description": "Menü für die Kleinen. Enthält 10 Hähnchen-Nuggets mit Pommes und einen Fruchtsaft."
+        "Menú Infantil": {
+            "name": "Menú Infantil",
+            "description": ""
         },
         "Salsa Algerian": {
             "name": "Salsa Algerienne",
@@ -393,33 +403,37 @@ export const de = {
             "name": "Salsa Brazil",
             "description": "Zusätzliche Portion Salsa Brazil."
         },
-        "Salsa Chilli Thai": {
-            "name": "Thai-Chillisauce",
-            "description": "Zusätzliche Portion Thai-Chillisauce."
-        },
-        "Salsa Curry": {
-            "name": "Currysauce",
-            "description": "Zusätzliche Portion Currysauce."
+        "Salsa Samurai": {
+            "name": "Samurai-Sauce",
+            "description": "Zusätzliche Portion Samurai-Sauce."
         },
         "Salsa Ketchup": {
             "name": "Ketchup",
             "description": "Zusätzliche Portion Ketchup."
         },
-        "Salsa Marocaine": {
-            "name": "Marokkanische Sauce",
-            "description": "Zusätzliche Portion marokkanische Sauce."
-        },
         "Salsa Mayonesa": {
             "name": "Mayonnaise",
             "description": "Zusätzliche Portion Mayonnaise."
         },
-        "Salsa Pita Kebab": {
-            "name": "Weiße Kebabsauce",
-            "description": "Zusätzliche Portion weiße Kebabsauce."
+        "Solo Carne (Sin ensalada/patatas)": {
+            "name": "Solo Carne (Sin ensalada/patatas)",
+            "description": ""
         },
-        "Salsa Samurai": {
-            "name": "Samurai-Sauce",
-            "description": "Zusätzliche Portion Samurai-Sauce."
+        "Extra de Carne": {
+            "name": "Extra de Carne",
+            "description": ""
+        },
+        "Queso Feta": {
+            "name": "Queso Feta",
+            "description": ""
+        },
+        "Queso de Cabra": {
+            "name": "Queso de Cabra",
+            "description": ""
+        },
+        "Ingrediente Extra": {
+            "name": "Ingrediente Extra",
+            "description": ""
         }
     }
 };
