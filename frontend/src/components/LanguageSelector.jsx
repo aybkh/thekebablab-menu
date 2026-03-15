@@ -10,7 +10,9 @@ const LANGUAGES = [
     { code: 'ar', label: 'العربية', flag: '🇲🇦' },
     { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
     { code: 'nl', label: 'Nederlands', flag: '🇳🇱' },
+    { code: 'ca', label: 'Català', flag: '🇦🇩' },
 ];
+
 
 const LanguageSelector = ({ currentLang, onLanguageChange, isWelcomeScreen = false }) => {
     const [isOpen, setIsOpen] = useState(false);
