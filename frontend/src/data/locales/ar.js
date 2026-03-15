@@ -27,18 +27,20 @@ export const ar = {
     "direction": "rtl",
     "categories": {
         "Tapas y Entrantes": "مقبلات ومشهيات",
-        "Pita": "بيتا",
-        "Hamburguesas": "برجر",
         "Dürüm": "دوروم",
-        "Tacos": "تاكو",
+        "Pita": "بيتا",
+        "Combo Box": "Combo Box",
+        "Tacos 303": "Tacos 303",
+        "Hamburguesas": "برجر",
         "Pizzas": "بيتزا",
         "Platos": "أطباقنا",
         "Postres": "حلويات",
-        "Bebidas": "مشروبات الباردة",
-        "Nuestros Batidos": "عصائرنا",
+        "Bebidas Frías": "Bebidas Frías",
+        "Batidos": "Batidos",
         "Bebidas Calientes": "مشروبات ساخنة",
         "Menús y Combos": "وجبات وكومبو",
-        "Salsas": "الصلصات"
+        "Salsas": "الصلصات",
+        "Suplementos": "Suplementos"
     },
     "products": {
         "Mozzarella Sticks": {
@@ -69,6 +71,10 @@ export const ar = {
             "name": "سلطة مشكلة",
             "description": "قاعدة منعشة من الخس مع الطماطم والبصل ومجموعة من الخضروات الموسمية."
         },
+        "Ensalada Mix Queso Cabra": {
+            "name": "Ensalada Mix Queso Cabra",
+            "description": ""
+        },
         "Nuestras Patatas Bravas": {
             "name": "بطاطس برافس الخاصة",
             "description": "مكعبات بطاطس مقلية تقدم مع صلصة برافا الكلاسيكية الحارة."
@@ -80,6 +86,22 @@ export const ar = {
         "Huevos rotos con Dürüm": {
             "name": "بيض مقلي مع دوروم",
             "description": "طبقة من البطاطس المقلية يعلوها بيض مقلي مكسور مع لحم كباب متبل على طريقة الدوروم."
+        },
+        "Dürüm de Pollo": {
+            "name": "دوروم دجاج",
+            "description": "لفافة كبيرة من تورتيلا القمح محشوة بشرائح الدجاج المشوي، خضروات، سلطة وصلصات البيت."
+        },
+        "Dürüm de Ternera": {
+            "name": "دوروم لحم",
+            "description": "لفافة تورتيلا محشوة بلحم البقر المشوي على سيخ الكباب التقليدي، خضروات طازجة، سلطة وصلصات."
+        },
+        "Dürüm Mix": {
+            "name": "دوروم مشكل",
+            "description": "لفافة تورتيلا محشوة بمزيج سخي من لحم الدجاج والبقر المشوي، مع الخضروات، السلطة والصلصات."
+        },
+        "Dürüm de Falafel": {
+            "name": "دوروم فلافل",
+            "description": "لفافة نباتية محشوة بأقراص الفلافل المقرمشة، سلطة طازجة، خضروات وصلصات."
         },
         "Pita de Pollo": {
             "name": "بيتا دجاج",
@@ -97,37 +119,17 @@ export const ar = {
             "name": "بيتا فلافل",
             "description": "خيار نباتي في خبز تركي مع أقراص الحمص المقلية والمتبلة (فلافل)، خضروات، سلطة وصلصات."
         },
-        "Hamburguesa Americana": {
-            "name": "برجر أمريكاني",
-            "description": "برجر بخبز ريفي مع 200 جرام من لحم البقر، مخلل، جبنة شيدر ذائبة، بصل مكرمل وصلصة أمريكية خاصة. يشمل البطاطس المقلية."
+        "Combo Box Nugguets": {
+            "name": "Combo Box Nugguets",
+            "description": "Patatas, Nugguets, Salsa Queso"
         },
-        "Hamburguesa Clássica": {
-            "name": "برجر كلاسيك",
-            "description": "برجر بخبز ريفي مع 200 جرام من لحم البقر، خس، طماطم، جبنة إيدام ذائبة وبيض مقلي. يشمل البطاطس المقلية."
+        "Combo Box Tenders": {
+            "name": "Combo Box Tenders",
+            "description": "Patatas, Tenders, Salsa Queso"
         },
-        "Hamburguesa Queso de Cabra": {
-            "name": "برجر جبنة الماعز",
-            "description": "برجر فاخر بخبز ريفي مع 200 جرام بقر، جرجير طازج، قطعة جبن ماعز مشوية، بصل مكرمل وصلصة العسل والخردل. يشمل البطاطس المقلية."
-        },
-        "Hamburguesa Chicken Crispy": {
-            "name": "برجر دجاج مقرمش",
-            "description": "برجر بخبز البريوش الناعم محشو بـ 200 جرام دجاج مقرمش، جرجير، شيدر ذائب، صلصة رانش ومخلل. يشمل البطاطس المقلية."
-        },
-        "Dürüm de Pollo": {
-            "name": "دوروم دجاج",
-            "description": "لفافة كبيرة من تورتيلا القمح محشوة بشرائح الدجاج المشوي، خضروات، سلطة وصلصات البيت."
-        },
-        "Dürüm de Ternera": {
-            "name": "دوروم لحم",
-            "description": "لفافة تورتيلا محشوة بلحم البقر المشوي على سيخ الكباب التقليدي، خضروات طازجة، سلطة وصلصات."
-        },
-        "Dürüm Mix": {
-            "name": "دوروم مشكل",
-            "description": "لفافة تورتيلا محشوة بمزيج سخي من لحم الدجاج والبقر المشوي، مع الخضروات، السلطة والصلصات."
-        },
-        "Dürüm de Falafel": {
-            "name": "دوروم فلافل",
-            "description": "لفافة نباتية محشوة بأقراص الفلافل المقرمشة، سلطة طازجة، خضروات وصلصات."
+        "Combo Box Mix": {
+            "name": "Combo Box Mix",
+            "description": "Patatas, Nugguets, Tenders, Salsa Queso"
         },
         "Taco de Pollo": {
             "name": "تاكو دجاج (فرنسي)",
@@ -148,6 +150,22 @@ export const ar = {
         "Taco de Tenders": {
             "name": "تاكو تندرز (فرنسي)",
             "description": "تاكو فرنسي مشبع محشو بشرائح الدجاج المقرمشة (تندرز)، بطاطس مقلية، الكثير من الموزاريلا الذائبة، صلصة الجبنة والصلصة الجزائرية أو الأندلسية."
+        },
+        "Hamburguesa Americana": {
+            "name": "برجر أمريكاني",
+            "description": "برجر بخبز ريفي مع 200 جرام من لحم البقر، مخلل، جبنة شيدر ذائبة، بصل مكرمل وصلصة أمريكية خاصة. يشمل البطاطس المقلية."
+        },
+        "Hamburguesa Clássica": {
+            "name": "برجر كلاسيك",
+            "description": "برجر بخبز ريفي مع 200 جرام من لحم البقر، خس، طماطم، جبنة إيدام ذائبة وبيض مقلي. يشمل البطاطس المقلية."
+        },
+        "Hamburguesa Queso de Cabra": {
+            "name": "برجر جبنة الماعز",
+            "description": "برجر فاخر بخبز ريفي مع 200 جرام بقر، جرجير طازج، قطعة جبن ماعز مشوية، بصل مكرمل وصلصة العسل والخردل. يشمل البطاطس المقلية."
+        },
+        "Hamburguesa Chicken Crispy": {
+            "name": "برجر دجاج مقرمش",
+            "description": "برجر بخبز البريوش الناعم محشو بـ 200 جرام دجاج مقرمش، جرجير، شيدر ذائب، صلصة رانش ومخلل. يشمل البطاطس المقلية."
         },
         "Pizza Margarita": {
             "name": "بيتزا مارغريتا",
@@ -193,6 +211,10 @@ export const ar = {
             "name": "بيتزا هاواي",
             "description": "بيتزا استوائية بصلصة الطماطم، لحم ديك رومي، قطع أناناس حلوة، ذرة ولمسة من الكريمة."
         },
+        "Pizza a tu Gusto": {
+            "name": "Pizza a tu Gusto",
+            "description": ""
+        },
         "Plato Kebab de Pollo": {
             "name": "طبق كباب دجاج",
             "description": "وجبة سخية تقدم في طبق (بدون خبز) مع شرائح الدجاج المشوي، سلطة مشكلة وبطاطس مقلية."
@@ -229,18 +251,6 @@ export const ar = {
             "name": "كاكاولات",
             "description": "حليب بالشوكولاتة التقليدي يقدم بارداً."
         },
-        "Aqua Deus": {
-            "name": "أكوا ديوس",
-            "description": "مشروب بارد فردي (أكوا ديوس)."
-        },
-        "Aquarius": {
-            "name": "أكواريوس",
-            "description": "مشروب بارد فردي (أكواريوس)."
-        },
-        "Bezoya": {
-            "name": "بيزويا",
-            "description": "مشروب بارد فردي (بيزويا)."
-        },
         "Coca-Cola": {
             "name": "كوكا كولا",
             "description": "مشروب بارد فردي (كوكا كولا)."
@@ -249,33 +259,49 @@ export const ar = {
             "name": "كوكا كولا زيرو",
             "description": "مشروب بارد فردي (كوكا كولا زيرو)."
         },
-        "Don Simon": {
-            "name": "دون سيمون",
-            "description": "مشروب بارد فردي (دون سيمون)."
+        "Fanta Naranja": {
+            "name": "Fanta Naranja",
+            "description": ""
         },
-        "Fanta": {
-            "name": "فانتا",
-            "description": "مشروب بارد فردي (فانتا)."
+        "Fanta Limón": {
+            "name": "Fanta Limón",
+            "description": ""
         },
-        "Font Vella": {
-            "name": "فونت فيا",
-            "description": "مشروب بارد فردي (فونت فيا)."
+        "Aquarius Naranja": {
+            "name": "Aquarius Naranja",
+            "description": ""
         },
-        "Hawai": {
-            "name": "هاواي",
-            "description": "مشروب بارد فردي (هاواي)."
+        "Aquarius Limón": {
+            "name": "Aquarius Limón",
+            "description": ""
         },
-        "Nestea": {
-            "name": "نيستي",
-            "description": "مشروب بارد فردي (نيستي)."
+        "Nestea Limón": {
+            "name": "Nestea Limón",
+            "description": ""
         },
         "Nestea Maracuyá": {
             "name": "نيستي ماراكوجا",
             "description": "مشروب بارد فردي (نيستي ماراكوجا)."
         },
-        "Oasis Tropical": {
-            "name": "أوازيز تروبيكال",
-            "description": "مشروب بارد فردي (أوازيز تروبيكال)."
+        "Trina Naranja": {
+            "name": "Trina Naranja",
+            "description": ""
+        },
+        "Pepsi": {
+            "name": "Pepsi",
+            "description": ""
+        },
+        "Sprite": {
+            "name": "سبرايت",
+            "description": "مشروب بارد فردي (سبرايت)."
+        },
+        "7UP": {
+            "name": "7UP",
+            "description": ""
+        },
+        "Hawai": {
+            "name": "هاواي",
+            "description": "مشروب بارد فردي (هاواي)."
         },
         "Poms": {
             "name": "بومس",
@@ -285,21 +311,17 @@ export const ar = {
             "name": "ريد بول",
             "description": "مشروب بارد فردي (ريد بول)."
         },
-        "Schweppes": {
-            "name": "شويبس",
-            "description": "مشروب بارد فردي (شويبس)."
-        },
-        "Sprite": {
-            "name": "سبرايت",
-            "description": "مشروب بارد فردي (سبرايت)."
+        "Monster": {
+            "name": "Monster",
+            "description": ""
         },
         "Vichy Catalán": {
             "name": "فيشي كاتالان",
             "description": "مشروب بارد فردي (فيشي كاتالان)."
         },
-        "Batido de Aguacate": {
-            "name": "عصير أفوكادو",
-            "description": "عصير كثيف وناعم ومغذي محضر من الأفوكادو الطازج."
+        "Schweppes": {
+            "name": "شويبس",
+            "description": "مشروب بارد فردي (شويبس)."
         },
         "Mango Lassi": {
             "name": "مانجو لاسي",
@@ -321,10 +343,6 @@ export const ar = {
             "name": "شاي / أعشاب",
             "description": "خدمة ماء ساخن مع كيس شاي أو أعشاب من اختيارك."
         },
-        "Descafeinado": {
-            "name": "قهوة بدون كافيين",
-            "description": "قهوة منزوعة الكافيين من الآلة."
-        },
         "Menú Dürüm": {
             "name": "وجبة دوروم",
             "description": "وجبة كاملة لشخص تشمل لفافة دوروم من اختيارك، تقدم مع بطاطس مقلية ومشروب غازي."
@@ -333,21 +351,17 @@ export const ar = {
             "name": "وجبة بيتا",
             "description": "وجبة كاملة فردية تشمل ساندوتش بيتا من اختيارك، بطاطس مقلية ومشروب غازي."
         },
-        "Menú Hamburguesa": {
-            "name": "وجبة برجر",
-            "description": "وجبة كاملة فردية مع برجر من القائمة، تقدم مع بطاطس مقلية ومشروب غازي."
-        },
         "Menú Taco": {
             "name": "وجبة تاكو",
             "description": "وجبة كاملة فردية تشمل تاكو فرنسي من اختيارك، بطاطس مقلية ومشروب غازي."
         },
+        "Menú Hamburguesa": {
+            "name": "وجبة برجر",
+            "description": "وجبة كاملة فردية مع برجر من القائمة، تقدم مع بطاطس مقلية ومشروب غازي."
+        },
         "Menú Pizza": {
             "name": "وجبة بيتزا",
             "description": "وجبة فردية تشمل بيتزا مقاس 32 سم من اختيارك ومشروب غازي."
-        },
-        "Menú Pizza Grande": {
-            "name": "وجبة بيتزا كبيرة",
-            "description": "وجبة فردية أو للمشاركة تشمل بيتزا بحجم كبير ومشروب غازي."
         },
         "Combo 2 Dürüms": {
             "name": "كومبو 2 دوروم",
@@ -357,21 +371,17 @@ export const ar = {
             "name": "كومبو 2 بيتا",
             "description": "عرض للمشاركة يشمل ساندوتشي بيتا، مع حصتين من البطاطس المقلية ومشروبين."
         },
-        "Combo 2 Tacos": {
-            "name": "كومبو 2 تاكو",
-            "description": "عرض للمشاركة يشمل 2 تاكو فرنسي، مع حصتين من البطاطس المقلية ومشروبين."
-        },
-        "Combo 2 Pizzas": {
-            "name": "كومبو 2 بيتزا",
-            "description": "توفير يشمل 2 بيتزا حجم متوسط وزجاجة مشروب عائلية (1 لتر - 1.5 لتر)."
+        "Combo 2 Pizzas Medianas": {
+            "name": "Combo 2 Pizzas Medianas",
+            "description": ""
         },
         "Combo Family": {
             "name": "الكومبو العائلي",
             "description": "أكبر باقة للمجموعات أو العائلات. تشمل: 1 دوروم، 1 بيتا، 1 برجر، 1 بيتزا متوسطة، 3 حصص بطاطس وزجاجة مشروب عائلية."
         },
-        "Combo Infantil": {
-            "name": "وجبة أطفال",
-            "description": "وجبة مخصصة للصغار. تشمل 10 قطع ناجتس دجاج مقرمشة مع البطاطس وعصير فواكه."
+        "Menú Infantil": {
+            "name": "Menú Infantil",
+            "description": ""
         },
         "Salsa Algerian": {
             "name": "صلصة جزائرية",
@@ -393,33 +403,37 @@ export const ar = {
             "name": "صلصة برازيل",
             "description": "علبة إضافية من صلصة البرازيل."
         },
-        "Salsa Chilli Thai": {
-            "name": "صلصة تشيلي تايلاندية",
-            "description": "علبة إضافية من صلصة التشيلي التايلاندية."
-        },
-        "Salsa Curry": {
-            "name": "صلصة كاري",
-            "description": "علبة إضافية من صلصة الكاري."
+        "Salsa Samurai": {
+            "name": "صلصة ساموراي",
+            "description": "علبة إضافية من صلصة الساموراي."
         },
         "Salsa Ketchup": {
             "name": "كاتشب",
             "description": "علبة إضافية من الكاتشب."
         },
-        "Salsa Marocaine": {
-            "name": "صلصة مغربية",
-            "description": "علبة إضافية من الصلصة المغربية."
-        },
         "Salsa Mayonesa": {
             "name": "مايونيز",
             "description": "علبة إضافية من المايونيز."
         },
-        "Salsa Pita Kebab": {
-            "name": "صلصة كباب بيضاء",
-            "description": "علبة إضافية من صلصة الكباب البيضاء."
+        "Solo Carne (Sin ensalada/patatas)": {
+            "name": "Solo Carne (Sin ensalada/patatas)",
+            "description": ""
         },
-        "Salsa Samurai": {
-            "name": "صلصة ساموراي",
-            "description": "علبة إضافية من صلصة الساموراي."
+        "Extra de Carne": {
+            "name": "Extra de Carne",
+            "description": ""
+        },
+        "Queso Feta": {
+            "name": "Queso Feta",
+            "description": ""
+        },
+        "Queso de Cabra": {
+            "name": "Queso de Cabra",
+            "description": ""
+        },
+        "Ingrediente Extra": {
+            "name": "Ingrediente Extra",
+            "description": ""
         }
     }
 };
