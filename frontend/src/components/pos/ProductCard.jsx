@@ -54,7 +54,6 @@ const ProductCard = ({ originalProd, category, onClick }) => {
                         <ChefHat size={48} />
                     </div>
                 )}
-                <AllergenIcons allergenIds={originalProd.alergenos} />
             </div>
         );
     };
@@ -71,6 +70,12 @@ const ProductCard = ({ originalProd, category, onClick }) => {
             )}
 
             {renderProductImage()}
+
+            {originalProd.alergenos && originalProd.alergenos.length > 0 && (
+                <div className="product-allergens-strip">
+                    <AllergenIcons allergenIds={originalProd.alergenos} />
+                </div>
+            )}
 
             <div className="product-info">
                 <h3 className="product-name">{prod.name}</h3>
