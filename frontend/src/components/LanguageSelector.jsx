@@ -4,13 +4,13 @@ import { ChevronDown } from 'lucide-react';
 import '../styles/LanguageSelector.css';
 
 const LANGUAGES = [
-    { code: 'es', label: 'Español', flag: '🇪🇸' },
-    { code: 'fr', label: 'Français', flag: '🇫🇷' },
-    { code: 'en', label: 'English', flag: '🇬🇧' },
-    { code: 'ar', label: 'العربية', flag: '🇲🇦' },
-    { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
-    { code: 'nl', label: 'Nederlands', flag: '🇳🇱' },
-    { code: 'ca', label: 'Català', flag: '🇦🇩' },
+    { code: 'es', label: 'Español', flag: '/icons/es.svg', isImage: true },
+    { code: 'ca', label: 'Català', flag: '/icons/ca.svg', isImage: true },
+    { code: 'fr', label: 'Français', flag: '/icons/fr.svg', isImage: true },
+    { code: 'en', label: 'English', flag: '/icons/en.svg', isImage: true },
+    { code: 'ar', label: 'العربية', flag: '/icons/ar.svg', isImage: true },
+    { code: 'de', label: 'Deutsch', flag: '/icons/de.svg', isImage: true },
+    { code: 'nl', label: 'Nederlands', flag: '/icons/nl.svg', isImage: true },
 ];
 
 
@@ -41,7 +41,11 @@ const LanguageSelector = ({ currentLang, onLanguageChange, isWelcomeScreen = fal
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Select Language"
             >
-                <span className="current-flag">{current.flag}</span>
+                {current.isImage ? (
+                    <img src={current.flag} alt={current.label} className="current-flag-img" />
+                ) : (
+                    <span className="current-flag">{current.flag}</span>
+                )}
                 <span className="current-code user-select-none">{current.code.toUpperCase()}</span>
                 <ChevronDown size={16} className={`chevron-icon ${isOpen ? 'rotate' : ''}`} />
             </button>
@@ -57,7 +61,11 @@ const LanguageSelector = ({ currentLang, onLanguageChange, isWelcomeScreen = fal
                                 setIsOpen(false);
                             }}
                         >
-                            <span className="option-flag">{lang.flag}</span>
+                            {lang.isImage ? (
+                                <img src={lang.flag} alt={lang.label} className="option-flag-img" />
+                            ) : (
+                                <span className="option-flag">{lang.flag}</span>
+                            )}
                             <span className="option-label">{lang.label}</span>
                             {currentLang === lang.code && <div className="active-dot"></div>}
                         </button>
