@@ -453,4 +453,31 @@ export const es = {
             "description": "Suplemento de ingrediente adicional."
         }
     }
+,
+    "pizza_custom": {
+    "title": "CREA TU PIZZA",
+    "bases": "Bases (Elige 1)",
+    "quesos": "Quesos (Múltiple)",
+    "carnes": "Carnes (Múltiple)",
+    "verduras": "Verduras (Múltiple)",
+    "items": {
+        "Tomate": "Tomate",
+        "Barbacoa": "Barbacoa",
+        "Crema/Nata": "Crema/Nata",
+        "Mozzarella": "Mozzarella",
+        "Gorgonzola": "Gorgonzola",
+        "Queso de Cabra": "Queso de Cabra",
+        "Pollo": "Pollo",
+        "Ternera": "Ternera",
+        "Bacón": "Bacón",
+        "Jamón York": "Jamón York",
+        "Peperoni": "Peperoni",
+        "Atún": "Atún",
+        "Cebolla": "Cebolla",
+        "Pimiento": "Pimiento",
+        "Champiñones": "Champiñones",
+        "Olivas Negras": "Olivas Negras",
+        "Piña": "Piña"
+    }
+}
 };
