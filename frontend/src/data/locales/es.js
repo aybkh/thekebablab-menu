@@ -22,7 +22,24 @@ export const es = {
         "cook": "Cocinar",
         "ticket": "Ticket de pedido",
         "go_to_sauces": "VER SALSAS DISPONIBLES",
-        "go_to_sauces_desc": "Elige tus salsas favoritas"
+        "go_to_sauces_desc": "Elige tus salsas favoritas",
+        "allergens_label": "Alérgenos",
+        "allergen_1": "Gluten",
+        "allergen_2": "Crustáceos",
+        "allergen_3": "Huevos",
+        "allergen_4": "Pescado",
+        "allergen_5": "Cacahuetes",
+        "allergen_6": "Soja",
+        "allergen_7": "Lácteos",
+        "allergen_8": "Frutos de cáscara",
+        "allergen_9": "Apio",
+        "allergen_10": "Mostaza",
+        "allergen_11": "Sésamo",
+        "allergen_12": "Sulfitos",
+        "allergen_13": "Moluscos",
+        "allergen_14": "Altramuces",
+        "allergen_15": "Picante",
+        "allergen_16": "Carne"
     },
     "direction": "ltr",
     "categories": {
@@ -73,7 +90,7 @@ export const es = {
         },
         "Ensalada Mix Queso Cabra": {
             "name": "Ensalada Mix Queso Cabra",
-            "description": ""
+            "description": "Mezcla de hojas verdes con medallón de queso de cabra."
         },
         "Nuestras Patatas Bravas": {
             "name": "Nuestras Patatas Bravas",
@@ -213,7 +230,7 @@ export const es = {
         },
         "Pizza a tu Gusto": {
             "name": "Pizza a tu Gusto",
-            "description": ""
+            "description": "Pizza mediana a elegir tus ingredientes favoritos."
         },
         "Plato Kebab de Pollo": {
             "name": "Plato Kebab de Pollo",
@@ -261,23 +278,23 @@ export const es = {
         },
         "Fanta Naranja": {
             "name": "Fanta Naranja",
-            "description": ""
+            "description": "Refresco de naranja individual frío."
         },
         "Fanta Limón": {
             "name": "Fanta Limón",
-            "description": ""
+            "description": "Refresco de limón individual frío."
         },
         "Aquarius Naranja": {
             "name": "Aquarius Naranja",
-            "description": ""
+            "description": "Bebida isotónica de naranja individual fría."
         },
         "Aquarius Limón": {
             "name": "Aquarius Limón",
-            "description": ""
+            "description": "Bebida isotónica de limón individual fría."
         },
         "Nestea Limón": {
             "name": "Nestea Limón",
-            "description": ""
+            "description": "Té frío sabor limón individual."
         },
         "Nestea Maracuyá": {
             "name": "Nestea Maracuyá",
@@ -285,11 +302,11 @@ export const es = {
         },
         "Trina Naranja": {
             "name": "Trina Naranja",
-            "description": ""
+            "description": "Refresco de naranja sin gas individual frío."
         },
         "Pepsi": {
             "name": "Pepsi",
-            "description": ""
+            "description": "Refresco de cola individual frío."
         },
         "Sprite": {
             "name": "Sprite",
@@ -297,7 +314,7 @@ export const es = {
         },
         "7UP": {
             "name": "7UP",
-            "description": ""
+            "description": "Refresco de lima-limón individual frío."
         },
         "Hawai": {
             "name": "Hawai",
@@ -313,7 +330,7 @@ export const es = {
         },
         "Monster": {
             "name": "Monster",
-            "description": ""
+            "description": "Bebida energética individual fría."
         },
         "Vichy Catalán": {
             "name": "Vichy Catalán",
@@ -373,7 +390,7 @@ export const es = {
         },
         "Combo 2 Pizzas Medianas": {
             "name": "Combo 2 Pizzas Medianas",
-            "description": ""
+            "description": "Dos pizzas medianas (32cm) a elegir de la carta."
         },
         "Combo Family": {
             "name": "Combo Family",
@@ -381,7 +398,7 @@ export const es = {
         },
         "Menú Infantil": {
             "name": "Menú Infantil",
-            "description": ""
+            "description": "Menú para niños con nuggets de pollo crujientes, patatas fritas y zumo."
         },
         "Salsa Algerian": {
             "name": "Salsa Algerian",
@@ -417,23 +434,23 @@ export const es = {
         },
         "Solo Carne (Sin ensalada/patatas)": {
             "name": "Solo Carne (Sin ensalada/patatas)",
-            "description": ""
+            "description": "Plato de carne kebab pura, sin guarnición."
         },
         "Extra de Carne": {
             "name": "Extra de Carne",
-            "description": ""
+            "description": "Porción adicional de carne kebab."
         },
         "Queso Feta": {
             "name": "Queso Feta",
-            "description": ""
+            "description": "Porción de queso feta griego."
         },
         "Queso de Cabra": {
             "name": "Queso de Cabra",
-            "description": ""
+            "description": "Medallón de queso de cabra."
         },
         "Ingrediente Extra": {
             "name": "Ingrediente Extra",
-            "description": ""
+            "description": "Suplemento de ingrediente adicional."
         }
     }
 };
