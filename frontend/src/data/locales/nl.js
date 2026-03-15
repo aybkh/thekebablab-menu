@@ -453,4 +453,31 @@ export const nl = {
             "description": "Extra ingrediënt."
         }
     }
+,
+    "pizza_custom": {
+    "title": "MAAK JE EIGEN PIZZA",
+    "bases": "Bases (Kies 1)",
+    "quesos": "Kazensch (Meerdere)",
+    "carnes": "Vlees (Meerdere)",
+    "verduras": "Groenten (Meerdere)",
+    "items": {
+        "Tomate": "Tomaat",
+        "Barbacoa": "BBQ",
+        "Crema/Nata": "Room",
+        "Mozzarella": "Mozzarella",
+        "Gorgonzola": "Gorgonzola",
+        "Queso de Cabra": "Geitenkaas",
+        "Pollo": "Kip",
+        "Ternera": "Rundvlees",
+        "Bacón": "Spek",
+        "Jamón York": "Ham",
+        "Peperoni": "Pepperoni",
+        "Atún": "Tonijn",
+        "Cebolla": "Ui",
+        "Pimiento": "Paprika",
+        "Champiñones": "Champignons",
+        "Olivas Negras": "Zwarte Olijven",
+        "Piña": "Ananas"
+    }
+}
 };
