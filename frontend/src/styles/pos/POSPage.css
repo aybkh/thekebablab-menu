@@ -107,7 +107,8 @@
     margin: 0;
     text-transform: uppercase;
     font-size: 1.8rem;
-    color: var(--color-text-main);
+    color: var(--color-text-light);
+    text-shadow: 2px 2px 1px var(--color-shadow);
 }
 
 .product-grid {
