@@ -16,11 +16,11 @@ export const ca = {
         "kitchen_title": "GESTIÓ DE CUINA",
         "update_every": "Sincronització cada",
         "clear_kitchen": "Netejar comandes",
-        "cancel": "Anular",
+        "cancel": "Anul·lar",
         "ready": "Llest!",
-        "delivered": "Entregat",
+        "delivered": "Lliurat",
         "cook": "Cuinar",
-        "ticket": "Ticket de comanda",
+        "ticket": "Tiquet de comanda",
         "go_to_sauces": "VEURE SALSES DISPONIBLES",
         "go_to_sauces_desc": "Tria les teves salses preferides"
     },
@@ -46,31 +46,31 @@ export const ca = {
     "products": {
         "Mozzarella Sticks": {
             "name": "Mozzarella Sticks",
-            "description": "Bastons de formatge mozzarella arrebossats i fregits hasta quedar crujientes. (6 unidades)"
+            "description": "Bastons de formatge mozzarella arrebossats i fregits fins quedar ben cruixents. (6 unitats)"
         },
         "Alitas de Pollo": {
             "name": "Aletes de Pollastre",
-            "description": "Aletes de pollastre senceres marinades i fregides al estilo tradicional. (6 unidades)"
+            "description": "Aletes de pollastre senceres marinades i fregides a l'estil tradicional. (6 unitats)"
         },
         "Croquetas de Pollo": {
             "name": "Croquetes de Pollastre",
-            "description": "Croquetas cremosas rellenas de suave bechamel y trocitos de pollo. (6 unidades)"
+            "description": "Croquetes cremoses farcides de suau beixamel i trossets de pollastre. (6 unitats)"
         },
         "Croquetas de Pescado Maxi": {
             "name": "Croquetes de Peix Maxi",
-            "description": "Croquetas de pescado de tamaño superior con rebozado exterior crujiente. (4 unidades)"
+            "description": "Croquetes de peix de mida superior amb un arrebossat exterior cruixent. (4 unitats)"
         },
         "Nugguets de Pollo": {
             "name": "Nuggets de Pollastre",
-            "description": "Bocados de pechuga de pollo empanados y fritos. (6 unidades)"
+            "description": "Mossegades de pit de pollastre arrebossades i fregides. (6 unitats)"
         },
         "Tenders de Pollo": {
             "name": "Tenders de Pollastre",
-            "description": "Solomillos o tiras de pollo marinadas y cubiertas con un rebozado extra crujiente. (6 unidades)"
+            "description": "Filets o tires de pollastre marinades i cobertes amb un arrebossat extra cruixent. (6 unitats)"
         },
         "Ensalada Mixta": {
             "name": "Amanida Mixta",
-            "description": "Base refrescante de lechuga con tomate, cebolla y una selección de vegetales de temporada."
+            "description": "Base refrescant d'enciam amb tomàquet, ceba i una selecció de vegetals de temporada."
         },
         "Ensalada Mix Queso Cabra": {
             "name": "Amanida Mix Formatge de Cabra",
@@ -78,139 +78,139 @@ export const ca = {
         },
         "Nuestras Patatas Bravas": {
             "name": "Les nostres Patates Braves",
-            "description": "Dados de patata frita servidos con una clásica salsa brava especial con un toque picante."
+            "description": "Daus de patata fregida servits amb una clàssica salsa brava especial amb un toc picant."
         },
         "Nuestras Patatas Fritas": {
             "name": "Les nostres Patates Fregides",
-            "description": "Ració de patates cortadas en bastón y fritas en su punto óptimo de sal."
+            "description": "Ració de patates tallades en bastons i fregides al seu punt òptim de sal."
         },
         "Huevos rotos con Dürüm": {
             "name": "Ous trencats amb Dürüm",
-            "description": "Cama de patatas fritas coronadas con huevos fritos rotos y acompañados de carne especiada de kebab estilo dürüm."
+            "description": "Llit de patates fregides coronades amb ous ferrats trencats i acompanyats de carn especiada de kebab a l'estil dürüm."
         },
         "Dürüm de Pollo": {
             "name": "Dürüm de Pollastre",
-            "description": "Rollo grande hecho con una fina tortilla de trigo relleno de finas láminas de carne de pollo asada, verduras, ensalada y salsas de la casa."
+            "description": "Rotlle gran fet amb una fina truita de blat farcit de fines làmines de carn de pollastre rostida, verdures, amanida i salses de la casa."
         },
         "Dürüm de Ternera": {
             "name": "Dürüm de Vedella",
-            "description": "Rollo de tortilla de trigo relleno de carne de ternera asada en el clásico torno de kebab, verduras frescas, ensalada y salsas."
+            "description": "Rotlle de truita de blat farcit de carn de vedella rostida al clàssic torn de kebab, verdures fresques, amanida i salses."
         },
         "Dürüm Mix": {
             "name": "Dürüm Mix",
-            "description": "Rollo de tortilla de trigo relleno con una mezcla generosa de carne de pollo y ternera asadas, acompañamiento de verduras, ensalada y salsas."
+            "description": "Rotlle de truita de blat farcit amb una barreja generosa de carn de pollastre i vedella rostides, acompanyament de verdures, amanida i salses."
         },
         "Dürüm de Falafel": {
             "name": "Dürüm de Falafel",
-            "description": "Rollo vegetal en tortilla de trigo relleno de croquetas crujientes de falafel, ensalada fresca, verduras y salsas."
+            "description": "Rotlle vegetal en truita de blat farcit de croquetes cruixents de falàfel, amanida fresca, verdures i salses."
         },
         "Pita de Pollo": {
             "name": "Pita de Pollastre",
-            "description": "Bocadillo en pan turco esponjoso relleno de jugosa carne de pollo asada, verduras frescas, ensalada variada y selección de salsas de la casa."
+            "description": "Entrepà en pa turc esponjós farcit de sucosa carn de pollastre rostida, verdures fresques, amanida variada i selecció de salses de la casa."
         },
         "Pita de Ternera": {
             "name": "Pita de Vedella",
-            "description": "Bocadillo en pan turco esponjoso relleno de finas láminas de carne de ternera asada, vegetales frescos, ensalada y salsas."
+            "description": "Entrepà en pa turc esponjós farcit de fines làmines de carn de vedella rostida, vegetals frescos, amanida i salses."
         },
         "Pita Mix": {
             "name": "Pita Mix",
-            "description": "Bocadillo en pan turco relleno de una combinación de carne asada de pollo y ternera, verduras frescas, ensalada y salsas."
+            "description": "Entrepà en pa turc farcit d'una combinació de carn rostida de pollastre i vedella, verdures fresques, amanida i salses."
         },
         "Pita Falafel": {
             "name": "Pita Falafel",
-            "description": "Opción vegetariana en bocadillo de pan turco con croquetas fritas de garbanzos y especias (falafel), verduras, ensalada y salsas."
+            "description": "Opció vegetariana en entrepà de pa turc amb croquetes fregides de cigrons i espècies (falàfel), verdures, amanida i salses."
         },
         "Combo Box Nugguets": {
             "name": "Combo Box Nuggets",
-            "description": "Patatas, Nugguets, Salsa Queso"
+            "description": "Patates, Nuggets, Salsa de Formatge"
         },
         "Combo Box Tenders": {
             "name": "Combo Box Tenders",
-            "description": "Patatas, Tenders, Salsa Queso"
+            "description": "Patates, Tenders, Salsa de Formatge"
         },
         "Combo Box Mix": {
             "name": "Combo Box Mix",
-            "description": "Patatas, Nugguets, Tenders, Salsa Queso"
+            "description": "Patates, Nuggets, Tenders, Salsa de Formatge"
         },
         "Taco de Pollo": {
             "name": "Taco de Pollastre",
-            "description": "Estilo 'French Taco': tortilla grande de trigo sellada a la plancha y rellena de jugoso pollo marinado, salsa francesa algeriene o andalouse, fundido de mozzarella, salsa de queso y patatas fritas integradas dentro del taco."
+            "description": "Estil 'French Taco': truita gran de blat segellada a la planxa i farcida de sucós pollastre marinat, salsa francesa algeriene o andalouse, mozzarella fosa, salsa de formatge i patates fregides integrades dins del taco."
         },
         "Taco de Ternera": {
             "name": "Taco de Vedella",
-            "description": "Estilo 'French Taco': tortilla sellada rellena de carne picada de ternera sazonada, patatas fritas interiores, mozzarella, salsa de queso cremosa y elección de salsa algeriene o andalouse."
+            "description": "Estil 'French Taco': truita segellada farcida de carn picada de vedella assaonada, patates fregides interiors, mozzarella, salsa de formatge cremosa i elecció de salsa algeriene o andalouse."
         },
         "Taco Mix": {
             "name": "Taco Mix",
-            "description": "Estilo 'French Taco': tortilla sellada con una combinación de carnes mixtas, patatas fritas, rica salsa de queso, queso mozzarella fundido y salsa algeriene o andalouse."
+            "description": "Estil 'French Taco': truita segellada amb una combinació de carns mixtes, patates fregides, rica salsa de formatge, formatge mozzarella fos i salsa algeriene o andalouse."
         },
         "Taco de Nugguets": {
             "name": "Taco de Nuggets",
-            "description": "Original 'French Taco' relleno de trozos de nuggets de pollo crujientes combinados con patatas fritas, queso mozzarella, salsa de queso y salsa algeriene o andalouse."
+            "description": "Original 'French Taco' farcit de trossos de nuggets de pollastre cruixents combinats amb patates fregides, formatge mozzarella, salsa de formatge i salsa algeriene o andalouse."
         },
         "Taco de Tenders": {
             "name": "Taco de Tenders",
-            "description": "Contundente 'French Taco' relleno de tiras de pollo rebozadas (tenders), patatas fritas, abundante queso mozzarella fundido, salsa de queso y salsa algeriene o andalouse."
+            "description": "Contundent 'French Taco' farcit de tires de pollastre arrebossades (tenders), patates fregides, abundant formatge mozzarella fos, salsa de formatge i salsa algeriene o andalouse."
         },
         "Hamburguesa Americana": {
             "name": "Hamburguesa Americana",
-            "description": "Hamburguesa en pan rústico con 200g de carne de ternera, pepinillo, queso cheddar fundido, cebolla caramelizada y salsa americana especial. Incluye ración de patatas fritas."
+            "description": "Hamburguesa en pa rústic amb 200g de carn de vedella, cogombret, formatge cheddar fos, ceba caramel·litzada i salsa americana especial. Inclou ració de patates fregides."
         },
         "Hamburguesa Clássica": {
             "name": "Hamburguesa Clàssica",
-            "description": "Hamburguesa en pan rústico con 200g de carne de ternera, cama de lechuga, rodajas de tomate, queso edam derretido y un jugoso huevo frito. Incluye ración de patatas fritas."
+            "description": "Hamburguesa en pa rústic amb 200g de carn de vedella, llit d'enciam, rodanxes de tomàquet, formatge edam fos i un sucós ou ferrat. Inclou ració de patates fregides."
         },
         "Hamburguesa Queso de Cabra": {
             "name": "Hamburguesa Formatge de Cabra",
-            "description": "Hamburguesa gourmet en pan rústico con 200g de ternera, hojas de rúcula fresca, medallón de queso de cabra a la plancha, cebolla caramelizada y salsa de miel y mostaza. Incluye ración de patatas fritas."
+            "description": "Hamburguesa gurmet en pa rústic amb 200g de vedella, fulles de ruca fresca, medalló de formatge de cabra a la planxa, ceba caramel·litzada i salsa de mel i mostassa. Inclou ració de patates fregides."
         },
         "Hamburguesa Chicken Crispy": {
             "name": "Hamburguesa Chicken Crispy",
-            "description": "Hamburguesa en pan brioche suave rellena de 200g de pollo con un rebozado crujiente de la casa, rúcula, queso cheddar fundido, salsa ranchera y rodajas de pepinillo. Incluye ración de patatas fritas."
+            "description": "Hamburguesa en pa brioix suau farcida de 200g de pollastre amb un arrebossat cruixent de la casa, ruca, formatge cheddar fos, salsa ranxera i rodanxes de cogombret. Inclou ració de patates fregides."
         },
         "Pizza Margarita": {
             "name": "Pizza Margarita",
-            "description": "Masa de pizza clásica italiana cubierta con base de salsa de tomate, queso mozzarella fundido y hojas de albahaca fresca."
+            "description": "Massa de pizza clàssica italiana coberta amb base de salsa de tomàquet, formatge mozzarella fos i fulles d'alfàbrega fresca."
         },
         "Pizza Italia": {
             "name": "Pizza Italia",
-            "description": "Masa de pizza cubierta con base de salsa de tomate, dados de tomate fresco troceado, hojas de rúcula y queso mozzarella."
+            "description": "Massa de pizza coberta amb base de salsa de tomàquet, daus de tomàquet fresc trossejat, fulles de ruca i formatge mozzarella."
         },
         "Pizza Kebab": {
             "name": "Pizza Kebab",
-            "description": "Fusión italo-turca: Masa de pizza con base de tomate y mozzarella, cubierta con carne de kebab a elegir (pollo, ternera o mixto), aceitunas y un toque de salsa blanca típica de kebab."
+            "description": "Fusió italo-turca: Massa de pizza amb base de tomàquet i mozzarella, coberta amb carn de kebab a triar (pollastre, vedella o mixt), olives i un toc de salsa blanca típica de kebab."
         },
         "Pizza de Pollo": {
             "name": "Pizza de Pollastre",
-            "description": "Masa de pizza con base de tomate y mozzarella, coronada con sabrosa cebolla caramelizada, pimientos y trozos tiernos de pollo."
+            "description": "Massa de pizza amb base de tomàquet i mozzarella, coronada amb saborosa ceba caramel·litzada, pebrots i trossos tendres de pollastre."
         },
         "Pizza Barbacoa": {
             "name": "Pizza Barbacoa",
-            "description": "Masa de pizza cubierta con base de tomate, mozzarella fundida, carne picada de ternera, tiras de bacon ahumado, pimiento rojo y un característico espiral de salsa barbacoa."
+            "description": "Massa de pizza coberta amb base de tomàquet, mozzarella fosa, carn picada de vedella, tires de bacó fumat, pebrot vermell i una característica espiral de salsa barbacoa."
         },
         "Pizza Tonno": {
             "name": "Pizza Tonno",
-            "description": "Masa de pizza marinera con base de salsa de tomate, mozzarella, trozos de atún claro, cebolla, rodajas de huevo duro y olivas negras."
+            "description": "Massa de pizza marinera amb base de salsa de tomàquet, mozzarella, trossos de tonyina clara, ceba, rodanxes d'ou dur i olives negres."
         },
         "Pizza Vegetal": {
             "name": "Pizza Vegetal",
-            "description": "Masa de pizza cubierta con base de salsa de tomate y abundantes verduras: hojas de espinaca, rodajas de calabacín y berenjena, pimiento y aceitunas."
+            "description": "Massa de pizza coberta amb base de salsa de tomàquet i abundants verdures: fulles d'espinac, rodanxes de carbassó i albergínia, pebrot i olives."
         },
         "Pizza 4 Quesos": {
             "name": "Pizza 4 Formatges",
-            "description": "Masa de pizza para amantes del queso, con base de tomate y una mezcla fundida de gorgonzola potente, suave queso brie, queso de cabra y clásica mozzarella."
+            "description": "Massa de pizza per a amants del formatge, amb base de tomàquet i una barreja fosa de gorgonzola potent, suau formatge brie, formatge de cabra i clàssica mozzarella."
         },
         "Pizza Infierno": {
             "name": "Pizza Infierno",
-            "description": "Masa de pizza picante cubierta con salsa de tomate, rodajas de chorizo, salsa o condimento picante y queso mozzarella."
+            "description": "Massa de pizza picant coberta amb salsa de tomàquet, rodanxes de xoriço, salsa o condiment picant i formatge mozzarella."
         },
         "Pizza Mediterránea": {
             "name": "Pizza Mediterrània",
-            "description": "Masa de pizza con base de tomate, acompañada de colas de gambas, lomos de anchoa, un ligero toque picante y queso mozzarella."
+            "description": "Massa de pizza amb base de tomàquet, acompanyada de cues de gambes, lloms d'anxova, un lleuger toc picant i formatge mozzarella."
         },
         "Pizza Hawaiana": {
-            "name": "Pizza Haiviana",
-            "description": "Masa de pizza tropical con base de salsa de tomate, fiambre de pavo, trozos de piña dulce, granos de maíz y un toque de nata."
+            "name": "Pizza Hawaiana",
+            "description": "Massa de pizza tropical amb base de salsa de tomàquet, embotit de gall dindi, trossos de pinya dolça, grans de blat de moro i un toc de nata."
         },
         "Pizza a tu Gusto": {
             "name": "Pizza a tu Gusto",
@@ -218,47 +218,47 @@ export const ca = {
         },
         "Plato Kebab de Pollo": {
             "name": "Plat Kebab de Pollastre",
-            "description": "Ració generosa servida directamente en plato (sin pan) con láminas de carne asada de pollo, acompañada de un lado de ensalada mixta y una guarnición de patatas fritas."
+            "description": "Ració generosa servida directament en plat (sense pa) amb làmines de carn rostida de pollastre, acompanyada d'amanida mixta i una guarnició de patates fregides."
         },
         "Plato Kebab de Ternera": {
             "name": "Plat Kebab de Vedella",
-            "description": "Ració servida en plato con sabrosas láminas de carne de ternera asada, acompañada de ensalada mixta fresca y guarnición de patatas fritas."
+            "description": "Ració servida en plat amb saboroses làmines de carn de vedella rostida, acompanyada d'amanida mixta fresca i guarnició de patates fregides."
         },
         "Plato Kebab Mix": {
             "name": "Plat Kebab Mix",
-            "description": "Plato combinado que ofrece lo mejor de ambos mundos: una mezcla de carne asada de pollo y ternera, acompañada de ensalada mixta y patatas fritas."
+            "description": "Plat combinat que ofereix el millor d'ambdós mons: una barreja de carn rostida de pollastre i vedella, acompanyada d'amanida mixta i patates fregides."
         },
         "Plato Falafel": {
             "name": "Plat Falafel",
-            "description": "Alternativa vegetariana servida en plato, compuesta por varias unidades de falafel (croquetas de garbanzo especiadas), ensalada mixta de acompañamiento y patatas fritas."
+            "description": "Alternativa vegetariana servida en plat, composta per diverses unitats de falàfel (croquetes de cigró especiades), amanida mixta d'acompanyament i patates fregides."
         },
         "Tarta de Queso": {
             "name": "Pastís de Formatge",
-            "description": "Porción de tarta de queso suave y cremosa para terminar con un toque dulce."
+            "description": "Porció de pastís de formatge suau i cremós per acabar amb un toc dolç."
         },
         "Agua Mineral 0,5L": {
             "name": "Aigua Mineral 0,5L",
-            "description": "Botella de agua mineral natural sin gas. Formato de 0,5L."
+            "description": "Ampolla d'aigua mineral natural sense gas. Format de 0,5L."
         },
         "Agua Mineral 1,5L": {
             "name": "Aigua Mineral 1,5L",
-            "description": "Botella de agua mineral natural sin gas. Formato familiar de 1,5L."
+            "description": "Ampolla d'aigua mineral natural sense gas. Format familiar d'1,5L."
         },
         "Zumo de Melocotón": {
             "name": "Suc de Préssec",
-            "description": "Botellín individual de néctar o zumo sabor melocotón."
+            "description": "Ampolleta individual de nèctar o suc sabor préssec."
         },
         "Cacaolat": {
             "name": "Cacaolat",
-            "description": "Batido lácteo tradicional de chocolate servido frío."
+            "description": "Batut lacti tradicional de xocolata servit fred."
         },
         "Coca-Cola": {
             "name": "Coca-Cola",
-            "description": "Refresc individual frío (Coca-Cola)."
+            "description": "Refresc individual fred (Coca-Cola)."
         },
         "Coca-Cola Zero": {
             "name": "Coca-Cola Zero",
-            "description": "Refresc individual frío (Coca-Cola Zero)."
+            "description": "Refresc individual fred (Coca-Cola Zero)."
         },
         "Fanta Naranja": {
             "name": "Fanta Naranja",
@@ -281,8 +281,8 @@ export const ca = {
             "description": ""
         },
         "Nestea Maracuyá": {
-            "name": "Nestea Maracuyá",
-            "description": "Refresc individual frío (Nestea Maracuyá)."
+            "name": "Nestea Maracujà",
+            "description": "Refresc individual fred (Nestea Maracujà)."
         },
         "Trina Naranja": {
             "name": "Trina Naranja",
@@ -294,7 +294,7 @@ export const ca = {
         },
         "Sprite": {
             "name": "Sprite",
-            "description": "Refresc individual frío (Sprite)."
+            "description": "Refresc individual fred (Sprite)."
         },
         "7UP": {
             "name": "7UP",
@@ -302,15 +302,15 @@ export const ca = {
         },
         "Hawai": {
             "name": "Hawai",
-            "description": "Refresc individual frío (Hawai)."
+            "description": "Refresc individual fred (Hawai)."
         },
         "Poms": {
             "name": "Poms",
-            "description": "Refresc individual frío (Poms)."
+            "description": "Refresc individual fred (Poms)."
         },
         "Red Bull": {
             "name": "Red Bull",
-            "description": "Refresc individual frío (Red Bull)."
+            "description": "Refresc individual fred (Red Bull)."
         },
         "Monster": {
             "name": "Monster",
@@ -318,67 +318,67 @@ export const ca = {
         },
         "Vichy Catalán": {
             "name": "Vichy Catalán",
-            "description": "Refresc individual frío (Vichy Catalán)."
+            "description": "Refresc individual fred (Vichy Catalán)."
         },
         "Schweppes": {
             "name": "Schweppes",
-            "description": "Refresc individual frío (Schweppes)."
+            "description": "Refresc individual fred (Schweppes)."
         },
         "Mango Lassi": {
             "name": "Mango Lassi",
-            "description": "Refrescante bebida tradicional de origen indio elaborada con yogur cremoso y pulpa de mango."
+            "description": "Refrescant beguda tradicional d'origen indi elaborada amb iogurt cremós i polpa de mango."
         },
         "Café con leche": {
-            "name": "Café con leche",
-            "description": "Taza de café expreso largo mezclado con leche vaporizada."
+            "name": "Cafè amb llet",
+            "description": "Tassa de cafè exprés llarg barrejat amb llet vaporitzada."
         },
         "Cortado": {
-            "name": "Cortado",
-            "description": "Taza pequeña de café expreso con un 'corte' o pequeño chorrito de leche."
+            "name": "Tallat",
+            "description": "Tassa petita de cafè exprés amb un 'tall' o petit raig de llet."
         },
         "Café solo": {
-            "name": "Café solo",
-            "description": "Un shot directo de café expreso negro sin adiciones."
+            "name": "Cafè sol",
+            "description": "Cafè exprés negre directe sense addicions."
         },
         "Infusiones": {
-            "name": "Infusiones",
-            "description": "Servicio de agua caliente acompañado del sobrecito de té o infusión herbal a elegir."
+            "name": "Infusions",
+            "description": "Servei d'aigua calenta acompanyat del sobret de te o infusió herbal a triar."
         },
         "Menú Dürüm": {
             "name": "Menú Dürüm",
-            "description": "Menú complet para una persona que incluye un rollo dürüm a elegir, acompañado de una ración de patatas fritas y un refresco."
+            "description": "Menú complet per a una persona que inclou un rotlle dürüm a triar, acompanyat d'una ració de patates fregides i un refresc."
         },
         "Menú Pita": {
             "name": "Menú Pita",
-            "description": "Menú complet individual que incluye un bocadillo de pan de pita a elegir, una ración de patatas fritas y un refresco."
+            "description": "Menú complet individual que inclou un entrepà de pa de pita a triar, una ració de patates fregides i un refresc."
         },
         "Menú Taco": {
             "name": "Menú Taco",
-            "description": "Menú complet individual compuesto por un French Taco de la carta a elegir, una guarnición de patatas fritas y un refresco."
+            "description": "Menú complet individual compost per un French Taco de la carta a triar, una guarnició de patates fregides i un refresc."
         },
         "Menú Hamburguesa": {
             "name": "Menú Hamburguesa",
-            "description": "Menú complet individual con una hamburguesa a elegir de la carta (burguer), acompañada de patatas fritas y un refresco."
+            "description": "Menú complet individual amb una hamburguesa a triar de la carta, acompanyada de patates fregides i un refresc."
         },
         "Menú Pizza": {
             "name": "Menú Pizza",
-            "description": "Menú individual con una pizza de 32cm (mediana) a elegir de la carta, acompañada de un refresco."
+            "description": "Menú individual amb una pizza de 32cm (mitjana) a triar de la carta, acompanyada d'un refresc."
         },
         "Combo 2 Dürüms": {
             "name": "Combo 2 Dürüms",
-            "description": "Oferta para compartir que incluye dos rollos dürüm a elegir, acompañados de dos raciones individuales de patatas fritas y dos refrescos."
+            "description": "Oferta per compartir que inclou dos rotlles dürüm a triar, acompanyats de dues racions individuals de patates fregides i dos refrescos."
         },
         "Combo 2 Pitas": {
             "name": "Combo 2 Pitas",
-            "description": "Oferta para compartir que incluye dos bocadillos de pan pita a elegir, junto con dos raciones de patatas fritas y dos refrescos."
+            "description": "Oferta per compartir que inclou dos entrepans de pa pita a triar, juntament amb dues racions de patates fregides i dos refrescos."
         },
         "Combo 2 Pizzas Medianas": {
-            "name": "Combo 2 Pizzas Medianas",
+            "name": "Combo 2 Pizzes Mitjanes",
             "description": ""
         },
         "Combo Family": {
             "name": "Combo Family",
-            "description": "El paquete más grande para grupos o familias. Incluye: 1 Dürüm, 1 pan de Pita, 1 Hamburguesa a elegir, 1 Pizza de tamaño mediano a elegir, 3 raciones de patatas fritas y 1 botella de refresco familiar de 1L."
+            "description": "El paquet més gran per a grups o famílies. Inclou: 1 Dürüm, 1 pa de Pita, 1 Hamburguesa a triar, 1 Pizza de mida mitjana a triar, 3 racions de patates fregides i 1 ampolla de refresc familiar d'1L."
         },
         "Menú Infantil": {
             "name": "Menú Infantil",
@@ -386,35 +386,35 @@ export const ca = {
         },
         "Salsa Algerian": {
             "name": "Salsa Algerian",
-            "description": "Pote adicional de Salsa Algerian."
+            "description": "Pot addicional de Salsa Algerian."
         },
         "Salsa Andaluza": {
             "name": "Salsa Andaluza",
-            "description": "Pote adicional de Salsa Andaluza."
+            "description": "Pot addicional de Salsa Andaluza."
         },
         "Salsa Barbacoa": {
             "name": "Salsa Barbacoa",
-            "description": "Pote adicional de Salsa Barbacoa."
+            "description": "Pot addicional de Salsa Barbacoa."
         },
         "Salsa Biggie": {
             "name": "Salsa Biggie",
-            "description": "Pote adicional de Salsa Biggie."
+            "description": "Pot addicional de Salsa Biggie."
         },
         "Salsa Brazil": {
             "name": "Salsa Brazil",
-            "description": "Pote adicional de Salsa Brazil."
+            "description": "Pot addicional de Salsa Brazil."
         },
         "Salsa Samurai": {
             "name": "Salsa Samurai",
-            "description": "Pote adicional de Salsa Samurai."
+            "description": "Pot addicional de Salsa Samurai."
         },
         "Salsa Ketchup": {
             "name": "Salsa Ketchup",
-            "description": "Pote adicional de Salsa Ketchup."
+            "description": "Pot addicional de Salsa Ketchup."
         },
         "Salsa Mayonesa": {
             "name": "Salsa Mayonesa",
-            "description": "Pote adicional de Salsa Mayonesa."
+            "description": "Pot addicional de Salsa Mayonesa."
         },
         "Solo Carne (Sin ensalada/patatas)": {
             "name": "Sols Carn (Sense amanida/patates)",
