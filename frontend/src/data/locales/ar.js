@@ -453,4 +453,31 @@ export const ar = {
             "description": "مكون إضافي."
         }
     }
+,
+    "pizza_custom": {
+    "title": "اصنع بيتزا بأختيارك",
+    "bases": "قواعد (اختر 1)",
+    "quesos": "أجبان (متعدد)",
+    "carnes": "لحوم (متعدد)",
+    "verduras": "خضار (متعدد)",
+    "items": {
+        "Tomate": "طماطم",
+        "Barbacoa": "باربكيو",
+        "Crema/Nata": "كريمة",
+        "Mozzarella": "موتزاريلا",
+        "Gorgonzola": "جورجونزولا",
+        "Queso de Cabra": "جبن الماعز",
+        "Pollo": "دجاج",
+        "Ternera": "لحم بقر",
+        "Bacón": "بايقون",
+        "Jamón York": "هام",
+        "Peperoni": "ببروني",
+        "Atún": "تونة",
+        "Cebolla": "بصل",
+        "Pimiento": "فلفل",
+        "Champiñones": "فطر",
+        "Olivas Negras": "زيتون أسود",
+        "Piña": "أناناس"
+    }
+}
 };
