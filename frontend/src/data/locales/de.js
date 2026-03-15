@@ -453,4 +453,31 @@ export const de = {
             "description": "Zusätzliche Zutat."
         }
     }
+,
+    "pizza_custom": {
+    "title": "BAUE DEINE PIZZA",
+    "bases": "Boden (Wähle 1)",
+    "quesos": "Käse (Mehrfach)",
+    "carnes": "Fleisch (Mehrfach)",
+    "verduras": "Gemüse (Mehrfach)",
+    "items": {
+        "Tomate": "Tomate",
+        "Barbacoa": "BBQ",
+        "Crema/Nata": "Sahne",
+        "Mozzarella": "Mozzarella",
+        "Gorgonzola": "Gorgonzola",
+        "Queso de Cabra": "Ziegenkäse",
+        "Pollo": "Hähnchen",
+        "Ternera": "Rind",
+        "Bacón": "Speck",
+        "Jamón York": "Schinken",
+        "Peperoni": "Peperoni",
+        "Atún": "Thunfisch",
+        "Cebolla": "Zwiebel",
+        "Pimiento": "Paprika",
+        "Champiñones": "Pilze",
+        "Olivas Negras": "Schwarze Oliven",
+        "Piña": "Ananas"
+    }
+}
 };
