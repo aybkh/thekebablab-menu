@@ -22,7 +22,24 @@ export const ar = {
         "cook": "طهي",
         "ticket": "تذكرة الطلب",
         "go_to_sauces": "عرض الصلصات المتوفرة",
-        "go_to_sauces_desc": "اختر صلصاتك المفضلة"
+        "go_to_sauces_desc": "اختر صلصاتك المفضلة",
+        "allergens_label": "المواد المسببة للحساسية",
+        "allergen_1": "جلوتين",
+        "allergen_2": "قشريات",
+        "allergen_3": "بيض",
+        "allergen_4": "سمك",
+        "allergen_5": "الفول السوداني",
+        "allergen_6": "صويا",
+        "allergen_7": "منتجات الألبان",
+        "allergen_8": "فواكه جافة",
+        "allergen_9": "كرَفس",
+        "allergen_10": "خردل",
+        "allergen_11": "سمسم",
+        "allergen_12": "كبريتات",
+        "allergen_13": "رخويات",
+        "allergen_14": "الترمس",
+        "allergen_15": "حار",
+        "allergen_16": "لحم"
     },
     "direction": "rtl",
     "categories": {
@@ -73,7 +90,7 @@ export const ar = {
         },
         "Ensalada Mix Queso Cabra": {
             "name": "Ensalada Mix Queso Cabra",
-            "description": ""
+            "description": "سلطة خضراء مع جبن الماعز."
         },
         "Nuestras Patatas Bravas": {
             "name": "بطاطس برافس الخاصة",
@@ -213,7 +230,7 @@ export const ar = {
         },
         "Pizza a tu Gusto": {
             "name": "Pizza a tu Gusto",
-            "description": ""
+            "description": "بيتزا متوسطة الحجم حسب اختيارك."
         },
         "Plato Kebab de Pollo": {
             "name": "طبق كباب دجاج",
@@ -261,23 +278,23 @@ export const ar = {
         },
         "Fanta Naranja": {
             "name": "Fanta Naranja",
-            "description": ""
+            "description": "فانتا برتقال باردة."
         },
         "Fanta Limón": {
             "name": "Fanta Limón",
-            "description": ""
+            "description": "فانتا ليمون باردة."
         },
         "Aquarius Naranja": {
             "name": "Aquarius Naranja",
-            "description": ""
+            "description": "مشروب متوازن برتقال بارد."
         },
         "Aquarius Limón": {
             "name": "Aquarius Limón",
-            "description": ""
+            "description": "مشروب متوازن ليمون بارد."
         },
         "Nestea Limón": {
             "name": "Nestea Limón",
-            "description": ""
+            "description": "شاي مثلج بالليمون بارد."
         },
         "Nestea Maracuyá": {
             "name": "نيستي ماراكوجا",
@@ -285,11 +302,11 @@ export const ar = {
         },
         "Trina Naranja": {
             "name": "Trina Naranja",
-            "description": ""
+            "description": "مشروب برتقال بدون غاز بارد."
         },
         "Pepsi": {
             "name": "Pepsi",
-            "description": ""
+            "description": "بيبسي كولا باردة."
         },
         "Sprite": {
             "name": "سبرايت",
@@ -297,7 +314,7 @@ export const ar = {
         },
         "7UP": {
             "name": "7UP",
-            "description": ""
+            "description": "مشروب غازي سيفن أب بارد."
         },
         "Hawai": {
             "name": "هاواي",
@@ -313,7 +330,7 @@ export const ar = {
         },
         "Monster": {
             "name": "Monster",
-            "description": ""
+            "description": "مشروب طاقة مونستر بارد."
         },
         "Vichy Catalán": {
             "name": "فيشي كاتالان",
@@ -373,7 +390,7 @@ export const ar = {
         },
         "Combo 2 Pizzas Medianas": {
             "name": "Combo 2 Pizzas Medianas",
-            "description": ""
+            "description": "بيتزا متوسطة الحجم (٣٢ سم) للاختيار."
         },
         "Combo Family": {
             "name": "الكومبو العائلي",
@@ -381,7 +398,7 @@ export const ar = {
         },
         "Menú Infantil": {
             "name": "Menú Infantil",
-            "description": ""
+            "description": "وجبة أطفال مع دجاج ناجت مقرمش، بطاطس مقلية وعصير."
         },
         "Salsa Algerian": {
             "name": "صلصة جزائرية",
@@ -417,23 +434,23 @@ export const ar = {
         },
         "Solo Carne (Sin ensalada/patatas)": {
             "name": "Solo Carne (Sin ensalada/patatas)",
-            "description": ""
+            "description": "طبق لحم كباب صافي، بدون ملحقات."
         },
         "Extra de Carne": {
             "name": "Extra de Carne",
-            "description": ""
+            "description": "زيادة في اللحم كباب."
         },
         "Queso Feta": {
             "name": "Queso Feta",
-            "description": ""
+            "description": "جبن فيتا يوناني."
         },
         "Queso de Cabra": {
             "name": "Queso de Cabra",
-            "description": ""
+            "description": "جبن ماعز."
         },
         "Ingrediente Extra": {
             "name": "Ingrediente Extra",
-            "description": ""
+            "description": "مكون إضافي."
         }
     }
 };
