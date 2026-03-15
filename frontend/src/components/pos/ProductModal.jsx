@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import PriceDisplay from '../shared/PriceDisplay';
+import { ALLERGEN_MAP } from '../landing/AllergenIcons';
 import '../../styles/pos/ProductModal.css';
 
 const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSauces }) => {
@@ -69,6 +70,35 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
                         </div>
                     );
                 })()}
+
+                {originalProduct?.alergenos && originalProduct.alergenos.length > 0 && (
+                    <div className="product-allergens-section">
+                        <span className="section-title">{t('allergens_label')}</span>
+                        <div className="product-allergens-list">
+                            {originalProduct.alergenos.map(id => {
+                                const alg = ALLERGEN_MAP[id];
+                                if (!alg) return null;
+                                return (
+                                    <div key={id} className="allergen-info-item">
+                                        <img 
+                                            src={alg.iconSrc} 
+                                            alt={alg.name} 
+                                            className="allergen-mini-icon" 
+                                            onError={(e) => { 
+                                                e.target.style.display = 'none'; 
+                                                if (e.target.nextSibling) e.target.nextSibling.style.display = 'flex'; 
+                                            }} 
+                                        />
+                                        <div className="allergen-fallback-mini" style={{ display: 'none', borderColor: alg.color }}>
+                                            {alg.emoji}
+                                        </div>
+                                        <span className="allergen-info-name">{t('allergen_' + id) || alg.name}</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                )}
 
                 {/* Variants (Sizes) */}
                 {currentProduct.variants?.length > 0 && (
