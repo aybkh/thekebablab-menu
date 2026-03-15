@@ -22,7 +22,24 @@ export const nl = {
         "cook": "Koken",
         "ticket": "Bestelticket",
         "go_to_sauces": "BEKIJK BESCHIKBARE SAUZEN",
-        "go_to_sauces_desc": "Kies je favoriete sauzen"
+        "go_to_sauces_desc": "Kies je favoriete sauzen",
+        "allergens_label": "Allergenen",
+        "allergen_1": "Gluten",
+        "allergen_2": "Schaaldieren",
+        "allergen_3": "Eieren",
+        "allergen_4": "Vis",
+        "allergen_5": "Pinda's",
+        "allergen_6": "Soja",
+        "allergen_7": "Zuivel",
+        "allergen_8": "Noten",
+        "allergen_9": "Selderij",
+        "allergen_10": "Mosterd",
+        "allergen_11": "Sesam",
+        "allergen_12": "Sulfieten",
+        "allergen_13": "Weekdieren",
+        "allergen_14": "Lupine",
+        "allergen_15": "Pittig",
+        "allergen_16": "Vlees"
     },
     "direction": "ltr",
     "categories": {
@@ -73,7 +90,7 @@ export const nl = {
         },
         "Ensalada Mix Queso Cabra": {
             "name": "Ensalada Mix Queso Cabra",
-            "description": ""
+            "description": "Gemengde sla met geitenkaas medaillon."
         },
         "Nuestras Patatas Bravas": {
             "name": "Onze Patatas Bravas",
@@ -213,7 +230,7 @@ export const nl = {
         },
         "Pizza a tu Gusto": {
             "name": "Pizza a tu Gusto",
-            "description": ""
+            "description": "Medium pizza naar wens belegd."
         },
         "Plato Kebab de Pollo": {
             "name": "Kebabschotel Kip",
@@ -261,23 +278,23 @@ export const nl = {
         },
         "Fanta Naranja": {
             "name": "Fanta Naranja",
-            "description": ""
+            "description": "Sinaasappel-Fanta (koud)."
         },
         "Fanta Limón": {
             "name": "Fanta Limón",
-            "description": ""
+            "description": "Citroen-Fanta (koud)."
         },
         "Aquarius Naranja": {
             "name": "Aquarius Naranja",
-            "description": ""
+            "description": "Isotone sinaasappeldrank (koud)."
         },
         "Aquarius Limón": {
             "name": "Aquarius Limón",
-            "description": ""
+            "description": "Isotone citroendrank (koud)."
         },
         "Nestea Limón": {
             "name": "Nestea Limón",
-            "description": ""
+            "description": "Citroen-ijsthee (koud)."
         },
         "Nestea Maracuyá": {
             "name": "Nestea Maracuja",
@@ -285,11 +302,11 @@ export const nl = {
         },
         "Trina Naranja": {
             "name": "Trina Naranja",
-            "description": ""
+            "description": "Trina sinaasappeldrank (plat)."
         },
         "Pepsi": {
             "name": "Pepsi",
-            "description": ""
+            "description": "Pepsi-Cola (koud)."
         },
         "Sprite": {
             "name": "Sprite",
@@ -297,7 +314,7 @@ export const nl = {
         },
         "7UP": {
             "name": "7UP",
-            "description": ""
+            "description": "Individueel koud citroen-limoen frisdrank."
         },
         "Hawai": {
             "name": "Hawai",
@@ -313,7 +330,7 @@ export const nl = {
         },
         "Monster": {
             "name": "Monster",
-            "description": ""
+            "description": "Individueel koud energiedrankje."
         },
         "Vichy Catalán": {
             "name": "Vichy Catalán",
@@ -373,7 +390,7 @@ export const nl = {
         },
         "Combo 2 Pizzas Medianas": {
             "name": "Combo 2 Pizzas Medianas",
-            "description": ""
+            "description": "Twee medium pizza's (32cm) naar keuze."
         },
         "Combo Family": {
             "name": "Familie-combo",
@@ -381,7 +398,7 @@ export const nl = {
         },
         "Menú Infantil": {
             "name": "Menú Infantil",
-            "description": ""
+            "description": "Kindermenu met krokante kipnuggets, friet en sap."
         },
         "Salsa Algerian": {
             "name": "Algerijnse saus",
@@ -417,23 +434,23 @@ export const nl = {
         },
         "Solo Carne (Sin ensalada/patatas)": {
             "name": "Solo Carne (Sin ensalada/patatas)",
-            "description": ""
+            "description": "Puur kebabvlees bord, zonder bijgerechten."
         },
         "Extra de Carne": {
             "name": "Extra de Carne",
-            "description": ""
+            "description": "Extra portie kebabvlees."
         },
         "Queso Feta": {
             "name": "Queso Feta",
-            "description": ""
+            "description": "Portie Griekse feta kaas."
         },
         "Queso de Cabra": {
             "name": "Queso de Cabra",
-            "description": ""
+            "description": "Geitenkaas medaillon."
         },
         "Ingrediente Extra": {
             "name": "Ingrediente Extra",
-            "description": ""
+            "description": "Extra ingrediënt."
         }
     }
 };
