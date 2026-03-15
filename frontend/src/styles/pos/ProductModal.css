@@ -230,3 +230,50 @@
 .modal-content::-webkit-scrollbar-thumb:hover {
     background: var(--color-primary);
 }
+
+/* Sección de Alérgenos en Modal */
+.product-allergens-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.product-allergens-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.allergen-info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.allergen-mini-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.allergen-fallback-mini {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background: white;
+    font-size: 0.8rem;
+}
+
+.allergen-info-name {
+    font-weight: 600;
+}
