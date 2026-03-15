@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../styles/landing/AllergenIcons.css';
 
 // --- TRADUCTOR HÍBRIDO (SVG + Fallback Emoji) ---
-const ALLERGEN_MAP = {
+export const ALLERGEN_MAP = {
     1: { name: "Gluten", iconSrc: "/icons/allergens/gluten.svg", emoji: "🌾", color: "#e67e22" },
     2: { name: "Crustáceos", iconSrc: "/icons/allergens/crustaceos.svg", emoji: "🦐", color: "#e74c3c" },
     3: { name: "Huevos", iconSrc: "/icons/allergens/huevos.svg", emoji: "🥚", color: "#f1c40f" },
