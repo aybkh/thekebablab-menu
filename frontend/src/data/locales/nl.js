@@ -27,18 +27,20 @@ export const nl = {
     "direction": "ltr",
     "categories": {
         "Tapas y Entrantes": "Tapas & Voorgerechten",
-        "Pita": "Pita",
-        "Hamburguesas": "Burgers",
         "Dürüm": "Dürüm",
-        "Tacos": "Tacos",
+        "Pita": "Pita",
+        "Combo Box": "Combo Box",
+        "Tacos 303": "Tacos 303",
+        "Hamburguesas": "Burgers",
         "Pizzas": "Pizza's",
         "Platos": "Schotels",
         "Postres": "Desserts",
-        "Bebidas": "Dranken",
-        "Nuestros Batidos": "Onze Shakes",
+        "Bebidas Frías": "Bebidas Frías",
+        "Batidos": "Batidos",
         "Bebidas Calientes": "Warme Dranken",
         "Menús y Combos": "Menu's & Combo's",
-        "Salsas": "Sauzen"
+        "Salsas": "Sauzen",
+        "Suplementos": "Suplementos"
     },
     "products": {
         "Mozzarella Sticks": {
@@ -69,6 +71,10 @@ export const nl = {
             "name": "Gemengde Salade",
             "description": "Verfrissende basis van sla met tomaat, ui en een selectie seizoensgroenten."
         },
+        "Ensalada Mix Queso Cabra": {
+            "name": "Ensalada Mix Queso Cabra",
+            "description": ""
+        },
         "Nuestras Patatas Bravas": {
             "name": "Onze Patatas Bravas",
             "description": "Gefrituurde aardappelblokjes geserveerd met een klassieke, licht pittige bravasaus."
@@ -80,6 +86,22 @@ export const nl = {
         "Huevos rotos con Dürüm": {
             "name": "Gebakken eieren met Dürüm",
             "description": "Bedje van frietjes met daarop gebroken gebakken eieren en gekruid dürüm-kebabvlees."
+        },
+        "Dürüm de Pollo": {
+            "name": "Kip Dürüm",
+            "description": "Grote tarwetortilla gevuld met dunne reepjes gegrilde kip, groenten, salade en huissauzen."
+        },
+        "Dürüm de Ternera": {
+            "name": "Rundvlees Dürüm",
+            "description": "Tarwetortilla gevuld met gegrild rundvlees van het klassieke spit, verse groenten, salade en sauzen."
+        },
+        "Dürüm Mix": {
+            "name": "Gemengde Dürüm",
+            "description": "Tarwetortilla gevuld met een royale mix van gegrilde kip en rundvlees, groenten, salade en sauzen."
+        },
+        "Dürüm de Falafel": {
+            "name": "Falafel Dürüm",
+            "description": "Vegetarische tarwetortilla gevuld met knapperige falafelballetjes, verse salade, groenten en sauzen."
         },
         "Pita de Pollo": {
             "name": "Kip Pita",
@@ -97,37 +119,17 @@ export const nl = {
             "name": "Falafel Pita",
             "description": "Vegetarisch broodje in Turks brood met gefrituurde kichererwtenballetjes (falafel), groenten, salade en sauzen."
         },
-        "Hamburguesa Americana": {
-            "name": "American Burger",
-            "description": "Burger op rustiek brood met 200g rundvlees, augurk, gesmolten cheddar, gekaramelliseerde ui en speciale American saus. Inclusief frietjes."
+        "Combo Box Nugguets": {
+            "name": "Combo Box Nugguets",
+            "description": "Patatas, Nugguets, Salsa Queso"
         },
-        "Hamburguesa Clássica": {
-            "name": "Classic Burger",
-            "description": "Burger op rustiek brood with 200g rundvlees, sla, plakjes tomaat, gesmolten Edammer kaas en een sappig gebakken ei. Inclusief frietjes."
+        "Combo Box Tenders": {
+            "name": "Combo Box Tenders",
+            "description": "Patatas, Tenders, Salsa Queso"
         },
-        "Hamburguesa Queso de Cabra": {
-            "name": "Geitenkaas Burger",
-            "description": "Gourmet burger op rustiek brood met 200g rundvlees, verse rucola, gegrilde geitenkaas, gekaramelliseerde ui en honing-mosterdsaus. Inclusief frietjes."
-        },
-        "Hamburguesa Chicken Crispy": {
-            "name": "Chicken Crispy Burger",
-            "description": "Burger op een zacht briochebroodje gevuld met 200g knapperig gepaneerde kip, rucola, gesmolten cheddar, ranchsaus en augurk. Inclusief frietjes."
-        },
-        "Dürüm de Pollo": {
-            "name": "Kip Dürüm",
-            "description": "Grote tarwetortilla gevuld met dunne reepjes gegrilde kip, groenten, salade en huissauzen."
-        },
-        "Dürüm de Ternera": {
-            "name": "Rundvlees Dürüm",
-            "description": "Tarwetortilla gevuld met gegrild rundvlees van het klassieke spit, verse groenten, salade en sauzen."
-        },
-        "Dürüm Mix": {
-            "name": "Gemengde Dürüm",
-            "description": "Tarwetortilla gevuld met een royale mix van gegrilde kip en rundvlees, groenten, salade en sauzen."
-        },
-        "Dürüm de Falafel": {
-            "name": "Falafel Dürüm",
-            "description": "Vegetarische tarwetortilla gevuld met knapperige falafelballetjes, verse salade, groenten en sauzen."
+        "Combo Box Mix": {
+            "name": "Combo Box Mix",
+            "description": "Patatas, Nugguets, Tenders, Salsa Queso"
         },
         "Taco de Pollo": {
             "name": "Kip Taco (Frans)",
@@ -148,6 +150,22 @@ export const nl = {
         "Taco de Tenders": {
             "name": "Tenders Taco (Frans)",
             "description": "Stevige Franse taco gevuld met gepaneerde kiphaasjes (tenders), frietjes, veel gesmolten mozzarella, kaassaus en Algerijnse of Andalusische saus."
+        },
+        "Hamburguesa Americana": {
+            "name": "American Burger",
+            "description": "Burger op rustiek brood met 200g rundvlees, augurk, gesmolten cheddar, gekaramelliseerde ui en speciale American saus. Inclusief frietjes."
+        },
+        "Hamburguesa Clássica": {
+            "name": "Classic Burger",
+            "description": "Burger op rustiek brood with 200g rundvlees, sla, plakjes tomaat, gesmolten Edammer kaas en een sappig gebakken ei. Inclusief frietjes."
+        },
+        "Hamburguesa Queso de Cabra": {
+            "name": "Geitenkaas Burger",
+            "description": "Gourmet burger op rustiek brood met 200g rundvlees, verse rucola, gegrilde geitenkaas, gekaramelliseerde ui en honing-mosterdsaus. Inclusief frietjes."
+        },
+        "Hamburguesa Chicken Crispy": {
+            "name": "Chicken Crispy Burger",
+            "description": "Burger op een zacht briochebroodje gevuld met 200g knapperig gepaneerde kip, rucola, gesmolten cheddar, ranchsaus en augurk. Inclusief frietjes."
         },
         "Pizza Margarita": {
             "name": "Pizza Margherita",
@@ -193,6 +211,10 @@ export const nl = {
             "name": "Pizza Hawaï",
             "description": "Tropisch pizzadeeg met tomatensaus, kalkoenham, zoete stukjes ananas, maïs en een scheutje room."
         },
+        "Pizza a tu Gusto": {
+            "name": "Pizza a tu Gusto",
+            "description": ""
+        },
         "Plato Kebab de Pollo": {
             "name": "Kebabschotel Kip",
             "description": "Royale portie op een bord (zonder brood) met reepjes gegrilde kip, geserveerd met gemengde salade en frietjes."
@@ -229,18 +251,6 @@ export const nl = {
             "name": "Cacaolat",
             "description": "Traditionele chocolademelk, koud geserveerd."
         },
-        "Aqua Deus": {
-            "name": "Aqua Deus",
-            "description": "Koude frisdrank (Aqua Deus)."
-        },
-        "Aquarius": {
-            "name": "Aquarius",
-            "description": "Koude frisdrank (Aquarius)."
-        },
-        "Bezoya": {
-            "name": "Bezoya",
-            "description": "Koude frisdrank (Bezoya)."
-        },
         "Coca-Cola": {
             "name": "Coca-Cola",
             "description": "Koude frisdrank (Coca-Cola)."
@@ -249,33 +259,49 @@ export const nl = {
             "name": "Coca-Cola Zero",
             "description": "Koude frisdrank (Coca-Cola Zero)."
         },
-        "Don Simon": {
-            "name": "Don Simon",
-            "description": "Koude frisdrank (Don Simon)."
+        "Fanta Naranja": {
+            "name": "Fanta Naranja",
+            "description": ""
         },
-        "Fanta": {
-            "name": "Fanta",
-            "description": "Koude frisdrank (Fanta)."
+        "Fanta Limón": {
+            "name": "Fanta Limón",
+            "description": ""
         },
-        "Font Vella": {
-            "name": "Font Vella",
-            "description": "Koude frisdrank (Font Vella)."
+        "Aquarius Naranja": {
+            "name": "Aquarius Naranja",
+            "description": ""
         },
-        "Hawai": {
-            "name": "Hawai",
-            "description": "Koude frisdrank (Hawai)."
+        "Aquarius Limón": {
+            "name": "Aquarius Limón",
+            "description": ""
         },
-        "Nestea": {
-            "name": "Nestea",
-            "description": "Koude frisdrank (Nestea)."
+        "Nestea Limón": {
+            "name": "Nestea Limón",
+            "description": ""
         },
         "Nestea Maracuyá": {
             "name": "Nestea Maracuja",
             "description": "Koude frisdrank (Nestea Maracuja)."
         },
-        "Oasis Tropical": {
-            "name": "Oasis Tropical",
-            "description": "Koude frisdrank (Oasis Tropical)."
+        "Trina Naranja": {
+            "name": "Trina Naranja",
+            "description": ""
+        },
+        "Pepsi": {
+            "name": "Pepsi",
+            "description": ""
+        },
+        "Sprite": {
+            "name": "Sprite",
+            "description": "Koude frisdrank (Sprite)."
+        },
+        "7UP": {
+            "name": "7UP",
+            "description": ""
+        },
+        "Hawai": {
+            "name": "Hawai",
+            "description": "Koude frisdrank (Hawai)."
         },
         "Poms": {
             "name": "Poms",
@@ -285,21 +311,17 @@ export const nl = {
             "name": "Red Bull",
             "description": "Koude frisdrank (Red Bull)."
         },
-        "Schweppes": {
-            "name": "Schweppes",
-            "description": "Koude frisdrank (Schweppes)."
-        },
-        "Sprite": {
-            "name": "Sprite",
-            "description": "Koude frisdrank (Sprite)."
+        "Monster": {
+            "name": "Monster",
+            "description": ""
         },
         "Vichy Catalán": {
             "name": "Vichy Catalán",
             "description": "Koude frisdrank (Vichy Catalán)."
         },
-        "Batido de Aguacate": {
-            "name": "Avocadoshake",
-            "description": "Romige en voedzame shake gemaakt van verse avocado."
+        "Schweppes": {
+            "name": "Schweppes",
+            "description": "Koude frisdrank (Schweppes)."
         },
         "Mango Lassi": {
             "name": "Mango Lassi",
@@ -321,10 +343,6 @@ export const nl = {
             "name": "Thee / Kruidenthee",
             "description": "Heet water met een theezakje naar keuze."
         },
-        "Descafeinado": {
-            "name": "Cafeïnevrije koffie",
-            "description": "Cafeïnevrije koffie uit de machine."
-        },
         "Menú Dürüm": {
             "name": "Dürüm-menu",
             "description": "Compleet menu voor één persoon inclusief een dürüm naar keuze, frietjes en een frisdrankje."
@@ -333,21 +351,17 @@ export const nl = {
             "name": "Pita-menu",
             "description": "Compleet menu voor één persoon inclusief een broodje pita naar keuze, frietjes en een frisdrankje."
         },
-        "Menú Hamburguesa": {
-            "name": "Burger-menu",
-            "description": "Compleet menu voor één persoon inclusief een burger naar keuze, frietjes en een frisdrankje."
-        },
         "Menú Taco": {
             "name": "Taco-menu",
             "description": "Compleet menu voor één persoon inclusief een Franse Taco naar keuze, frietjes en een frisdrankje."
         },
+        "Menú Hamburguesa": {
+            "name": "Burger-menu",
+            "description": "Compleet menu voor één persoon inclusief een burger naar keuze, frietjes en een frisdrankje."
+        },
         "Menú Pizza": {
             "name": "Pizza-menu",
             "description": "Menu inclusief een 32cm pizza naar keuze en een frisdrankje."
-        },
-        "Menú Pizza Grande": {
-            "name": "Groot Pizza-menu",
-            "description": "Menu inclusief een grote pizza naar keuze en een frisdrankje."
         },
         "Combo 2 Dürüms": {
             "name": "2 Dürüms-combo",
@@ -357,21 +371,17 @@ export const nl = {
             "name": "2 Pitas-combo",
             "description": "Deelmenu met twee broodjes pita naar keuze, twee porties friet en twee frisdrankjes."
         },
-        "Combo 2 Tacos": {
-            "name": "2 Tacos-combo",
-            "description": "Deelmenu met twee Franse taco's naar keuze, twee porties friet en twee frisdrankjes."
-        },
-        "Combo 2 Pizzas": {
-            "name": "2 Pizza's-combo",
-            "description": "Voordeelmenu inclusief twee 32cm pizza's naar keuze en een grote fles frisdrank (1L - 1,5L)."
+        "Combo 2 Pizzas Medianas": {
+            "name": "Combo 2 Pizzas Medianas",
+            "description": ""
         },
         "Combo Family": {
             "name": "Familie-combo",
             "description": "Het grootste pakket voor groepen of families. Bevat: 1 Dürüm, 1 Pita, 1 Burger naar keuze, 1 pizza 32cm, 3 porties friet en een grote fles frisdrank."
         },
-        "Combo Infantil": {
-            "name": "Kindermenu",
-            "description": "Menu voor de kleintjes. Bevat 10 kipnuggets met frietjes en een vruchtensapje."
+        "Menú Infantil": {
+            "name": "Menú Infantil",
+            "description": ""
         },
         "Salsa Algerian": {
             "name": "Algerijnse saus",
@@ -393,33 +403,37 @@ export const nl = {
             "name": "Brazil saus",
             "description": "Extra bakje Brazil saus."
         },
-        "Salsa Chilli Thai": {
-            "name": "Thai chilisaus",
-            "description": "Extra bakje Thai chilisaus."
-        },
-        "Salsa Curry": {
-            "name": "Currysaus",
-            "description": "Extra bakje currysaus."
+        "Salsa Samurai": {
+            "name": "Samuraisaus",
+            "description": "Extra bakje samuraisaus."
         },
         "Salsa Ketchup": {
             "name": "Ketchup",
             "description": "Extra bakje ketchup."
         },
-        "Salsa Marocaine": {
-            "name": "Marokkaanse saus",
-            "description": "Extra bakje Marokkaanse saus."
-        },
         "Salsa Mayonesa": {
             "name": "Mayonaise",
             "description": "Extra bakje mayonaise."
         },
-        "Salsa Pita Kebab": {
-            "name": "Witte kebabsaus",
-            "description": "Extra bakje witte kebabsaus."
+        "Solo Carne (Sin ensalada/patatas)": {
+            "name": "Solo Carne (Sin ensalada/patatas)",
+            "description": ""
         },
-        "Salsa Samurai": {
-            "name": "Samuraisaus",
-            "description": "Extra bakje samuraisaus."
+        "Extra de Carne": {
+            "name": "Extra de Carne",
+            "description": ""
+        },
+        "Queso Feta": {
+            "name": "Queso Feta",
+            "description": ""
+        },
+        "Queso de Cabra": {
+            "name": "Queso de Cabra",
+            "description": ""
+        },
+        "Ingrediente Extra": {
+            "name": "Ingrediente Extra",
+            "description": ""
         }
     }
 };
