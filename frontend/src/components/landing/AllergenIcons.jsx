@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../styles/landing/AllergenIcons.css';
 
 // --- TRADUCTOR HÍBRIDO (SVG + Fallback Emoji) ---
 const ALLERGEN_MAP = {
@@ -27,12 +28,11 @@ const AllergenIconItem = ({ alg }) => {
     if (imageError) {
         // FALLBACK: Mostrar el Emoji si no hay SVG
         return (
-            <div title={alg.name} style={{
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                width: '28px', height: '28px', borderRadius: '50%',
-                background: 'white', border: `2px solid ${alg.color}`,
-                fontSize: '1.2rem', boxShadow: '0 2px 5px rgba(0,0,0,0.3)', cursor: 'help'
-            }}>
+            <div 
+                title={alg.name} 
+                className="allergen-icon-fallback" 
+                style={{ border: `2px solid ${alg.color}` }}
+            >
                 <span role="img" aria-label={alg.name}>{alg.emoji}</span>
             </div>
         );
@@ -45,10 +45,7 @@ const AllergenIconItem = ({ alg }) => {
             alt={alg.name}
             title={alg.name}
             onError={() => setImageError(true)} // Si falla, activa el fallback
-            style={{
-                width: '28px', height: '28px', objectFit: 'contain',
-                filter: 'drop-shadow(0px 2px 4px rgba(0,0,0,0.4))', cursor: 'help'
-            }}
+            className="allergen-icon-item"
         />
     );
 };
@@ -63,20 +60,13 @@ const AllergenIcons = ({ allergenIds }) => {
     if (validAllergens.length === 0) return null;
 
     return (
-        <div 
-            className="allergen-overlay" // Clase para que el agente la posicione con CSS
-            style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '6px',
-                padding: '5px'
-            }}
-        >
+        <div className="allergen-overlay">
             {validAllergens.map((alg, index) => (
                 <AllergenIconItem key={index} alg={alg} />
             ))}
         </div>
     );
 };
+
 
 export default AllergenIcons;
