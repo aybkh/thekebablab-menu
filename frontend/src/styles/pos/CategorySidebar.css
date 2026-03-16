@@ -37,14 +37,15 @@
     height: 120px;
     cursor: pointer;
     background: transparent;
-    border: 2px solid var(--color-primary);
+    border: 1px dashed var(--color-primary);
     transition: all 0.2s ease;
     margin: 10px 15px;
     border-radius: 8px;
 }
 
 .cat-btn:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--color-shadow);
+    border: 1px solid var(--color-primary);
 }
 
 .cat-btn.active {
