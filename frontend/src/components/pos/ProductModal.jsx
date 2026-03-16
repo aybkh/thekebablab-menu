@@ -68,7 +68,17 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
             }
         }
 
-        return (base + menuExtra + drinkExtra + sauceExtra + batidoExtra + pizzaExtra).toFixed(2);
+        // Suplementos para Dürüm/Pita
+        let extrasTotal = 0;
+        if (pizzaSelections["extras"]) {
+            pizzaSelections["extras"].forEach(extra => {
+                if (extra.includes("Carne")) extrasTotal += 2.00;
+                if (extra.includes("Feta")) extrasTotal += 1.00;
+                if (extra.includes("Cabra")) extrasTotal += 1.50;
+            });
+        }
+
+        return (base + menuExtra + drinkExtra + sauceExtra + batidoExtra + pizzaExtra + extrasTotal).toFixed(2);
     };
 
     return (
@@ -206,8 +216,45 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
                     </div>
                 )}
 
+                {/* Suplementos (Dürüm / Pita) */}
+                {((category?.name === "Dürüm" || category?.name === "Pita")) && (
+                    <div className="selection-container">
+                        <span className="section-title" style={{ color: 'var(--primary)' }}>SUPLEMENTOS</span>
+                        <div className="selection-grid">
+                            {[
+                                { name: "Extra de Carne / Solo Carne", price: 2.00 },
+                                { name: "Queso Feta", price: 1.00 },
+                                { name: "Queso de Cabra", price: 1.50 }
+                            ].map(extra => {
+                                const list = pizzaSelections["extras"] || [];
+                                const isSelected = list.includes(extra.name);
+                                return (
+                                    <button 
+                                        key={extra.name} 
+                                        className={`option-btn ${isSelected ? 'selected' : ''}`}
+                                        onClick={() => {
+                                            if (isSelected) {
+                                                setPizzaSelections({ ...pizzaSelections, extras: list.filter(e => e !== extra.name) });
+                                            } else {
+                                                setPizzaSelections({ ...pizzaSelections, extras: [...list, extra.name] });
+                                            }
+                                        }}
+                                    >
+                                        {extra.name} (+<PriceDisplay price={extra.price} />)
+                                    </button>
+                                );
+                            })}
+                        </div>
+                        {category?.name === "Dürüm" && (
+                            <p style={{ fontSize: "0.80rem", opacity: 0.7, fontStyle: "italic", marginTop: "5px" }}>
+                                * Si no se pone lechuga en el Dürüm se aplicará suplemento de Solo Carne.
+                            </p>
+                        )}
+                    </div>
+                )}
+
                 {/* Redirect to Sauces Logic */}
-                {(((category?.name || "").includes("Tacos")) || ((category?.name || "").includes("Bocadillos")) || ((category?.name || "").includes("Hamburguesas")) || (originalProduct?.name || "").toLowerCase().includes("taco") || (originalProduct?.name || "").toLowerCase().includes("burger")) && (
+                {(((category?.name || "").includes("Tacos")) || ((category?.name || "").includes("Bocadillos")) || ((category?.name || "").includes("Hamburguesas")) || (category?.name || "") === "Dürüm" || (category?.name || "") === "Pita" || (category?.name || "") === "Combo Box" || (originalProduct?.name || "").toLowerCase().includes("taco") || (originalProduct?.name || "").toLowerCase().includes("burger")) && (
                     <div className="sauces-redirect-container">
                         <span className="section-title">{t('sauces_label')}</span>
                         <div style={{ marginTop: '10px' }}>
