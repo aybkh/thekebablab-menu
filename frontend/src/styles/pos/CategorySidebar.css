@@ -17,10 +17,13 @@
 }
 
 .brand-title.desktop-only {
-    padding: 5px;
+
     text-align: center;
     border-bottom: 2px solid var(--color-border);
     background-color: var(--color-sidebar);
+    position: sticky;
+    top: 0;
+    z-index: 60;
 }
 
 .brand-logo {
@@ -97,9 +100,5 @@
     .category-sidebar.mobile-visible {
         transform: translateX(0);
         box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
-    }
-    
-    .desktop-only {
-        display: none;
     }
 }
