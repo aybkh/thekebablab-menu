@@ -46,7 +46,7 @@
           "id": 4,
           "name": "Croquetas de Pescado Maxi",
           "price": 5.95,
-          "description": "Croquetas de pescado de tama\u00F1o superior con rebozado exterior crujiente. (4 unidades)",
+          "description": "Croquetas de pescado de tamaño superior con rebozado exterior crujiente. (4 unidades)",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -87,43 +87,100 @@
           "id": 7,
           "name": "Ensalada Mixta",
           "price": 4.95,
-          "description": "Base refrescante de lechuga con tomate, cebolla y una selecci\u00F3n de vegetales de temporada.",
+          "description": "Base refrescante de lechuga con tomate, cebolla y una selección de vegetales de temporada.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 8,
+          "id": 98,
           "name": "Ensalada Mix Queso Cabra",
           "price": 5.95,
-          "description": "",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            7
+          ]
+        },
+        {
+          "id": 8,
+          "name": "Nuestras Patatas Bravas",
+          "price": 3.95,
+          "description": "Dados de patata frita servidos con una clásica salsa brava especial con un toque picante.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
           "id": 9,
-          "name": "Nuestras Patatas Bravas",
-          "price": 3.95,
-          "description": "Dados de patata frita servidos con una cl\u00E1sica salsa brava especial con un toque picante.",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 10,
           "name": "Nuestras Patatas Fritas",
           "price": 2.95,
-          "description": "Raci\u00F3n de patatas cortadas en bast\u00F3n y fritas en su punto \u00F3ptimo de sal.",
+          "description": "Ración de patatas cortadas en bastón y fritas en su punto óptimo de sal.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 11,
-          "name": "Huevos rotos con D\u00FCr\u00FCm",
+          "id": 99,
+          "name": "Huevos rotos con Dürüm",
           "price": 4.95,
-          "description": "",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dürüm",
+      "image": "",
+      "products": [
+        {
+          "id": 19,
+          "name": "Dürüm de Pollo",
+          "price": 5.5,
+          "description": "Rollo grande hecho con una fina tortilla de trigo relleno de finas láminas de carne de pollo asada, verduras, ensalada y salsas de la casa.",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            1,
+            6,
+            7
+          ]
+        },
+        {
+          "id": 20,
+          "name": "Dürüm de Ternera",
+          "price": 5.5,
+          "description": "Rollo de tortilla de trigo relleno de carne de ternera asada en el clásico torno de kebab, verduras frescas, ensalada y salsas.",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            1,
+            6,
+            7
+          ]
+        },
+        {
+          "id": 21,
+          "name": "Dürüm Mix",
+          "price": 5.5,
+          "description": "Rollo de tortilla de trigo relleno con una mezcla generosa de carne de pollo y ternera asadas, acompañamiento de verduras, ensalada y salsas.",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            1,
+            6,
+            7
+          ]
+        },
+        {
+          "id": 22,
+          "name": "Dürüm de Falafel",
+          "price": 5.5,
+          "description": "Rollo vegetal en tortilla de trigo relleno de croquetas crujientes de falafel, ensalada fresca, verduras y salsas.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -136,15 +193,29 @@
       ]
     },
     {
-      "id": 2,
-      "name": "D\u00FCr\u00FCm",
+      "id": 3,
+      "name": "Pita",
       "image": "",
       "products": [
         {
-          "id": 12,
-          "name": "D\u00FCr\u00FCm de Pollo",
+          "id": 11,
+          "name": "Pita de Pollo",
           "price": 5.5,
-          "description": "Rollo grande hecho con una fina tortilla de trigo relleno de finas l\u00E1minas de carne de pollo asada, verduras, ensalada y salsas de la casa.",
+          "description": "Bocadillo en pan turco esponjoso relleno de jugosa carne de pollo asada, verduras frescas, ensalada variada y selección de salsas de la casa.",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            1,
+            6,
+            7,
+            11
+          ]
+        },
+        {
+          "id": 12,
+          "name": "Pita de Ternera",
+          "price": 5.5,
+          "description": "Bocadillo en pan turco esponjoso relleno de finas láminas de carne de ternera asada, vegetales frescos, ensalada y salsas.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -156,9 +227,9 @@
         },
         {
           "id": 13,
-          "name": "D\u00FCr\u00FCm de Ternera",
+          "name": "Pita Mix",
           "price": 5.5,
-          "description": "Rollo de tortilla de trigo relleno de carne de ternera asada en el cl\u00E1sico torno de kebab, verduras frescas, ensalada y salsas.",
+          "description": "Bocadillo en pan turco relleno de una combinación de carne asada de pollo y ternera, verduras frescas, ensalada y salsas.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -170,9 +241,9 @@
         },
         {
           "id": 14,
-          "name": "D\u00FCr\u00FCm Mix",
+          "name": "Pita Falafel",
           "price": 5.5,
-          "description": "Rollo de tortilla de trigo relleno con una mezcla generosa de carne de pollo y ternera asadas, acompa\u00F1amiento de verduras, ensalada y salsas.",
+          "description": "Opción vegetariana en bocadillo de pan turco con croquetas fritas de garbanzos y especias (falafel), verduras, ensalada y salsas.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -180,77 +251,6 @@
             6,
             7,
             11
-          ]
-        },
-        {
-          "id": 15,
-          "name": "D\u00FCr\u00FCm de Falafel",
-          "price": 5.5,
-          "description": "Rollo vegetal en tortilla de trigo relleno de croquetas crujientes de falafel, ensalada fresca, verduras y salsas.",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": [
-            1,
-            3,
-            7,
-            10
-          ]
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Pita",
-      "image": "",
-      "products": [
-        {
-          "id": 16,
-          "name": "Pita de Pollo",
-          "price": 5.5,
-          "description": "Bocadillo en pan turco esponjoso relleno de jugosa carne de pollo asada, verduras frescas, ensalada variada y selecci\u00F3n de salsas de la casa.",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": [
-            1,
-            3,
-            7,
-            10
-          ]
-        },
-        {
-          "id": 17,
-          "name": "Pita de Ternera",
-          "price": 5.5,
-          "description": "Bocadillo en pan turco esponjoso relleno de finas l\u00E1minas de carne de ternera asada, vegetales frescos, ensalada y salsas.",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 18,
-          "name": "Pita Mix",
-          "price": 5.5,
-          "description": "Bocadillo en pan turco relleno de una combinaci\u00F3n de carne asada de pollo y ternera, verduras frescas, ensalada y salsas.",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": [
-            1,
-            3,
-            7,
-            10
-          ]
-        },
-        {
-          "id": 19,
-          "name": "Pita Falafel",
-          "price": 5.5,
-          "description": "Opci\u00F3n vegetariana en bocadillo de pan turco con croquetas fritas de garbanzos y especias (falafel), verduras, ensalada y salsas.",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": [
-            1,
-            6,
-            7
           ]
         }
       ]
@@ -261,7 +261,7 @@
       "image": "",
       "products": [
         {
-          "id": 20,
+          "id": 100,
           "name": "Combo Box Nugguets",
           "price": 6.95,
           "description": "Patatas, Nugguets, Salsa Queso",
@@ -270,11 +270,12 @@
           "alergenos": [
             1,
             6,
-            7
+            7,
+            9
           ]
         },
         {
-          "id": 21,
+          "id": 101,
           "name": "Combo Box Tenders",
           "price": 6.95,
           "description": "Patatas, Tenders, Salsa Queso",
@@ -282,12 +283,11 @@
           "image": "",
           "alergenos": [
             1,
-            6,
             7
           ]
         },
         {
-          "id": 22,
+          "id": 102,
           "name": "Combo Box Mix",
           "price": 6.95,
           "description": "Patatas, Nugguets, Tenders, Salsa Queso",
@@ -297,7 +297,7 @@
             1,
             6,
             7,
-            11
+            9
           ]
         }
       ]
@@ -311,7 +311,7 @@
           "id": 23,
           "name": "Taco de Pollo",
           "price": 7.95,
-          "description": "Estilo \u0027French Taco\u0027: tortilla grande de trigo sellada a la plancha y rellena de jugoso pollo marinado, salsa francesa algeriene o andalouse, fundido de mozzarella, salsa de queso y patatas fritas integradas dentro del taco.",
+          "description": "Estilo 'French Taco': tortilla grande de trigo sellada a la plancha y rellena de jugoso pollo marinado, salsa francesa algeriene o andalouse, fundido de mozzarella, salsa de queso y patatas fritas integradas dentro del taco.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -325,7 +325,7 @@
           "id": 24,
           "name": "Taco de Ternera",
           "price": 8.95,
-          "description": "Estilo \u0027French Taco\u0027: tortilla sellada rellena de carne picada de ternera sazonada, patatas fritas interiores, mozzarella, salsa de queso cremosa y elecci\u00F3n de salsa algeriene o andalouse.",
+          "description": "Estilo 'French Taco': tortilla sellada rellena de carne picada de ternera sazonada, patatas fritas interiores, mozzarella, salsa de queso cremosa y elección de salsa algeriene o andalouse.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -339,7 +339,7 @@
           "id": 25,
           "name": "Taco Mix",
           "price": 8.95,
-          "description": "Estilo \u0027French Taco\u0027: tortilla sellada con una combinaci\u00F3n de carnes mixtas, patatas fritas, rica salsa de queso, queso mozzarella fundido y salsa algeriene o andalouse.",
+          "description": "Estilo 'French Taco': tortilla sellada con una combinación de carnes mixtas, patatas fritas, rica salsa de queso, queso mozzarella fundido y salsa algeriene o andalouse.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -353,7 +353,7 @@
           "id": 26,
           "name": "Taco de Nugguets",
           "price": 8.95,
-          "description": "Original \u0027French Taco\u0027 relleno de trozos de nuggets de pollo crujientes combinados con patatas fritas, queso mozzarella, salsa de queso y salsa algeriene o andalouse.",
+          "description": "Original 'French Taco' relleno de trozos de nuggets de pollo crujientes combinados con patatas fritas, queso mozzarella, salsa de queso y salsa algeriene o andalouse.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -369,7 +369,7 @@
           "id": 27,
           "name": "Taco de Tenders",
           "price": 8.95,
-          "description": "Contundente \u0027French Taco\u0027 relleno de tiras de pollo rebozadas (tenders), patatas fritas, abundante queso mozzarella fundido, salsa de queso y salsa algeriene o andalouse.",
+          "description": "Contundente 'French Taco' relleno de tiras de pollo rebozadas (tenders), patatas fritas, abundante queso mozzarella fundido, salsa de queso y salsa algeriene o andalouse.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -387,46 +387,58 @@
       "image": "",
       "products": [
         {
-          "id": 28,
+          "id": 15,
           "name": "Hamburguesa Americana",
           "price": 8.5,
-          "description": "Hamburguesa en pan r\u00FAstico con 200g de carne de ternera, acompa\u00F1ada de bacon crujiente, pepinillo, queso cheddar fundido, cebolla caramelizada y salsa americana especial. Incluye raci\u00F3n de patatas fritas.",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 29,
-          "name": "Hamburguesa Cl\u00E1ssica",
-          "price": 8.25,
-          "description": "Hamburguesa en pan r\u00FAstico con 200g de carne de ternera, cama de lechuga, rodajas de tomate, queso edam derretido y un jugoso huevo frito. Incluye raci\u00F3n de patatas fritas.",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 30,
-          "name": "Hamburguesa Queso de Cabra",
-          "price": 8.95,
-          "description": "",
+          "description": "Hamburguesa en pan rústico con 200g de carne de ternera, acompañada de bacon crujiente, pepinillo, queso cheddar fundido, cebolla caramelizada y salsa americana especial. Incluye ración de patatas fritas.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
             1,
             3,
-            7
+            7,
+            10
           ]
         },
         {
-          "id": 31,
-          "name": "Hamburguesa Chicken Crispy",
-          "price": 8.5,
-          "description": "Hamburguesa en pan brioche suave rellena de 200g de pollo con un rebozado crujiente de la casa, r\u00FAcula, queso cheddar fundido, salsa ranchera y rodajas de pepinillo. Incluye raci\u00F3n de patatas fritas.",
+          "id": 16,
+          "name": "Hamburguesa Clássica",
+          "price": 8.25,
+          "description": "Hamburguesa en pan rústico con 200g de carne de ternera, cama de lechuga, rodajas de tomate, queso edam derretido y un jugoso huevo frito. Incluye ración de patatas fritas.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
             1,
-            7
+            3,
+            7,
+            10
+          ]
+        },
+        {
+          "id": 103,
+          "name": "Hamburguesa Queso de Cabra",
+          "price": 8.95,
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            1,
+            3,
+            7,
+            10
+          ]
+        },
+        {
+          "id": 18,
+          "name": "Hamburguesa Chicken Crispy",
+          "price": 8.5,
+          "description": "Hamburguesa en pan brioche suave rellena de 200g de pollo con un rebozado crujiente de la casa, rúcula, queso cheddar fundido, salsa ranchera y rodajas de pepinillo. Incluye ración de patatas fritas.",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            1,
+            3,
+            7,
+            10
           ]
         }
       ]
@@ -437,10 +449,9 @@
       "image": "",
       "products": [
         {
-          "id": 32,
+          "id": 104,
           "name": "Pizza Margarita",
           "price": 8.95,
-          "description": "",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -449,10 +460,9 @@
           ]
         },
         {
-          "id": 33,
+          "id": 105,
           "name": "Pizza Italia",
           "price": 8.95,
-          "description": "",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -461,19 +471,20 @@
           ]
         },
         {
-          "id": 34,
+          "id": 30,
           "name": "Pizza Kebab",
           "price": 9.95,
-          "description": "Fusi\u00F3n italo-turca: Masa de pizza con base de tomate y mozzarella, cubierta con carne de kebab a elegir (pollo, ternera o mixto), aceitunas y un toque de salsa blanca t\u00EDpica de kebab.",
+          "description": "Fusión italo-turca: Masa de pizza con base de tomate y mozzarella, cubierta con carne de kebab a elegir (pollo, ternera o mixto), aceitunas y un toque de salsa blanca típica de kebab.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
             1,
+            3,
             7
           ]
         },
         {
-          "id": 35,
+          "id": 31,
           "name": "Pizza de Pollo",
           "price": 9.95,
           "description": "Masa de pizza con base de tomate y mozzarella, coronada con sabrosa cebolla caramelizada, pimientos y trozos tiernos de pollo.",
@@ -485,10 +496,58 @@
           ]
         },
         {
-          "id": 36,
+          "id": 32,
           "name": "Pizza Barbacoa",
           "price": 9.95,
-          "description": "Masa de pizza cubierta con base de tomate, mozzarella fundida, carne picada de ternera, tiras de bacon ahumado, pimiento rojo y un caracter\u00EDstico espiral de salsa barbacoa.",
+          "description": "Masa de pizza cubierta con base de tomate, mozzarella fundida, carne picada de ternera, tiras de bacon ahumado, pimiento rojo y un característico espiral de salsa barbacoa.",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            1,
+            7
+          ]
+        },
+        {
+          "id": 33,
+          "name": "Pizza Tonno",
+          "price": 9.95,
+          "description": "Masa de pizza marinera con base de salsa de tomate, mozzarella, trozos de atún claro, cebolla, rodajas de huevo duro y olivas negras.",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            1,
+            7
+          ]
+        },
+        {
+          "id": 34,
+          "name": "Pizza Vegetal",
+          "price": 9.95,
+          "description": "Masa de pizza cubierta con base de salsa de tomate y abundantes verduras: hojas de espinaca, rodajas de calabacín y berenjena, pimiento y aceitunas.",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            1,
+            7
+          ]
+        },
+        {
+          "id": 35,
+          "name": "Pizza 4 Quesos",
+          "price": 9.95,
+          "description": "Masa de pizza para amantes del queso, con base de tomate y una mezcla fundida de gorgonzola potente, suave queso brie, queso de cabra y clásica mozzarella.",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            1,
+            7
+          ]
+        },
+        {
+          "id": 36,
+          "name": "Pizza Infierno",
+          "price": 9.95,
+          "description": "Masa de pizza picante cubierta con salsa de tomate, rodajas de chorizo, salsa o condimento picante y queso mozzarella.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -498,9 +557,9 @@
         },
         {
           "id": 37,
-          "name": "Pizza Tonno",
+          "name": "Pizza Mediterránea",
           "price": 9.95,
-          "description": "Masa de pizza marinera con base de salsa de tomate, mozzarella, trozos de at\u00FAn claro, cebolla, rodajas de huevo duro y olivas negras.",
+          "description": "Masa de pizza con base de tomate, acompañada de colas de gambas, lomos de anchoa, un ligero toque picante y queso mozzarella.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -510,9 +569,9 @@
         },
         {
           "id": 38,
-          "name": "Pizza Vegetal",
+          "name": "Pizza Hawaiana",
           "price": 9.95,
-          "description": "Masa de pizza cubierta con base de salsa de tomate y abundantes verduras: hojas de espinaca, rodajas de calabac\u00EDn y berenjena, pimiento y aceitunas.",
+          "description": "Masa de pizza tropical con base de salsa de tomate, fiambre de pavo, trozos de piña dulce, granos de maíz y un toque de nata.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -521,10 +580,28 @@
           ]
         },
         {
+          "id": 106,
+          "name": "Pizza a tu Gusto",
+          "price": 10.95,
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            1,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Platos",
+      "image": "",
+      "products": [
+        {
           "id": 39,
-          "name": "Pizza 4 Quesos",
-          "price": 9.95,
-          "description": "Masa de pizza para amantes del queso, con base de tomate y una mezcla fundida de gorgonzola potente, suave queso brie, queso de cabra y cl\u00E1sica mozzarella.",
+          "name": "Plato Kebab de Pollo",
+          "price": 8.95,
+          "description": "Ración generosa servida directamente en plato (sin pan) con láminas de carne asada de pollo, acompañada de un lado de ensalada mixta y una guarnición de patatas fritas.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -535,9 +612,9 @@
         },
         {
           "id": 40,
-          "name": "Pizza Infierno",
-          "price": 9.95,
-          "description": "Masa de pizza picante cubierta con salsa de tomate, rodajas de chorizo, salsa o condimento picante y queso mozzarella.",
+          "name": "Plato Kebab de Ternera",
+          "price": 8.95,
+          "description": "Ración servida en plato con sabrosas láminas de carne de ternera asada, acompañada de ensalada mixta fresca y guarnición de patatas fritas.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -548,9 +625,9 @@
         },
         {
           "id": 41,
-          "name": "Pizza Mediterr\u00E1nea",
-          "price": 9.95,
-          "description": "Masa de pizza con base de tomate, acompa\u00F1ada de colas de gambas, lomos de anchoa, un ligero toque picante y queso mozzarella.",
+          "name": "Plato Kebab Mix",
+          "price": 8.95,
+          "description": "Plato combinado que ofrece lo mejor de ambos mundos: una mezcla de carne asada de pollo y ternera, acompañada de ensalada mixta y patatas fritas.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -561,9 +638,9 @@
         },
         {
           "id": 42,
-          "name": "Pizza Hawaiana",
-          "price": 9.95,
-          "description": "Masa de pizza tropical con base de salsa de tomate, fiambre de pavo, trozos de pi\u00F1a dulce, granos de ma\u00EDz y un toque de nata.",
+          "name": "Plato Falafel",
+          "price": 7.95,
+          "description": "Alternativa vegetariana servida en plato, compuesta por varias unidades de falafel (croquetas de garbanzo especiadas), ensalada mixta de acompañamiento y patatas fritas.",
           "isAvailable": true,
           "image": "",
           "alergenos": [
@@ -572,84 +649,53 @@
             7,
             11
           ]
-        },
-        {
-          "id": 43,
-          "name": "Pizza a tu Gusto",
-          "price": 10.95,
-          "description": "",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "name": "Platos",
-      "image": "",
-      "products": [
-        {
-          "id": 44,
-          "name": "Plato Kebab de Pollo",
-          "price": 8.95,
-          "description": "Raci\u00F3n generosa servida directamente en plato (sin pan) con l\u00E1minas de carne asada de pollo, acompa\u00F1ada de un lado de ensalada mixta y una guarnici\u00F3n de patatas fritas.",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 45,
-          "name": "Plato Kebab de Ternera",
-          "price": 8.95,
-          "description": "Raci\u00F3n servida en plato con sabrosas l\u00E1minas de carne de ternera asada, acompa\u00F1ada de ensalada mixta fresca y guarnici\u00F3n de patatas fritas.",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 46,
-          "name": "Plato Kebab Mix",
-          "price": 8.95,
-          "description": "Plato combinado que ofrece lo mejor de ambos mundos: una mezcla de carne asada de pollo y ternera, acompa\u00F1ada de ensalada mixta y patatas fritas.",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 47,
-          "name": "Plato Falafel",
-          "price": 7.95,
-          "description": "Alternativa vegetariana servida en plato, compuesta por varias unidades de falafel (croquetas de garbanzo especiadas), ensalada mixta de acompa\u00F1amiento y patatas fritas.",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
         }
       ]
     },
     {
       "id": 9,
-      "name": "Postres",
+      "name": "Postres y Batidos",
       "image": "",
       "products": [
         {
-          "id": 48,
+          "id": 43,
           "name": "Tarta de Queso",
           "price": 4.95,
-          "description": "Porci\u00F3n de tarta de queso suave y cremosa para terminar con un toque dulce.",
-          "isAvailable": false,
+          "description": "Porción de tarta de queso suave y cremosa para terminar con un toque dulce.",
+          "isAvailable": true,
           "image": "",
           "alergenos": []
+        },
+        {
+          "id": 123,
+          "name": "Mango Lassi",
+          "price": 5,
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            7
+          ]
+        },
+        {
+          "id": 51,
+          "name": "Mango Lassi",
+          "price": 5,
+          "description": "Refrescante bebida tradicional de origen indio elaborada con yogur cremoso y pulpa de mango.",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": [
+            7
+          ]
         }
       ]
     },
     {
       "id": 10,
-      "name": "Bebidas Fr\u00EDas",
+      "name": "Bebidas Frías",
       "image": "",
       "products": [
         {
-          "id": 49,
+          "id": 45,
           "name": "Agua Mineral 0,5L",
           "price": 1.5,
           "description": "Botella de agua mineral natural sin gas. Formato de 0,5L.",
@@ -658,7 +704,7 @@
           "alergenos": []
         },
         {
-          "id": 50,
+          "id": 46,
           "name": "Agua Mineral 1,5L",
           "price": 2.2,
           "description": "Botella de agua mineral natural sin gas. Formato familiar de 1,5L.",
@@ -667,199 +713,172 @@
           "alergenos": []
         },
         {
-          "id": 51,
-          "name": "Zumo de Melocot\u00F3n",
+          "id": 48,
+          "name": "Zumo de Melocotón",
           "price": 2,
-          "description": "Botell\u00EDn individual de n\u00E9ctar o zumo sabor melocot\u00F3n.",
+          "description": "Botellín individual de néctar o zumo sabor melocotón.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            7
-          ]
+          "alergenos": []
         },
         {
-          "id": 52,
+          "id": 49,
           "name": "Cacaolat",
           "price": 2,
-          "description": "Batido l\u00E1cteo tradicional de chocolate servido fr\u00EDo.",
+          "description": "Batido lácteo tradicional de chocolate servido frío.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
-        {
-          "id": 53,
-          "name": "Coca-Cola",
-          "price": 2.5,
-          "description": "Refresco individual fr\u00EDo (Coca-Cola).",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 54,
-          "name": "Coca-Cola Zero",
-          "price": 2.5,
-          "description": "Refresco individual fr\u00EDo (Coca-Cola Zero).",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 55,
-          "name": "Fanta Naranja",
-          "price": 2.5,
-          "description": "",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 56,
-          "name": "Fanta Lim\u00F3n",
-          "price": 2.5,
-          "description": "",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 57,
-          "name": "Aquarius Naranja",
-          "price": 2.5,
-          "description": "",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 58,
-          "name": "Aquarius Lim\u00F3n",
-          "price": 2.5,
-          "description": "",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 59,
-          "name": "Nestea Lim\u00F3n",
-          "price": 2.5,
-          "description": "",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 60,
-          "name": "Nestea Maracuy\u00E1",
-          "price": 2.5,
-          "description": "Refresco individual fr\u00EDo (Nestea Maracuy\u00E1).",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 61,
-          "name": "Trina Naranja",
-          "price": 2.5,
-          "description": "",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 62,
-          "name": "Pepsi",
-          "price": 2.5,
-          "description": "",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 63,
-          "name": "Sprite",
-          "price": 2.5,
-          "description": "Refresco individual fr\u00EDo (Sprite).",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 64,
-          "name": "7UP",
-          "price": 2.5,
-          "description": "",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 65,
-          "name": "Hawai",
-          "price": 2.5,
-          "description": "Refresco individual fr\u00EDo (Hawai).",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 66,
-          "name": "Poms",
-          "price": 2.5,
-          "description": "Refresco individual fr\u00EDo (Poms).",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 67,
-          "name": "Red Bull",
-          "price": 3,
-          "description": "Refresco individual fr\u00EDo (Red Bull).",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 68,
-          "name": "Monster",
-          "price": 3,
-          "description": "",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 69,
-          "name": "Vichy Catal\u00E1n",
-          "price": 2.5,
-          "description": "Refresco individual fr\u00EDo (Vichy Catal\u00E1n).",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 70,
-          "name": "Schweppes",
-          "price": 2.5,
-          "description": "Refresco individual fr\u00EDo (Schweppes).",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        }
-      ]
-    },
-    {
-      "id": 11,
-      "name": "Batidos",
-      "image": "",
-      "products": [
         {
           "id": 71,
-          "name": "Mango Lassi",
-          "price": 5,
-          "description": "Refrescante bebida tradicional de origen indio elaborada con yogur cremoso y pulpa de mango.",
+          "name": "Coca-Cola",
+          "price": 2.5,
+          "description": "Refresco individual frío (Coca-Cola).",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 72,
+          "name": "Coca-Cola Zero",
+          "price": 2.5,
+          "description": "Refresco individual frío (Coca-Cola Zero).",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 107,
+          "name": "Fanta Naranja",
+          "price": 2.5,
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 108,
+          "name": "Fanta Limón",
+          "price": 2.5,
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 109,
+          "name": "Aquarius Naranja",
+          "price": 2.5,
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 110,
+          "name": "Aquarius Limón",
+          "price": 2.5,
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 111,
+          "name": "Nestea Limón",
+          "price": 2.5,
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 78,
+          "name": "Nestea Maracuyá",
+          "price": 2.5,
+          "description": "Refresco individual frío (Nestea Maracuyá).",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 112,
+          "name": "Trina Naranja",
+          "price": 2.5,
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 113,
+          "name": "Pepsi",
+          "price": 2.5,
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 83,
+          "name": "Sprite",
+          "price": 2.5,
+          "description": "Refresco individual frío (Sprite).",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 114,
+          "name": "7UP",
+          "price": 2.5,
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 76,
+          "name": "Hawai",
+          "price": 2.5,
+          "description": "Refresco individual frío (Hawai).",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 80,
+          "name": "Poms",
+          "price": 2.5,
+          "description": "Refresco individual frío (Poms).",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 81,
+          "name": "Red Bull",
+          "price": 3,
+          "description": "Refresco individual frío (Red Bull).",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 115,
+          "name": "Monster",
+          "price": 3,
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 84,
+          "name": "Vichy Catalán",
+          "price": 2.5,
+          "description": "Refresco individual frío (Vichy Catalán).",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 82,
+          "name": "Schweppes",
+          "price": 2.5,
+          "description": "Refresco individual frío (Schweppes).",
           "isAvailable": true,
           "image": "",
           "alergenos": []
@@ -872,37 +891,37 @@
       "image": "",
       "products": [
         {
-          "id": 72,
-          "name": "Caf\u00E9 con leche",
+          "id": 52,
+          "name": "Café con leche",
           "price": 1.6,
-          "description": "Taza de caf\u00E9 expreso largo mezclado con leche vaporizada.",
+          "description": "Taza de café expreso largo mezclado con leche vaporizada.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 73,
+          "id": 53,
           "name": "Cortado",
           "price": 1.5,
-          "description": "Taza peque\u00F1a de caf\u00E9 expreso con un \u0027corte\u0027 o peque\u00F1o chorrito de leche.",
+          "description": "Taza pequeña de café expreso con un 'corte' o pequeño chorrito de leche.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 74,
-          "name": "Caf\u00E9 solo",
+          "id": 54,
+          "name": "Café solo",
           "price": 1.4,
-          "description": "Un shot directo de caf\u00E9 expreso negro sin adiciones.",
+          "description": "Un shot directo de café expreso negro sin adiciones.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 75,
+          "id": 55,
           "name": "Infusiones",
           "price": 1.6,
-          "description": "Servicio de agua caliente acompa\u00F1ado del sobrecito de t\u00E9 o infusi\u00F3n herbal a elegir.",
+          "description": "Servicio de agua caliente acompañado del sobrecito de té o infusión herbal a elegir.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
@@ -911,65 +930,80 @@
     },
     {
       "id": 13,
-      "name": "Men\u00FAs y Combos",
+      "name": "Menús",
       "image": "",
       "products": [
         {
-          "id": 76,
-          "name": "Men\u00FA D\u00FCr\u00FCm",
+          "id": 56,
+          "name": "Menú Dürüm",
           "price": 8.95,
-          "description": "Men\u00FA completo para una persona que incluye un rollo d\u00FCr\u00FCm a elegir, acompa\u00F1ado de una raci\u00F3n de patatas fritas y un refresco.",
+          "description": "Menú completo para una persona que incluye un rollo dürüm a elegir, acompañado de una ración de patatas fritas y un refresco.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 77,
-          "name": "Men\u00FA Pita",
+          "id": 57,
+          "name": "Menú Pita",
           "price": 8.45,
-          "description": "Men\u00FA completo individual que incluye un bocadillo de pan de pita a elegir, una raci\u00F3n de patatas fritas y un refresco.",
+          "description": "Menú completo individual que incluye un bocadillo de pan de pita a elegir, una ración de patatas fritas y un refresco.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 78,
-          "name": "Men\u00FA Taco",
+          "id": 59,
+          "name": "Menú Taco",
           "price": 9.95,
-          "description": "Men\u00FA completo individual compuesto por un French Taco de la carta a elegir, una guarnici\u00F3n de patatas fritas y un refresco.",
+          "description": "Menú completo individual compuesto por un French Taco de la carta a elegir, una guarnición de patatas fritas y un refresco.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 79,
-          "name": "Men\u00FA Hamburguesa",
+          "id": 58,
+          "name": "Menú Hamburguesa",
           "price": 9.95,
-          "description": "Men\u00FA completo individual con una hamburguesa a elegir de la carta (burguer), acompa\u00F1ada de patatas fritas y un refresco.",
+          "description": "Menú completo individual con una hamburguesa a elegir de la carta (burguer), acompañada de patatas fritas y un refresco.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 80,
-          "name": "Men\u00FA Pizza",
+          "id": 60,
+          "name": "Menú Pizza",
           "price": 10.95,
-          "description": "Men\u00FA individual con una pizza de 32cm (mediana) a elegir de la carta, acompa\u00F1ada de un refresco.",
+          "description": "Menú individual con una pizza de 32cm (mediana) a elegir de la carta, acompañada de un refresco.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 81,
-          "name": "Combo 2 D\u00FCr\u00FCms",
+          "id": 117,
+          "name": "Menú Infantil",
+          "price": 6.95,
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Combos",
+      "image": "",
+      "products": [
+        {
+          "id": 62,
+          "name": "Combo 2 Dürüms",
           "price": 17.45,
-          "description": "Oferta para compartir que incluye dos rollos d\u00FCr\u00FCm a elegir, acompa\u00F1ados de dos raciones individuales de patatas fritas y dos refrescos.",
+          "description": "Oferta para compartir que incluye dos rollos dürüm a elegir, acompañados de dos raciones individuales de patatas fritas y dos refrescos.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 82,
+          "id": 63,
           "name": "Combo 2 Pitas",
           "price": 16.45,
           "description": "Oferta para compartir que incluye dos bocadillos de pan pita a elegir, junto con dos raciones de patatas fritas y dos refrescos.",
@@ -978,28 +1012,18 @@
           "alergenos": []
         },
         {
-          "id": 83,
+          "id": 116,
           "name": "Combo 2 Pizzas Medianas",
           "price": 21.95,
-          "description": "",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 84,
+          "id": 66,
           "name": "Combo Family",
           "price": 33.95,
-          "description": "El paquete m\u00E1s grande para grupos o familias. Incluye: 1 D\u00FCr\u00FCm, 1 pan de Pita, 1 Hamburguesa a elegir, 1 Pizza de tama\u00F1o mediano a elegir, 3 raciones de patatas fritas y 1 botella de refresco familiar de 1L.",
-          "isAvailable": true,
-          "image": "",
-          "alergenos": []
-        },
-        {
-          "id": 85,
-          "name": "Men\u00FA Infantil",
-          "price": 6.95,
-          "description": "",
+          "description": "El paquete más grande para grupos o familias. Incluye: 1 Dürüm, 1 pan de Pita, 1 Hamburguesa a elegir, 1 Pizza de tamaño mediano a elegir, 3 raciones de patatas fritas y 1 botella de refresco familiar de 1L.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
@@ -1057,7 +1081,7 @@
           "alergenos": []
         },
         {
-          "id": 91,
+          "id": 97,
           "name": "Salsa Samurai",
           "price": 0.5,
           "description": "Pote adicional de Salsa Samurai.",
@@ -1066,7 +1090,7 @@
           "alergenos": []
         },
         {
-          "id": 92,
+          "id": 93,
           "name": "Salsa Ketchup",
           "price": 0.5,
           "description": "Pote adicional de Salsa Ketchup.",
@@ -1075,7 +1099,7 @@
           "alergenos": []
         },
         {
-          "id": 93,
+          "id": 95,
           "name": "Salsa Mayonesa",
           "price": 0.5,
           "description": "Pote adicional de Salsa Mayonesa.",
@@ -1091,51 +1115,44 @@
       "image": "",
       "products": [
         {
-          "id": 94,
+          "id": 118,
           "name": "Solo Carne (Sin ensalada/patatas)",
           "price": 2,
-          "description": "",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 95,
+          "id": 119,
           "name": "Extra de Carne",
           "price": 2,
-          "description": "",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 96,
+          "id": 120,
           "name": "Queso Feta",
           "price": 1,
-          "description": "",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 97,
+          "id": 121,
           "name": "Queso de Cabra",
           "price": 1.5,
-          "description": "",
           "isAvailable": true,
           "image": "",
           "alergenos": []
         },
         {
-          "id": 98,
+          "id": 122,
           "name": "Ingrediente Extra",
           "price": 1,
-          "description": "",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            7
-          ]
+          "alergenos": []
         }
       ]
     }
