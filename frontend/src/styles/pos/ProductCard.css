@@ -42,7 +42,7 @@
 
 .product-image-container {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 2;
     overflow: hidden;
     background-color: #f7f7f7;
     border-bottom: 2px solid var(--color-border);
