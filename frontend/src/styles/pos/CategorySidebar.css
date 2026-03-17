@@ -89,7 +89,7 @@
 @media (max-width: 768px) {
     .category-sidebar {
         transform: translateX(-100%);
-        width: 250px;
+        width: 200px;
         border-right-width: 6px;
     }
 
