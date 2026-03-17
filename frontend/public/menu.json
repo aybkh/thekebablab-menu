@@ -584,7 +584,7 @@
           "name": "Pizza a tu Gusto",
           "price": 10.95,
           "isAvailable": true,
-          "image": "default.webp",
+          "image": "pizza-a-tu-gusto.webp",
           "alergenos": [
             1,
             7
@@ -871,6 +871,24 @@
           "isAvailable": true,
           "image": "schweppes.webp",
           "alergenos": []
+        },
+        {
+          "id": 124,
+          "name": "Free Damm Limón",
+          "price": 2.5,
+          "description": "Cerveza sin alcohol con limón.",
+          "isAvailable": true,
+          "image": "free-damm-limon.webp",
+          "alergenos": []
+        },
+        {
+          "id": 125,
+          "name": "Free Damm Tostada",
+          "price": 2.5,
+          "description": "Cerveza sin alcohol tostada.",
+          "isAvailable": true,
+          "image": "free-damm-tostada.webp",
+          "alergenos": []
         }
       ]
     },
@@ -1094,53 +1112,6 @@
           "description": "Pote adicional de Salsa Mayonesa.",
           "isAvailable": true,
           "image": "salsa-mayonesa.webp",
-          "alergenos": []
-        }
-      ]
-    },
-    {
-      "id": 15,
-      "name": "Suplementos",
-      "image": "",
-      "products": [
-        {
-          "id": 118,
-          "name": "Solo Carne (Sin ensalada/patatas)",
-          "price": 2,
-          "isAvailable": true,
-          "image": "default.webp",
-          "alergenos": []
-        },
-        {
-          "id": 119,
-          "name": "Extra de Carne",
-          "price": 2,
-          "isAvailable": true,
-          "image": "default.webp",
-          "alergenos": []
-        },
-        {
-          "id": 120,
-          "name": "Queso Feta",
-          "price": 1,
-          "isAvailable": true,
-          "image": "default.webp",
-          "alergenos": []
-        },
-        {
-          "id": 121,
-          "name": "Queso de Cabra",
-          "price": 1.5,
-          "isAvailable": true,
-          "image": "default.webp",
-          "alergenos": []
-        },
-        {
-          "id": 122,
-          "name": "Ingrediente Extra",
-          "price": 1,
-          "isAvailable": true,
-          "image": "default.webp",
           "alergenos": []
         }
       ]
