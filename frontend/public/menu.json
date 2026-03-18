@@ -97,7 +97,7 @@
           "name": "Ensalada Mix Queso Cabra",
           "price": 5.95,
           "isAvailable": true,
-          "image": "ensalada-mix-queso-cabra.webp",
+          "image": "ensalada-queso-cabra.webp",
           "alergenos": [
             7
           ]
@@ -597,7 +597,7 @@
     {
       "id": 8,
       "name": "Platos",
-      "image": "platos.webp",
+      "image": "nuestros-platos.webp",
       "products": [
         {
           "id": 39,
@@ -866,7 +866,7 @@
           "price": 2.5,
           "description": "Refresco individual frío (Vichy Catalán).",
           "isAvailable": true,
-          "image": "vichy.webp",
+          "image": "vichy-catalan.webp",
           "alergenos": []
         },
         {
