@@ -643,7 +643,7 @@
           "name": "Tarta de Queso",
           "price": 4.95,
           "description": "Porci\u00F3n de tarta de queso suave y cremosa para terminar con un toque dulce.",
-          "isAvailable": true,
+          "isAvailable": false,
           "image": "",
           "alergenos": []
         },
