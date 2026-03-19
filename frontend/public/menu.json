@@ -966,10 +966,7 @@
           "description": "Menú completo individual que incluye un bocadillo de pan de pita a elegir, una ración de patatas fritas y un refresco.",
           "isAvailable": true,
           "image": "menu-pita.webp",
-          "alergenos": [
-            1,
-            16
-          ]
+          "alergenos": []
         },
         {
           "id": 59,
@@ -996,10 +993,7 @@
           "description": "Menú individual con una pizza de 32cm (mediana) a elegir de la carta, acompañada de un refresco.",
           "isAvailable": true,
           "image": "menu-pizza.webp",
-          "alergenos": [
-            1,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 117,
@@ -1032,10 +1026,7 @@
           "description": "Oferta para compartir que incluye dos bocadillos de pan pita a elegir, junto con dos raciones de patatas fritas y dos refrescos.",
           "isAvailable": true,
           "image": "combo-2-pitas.webp",
-          "alergenos": [
-            1,
-            16
-          ]
+          "alergenos": []
         },
         {
           "id": 116,
@@ -1043,10 +1034,7 @@
           "price": 21.95,
           "isAvailable": true,
           "image": "combo-2-pizzas-medianas.webp",
-          "alergenos": [
-            1,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 66,
@@ -1055,11 +1043,7 @@
           "description": "El paquete más grande para grupos o familias. Incluye: 1 Dürüm, 1 pan de Pita, 1 Hamburguesa a elegir, 1 Pizza de tamaño mediano a elegir, 3 raciones de patatas fritas y 1 botella de refresco familiar de 1L.",
           "isAvailable": true,
           "image": "combo-family.webp",
-          "alergenos": [
-            1,
-            7,
-            16
-          ]
+          "alergenos": []
         }
       ]
     },
@@ -1075,7 +1059,9 @@
           "description": "Pote adicional de Salsa Algerian.",
           "isAvailable": true,
           "image": "salsa-algerian.webp",
-          "alergenos": []
+          "alergenos": [
+            15
+          ]
         },
         {
           "id": 87,
