@@ -269,7 +269,7 @@
       "open": 12,
       "close": 23,
       "label": "12:00 - 23:00",
-      "closed": true
+      "closed": false
     },
     {
       "name": "Mi\u00E9rcoles",
