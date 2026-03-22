@@ -158,23 +158,19 @@
       ]
     },
     {
-      "title": "Batidos y postres",
+      "title": "Combo Box",
       "images": [
         {
-          "src": "/products/batido-de-aguacate.webp",
-          "label": "Batido de Aguacate"
+          "src": "/products/combo-box-nugguets.webp",
+          "label": "Combo Box Nugguets"
         },
         {
-          "src": "/products/mango-lassi.webp",
-          "label": "Mango Lassi"
+          "src": "/products/combo-box-tenders.webp",
+          "label": "Combo Box Tenders"
         },
         {
-          "src": "/products/tarta-de-queso.webp",
-          "label": "Tarta de Queso"
-        },
-        {
-          "src": "/products/cortado.webp",
-          "label": "Cortado"
+          "src": "/products/combo-box-mix.webp",
+          "label": "Combo Box Mix"
         }
       ]
     }
