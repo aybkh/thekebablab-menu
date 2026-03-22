@@ -15,6 +15,13 @@ const ProductCard = ({ originalProd, category, onClick }) => {
     const renderProductImage = () => {
         const getFallbackSrc = () => {
             let cleanProd = (originalProd.name || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+            
+            // Override for general bottled waters mismatchs static filenames maps disk
+            if (cleanProd.includes("agua")) {
+                if (cleanProd.includes("1") && cleanProd.includes("5")) return `/products/agua-mineral-1-5l.webp`;
+                return `/products/agua-mineral-0-5l.webp`;
+            }
+
             let suffix = "";
             const catName = category.name || "";
             if (catName.includes("Tacos")) suffix = "-taco";
