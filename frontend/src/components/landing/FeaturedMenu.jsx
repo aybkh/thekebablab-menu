@@ -1,62 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-const featuredData = [
-    {
-        title: "ENTRANTES",
-        images: [
-            { src: "/products/nuestras-patatas-fritas.webp", label: "Patatas Fritas" },
-            { src: "/products/nuestras-patatas-bravas.webp", label: "Patatas Bravas" },
-            { src: "/products/nugguets-de-pollo.webp", label: "Nuggets" },
-            { src: "/products/tenders-de-pollo.webp", label: "Tenders" }
-        ]
-    },
-    {
-        title: "DÜRÜM",
-        images: [
-            { src: "/products/durum-de-pollo.webp", label: "Dürüm Pollo" },
-            { src: "/products/durum-de-ternera.webp", label: "Dürüm Ternera" },
-            { src: "/products/durum-de-falafel.webp", label: "Dürüm Falafel" },
-            { src: "/products/durum-mix.webp", label: "Dürüm Mixto" }
-        ]
-    },
-    {
-        title: "PITA",
-        images: [
-            { src: "/products/pita-de-pollo.webp", label: "Pita Pollo" },
-            { src: "/products/pita-de-ternera.webp", label: "Pita Ternera" },
-            { src: "/products/pita-falafel.webp", label: "Pita Falafel" },
-            { src: "/products/pita-mix.webp", label: "Pita Mixto" }
-        ]
-    },
-    {
-        title: "PIZZAS",
-        images: [
-            { src: "/products/pizza-margarita.webp", label: "Pizza Margarita" },
-            { src: "/products/pizza-kebab.webp", label: "Pizza Kebab" },
-            { src: "/products/pizza-tonno.webp", label: "Pizza Atún" },
-            { src: "/products/pizza-barbacoa.webp", label: "Pizza Barbacoa" },
-        ]
-    },
-    {
-        title: "TACOS",
-        images: [
-            { src: "/products/taco-de-pollo.webp", label: "Taco de Pollo" },
-            { src: "/products/taco-de-ternera.webp", label: "Taco de Ternera" },
-            { src: "/products/taco-de-nugguets.webp", label: "Taco de Nuggets" },
-            { src: "/products/taco-mix.webp", label: "Taco Mixto" }
-        ]
-    },
-    {
-        title: "Batidos y postres",
-        images: [
-            { src: "/products/batido-de-aguacate.webp", label: "Batido de Aguacate" },
-            { src: "/products/mango-lassi.webp", label: "Mango Lassi" },
-            { src: "/products/tarta-de-queso.webp", label: "Tarta de Queso" },
-            { src: "/products/cortado.webp", label: "Cortado" }
-        ]
-    }
-];
+import { useSiteConfig } from '../../context/SiteConfigContext';
 
 const FeaturedCard = ({ item }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -111,6 +55,9 @@ const FeaturedCard = ({ item }) => {
 };
 
 const FeaturedMenu = () => {
+    const { siteConfig } = useSiteConfig();
+    const featuredData = siteConfig?.featuredMenu || [];
+
     return (
         <section className="featured-section">
             <div className="section-head">

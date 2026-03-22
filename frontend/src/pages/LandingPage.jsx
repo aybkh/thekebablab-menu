@@ -8,49 +8,29 @@ import { Link } from 'react-router-dom';
 import { MapPin, Phone, Instagram, ChevronLeft, ChevronRight } from 'lucide-react';
 import '../styles/LandingPage.css'; 
 import { useTenant } from '../context/TenantContext';
-
-const socialVideos = [
-    "/videos/victorprous_9-16.mp4",
-    "/videos/Pizza_9-16.mp4",
-    "/videos/Tenders_9-16.mp4"
-];
-
-const socialVideoTitles = [
-    "VICTOR PROUS 🏆",
-    "PIZZA TIME 🍕",
-    "TENDERS CRUNCHY 🍗"
-];
-
-const heroMedia = [
-    { type: 'video', src: "/hero/Tour_local_3-2.mp4" },
-    { type: 'video', src: "/hero/Patatas_Fritas.mp4" },
-    { type: 'video', src: "/hero/Tacos_Mixto_3-2.mp4" },
-    { type: 'video', src: "/hero/Burger_Cabra.mp4" },
-    { type: 'video', src: "/hero/Plato_Kebab_3-2.mp4" },
-    { type: 'video', src: "/hero/Patatas_Bravas.mp4" },
-    { type: 'video', src: "/hero/Entrantes.mp4" },
-    { type: 'video', src: "/hero/Burger_Clasica.mp4" },
-    { type: 'video', src: "/hero/Mango_Lassi.mp4" }
-];
-
-// Banner logic now uses heroMedia
+import { useSiteConfig } from '../context/SiteConfigContext';
 
 
 const LandingPage = () => {
     const { theme } = useTenant();
+    const { siteConfig, isLoading: configLoading } = useSiteConfig();
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
     const [currentBanner, setCurrentBanner] = useState(0);
 
+    const heroMedia = siteConfig?.heroMedia || [];
+    const socialVideos = siteConfig?.socialVideos || [];
+
     // Auto-slide Hero Media Logic (4s interval for images, videos handle their own onEnded)
     React.useEffect(() => {
+        if (heroMedia.length === 0) return;
         const currentItem = heroMedia[currentBanner];
-        if (currentItem.type === 'image') {
+        if (currentItem?.type === 'image') {
             const timeout = setTimeout(() => {
                 setCurrentBanner((prev) => (prev + 1) % heroMedia.length);
             }, 4000);
             return () => clearTimeout(timeout);
         }
-    }, [currentBanner]);
+    }, [currentBanner, heroMedia]);
 
     const handleHeroVideoEnd = () => {
         setCurrentBanner((prev) => (prev + 1) % heroMedia.length);
@@ -65,6 +45,7 @@ const LandingPage = () => {
         setCurrentVideoIndex((prev) => (prev - 1 + socialVideos.length) % socialVideos.length);
     };
 
+    if (configLoading) return null;
 
     return (
         <div className="landing-page">
@@ -127,8 +108,8 @@ const LandingPage = () => {
                             {/* Video Container */}
                             <div className="video-inner-container">
                                 <video
-                                    key={socialVideos[currentVideoIndex]}
-                                    src={socialVideos[currentVideoIndex]}
+                                    key={socialVideos[currentVideoIndex]?.src}
+                                    src={socialVideos[currentVideoIndex]?.src}
                                     autoPlay
                                     muted
                                     playsInline
@@ -161,7 +142,7 @@ const LandingPage = () => {
                                 {/* Title & Dots */}
                                 <div className="video-info-overlay">
                                     <p className="video-title">
-                                        {socialVideoTitles[currentVideoIndex]}
+                                        {socialVideos[currentVideoIndex]?.title}
                                     </p>
 
                                     {/* Dots Indicator */}

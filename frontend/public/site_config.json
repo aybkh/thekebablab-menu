@@ -1,0 +1,310 @@
+{
+  "heroMedia": [
+    {
+      "type": "video",
+      "src": "/hero/Tour_local_3-2.mp4"
+    },
+    {
+      "type": "video",
+      "src": "/hero/Patatas_Fritas.mp4"
+    },
+    {
+      "type": "video",
+      "src": "/hero/Tacos_Mixto_3-2.mp4"
+    },
+    {
+      "type": "video",
+      "src": "/hero/Burger_Cabra.mp4"
+    },
+    {
+      "type": "video",
+      "src": "/hero/Plato_Kebab_3-2.mp4"
+    },
+    {
+      "type": "video",
+      "src": "/hero/Patatas_Bravas.mp4"
+    },
+    {
+      "type": "video",
+      "src": "/hero/Entrantes.mp4"
+    },
+    {
+      "type": "video",
+      "src": "/hero/Burger_Clasica.mp4"
+    },
+    {
+      "type": "video",
+      "src": "/hero/Mango_Lassi.mp4"
+    }
+  ],
+  "socialVideos": [
+    {
+      "src": "/videos/victorprous_9-16.mp4",
+      "title": "VICTOR PROUS \uD83C\uDFC6"
+    },
+    {
+      "src": "/videos/Pizza_9-16.mp4",
+      "title": "PIZZA TIME \uD83C\uDF55"
+    },
+    {
+      "src": "/videos/Tenders_9-16.mp4",
+      "title": "TENDERS CRUNCHY \uD83C\uDF57"
+    }
+  ],
+  "featuredMenu": [
+    {
+      "title": "ENTRANTES",
+      "images": [
+        {
+          "src": "/products/nuestras-patatas-fritas.webp",
+          "label": "Patatas Fritas"
+        },
+        {
+          "src": "/products/nuestras-patatas-bravas.webp",
+          "label": "Patatas Bravas"
+        },
+        {
+          "src": "/products/nugguets-de-pollo.webp",
+          "label": "Nuggets"
+        },
+        {
+          "src": "/products/tenders-de-pollo.webp",
+          "label": "Tenders"
+        }
+      ]
+    },
+    {
+      "title": "D\u00DCR\u00DCM",
+      "images": [
+        {
+          "src": "/products/durum-de-pollo.webp",
+          "label": "D\u00FCr\u00FCm Pollo"
+        },
+        {
+          "src": "/products/durum-de-ternera.webp",
+          "label": "D\u00FCr\u00FCm Ternera"
+        },
+        {
+          "src": "/products/durum-de-falafel.webp",
+          "label": "D\u00FCr\u00FCm Falafel"
+        },
+        {
+          "src": "/products/durum-mix.webp",
+          "label": "D\u00FCr\u00FCm Mixto"
+        }
+      ]
+    },
+    {
+      "title": "PITA",
+      "images": [
+        {
+          "src": "/products/pita-de-pollo.webp",
+          "label": "Pita Pollo"
+        },
+        {
+          "src": "/products/pita-de-ternera.webp",
+          "label": "Pita Ternera"
+        },
+        {
+          "src": "/products/pita-falafel.webp",
+          "label": "Pita Falafel"
+        },
+        {
+          "src": "/products/pita-mix.webp",
+          "label": "Pita Mixto"
+        }
+      ]
+    },
+    {
+      "title": "PIZZAS",
+      "images": [
+        {
+          "src": "/products/pizza-margarita.webp",
+          "label": "Pizza Margarita"
+        },
+        {
+          "src": "/products/pizza-kebab.webp",
+          "label": "Pizza Kebab"
+        },
+        {
+          "src": "/products/pizza-tonno.webp",
+          "label": "Pizza At\u00FAn"
+        },
+        {
+          "src": "/products/pizza-barbacoa.webp",
+          "label": "Pizza Barbacoa"
+        }
+      ]
+    },
+    {
+      "title": "TACOS",
+      "images": [
+        {
+          "src": "/products/taco-de-pollo.webp",
+          "label": "Taco de Pollo"
+        },
+        {
+          "src": "/products/taco-de-ternera.webp",
+          "label": "Taco de Ternera"
+        },
+        {
+          "src": "/products/taco-de-nugguets.webp",
+          "label": "Taco de Nuggets"
+        },
+        {
+          "src": "/products/taco-mix.webp",
+          "label": "Taco Mixto"
+        }
+      ]
+    },
+    {
+      "title": "Batidos y postres",
+      "images": [
+        {
+          "src": "/products/batido-de-aguacate.webp",
+          "label": "Batido de Aguacate"
+        },
+        {
+          "src": "/products/mango-lassi.webp",
+          "label": "Mango Lassi"
+        },
+        {
+          "src": "/products/tarta-de-queso.webp",
+          "label": "Tarta de Queso"
+        },
+        {
+          "src": "/products/cortado.webp",
+          "label": "Cortado"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Ariadna Pinazo",
+      "text": "Tomamos un combo de 2 durums con patatas y a\u00F1adimos unos fingers de mozzarella. Todo estaba realmente rico, en especial el durum, que era super completo. Las patatas y los fingers llevaban un aderezo que las elevaba por completo.",
+      "stars": 5
+    },
+    {
+      "name": "Alanis Alba G\u00F3mez",
+      "text": "Hemos ido toda la familia a comer, un sitio maravilloso... La comida INCRE\u00CDBLE, para el precio que es tan barato te ponen una cantidad muy considerada!!!",
+      "stars": 5
+    },
+    {
+      "name": "Shyziii Mughal",
+      "text": "Acabamos de descubrir este kebab nuevo en Blanes y \u00A1madre m\u00EDa! \uD83D\uDE0D El sitio es precioso, s\u00FAper moderno y limpio. Los chicos que atienden son un encanto... La comida buen\u00EDsima.",
+      "stars": 5
+    },
+    {
+      "name": "Furkan Ak",
+      "text": "I\u0027m from Germany and had a D\u00FCr\u00FCm here \u2014 and I have to say, this is the only place in Spain I\u0027ve found that truly meets German standards! \uD83C\uDF2F\uD83C\uDDE9\uD83C\uDDEA",
+      "stars": 5
+    },
+    {
+      "name": "Elena Salawi",
+      "text": "Un lugar agradable y fresco. El camarero es muy amable y atento. La comida es econ\u00F3mica y muy buena. Com\u00ED un men\u00FA taco mixto (pollo y ternera) y me gust\u00F3 mucho, llena much\u00EDsimo.",
+      "stars": 5
+    },
+    {
+      "name": "Adele Gottschefsky",
+      "text": "One of the best kebabs I\u0027ve ever eaten in my life. We ate a D\u00FCr\u00FCm and it was amazing. It should be noted that the place is really clean, the Kebab extremely well done. Congratulations!!!",
+      "stars": 5
+    },
+    {
+      "name": "Taiba Ilyas",
+      "text": "\u00A1Me ha encantado! Hac\u00EDa mucho tiempo que no com\u00EDa un taco tan jugoso y que me lo haya acabado entero. La pizza estaba muy buena y ten\u00EDa un sabor suave y muy apetecible. El lugar es muy tranquilo.",
+      "stars": 5
+    },
+    {
+      "name": "Yani Gospodinova",
+      "text": "Ped\u00ED un men\u00FA de kebab y la porci\u00F3n es muy generosa. El sitio es muy limpio, muy buen servicio y una atenci\u00F3n muy amable.",
+      "stars": 5
+    },
+    {
+      "name": "Daniel C.",
+      "text": "Brutal, muy bueno todo y todo de buena calidad, \u00A1volveremos!",
+      "stars": 5
+    },
+    {
+      "name": "ZEBALLOS SERRUDO MAJHERLY",
+      "text": "Nos encant\u00F3 la comida, pedimos unas alitas, una pita y un taco \uD83E\uDD29 No tuvimos que esperar mucho y todo nos lleg\u00F3 excelente, la atenci\u00F3n muy buena.",
+      "stars": 5
+    },
+    {
+      "name": "Meri Bahri",
+      "text": "Ayer entr\u00E9 a este local con mis hijos a comer y fue todo un acierto, local bonito con bastante espacio, \u00A1muy buen trato desde el principio de todos los trabajadores!",
+      "stars": 5
+    },
+    {
+      "name": "Claudia Alba",
+      "text": "\u00A1El mango lassi estaba riqu\u00EDsimo! El taco s\u00FAper jugoso y la carne muy suave, la pizza 4 quesos incre\u00EDble y todo 100% halal. Los camareros y cocineros muy amables y simp\u00E1ticos, sitio muy recomendado.",
+      "stars": 5
+    },
+    {
+      "name": "Jakub Mich\u00E1lek",
+      "text": "Un gran kebab a un gran precio. Los precios son excelentes, las raciones son grandes y muy sabrosas. Recomiendo visitarlo.",
+      "stars": 5
+    },
+    {
+      "name": "Nihal Brikci",
+      "text": "\u00A1Una experiencia magn\u00EDfica! Paramos en Blanes especialmente para descubrir este restaurante, y no nos decepcion\u00F3... la pizza es excelente, los tacos tambi\u00E9n.",
+      "stars": 5
+    },
+    {
+      "name": "haizea Atxaga Abad",
+      "text": "Nunca pongo rese\u00F1as porque prefiero guard\u00E1rmelo para m\u00ED, pero este lugar ha sido espectacular. Los precios de men\u00FA rondan los 7 euros y las porciones son muy buenas. Las patatas fritas est\u00E1n BUEN\u00CDSIMAS...",
+      "stars": 5
+    }
+  ],
+  "schedule": [
+    {
+      "name": "Lunes",
+      "open": 12,
+      "close": 23,
+      "label": "12:00 - 23:00",
+      "closed": false
+    },
+    {
+      "name": "Martes",
+      "open": 12,
+      "close": 23,
+      "label": "12:00 - 23:00",
+      "closed": true
+    },
+    {
+      "name": "Mi\u00E9rcoles",
+      "open": 12,
+      "close": 23,
+      "label": "12:00 - 23:00",
+      "closed": false
+    },
+    {
+      "name": "Jueves",
+      "open": 12,
+      "close": 23,
+      "label": "12:00 - 23:00",
+      "closed": false
+    },
+    {
+      "name": "Viernes",
+      "open": 12,
+      "close": 23,
+      "label": "12:00 - 23:00",
+      "closed": false
+    },
+    {
+      "name": "S\u00E1bado",
+      "open": 12,
+      "close": 23,
+      "label": "12:00 - 23:00",
+      "closed": false
+    },
+    {
+      "name": "Domingo",
+      "open": 12,
+      "close": 23,
+      "label": "12:00 - 23:00",
+      "closed": false
+    }
+  ]
+}

@@ -1,24 +1,6 @@
 import React from 'react';
 import { Star, User } from 'lucide-react';
-
-// Real Data extracted from public/resenas_kebab.csv
-const reviews = [
-    { name: "Ariadna Pinazo", text: "Tomamos un combo de 2 durums con patatas y añadimos unos fingers de mozzarella. Todo estaba realmente rico, en especial el durum, que era super completo. Las patatas y los fingers llevaban un aderezo que las elevaba por completo.", stars: 5 },
-    { name: "Alanis Alba Gómez", text: "Hemos ido toda la familia a comer, un sitio maravilloso... La comida INCREÍBLE, para el precio que es tan barato te ponen una cantidad muy considerada!!!", stars: 5 },
-    { name: "Shyziii Mughal", text: "Acabamos de descubrir este kebab nuevo en Blanes y ¡madre mía! 😍 El sitio es precioso, súper moderno y limpio. Los chicos que atienden son un encanto... La comida buenísima.", stars: 5 },
-    { name: "Furkan Ak", text: "I’m from Germany and had a Dürüm here — and I have to say, this is the only place in Spain I’ve found that truly meets German standards! 🌯🇩🇪", stars: 5 },
-    { name: "Elena Salawi", text: "Un lugar agradable y fresco. El camarero es muy amable y atento. La comida es económica y muy buena. Comí un menú taco mixto (pollo y ternera) y me gustó mucho, llena muchísimo.", stars: 5 },
-    { name: "Adele Gottschefsky", text: "One of the best kebabs I've ever eaten in my life. We ate a Dürüm and it was amazing. It should be noted that the place is really clean, the Kebab extremely well done. Congratulations!!!", stars: 5 },
-    { name: "Taiba Ilyas", text: "¡Me ha encantado! Hacía mucho tiempo que no comía un taco tan jugoso y que me lo haya acabado entero. La pizza estaba muy buena y tenía un sabor suave y muy apetecible. El lugar es muy tranquilo.", stars: 5 },
-    { name: "Yani Gospodinova", text: "Pedí un menú de kebab y la porción es muy generosa. El sitio es muy limpio, muy buen servicio y una atención muy amable.", stars: 5 },
-    { name: "Daniel C.", text: "Brutal, muy bueno todo y todo de buena calidad, ¡volveremos!", stars: 5 },
-    { name: "ZEBALLOS SERRUDO MAJHERLY", text: "Nos encantó la comida, pedimos unas alitas, una pita y un taco 🤩 No tuvimos que esperar mucho y todo nos llegó excelente, la atención muy buena.", stars: 5 },
-    { name: "Meri Bahri", text: "Ayer entré a este local con mis hijos a comer y fue todo un acierto, local bonito con bastante espacio, ¡muy buen trato desde el principio de todos los trabajadores!", stars: 5 },
-    { name: "Claudia Alba", text: "¡El mango lassi estaba riquísimo! El taco súper jugoso y la carne muy suave, la pizza 4 quesos increíble y todo 100% halal. Los camareros y cocineros muy amables y simpáticos, sitio muy recomendado.", stars: 5 },
-    { name: "Jakub Michálek", text: "Un gran kebab a un gran precio. Los precios son excelentes, las raciones son grandes y muy sabrosas. Recomiendo visitarlo.", stars: 5 },
-    { name: "Nihal Brikci", text: "¡Una experiencia magnífica! Paramos en Blanes especialmente para descubrir este restaurante, y no nos decepcionó... la pizza es excelente, los tacos también.", stars: 5 },
-    { name: "haizea Atxaga Abad", text: "Nunca pongo reseñas porque prefiero guardármelo para mí, pero este lugar ha sido espectacular. Los precios de menú rondan los 7 euros y las porciones son muy buenas. Las patatas fritas están BUENÍSIMAS...", stars: 5 }
-];
+import { useSiteConfig } from '../../context/SiteConfigContext';
 
 const GoogleIcon = ({ className }) => (
     <svg className={className} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -30,6 +12,9 @@ const GoogleIcon = ({ className }) => (
 );
 
 const ReviewsSection = () => {
+    const { siteConfig } = useSiteConfig();
+    const reviews = siteConfig?.reviews || [];
+
     return (
         <section className="reviews-section relative">
             <div className="section-head">

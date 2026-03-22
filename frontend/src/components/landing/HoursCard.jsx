@@ -1,20 +1,14 @@
 import React, { useState, useEffect } from 'react';
-
-const schedule = [
-    { name: 'Lunes', open: 12, close: 23, label: '12:00 - 23:00' },
-    { name: 'Martes', open: 12, close: 23, label: '12:00 - 23:00' },
-    { name: 'Miércoles', open: 12, close: 23, label: '12:00 - 23:00' },
-    { name: 'Jueves', open: 12, close: 23, label: '12:00 - 23:00' },
-    { name: 'Viernes', open: 12, close: 23, label: '12:00 - 23:00' },
-    { name: 'Sábado', open: 12, close: 23, label: '12:00 - 23:00' },
-    { name: 'Domingo', open: 12, close: 23, label: '12:00 - 23:00' },
-];
+import { useSiteConfig } from '../../context/SiteConfigContext';
 
 const HoursCard = () => {
+    const { siteConfig } = useSiteConfig();
+    const schedule = siteConfig?.schedule || [];
     const [status, setStatus] = useState({ isOpen: false, text: 'Cargando', color: '#666' });
     const todayIndex = (new Date().getDay() + 6) % 7;
 
     useEffect(() => {
+        if (schedule.length === 0) return;
         const checkStatus = () => {
             const now = new Date();
             const hour = now.getHours() + (now.getMinutes() / 60);
@@ -35,7 +29,7 @@ const HoursCard = () => {
         checkStatus();
         const interval = setInterval(checkStatus, 60000);
         return () => clearInterval(interval);
-    }, [todayIndex]);
+    }, [todayIndex, schedule]);
 
     return (
         <div className="hours-container">

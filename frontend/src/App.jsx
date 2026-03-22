@@ -2,10 +2,12 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import { useTenant } from './context/TenantContext';
+import { SiteConfigProvider } from './context/SiteConfigContext';
 
 // Pages
 import LandingPage from './pages/LandingPage';
 import POSPage from './pages/POSPage';
+import AdminLandingPage from './pages/AdminLandingPage';
 
 function App() {
   const { theme, isLoading, error } = useTenant();
@@ -20,14 +22,17 @@ function App() {
 
   return (
     <LanguageProvider>
-      <Router>
-        <div className="App">
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/menu" element={<POSPage />} />
-          </Routes>
-        </div>
-      </Router>
+      <SiteConfigProvider>
+        <Router>
+          <div className="App">
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/menu" element={<POSPage />} />
+              <Route path="/admin" element={<AdminLandingPage />} />
+            </Routes>
+          </div>
+        </Router>
+      </SiteConfigProvider>
     </LanguageProvider>
   );
 }
