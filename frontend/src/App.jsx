@@ -7,7 +7,7 @@ import { SiteConfigProvider } from './context/SiteConfigContext';
 // Pages
 import LandingPage from './pages/LandingPage';
 import POSPage from './pages/POSPage';
-import AdminLandingPage from './pages/AdminLandingPage';
+import NotFound from './pages/NotFound';
 
 function App() {
   const { theme, isLoading, error } = useTenant();
@@ -28,7 +28,7 @@ function App() {
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/menu" element={<POSPage />} />
-              <Route path="/admin" element={<AdminLandingPage />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
         </Router>
