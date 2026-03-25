@@ -12,11 +12,7 @@
           "description": "Bastoncitos de queso mozzarella rebozados y fritos hasta quedar crujientes. (6 unidades)",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            10
-          ]
+          "alergenos": []
         },
         {
           "id": 2,
@@ -25,9 +21,7 @@
           "description": "Alitas de pollo enteras marinadas y fritas al estilo tradicional. (6 unidades)",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1
-          ]
+          "alergenos": []
         },
         {
           "id": 3,
@@ -36,11 +30,7 @@
           "description": "Croquetas cremosas rellenas de suave bechamel y trocitos de pollo. (6 unidades)",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            10
-          ]
+          "alergenos": []
         },
         {
           "id": 4,
@@ -49,15 +39,7 @@
           "description": "Croquetas de pescado de tama\u00F1o superior con rebozado exterior crujiente. (4 unidades)",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            2,
-            3,
-            4,
-            6,
-            9,
-            12
-          ]
+          "alergenos": []
         },
         {
           "id": 5,
@@ -66,11 +48,7 @@
           "description": "Bocados de pechuga de pollo empanados y fritos. (6 unidades)",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            9
-          ]
+          "alergenos": []
         },
         {
           "id": 6,
@@ -79,9 +57,7 @@
           "description": "Solomillos o tiras de pollo marinadas y cubiertas con un rebozado extra crujiente. (6 unidades)",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1
-          ]
+          "alergenos": []
         },
         {
           "id": 7,
@@ -99,9 +75,7 @@
           "description": "",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            15
-          ]
+          "alergenos": []
         },
         {
           "id": 9,
@@ -128,12 +102,7 @@
           "description": "",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            7,
-            11
-          ]
+          "alergenos": []
         }
       ]
     },
@@ -149,12 +118,7 @@
           "description": "Rollo grande hecho con una fina tortilla de trigo relleno de finas l\u00E1minas de carne de pollo asada, verduras, ensalada y salsas de la casa.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            7,
-            11
-          ]
+          "alergenos": []
         },
         {
           "id": 13,
@@ -163,12 +127,7 @@
           "description": "Rollo de tortilla de trigo relleno de carne de ternera asada en el cl\u00E1sico torno de kebab, verduras frescas, ensalada y salsas.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            7,
-            11
-          ]
+          "alergenos": []
         },
         {
           "id": 14,
@@ -177,12 +136,7 @@
           "description": "Rollo de tortilla de trigo relleno con una mezcla generosa de carne de pollo y ternera asadas, acompa\u00F1amiento de verduras, ensalada y salsas.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            7,
-            11
-          ]
+          "alergenos": []
         },
         {
           "id": 15,
@@ -191,12 +145,7 @@
           "description": "Rollo vegetal en tortilla de trigo relleno de croquetas crujientes de falafel, ensalada fresca, verduras y salsas.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            3,
-            7,
-            10
-          ]
+          "alergenos": []
         }
       ]
     },
@@ -212,12 +161,7 @@
           "description": "Bocadillo en pan turco esponjoso relleno de jugosa carne de pollo asada, verduras frescas, ensalada variada y selecci\u00F3n de salsas de la casa.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            3,
-            7,
-            10
-          ]
+          "alergenos": []
         },
         {
           "id": 17,
@@ -235,12 +179,7 @@
           "description": "Bocadillo en pan turco relleno de una combinaci\u00F3n de carne asada de pollo y ternera, verduras frescas, ensalada y salsas.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            3,
-            7,
-            10
-          ]
+          "alergenos": []
         },
         {
           "id": 19,
@@ -249,11 +188,7 @@
           "description": "Opci\u00F3n vegetariana en bocadillo de pan turco con croquetas fritas de garbanzos y especias (falafel), verduras, ensalada y salsas.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            7
-          ]
+          "alergenos": []
         }
       ]
     },
@@ -269,11 +204,7 @@
           "description": "Patatas, Nugguets, Salsa Queso",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 21,
@@ -282,11 +213,7 @@
           "description": "Patatas, Tenders, Salsa Queso",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 22,
@@ -295,12 +222,7 @@
           "description": "Patatas, Nugguets, Tenders, Salsa Queso",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            7,
-            11
-          ]
+          "alergenos": []
         }
       ]
     },
@@ -316,12 +238,7 @@
           "description": "Estilo \u0027French Taco\u0027: tortilla grande de trigo sellada a la plancha y rellena de jugoso pollo marinado, salsa francesa algeriene o andalouse, fundido de mozzarella, salsa de queso y patatas fritas integradas dentro del taco.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            3,
-            7,
-            10
-          ]
+          "alergenos": []
         },
         {
           "id": 24,
@@ -330,12 +247,7 @@
           "description": "Estilo \u0027French Taco\u0027: tortilla sellada rellena de carne picada de ternera sazonada, patatas fritas interiores, mozzarella, salsa de queso cremosa y elecci\u00F3n de salsa algeriene o andalouse.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            3,
-            7,
-            10
-          ]
+          "alergenos": []
         },
         {
           "id": 25,
@@ -344,12 +256,7 @@
           "description": "Estilo \u0027French Taco\u0027: tortilla sellada con una combinaci\u00F3n de carnes mixtas, patatas fritas, rica salsa de queso, queso mozzarella fundido y salsa algeriene o andalouse.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            3,
-            7,
-            10
-          ]
+          "alergenos": []
         },
         {
           "id": 26,
@@ -358,14 +265,7 @@
           "description": "Original \u0027French Taco\u0027 relleno de trozos de nuggets de pollo crujientes combinados con patatas fritas, queso mozzarella, salsa de queso y salsa algeriene o andalouse.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            3,
-            6,
-            7,
-            9,
-            10
-          ]
+          "alergenos": []
         },
         {
           "id": 27,
@@ -374,12 +274,7 @@
           "description": "Contundente \u0027French Taco\u0027 relleno de tiras de pollo rebozadas (tenders), patatas fritas, abundante queso mozzarella fundido, salsa de queso y salsa algeriene o andalouse.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            3,
-            7,
-            10
-          ]
+          "alergenos": []
         }
       ]
     },
@@ -413,11 +308,7 @@
           "description": "",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            3,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 31,
@@ -426,10 +317,7 @@
           "description": "Hamburguesa en pan brioche suave rellena de 200g de pollo con un rebozado crujiente de la casa, r\u00FAcula, queso cheddar fundido, salsa ranchera y rodajas de pepinillo. Incluye raci\u00F3n de patatas fritas.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            7
-          ]
+          "alergenos": []
         }
       ]
     },
@@ -445,10 +333,7 @@
           "description": "",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 33,
@@ -457,10 +342,7 @@
           "description": "",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 34,
@@ -469,10 +351,7 @@
           "description": "Fusi\u00F3n italo-turca: Masa de pizza con base de tomate y mozzarella, cubierta con carne de kebab a elegir (pollo, ternera o mixto), aceitunas y un toque de salsa blanca t\u00EDpica de kebab.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 35,
@@ -481,10 +360,7 @@
           "description": "Masa de pizza con base de tomate y mozzarella, coronada con sabrosa cebolla caramelizada, pimientos y trozos tiernos de pollo.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 36,
@@ -493,10 +369,7 @@
           "description": "Masa de pizza cubierta con base de tomate, mozzarella fundida, carne picada de ternera, tiras de bacon ahumado, pimiento rojo y un caracter\u00EDstico espiral de salsa barbacoa.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 37,
@@ -505,10 +378,7 @@
           "description": "Masa de pizza marinera con base de salsa de tomate, mozzarella, trozos de at\u00FAn claro, cebolla, rodajas de huevo duro y olivas negras.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 38,
@@ -517,10 +387,7 @@
           "description": "Masa de pizza cubierta con base de salsa de tomate y abundantes verduras: hojas de espinaca, rodajas de calabac\u00EDn y berenjena, pimiento y aceitunas.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 39,
@@ -529,11 +396,7 @@
           "description": "Masa de pizza para amantes del queso, con base de tomate y una mezcla fundida de gorgonzola potente, suave queso brie, queso de cabra y cl\u00E1sica mozzarella.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 40,
@@ -542,11 +405,7 @@
           "description": "Masa de pizza picante cubierta con salsa de tomate, rodajas de chorizo, salsa o condimento picante y queso mozzarella.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 41,
@@ -555,11 +414,7 @@
           "description": "Masa de pizza con base de tomate, acompa\u00F1ada de colas de gambas, lomos de anchoa, un ligero toque picante y queso mozzarella.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 42,
@@ -568,12 +423,7 @@
           "description": "Masa de pizza tropical con base de salsa de tomate, fiambre de pavo, trozos de pi\u00F1a dulce, granos de ma\u00EDz y un toque de nata.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            6,
-            7,
-            11
-          ]
+          "alergenos": []
         },
         {
           "id": 43,
@@ -582,11 +432,7 @@
           "description": "",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            3,
-            7
-          ]
+          "alergenos": []
         }
       ]
     },
@@ -688,9 +534,7 @@
           "description": "Botell\u00EDn individual de n\u00E9ctar o zumo sabor melocot\u00F3n.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 53,
@@ -699,9 +543,7 @@
           "description": "Batido l\u00E1cteo tradicional de chocolate servido fr\u00EDo.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 54,
@@ -737,10 +579,7 @@
           "description": "",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            16
-          ]
+          "alergenos": []
         },
         {
           "id": 58,
@@ -767,10 +606,7 @@
           "description": "",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            7
-          ]
+          "alergenos": []
         },
         {
           "id": 61,
@@ -797,10 +633,7 @@
           "description": "",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            16
-          ]
+          "alergenos": []
         },
         {
           "id": 64,
@@ -827,11 +660,7 @@
           "description": "Refresco individual fr\u00EDo (Hawai).",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            1,
-            7,
-            16
-          ]
+          "alergenos": []
         },
         {
           "id": 67,
@@ -1120,9 +949,7 @@
           "description": "Pote adicional de Salsa Mayonesa.",
           "isAvailable": true,
           "image": "",
-          "alergenos": [
-            3
-          ]
+          "alergenos": []
         }
       ]
     }
