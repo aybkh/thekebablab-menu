@@ -39,7 +39,8 @@ export const fr = {
         "allergen_13": "Mollusques",
         "allergen_14": "Lupins",
         "allergen_15": "Épicé",
-        "allergen_16": "Viande"
+        "allergen_16": "Viande",
+        "new": "NOUVEAU !"
     },
     "direction": "ltr",
     "categories": {
