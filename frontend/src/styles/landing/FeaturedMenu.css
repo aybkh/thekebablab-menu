@@ -92,19 +92,7 @@
     object-fit: cover;
 }
 
-.card-badge {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    background: var(--color-primary);
-    color: var(--color-sidebar);
-    padding: 4px 10px;
-    border-radius: 4px;
-    border: 2px solid var(--color-border);
-    font-size: 0.7rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+/* Se elimina card-badge ya que ya no se usa como overlay */
 
 .card-arrow {
     position: absolute;
@@ -138,6 +126,14 @@
     text-shadow: 2px 2px 0px var(--color-shadow);
 }
 
+.featured-item-name {
+    font-family: 'Black Ops One', cursive;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
 .card-content p {
     color: #ccc;
     font-size: 0.75rem;
@@ -147,9 +143,19 @@
 
 @media (min-width: 768px) {
     .card-content { padding: 20px; }
-    .card-content h3 { font-size: 1.4rem; margin-bottom: 5px; }
+    .card-content h3 { font-size: 1.4rem; margin-bottom: 2px; }
+    .featured-item-name { 
+        font-size: 1.1rem; 
+        margin-bottom: 10px;
+        background: var(--color-primary);
+        color: var(--color-sidebar);
+        padding: 5px 15px;
+        display: inline-block;
+        border-radius: 4px;
+        border: 2px solid var(--color-border);
+        font-weight: bold;
+    }
     .card-content p { font-size: 0.9rem; display: block; }
-    .card-badge { bottom: 10px; right: 10px; padding: 4px 10px; font-size: 0.8rem; }
 }
 
 .featured-subtitle-head {
