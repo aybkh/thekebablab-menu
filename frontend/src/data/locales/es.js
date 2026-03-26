@@ -39,7 +39,8 @@ export const es = {
         "allergen_13": "Moluscos",
         "allergen_14": "Altramuces",
         "allergen_15": "Picante",
-        "allergen_16": "Carne"
+        "allergen_16": "Carne",
+        "new": "¡NUEVO!"
     },
     "direction": "ltr",
     "categories": {

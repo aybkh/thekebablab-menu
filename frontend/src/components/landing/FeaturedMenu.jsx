@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useSiteConfig } from '../../context/SiteConfigContext';
+import { useLanguage } from '../../context/LanguageContext';
 
 const FeaturedCard = ({ item }) => {
+    const { t } = useLanguage();
     const [currentIndex, setCurrentIndex] = useState(0);
+    
+    // Check if this card is the Combo Box one to apply special styling
+    const isCombo = item.title === "Combo Box" || item.title === "MENÚS Y COMBOS" || item.title === "MENUS Y COMBOS";
 
     const nextSlide = (e) => {
         e.stopPropagation();
@@ -24,7 +29,12 @@ const FeaturedCard = ({ item }) => {
     }, [item.images.length]);
 
     return (
-        <div className="featured-card">
+        <div className={`featured-card ${isCombo ? 'is-combo' : ''}`}>
+            {isCombo && (
+                <div className="new-tag-badge">
+                    {t('new')}
+                </div>
+            )}
             {/* Image Slider Container */}
             <div className="card-image-container">
                 {item.images.map((img, idx) => (
@@ -33,10 +43,6 @@ const FeaturedCard = ({ item }) => {
                             src={img.src}
                             alt={img.label}
                         />
-                        {/* Label Badge */}
-                        <div className="card-badge">
-                            {img.label}
-                        </div>
                     </div>
                 ))}
 
@@ -48,6 +54,9 @@ const FeaturedCard = ({ item }) => {
             {/* Content */}
             <div className="card-content">
                 <h3>{item.title}</h3>
+                <div className="featured-item-name">
+                    {item.images[currentIndex].label}
+                </div>
                 <p>{item.subtitle}</p>
             </div>
         </div>

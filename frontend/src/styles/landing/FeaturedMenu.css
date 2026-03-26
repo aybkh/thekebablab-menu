@@ -61,14 +61,14 @@
 .card-image-container {
     position: relative;
     width: 100%;
-    height: 150px;
+    aspect-ratio: 3 / 2;
     overflow: hidden;
     border-bottom: 4px solid var(--color-border);
 }
 
 @media (min-width: 768px) {
     .card-image-container {
-        height: 220px;
+        height: auto; /* El ratio controla el alto */
     }
 }
 
@@ -92,19 +92,7 @@
     object-fit: cover;
 }
 
-.card-badge {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    background: var(--color-primary);
-    color: var(--color-sidebar);
-    padding: 4px 10px;
-    border-radius: 4px;
-    border: 2px solid var(--color-border);
-    font-size: 0.7rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+/* Se elimina card-badge ya que ya no se usa como overlay */
 
 .card-arrow {
     position: absolute;
@@ -138,6 +126,14 @@
     text-shadow: 2px 2px 0px var(--color-shadow);
 }
 
+.featured-item-name {
+    font-family: 'Black Ops One', cursive;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
 .card-content p {
     color: #ccc;
     font-size: 0.75rem;
@@ -147,9 +143,19 @@
 
 @media (min-width: 768px) {
     .card-content { padding: 20px; }
-    .card-content h3 { font-size: 1.4rem; margin-bottom: 5px; }
+    .card-content h3 { font-size: 1.4rem; margin-bottom: 2px; }
+    .featured-item-name { 
+        font-size: 1.1rem; 
+        margin-bottom: 10px;
+        background: var(--color-primary);
+        color: var(--color-sidebar);
+        padding: 5px 15px;
+        display: inline-block;
+        border-radius: 4px;
+        border: 2px solid var(--color-border);
+        font-weight: bold;
+    }
     .card-content p { font-size: 0.9rem; display: block; }
-    .card-badge { bottom: 10px; right: 10px; padding: 4px 10px; font-size: 0.8rem; }
 }
 
 .featured-subtitle-head {
@@ -160,4 +166,47 @@
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+/* Estilos especiales para el Combo Box (Solo destaque visual, NO más grande) */
+.featured-card.is-combo {
+    border-color: #ffd700 !important; /* Dorado para resaltar */
+    z-index: 5;
+}
+
+@media (min-width: 768px) {
+    .featured-card.is-combo:hover {
+        transform: rotate(0deg) scale(1.05); /* Igual que el resto al hacer hover */
+    }
+}
+
+/* Etiqueta "NUEVO" elegante en forma de lazo/cinta */
+.new-tag-badge {
+    position: absolute;
+    top: 15px;
+    left: -35px;
+    background: #ffd700;
+    color: #000;
+    padding: 5px 40px;
+    transform: rotate(-35deg);
+    z-index: 100;
+    font-weight: 900;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Ajuste móvil para que el Combo Box sea igual al resto */
+@media (max-width: 767px) {
+    .featured-card.is-combo {
+        grid-column: auto; 
+    }
+    .new-tag-badge {
+        font-size: 0.7rem;
+        padding: 4px 35px;
+        top: 10px;
+    }
 }

@@ -39,7 +39,8 @@ export const nl = {
         "allergen_13": "Weekdieren",
         "allergen_14": "Lupine",
         "allergen_15": "Pittig",
-        "allergen_16": "Vlees"
+        "allergen_16": "Vlees",
+        "new": "NIEUW!"
     },
     "direction": "ltr",
     "categories": {

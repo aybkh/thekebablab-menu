@@ -39,7 +39,8 @@ export const de = {
         "allergen_13": "Weichtiere",
         "allergen_14": "Lupinen",
         "allergen_15": "Scharf",
-        "allergen_16": "Fleisch"
+        "allergen_16": "Fleisch",
+        "new": "NEU!"
     },
     "direction": "ltr",
     "categories": {
