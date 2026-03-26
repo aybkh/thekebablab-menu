@@ -43,10 +43,6 @@ const FeaturedCard = ({ item }) => {
                             src={img.src}
                             alt={img.label}
                         />
-                        {/* Label Badge */}
-                        <div className="card-badge">
-                            {img.label}
-                        </div>
                     </div>
                 ))}
 
@@ -58,6 +54,9 @@ const FeaturedCard = ({ item }) => {
             {/* Content */}
             <div className="card-content">
                 <h3>{item.title}</h3>
+                <div className="featured-item-name">
+                    {item.images[currentIndex].label}
+                </div>
                 <p>{item.subtitle}</p>
             </div>
         </div>
