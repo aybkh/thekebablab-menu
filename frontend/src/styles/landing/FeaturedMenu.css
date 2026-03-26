@@ -161,3 +161,55 @@
     text-transform: uppercase;
     font-weight: bold;
 }
+
+/* Estilos especiales para el Combo Box (MÁS GRANDE) */
+.featured-card.is-combo {
+    transform: rotate(2deg) scale(1.05);
+    border-color: #ffd700 !important; /* Dorado para resaltar */
+    box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+@media (min-width: 768px) {
+    .featured-card.is-combo {
+        width: 310px; /* Más ancho que los 280px estándar */
+        margin: 20px;
+    }
+    .featured-card.is-combo:hover {
+        transform: rotate(0deg) scale(1.1);
+    }
+}
+
+/* Etiqueta "NUEVO" elegante en forma de lazo/cinta */
+.new-tag-badge {
+    position: absolute;
+    top: 15px;
+    left: -35px;
+    background: #ffd700;
+    color: #000;
+    padding: 5px 40px;
+    transform: rotate(-35deg);
+    z-index: 100;
+    font-weight: 900;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Ajuste móvil para que el Combo Box destaque */
+@media (max-width: 767px) {
+    .featured-card.is-combo {
+        grid-column: span 2; /* Ocupa todo el ancho en móvil */
+        width: 100%;
+        margin: 15px 0;
+        transform: rotate(0deg) scale(1.02);
+    }
+    .new-tag-badge {
+        font-size: 0.7rem;
+        padding: 4px 35px;
+        top: 10px;
+    }
+}
