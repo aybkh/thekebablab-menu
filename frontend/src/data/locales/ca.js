@@ -39,7 +39,8 @@ export const ca = {
         "allergen_13": "Mol·luscs",
         "allergen_14": "Altramucs",
         "allergen_15": "Picant",
-        "allergen_16": "Carn"
+        "allergen_16": "Carn",
+        "new": "NOU!"
     },
     "direction": "ltr",
     "categories": {
