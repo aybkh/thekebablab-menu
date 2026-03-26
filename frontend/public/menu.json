@@ -947,7 +947,7 @@
           "name": "Salsa Mayonesa",
           "price": 0.5,
           "description": "Pote adicional de Salsa Mayonesa.",
-          "isAvailable": true,
+          "isAvailable": false,
           "image": "",
           "alergenos": []
         }
