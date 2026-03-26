@@ -149,4 +149,45 @@
 .hero-slide.active {
     opacity: 1;
 }
+.hero-arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.hero-arrow-btn:hover {
+    background: var(--color-primary);
+    transform: translateY(-50%) scale(1.15);
+    border-color: var(--color-border);
+    box-shadow: 0 0 20px rgba(242, 97, 34, 0.4);
+}
+
+.hero-arrow-prev {
+    left: 20px;
+}
+
+.hero-arrow-next {
+    right: 20px;
+}
+
+@media (max-width: 480px) {
+    .hero-arrow-btn {
+        padding: 8px;
+    }
+    .hero-arrow-prev { left: 10px; }
+    .hero-arrow-next { right: 10px; }
+}
 
