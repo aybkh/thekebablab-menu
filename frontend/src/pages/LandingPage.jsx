@@ -33,7 +33,15 @@ const LandingPage = () => {
     }, [currentBanner, heroMedia]);
 
     const handleHeroVideoEnd = () => {
+        nextHeroMedia();
+    };
+
+    const nextHeroMedia = () => {
         setCurrentBanner((prev) => (prev + 1) % heroMedia.length);
+    };
+
+    const prevHeroMedia = () => {
+        setCurrentBanner((prev) => (prev - 1 + heroMedia.length) % heroMedia.length);
     };
 
 
@@ -61,19 +69,19 @@ const LandingPage = () => {
                         <h1 className="hero-title">{theme.restaurantName.toUpperCase()}<br /><span>{theme.restaurantSuffix}</span></h1>
 
                         <div className="hero-slider-container">
-                            {heroMedia.map((item, index) => (
-                                index === currentBanner && (
-                                    item.type === 'image' ? (
+                            {heroMedia.length > 0 && (
+                                <>
+                                    {heroMedia[currentBanner].type === 'image' ? (
                                         <img
-                                            key={index}
-                                            src={item.src}
+                                            key={currentBanner}
+                                            src={heroMedia[currentBanner].src}
                                             alt="Hero Slide"
                                             className="hero-slide active"
                                         />
                                     ) : (
                                         <video
-                                            key={index}
-                                            src={item.src}
+                                            key={currentBanner}
+                                            src={heroMedia[currentBanner].src}
                                             autoPlay
                                             muted
                                             playsInline
@@ -81,9 +89,25 @@ const LandingPage = () => {
                                             className="hero-slide active"
                                             style={{ objectFit: 'cover' }}
                                         />
-                                    )
-                                )
-                            ))}
+                                    )}
+                                    
+                                    {/* Navigation Arrows */}
+                                    <button 
+                                        onClick={(e) => { e.stopPropagation(); prevHeroMedia(); }} 
+                                        className="hero-arrow-btn hero-arrow-prev"
+                                        aria-label="Anterior"
+                                    >
+                                        <ChevronLeft size={24} />
+                                    </button>
+                                    <button 
+                                        onClick={(e) => { e.stopPropagation(); nextHeroMedia(); }} 
+                                        className="hero-arrow-btn hero-arrow-next"
+                                        aria-label="Siguiente"
+                                    >
+                                        <ChevronRight size={24} />
+                                    </button>
+                                </>
+                            )}
                         </div>
 
                         <p className="hero-subtitle">
