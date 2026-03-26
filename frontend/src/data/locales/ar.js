@@ -39,7 +39,8 @@ export const ar = {
         "allergen_13": "رخويات",
         "allergen_14": "الترمس",
         "allergen_15": "حار",
-        "allergen_16": "لحم"
+        "allergen_16": "لحم",
+        "new": "جديد"
     },
     "direction": "rtl",
     "categories": {
