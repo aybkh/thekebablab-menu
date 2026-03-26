@@ -162,21 +162,15 @@
     font-weight: bold;
 }
 
-/* Estilos especiales para el Combo Box (MÁS GRANDE) */
+/* Estilos especiales para el Combo Box (Solo destaque visual, NO más grande) */
 .featured-card.is-combo {
-    transform: rotate(2deg) scale(1.05);
     border-color: #ffd700 !important; /* Dorado para resaltar */
-    box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.5);
     z-index: 5;
 }
 
 @media (min-width: 768px) {
-    .featured-card.is-combo {
-        width: 310px; /* Más ancho que los 280px estándar */
-        margin: 20px;
-    }
     .featured-card.is-combo:hover {
-        transform: rotate(0deg) scale(1.1);
+        transform: rotate(0deg) scale(1.05); /* Igual que el resto al hacer hover */
     }
 }
 
@@ -199,13 +193,10 @@
     border: 1px solid rgba(0,0,0,0.1);
 }
 
-/* Ajuste móvil para que el Combo Box destaque */
+/* Ajuste móvil para que el Combo Box sea igual al resto */
 @media (max-width: 767px) {
     .featured-card.is-combo {
-        grid-column: span 2; /* Ocupa todo el ancho en móvil */
-        width: 100%;
-        margin: 15px 0;
-        transform: rotate(0deg) scale(1.02);
+        grid-column: auto; 
     }
     .new-tag-badge {
         font-size: 0.7rem;
