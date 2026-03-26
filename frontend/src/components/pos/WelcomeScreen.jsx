@@ -11,20 +11,10 @@ const WelcomeScreen = ({ onStart }) => {
     return (
         <div className="welcome-screen">
             <div className="welcome-header">
-                <div className="welcome-brand">
-                    {theme.restaurantName.split(' ').map((word, idx) => (
-                        <div key={idx}>{word.toUpperCase()}</div>
-                    ))}
-                    {theme.restaurantSuffix && (
-                        <div className="welcome-brand-suffix">
-                            {theme.restaurantSuffix}
-                        </div>
-                    )}
-                </div>
                 <LanguageSelector currentLang={language} onLanguageChange={setLanguage} isWelcomeScreen={true} />
             </div>
             <button onClick={onStart} className="welcome-full-btn">
-                <img src="/images/kebab-logo.webp" alt="EMPEZAR" className="welcome-start-img" />
+                <img src="/images/start.webp" alt="EMPEZAR" className="welcome-start-img" />
                 <span className="welcome-start-text">
                     {t('start')}
                 </span>
