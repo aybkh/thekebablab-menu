@@ -40,7 +40,9 @@ export const en = {
         "allergen_14": "Lupins",
         "allergen_15": "Spicy",
         "allergen_16": "Meat",
-        "new": "NEW!"
+        "new": "NEW!",
+        "supplements_label": "SUPPLEMENTS AND EXTRAS",
+        "durum_no_lettuce_warning": "If no lettuce is added, a 'Solo Carne' supplement will apply."
     },
     "direction": "ltr",
     "categories": {
