@@ -40,7 +40,9 @@ export const es = {
         "allergen_14": "Altramuces",
         "allergen_15": "Picante",
         "allergen_16": "Carne",
-        "new": "¡NUEVO!"
+        "new": "¡NUEVO!",
+        "supplements_label": "SUPLEMENTOS Y EXTRAS",
+        "durum_no_lettuce_warning": "Si no se pone lechuga se aplicará suplemento de Solo Carne."
     },
     "direction": "ltr",
     "categories": {
