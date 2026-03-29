@@ -147,11 +147,11 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
                     <div className="product-allergens-section">
                         <span className="section-title">{t('allergens_label')}</span>
                         <div className="product-allergens-list">
-                            {originalProduct.alergenos.map(id => {
-                                const alg = ALLERGEN_MAP[id];
+                            {(originalProduct.alergenos || []).map(id => {
+                                const alg = ALLERGEN_MAP[Number(id)];
                                 if (!alg) return null;
                                 return (
-                                    <div key={id} className="allergen-info-item">
+                                    <div key={id} className="allergen-info-item" title={t('allergen_' + id) || alg.name}>
                                         <img 
                                             src={alg.iconSrc} 
                                             alt={alg.name} 
