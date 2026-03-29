@@ -1,6 +1,7 @@
 import React from 'react';
 import { Star, User } from 'lucide-react';
 import { useSiteConfig } from '../../context/SiteConfigContext';
+import { useLanguage } from '../../context/LanguageContext';
 
 const GoogleIcon = ({ className }) => (
     <svg className={className} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -13,14 +14,15 @@ const GoogleIcon = ({ className }) => (
 
 const ReviewsSection = () => {
     const { siteConfig } = useSiteConfig();
+    const { t } = useLanguage();
     const reviews = siteConfig?.reviews || [];
 
     return (
         <section className="reviews-section relative">
             <div className="section-head">
-                <h2>LO QUE DICEN DE NOSOTROS</h2>
+                <h2>{t('reviews_title')}</h2>
                 <div className="reviews-google-summary">
-                    <GoogleIcon /> 4.6⭐ en Google Maps
+                    <GoogleIcon /> 4.6⭐ {t('google_maps_text')}
                 </div>
             </div>
 
