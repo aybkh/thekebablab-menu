@@ -42,7 +42,16 @@ export const es = {
         "allergen_16": "Carne",
         "new": "¡NUEVO!",
         "supplements_label": "SUPLEMENTOS Y EXTRAS",
-        "durum_no_lettuce_warning": "Si no se pone lechuga se aplicará suplemento de Solo Carne."
+        "durum_no_lettuce_warning": "Si no se pone lechuga se aplicará suplemento de Solo Carne.",
+        "extra_meat": "Extra de Carne / Solo Carne",
+        "no_lettuce": "Sin Lechuga (Más Carne)",
+        "goat_cheese": "Queso de Cabra",
+        "feta_cheese": "Queso Feta",
+        "fried_egg": "Huevo Frito",
+        "bacon": "Bacon",
+        "fries_inside": "Patatas dentro",
+        "jalapenos": "Jalapeños",
+        "extra_cheddar": "Extra Queso Cheddar"
     },
     "direction": "ltr",
     "categories": {
