@@ -40,7 +40,9 @@ export const ca = {
         "allergen_14": "Altramucs",
         "allergen_15": "Picant",
         "allergen_16": "Carn",
-        "new": "NOU!"
+        "new": "NOU!",
+        "supplements_label": "SUPLEMENTS I EXTRAS",
+        "durum_no_lettuce_warning": "Si no es posa enciam s'aplicarà suplement de Sòls Carn."
     },
     "direction": "ltr",
     "categories": {
