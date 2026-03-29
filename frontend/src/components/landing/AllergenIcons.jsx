@@ -53,8 +53,8 @@ const AllergenIconItem = ({ alg }) => {
 const AllergenIcons = ({ allergenIds }) => {
     if (!allergenIds || allergenIds.length === 0) return null;
 
-    const validAllergens = allergenIds
-        .map(id => ALLERGEN_MAP[id])
+    const validAllergens = (allergenIds || [])
+        .map(id => ALLERGEN_MAP[Number(id)])
         .filter(alg => alg !== undefined);
 
     if (validAllergens.length === 0) return null;
