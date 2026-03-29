@@ -40,7 +40,18 @@ export const de = {
         "allergen_14": "Lupinen",
         "allergen_15": "Scharf",
         "allergen_16": "Fleisch",
-        "new": "NEU!"
+        "new": "NEU!",
+        "supplements_label": "EXTRAS UND ZUBEHÖR",
+        "durum_no_lettuce_warning": "Wenn kein Salat hinzugefügt wird, fällt ein 'Solo Carne'-Aufpreis an.",
+        "extra_meat": "Zusätzliches Fleisch / Nur Fleisch",
+        "no_lettuce": "Ohne Salat (Mehr Fleisch)",
+        "goat_cheese": "Ziegenkäse",
+        "feta_cheese": "Fetakäse",
+        "fried_egg": "Spiegelei",
+        "bacon": "Speck",
+        "fries_inside": "Pommes innen",
+        "jalapenos": "Jalapeños",
+        "extra_cheddar": "Extra Cheddar-Käse"
     },
     "direction": "ltr",
     "categories": {
