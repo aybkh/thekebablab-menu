@@ -68,18 +68,55 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
             }
         }
 
-        // Suplementos para Dürüm/Pita
+        // Suplementos para Dürüm/Pita/Tacos/Burgers/Platos
         let extrasTotal = 0;
+        let hasSoloCarneOrSinLechuga = false;
+
         if (pizzaSelections["extras"]) {
             pizzaSelections["extras"].forEach(extra => {
-                if (extra.includes("Carne")) extrasTotal += 2.00;
-                if (extra.includes("Feta")) extrasTotal += 1.00;
-                if (extra.includes("Cabra")) extrasTotal += 1.50;
+                const isCarneOrLechuga = extra.includes("Carne") || extra.includes("Lechuga");
+                const match = extra.match(/\+([\d.]+)/);
+                
+                let price = 0;
+                if (match) {
+                    price = parseFloat(match[1]);
+                } else {
+                    // Fallback for hardcoded names if regex fails
+                    if (isCarneOrLechuga) price = 2.00;
+                    else if (extra.includes("Feta")) price = 1.00;
+                    else if (extra.includes("Cabra")) price = 1.50;
+                }
+
+                // Evitar cobrar el suplemento de +2.00€ dos veces si se marcan ambos
+                if (isCarneOrLechuga) {
+                    if (!hasSoloCarneOrSinLechuga) {
+                        extrasTotal += price;
+                        hasSoloCarneOrSinLechuga = true;
+                    }
+                } else {
+                    extrasTotal += price;
+                }
             });
         }
 
         return (base + menuExtra + drinkExtra + sauceExtra + batidoExtra + pizzaExtra + extrasTotal).toFixed(2);
     };
+
+    const SUPLEMENTOS_LIST = [
+        { name: "Extra de Carne / Solo Carne", price: 2.00 },
+        { name: "Sin Lechuga (Más Carne)", price: 2.00 },
+        { name: "Queso de Cabra", price: 1.50 },
+        { name: "Queso Feta", price: 1.00 },
+        { name: "Huevo Frito", price: 1.00 },
+        { name: "Bacon", price: 1.00 },
+        { name: "Patatas dentro", price: 1.00 },
+        { name: "Jalapeños", price: 0.50 },
+        { name: "Extra Queso Cheddar", price: 0.50 }
+    ];
+
+    const needsSuplementos = ["Dürüm", "Pita", "Tacos", "Hamburguesas", "Platos", "Bocadillos", "Combo Box"].includes(category?.name) || 
+                             currentProduct.name.toLowerCase().includes("taco") || 
+                             currentProduct.name.toLowerCase().includes("burger");
 
     return (
         <div className="modal-overlay">
@@ -216,38 +253,37 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
                     </div>
                 )}
 
-                {/* Suplementos (Dürüm / Pita) */}
-                {((category?.name === "Dürüm" || category?.name === "Pita")) && (
-                    <div className="selection-container">
-                        <span className="section-title" style={{ color: 'var(--primary)' }}>SUPLEMENTOS</span>
+                {/* Suplementos (Dürüm / Pita / Tacos / Burgers / Platos) */}
+                {needsSuplementos && (
+                    <div className="selection-container" style={{ border: '1px solid rgba(242, 97, 34, 0.2)', padding: '10px', borderRadius: '12px' }}>
+                        <span className="section-title" style={{ color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                             {t('supplements_label') || 'SUPLEMENTOS Y EXTRAS'}
+                        </span>
                         <div className="selection-grid">
-                            {[
-                                { name: "Extra de Carne / Solo Carne", price: 2.00 },
-                                { name: "Queso Feta", price: 1.00 },
-                                { name: "Queso de Cabra", price: 1.50 }
-                            ].map(extra => {
+                            {SUPLEMENTOS_LIST.map(extra => {
                                 const list = pizzaSelections["extras"] || [];
-                                const isSelected = list.includes(extra.name);
+                                const isSelected = list.some(e => e.startsWith(extra.name));
                                 return (
                                     <button 
                                         key={extra.name} 
                                         className={`option-btn ${isSelected ? 'selected' : ''}`}
                                         onClick={() => {
+                                            const entry = `${extra.name} (+${extra.price}€)`;
                                             if (isSelected) {
-                                                setPizzaSelections({ ...pizzaSelections, extras: list.filter(e => e !== extra.name) });
+                                                setPizzaSelections({ ...pizzaSelections, extras: list.filter(e => !e.startsWith(extra.name)) });
                                             } else {
-                                                setPizzaSelections({ ...pizzaSelections, extras: [...list, extra.name] });
+                                                setPizzaSelections({ ...pizzaSelections, extras: [...list, entry] });
                                             }
                                         }}
                                     >
-                                        {extra.name} (+<PriceDisplay price={extra.price} />)
+                                        {extra.name} <span style={{ fontSize: '0.85em', opacity: 0.9 }}>(+<PriceDisplay price={extra.price} />)</span>
                                     </button>
                                 );
                             })}
                         </div>
                         {category?.name === "Dürüm" && (
-                            <p style={{ fontSize: "0.80rem", opacity: 0.7, fontStyle: "italic", marginTop: "5px" }}>
-                                * Si no se pone lechuga en el Dürüm se aplicará suplemento de Solo Carne.
+                            <p style={{ fontSize: "0.75rem", opacity: 0.7, fontStyle: "italic", marginTop: "8px", borderTop: '1px solid #eee', paddingTop: '5px' }}>
+                                * {t('durum_no_lettuce_warning') || 'Si no se pone lechuga se aplicará suplemento de Solo Carne.'}
                             </p>
                         )}
                     </div>
