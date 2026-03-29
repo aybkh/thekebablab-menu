@@ -100,7 +100,7 @@
           "name": "Ensalada Mix Queso Cabra",
           "price": 5.95,
           "isAvailable": true,
-          "image": "ensalada-queso-cabra.webp",
+          "image": "ensalada-mix-queso-cabra.webp",
           "alergenos": [
             7
           ]
