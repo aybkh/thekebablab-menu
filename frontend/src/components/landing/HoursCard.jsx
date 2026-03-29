@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useSiteConfig } from '../../context/SiteConfigContext';
+import { useLanguage } from '../../context/LanguageContext';
 
 const HoursCard = () => {
     const { siteConfig } = useSiteConfig();
+    const { t } = useLanguage();
     const schedule = siteConfig?.schedule || [];
-    const [status, setStatus] = useState({ isOpen: false, text: 'Cargando', color: '#666' });
+    const [status, setStatus] = useState({ isOpen: false, text: t('hours_loading'), color: '#666' });
     const todayIndex = (new Date().getDay() + 6) % 7;
 
     useEffect(() => {
@@ -15,14 +17,14 @@ const HoursCard = () => {
             const today = schedule[todayIndex];
 
             if (today.closed) {
-                setStatus({ isOpen: false, text: 'CERRADO HOY', color: '#a41000ff' });
+                setStatus({ isOpen: false, text: t('closed_today'), color: '#a41000ff' });
             } else {
                 if (hour >= today.open && hour < today.close) {
-                    setStatus({ isOpen: true, text: 'ABIERTO AHORA', color: '#d87a22ff' });
+                    setStatus({ isOpen: true, text: t('open_now'), color: '#d87a22ff' });
                 } else if (hour < today.open) {
-                    setStatus({ isOpen: false, text: `ABRE A LAS ${today.open}:00`, color: '#f1800fff' });
+                    setStatus({ isOpen: false, text: `${t('opens_at')} ${today.open}:00`, color: '#f1800fff' });
                 } else {
-                    setStatus({ isOpen: false, text: 'CERRADO', color: '#E74C3C' });
+                    setStatus({ isOpen: false, text: t('closed'), color: '#E74C3C' });
                 }
             }
         };
@@ -52,10 +54,10 @@ const HoursCard = () => {
                             <div key={day.name} className={`hours-row ${isToday ? 'today' : ''} ${isClosed ? 'closed' : ''}`}>
                                 <div className="flex items-center gap-2">
                                     {isToday && <span className="today-dot">●</span>}
-                                    <span className="day-name">{day.name}</span>
+                                    <span className="day-name">{t(`day_${idx}`)}</span>
                                 </div>
                                 <span className="day-time">
-                                    {isClosed ? 'CERRADO' : day.label}
+                                    {isClosed ? t('closed') : day.label}
                                 </span>
                             </div>
                         );
