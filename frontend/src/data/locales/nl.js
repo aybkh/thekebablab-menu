@@ -40,7 +40,18 @@ export const nl = {
         "allergen_14": "Lupine",
         "allergen_15": "Pittig",
         "allergen_16": "Vlees",
-        "new": "NIEUW!"
+        "new": "NIEUW!",
+        "supplements_label": "SUPPLEMENTEN EN EXTRA'S",
+        "durum_no_lettuce_warning": "Als er geen sla wordt toegevoegd, wordt een 'Solo Carne' toeslag berekend.",
+        "extra_meat": "Extra vlees / Alleen vlees",
+        "no_lettuce": "Geen sla (Meer vlees)",
+        "goat_cheese": "Geitenkaas",
+        "feta_cheese": "Feta kaas",
+        "fried_egg": "Gebakken ei",
+        "bacon": "Spek",
+        "fries_inside": "Patat erin",
+        "jalapenos": "Jalapeños",
+        "extra_cheddar": "Extra Cheddarkaas"
     },
     "direction": "ltr",
     "categories": {
