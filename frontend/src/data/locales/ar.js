@@ -42,7 +42,16 @@ export const ar = {
         "allergen_16": "لحم",
         "new": "جديد!",
         "supplements_label": "الإضافات والملحقات",
-        "durum_no_lettuce_warning": "إذا لم يتم إضافة الخس، فسيتم تطبيق تكلفة إضافية لـ 'لحم فقط'."
+        "durum_no_lettuce_warning": "إذا لم يتم إضافة الخس، فسيتم تطبيق تكلفة إضافية لـ 'لحم فقط'.",
+        "extra_meat": "لحم إضافي / لحم فقط",
+        "no_lettuce": "بدون خس (مزيد من اللحم)",
+        "goat_cheese": "جبن الماعز",
+        "feta_cheese": "جبن فيتا",
+        "fried_egg": "بيض مقلي",
+        "bacon": "باكون",
+        "fries_inside": "بطاطس بالداخل",
+        "jalapenos": "هلابينو",
+        "extra_cheddar": "جبن شيدر إضافي"
     },
     "direction": "rtl",
     "categories": {
