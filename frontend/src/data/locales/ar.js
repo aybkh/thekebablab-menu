@@ -40,7 +40,9 @@ export const ar = {
         "allergen_14": "الترمس",
         "allergen_15": "حار",
         "allergen_16": "لحم",
-        "new": "جديد"
+        "new": "جديد!",
+        "supplements_label": "الإضافات والملحقات",
+        "durum_no_lettuce_warning": "إذا لم يتم إضافة الخس، فسيتم تطبيق تكلفة إضافية لـ 'لحم فقط'."
     },
     "direction": "rtl",
     "categories": {
