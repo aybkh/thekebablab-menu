@@ -41,8 +41,17 @@ export const ca = {
         "allergen_15": "Picant",
         "allergen_16": "Carn",
         "new": "NOU!",
-        "supplements_label": "SUPLEMENTS I EXTRAS",
-        "durum_no_lettuce_warning": "Si no es posa enciam s'aplicarà suplement de Sòls Carn."
+        "supplements_label": "SUPLEMENTS I EXTRES",
+        "durum_no_lettuce_warning": "Si no s'hi posa enciam, s'aplicarà el suplement de Només Carn.",
+        "extra_meat": "Extra de Carn / Només Carn",
+        "no_lettuce": "Sense Enciam (Més Carn)",
+        "goat_cheese": "Formatge de Cabra",
+        "feta_cheese": "Formatge Feta",
+        "fried_egg": "Ou Fregit",
+        "bacon": "Bacó",
+        "fries_inside": "Patates a l'interior",
+        "jalapenos": "Jalapeños",
+        "extra_cheddar": "Extra de Formatge Cheddar"
     },
     "direction": "ltr",
     "categories": {
