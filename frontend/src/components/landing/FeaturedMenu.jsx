@@ -67,12 +67,14 @@ const FeaturedMenu = () => {
     const { siteConfig } = useSiteConfig();
     const featuredData = siteConfig?.featuredMenu || [];
 
+    const { t } = useLanguage();
+
     return (
         <section className="featured-section">
             <div className="section-head">
-                <h2>NUESTROS FAVORITOS</h2>
+                <h2>{t('featured_title')}</h2>
                 <span className="featured-subtitle-head">
-                    DESCUBRE LO MEJOR
+                    {t('featured_subtitle')}
                 </span>
             </div>
 
