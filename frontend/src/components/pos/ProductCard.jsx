@@ -35,7 +35,7 @@ const ProductCard = ({ originalProd, category, onClick }) => {
             else if (catName.includes("Café")) { suffix = "-cafe"; cleanProd = cleanProd.replace("cafe-", ""); }
             else if (catName.includes("Ensaladas")) {
                 if (cleanProd.includes("wrap")) { suffix = "-wrap"; cleanProd = cleanProd.replace("wrap-de-", "").replace("wrap-", ""); }
-                else { suffix = "-ensalada"; cleanProd = cleanProd.replace("ensalada-", ""); }
+                else { suffix = ""; cleanProd = cleanProd.replace(/-de-/g, '-'); }
             }
             return `/products/${cleanProd}${suffix}.webp`;
         };
@@ -77,8 +77,11 @@ const ProductCard = ({ originalProd, category, onClick }) => {
             )}
 
             {renderProductImage()}
-
-            {originalProd.alergenos && originalProd.alergenos.length > 0 && (
+            
+            {/* Ocultar alérgenos en Combos y Menús (Excepto Combo Box) */}
+            {originalProd.alergenos && originalProd.alergenos.length > 0 && 
+             !( (category?.name?.toLowerCase().includes('combo') || category?.name?.toLowerCase().includes('menú') || category?.name?.toLowerCase().includes('menu')) 
+                && !category?.name?.toLowerCase().includes('box') ) && (
                 <div className="product-allergens-strip">
                     <AllergenIcons allergenIds={originalProd.alergenos} />
                 </div>
