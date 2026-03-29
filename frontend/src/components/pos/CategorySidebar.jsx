@@ -31,7 +31,7 @@ const CategorySidebar = ({ categories, selectedCategory, onSelectCategory, isMob
 
     return (
         <aside className={`category-sidebar ${isMobileVisible ? 'mobile-visible' : ''}`}>
-            <div className="brand-title desktop-only">
+            <div className="brand-title">
                 <img src={theme.brand.logoFallback} alt={theme.restaurantName} className="brand-logo"
                     onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
             </div>
