@@ -40,8 +40,13 @@
     color: var(--color-sidebar);
 }
 
+.delivery-card.local {
+    background: #f26122; /* Naranja Kebab Lab */
+    color: var(--color-sidebar);
+}
+
 .delivery-logo-wrapper {
-    background: white;
+    background: white; /* Default for non-customized */
     width: 60px;
     height: 60px;
     border-radius: 12px;
@@ -53,10 +58,25 @@
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    box-shadow: 4px 4px 0px var(--color-shadow);
-    z-index: 2;
     overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 4px 4px 0px var(--color-shadow);
 }
+
+/* Match logo container background to card to avoid white "franja" */
+.delivery-card.glovo .delivery-logo-wrapper {
+    background: #ffc244;
+}
+
+.delivery-card.uber-eats .delivery-logo-wrapper {
+    background: #06C167;
+}
+
+.delivery-card.local .delivery-logo-wrapper {
+    background: #f26122;
+}
+
+/* Removed specific overrides for local card logo wrapper to match Glovo/UberEats style */
 
 .delivery-brand-logo {
     max-width: 100%;
@@ -64,11 +84,24 @@
     object-fit: contain;
 }
 
+.delivery-text-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 .delivery-btn-text {
     font-family: 'Black Ops One', cursive;
     font-size: 1.1rem;
     letter-spacing: 1px;
-    flex: 1;
+}
+
+.delivery-note {
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-top: 4px;
 }
 
 .delivery-arrow {
