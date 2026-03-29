@@ -42,7 +42,16 @@ export const fr = {
         "allergen_16": "Viande",
         "new": "NOUVEAU !",
         "supplements_label": "SUPPLÉMENTS ET EXTRAS",
-        "durum_no_lettuce_warning": "Si aucune laitue n'est ajoutée, un supplément 'Solo Carne' s'appliquera."
+        "durum_no_lettuce_warning": "Si aucune laitue n'est ajoutée, un supplément 'Solo Carne' s'appliquera.",
+        "extra_meat": "Viande Supplémentaire / Viande Seulement",
+        "no_lettuce": "Sans Laitue (Plus de Viande)",
+        "goat_cheese": "Fromage de Chèvre",
+        "feta_cheese": "Fromage Feta",
+        "fried_egg": "Œuf Frit",
+        "bacon": "Bacon",
+        "fries_inside": "Frites à l'intérieur",
+        "jalapenos": "Jalapeños",
+        "extra_cheddar": "Extra Fromage Cheddar"
     },
     "direction": "ltr",
     "categories": {
