@@ -47,6 +47,13 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
 
     if (!isOpen || !currentProduct) return null;
 
+    // Determina el precio de Solo Carne / Sin Lechuga según tipo de carne
+    const soloCarnePrice = (() => {
+        const n = (currentProduct?.name || '').toLowerCase();
+        if (n.includes('ternera') || n.includes('mix')) return 3.50;
+        return 2.50;
+    })();
+
     // Helper to calculate total
     const calculateTotal = () => {
         const base = selectedVariant ? Number(selectedVariant.price) : Number(currentProduct.price || currentProduct.base_price || 0);
@@ -82,7 +89,7 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
                     price = parseFloat(match[1]);
                 } else {
                     // Fallback for hardcoded names if regex fails
-                    if (isCarneOrLechuga) price = 2.00;
+                    if (isCarneOrLechuga) price = soloCarnePrice;
                     else if (extra.includes("Feta")) price = 1.00;
                     else if (extra.includes("Cabra")) price = 1.50;
                 }
@@ -103,8 +110,8 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
     };
 
     const SUPLEMENTOS_LIST = [
-        { key: "extra_meat", price: 2.00 },
-        { key: "no_lettuce", price: 2.00 },
+        { key: "extra_meat", price: soloCarnePrice },
+        { key: "no_lettuce", price: soloCarnePrice },
         { key: "goat_cheese", price: 1.50 },
         { key: "feta_cheese", price: 1.00 },
         { key: "fried_egg", price: 1.00 },
