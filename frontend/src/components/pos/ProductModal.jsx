@@ -103,15 +103,15 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
     };
 
     const SUPLEMENTOS_LIST = [
-        { name: "Extra de Carne / Solo Carne", price: 2.00 },
-        { name: "Sin Lechuga (Más Carne)", price: 2.00 },
-        { name: "Queso de Cabra", price: 1.50 },
-        { name: "Queso Feta", price: 1.00 },
-        { name: "Huevo Frito", price: 1.00 },
-        { name: "Bacon", price: 1.00 },
-        { name: "Patatas dentro", price: 1.00 },
-        { name: "Jalapeños", price: 0.50 },
-        { name: "Extra Queso Cheddar", price: 0.50 }
+        { key: "extra_meat", price: 2.00 },
+        { key: "no_lettuce", price: 2.00 },
+        { key: "goat_cheese", price: 1.50 },
+        { key: "feta_cheese", price: 1.00 },
+        { key: "fried_egg", price: 1.00 },
+        { key: "bacon", price: 1.00 },
+        { key: "fries_inside", price: 1.00 },
+        { key: "jalapenos", price: 0.50 },
+        { key: "extra_cheddar", price: 0.50 }
     ];
 
     const needsSuplementos = ["Dürüm", "Pita", "Tacos", "Hamburguesas", "Platos", "Bocadillos", "Combo Box"].includes(category?.name) || 
@@ -262,21 +262,21 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
                         <div className="selection-grid">
                             {SUPLEMENTOS_LIST.map(extra => {
                                 const list = pizzaSelections["extras"] || [];
-                                const isSelected = list.some(e => e.startsWith(extra.name));
+                                const isSelected = list.some(e => e.includes(extra.key));
                                 return (
                                     <button 
-                                        key={extra.name} 
+                                        key={extra.key} 
                                         className={`option-btn ${isSelected ? 'selected' : ''}`}
                                         onClick={() => {
-                                            const entry = `${extra.name} (+${extra.price}€)`;
+                                            const entry = `${t(extra.key)} (+${extra.price}€) [ID:${extra.key}]`;
                                             if (isSelected) {
-                                                setPizzaSelections({ ...pizzaSelections, extras: list.filter(e => !e.startsWith(extra.name)) });
+                                                setPizzaSelections({ ...pizzaSelections, extras: list.filter(e => !e.includes(extra.key)) });
                                             } else {
                                                 setPizzaSelections({ ...pizzaSelections, extras: [...list, entry] });
                                             }
                                         }}
                                     >
-                                        {extra.name} <span style={{ fontSize: '0.85em', opacity: 0.9 }}>(+<PriceDisplay price={extra.price} />)</span>
+                                        {t(extra.key)} <span style={{ fontSize: '0.85em', opacity: 0.9 }}>(+<PriceDisplay price={extra.price} />)</span>
                                     </button>
                                 );
                             })}
