@@ -1,5 +1,5 @@
-import React from 'react';
 import { useTenant } from '../../context/TenantContext';
+import { useLanguage } from '../../context/LanguageContext';
 
 // Función exclusiva para forzar la app de Glovo según el sistema operativo
 const handleGlovoRedirect = (webUrl, e) => {
@@ -30,6 +30,7 @@ const handleGlovoRedirect = (webUrl, e) => {
 
 const DeliverySection = () => {
     const { theme } = useTenant();
+    const { t } = useLanguage();
 
     if (!theme) return null;
 
@@ -43,11 +44,10 @@ const DeliverySection = () => {
         <section id="delivery" className="delivery-section">
             <div className="max-w-[1200px] mx-auto">
                 <div className="section-head mb-12">
-                    <h2>PEDIR A DOMICILIO</h2>
+                    <h2>{t('delivery_title')}</h2>
                 </div>
 
                 <div className="delivery-container">
-                    {/* GLOVO: Botón con interceptor para forzar App / Store */}
                     <a 
                         href={glovoLink} 
                         onClick={(e) => handleGlovoRedirect(glovoLink, e)} 
@@ -57,11 +57,13 @@ const DeliverySection = () => {
                         <div className="delivery-logo-wrapper">
                             <img src="/images/glovo.webp" alt="Glovo" className="delivery-brand-logo" />
                         </div>
-                        <span className="delivery-btn-text">{theme.socials.glovoLabel || 'PIDE EN GLOVO'}</span>
+                        <div className="delivery-text-info">
+                            <span className="delivery-btn-text">{t('order_glovo')}</span>
+                            <span className="delivery-note">{t('glovo_note')}</span>
+                        </div>
                         <div className="delivery-arrow">➔</div>
                     </a>
 
-                    {/* UBER EATS: Botón nativo estándar (Abre el navegador) */}
                     <a 
                         href={uberEatsLink} 
                         target="_blank" 
@@ -71,7 +73,25 @@ const DeliverySection = () => {
                         <div className="delivery-logo-wrapper">
                             <img src="/images/ubereats.webp" alt="Uber Eats" className="delivery-brand-logo" />
                         </div>
-                        <span className="delivery-btn-text">{theme.socials.uberEatsLabel || 'PIDE EN UBER EATS'}</span>
+                        <div className="delivery-text-info">
+                            <span className="delivery-btn-text">{t('order_ubereats')}</span>
+                            <span className="delivery-note">{t('ubereats_note')}</span>
+                        </div>
+                        <div className="delivery-arrow">➔</div>
+                    </a>
+
+                    {/* PHONE / LOCAL ORDER: Botón para llamar directamente */}
+                    <a 
+                        href={`tel:972947025`} 
+                        className="delivery-card local"
+                    >
+                        <div className="delivery-logo-wrapper">
+                            <img src="/images/kebab-ico.webp" alt="The Kebab Lab" className="delivery-brand-logo" />
+                        </div>
+                        <div className="delivery-text-info">
+                            <span className="delivery-btn-text">{t('local_order_label')}</span>
+                            <span className="delivery-note">{t('delivery_fee_note')}</span>
+                        </div>
                         <div className="delivery-arrow">➔</div>
                     </a>
                 </div>
