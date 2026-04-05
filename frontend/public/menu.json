@@ -444,7 +444,7 @@
         {
           "id": 44,
           "name": "Plato Kebab de Pollo",
-          "price": 8.95,
+          "price": 7.9,
           "description": "Raci\u00F3n generosa servida directamente en plato (sin pan) con l\u00E1minas de carne asada de pollo, acompa\u00F1ada de un lado de ensalada mixta y una guarnici\u00F3n de patatas fritas.",
           "isAvailable": true,
           "image": "",
@@ -453,7 +453,7 @@
         {
           "id": 45,
           "name": "Plato Kebab de Ternera",
-          "price": 8.95,
+          "price": 7.9,
           "description": "Raci\u00F3n servida en plato con sabrosas l\u00E1minas de carne de ternera asada, acompa\u00F1ada de ensalada mixta fresca y guarnici\u00F3n de patatas fritas.",
           "isAvailable": true,
           "image": "",
@@ -462,7 +462,7 @@
         {
           "id": 46,
           "name": "Plato Kebab Mix",
-          "price": 8.95,
+          "price": 7.9,
           "description": "Plato combinado que ofrece lo mejor de ambos mundos: una mezcla de carne asada de pollo y ternera, acompa\u00F1ada de ensalada mixta y patatas fritas.",
           "isAvailable": true,
           "image": "",
@@ -471,7 +471,7 @@
         {
           "id": 47,
           "name": "Plato de Falafel",
-          "price": 7.95,
+          "price": 7.9,
           "description": "Alternativa vegetariana servida en plato, compuesta por varias unidades de falafel (croquetas de garbanzo especiadas), ensalada mixta de acompa\u00F1amiento y patatas fritas.",
           "isAvailable": true,
           "image": "",
@@ -721,7 +721,7 @@
           "name": "Free Damm Tostada",
           "price": 2.5,
           "description": "Cerveza sin alcohol tostada.",
-          "isAvailable": true,
+          "isAvailable": false,
           "image": "",
           "alergenos": []
         }
@@ -858,7 +858,7 @@
           "id": 86,
           "name": "Combo 2 Pizzas Medianas",
           "price": 21.95,
-          "description": "",
+          "description": "2 pizzas medianas de 32cm a elegir de la carta y 2 refrescos.",
           "isAvailable": true,
           "image": "",
           "alergenos": []
@@ -947,6 +947,15 @@
           "name": "Salsa Mayonesa",
           "price": 0.5,
           "description": "Pote adicional de Salsa Mayonesa.",
+          "isAvailable": true,
+          "image": "",
+          "alergenos": []
+        },
+        {
+          "id": 96,
+          "name": "Salsa Pita Kebab",
+          "price": 0.5,
+          "description": "Pote adicional de Salsa Pita Kebab.",
           "isAvailable": true,
           "image": "",
           "alergenos": []

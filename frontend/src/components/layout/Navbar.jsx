@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, MapPin, Clock, Phone, Utensils, Bike } from 'lucide-react';
 import { useTenant } from '../../context/TenantContext';
+import { useLanguage } from '../../context/LanguageContext';
+import LanguageSelector from '../LanguageSelector';
 
 const Navbar = () => {
     const { theme } = useTenant();
+    const { t, language, setLanguage } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
@@ -33,21 +36,15 @@ const Navbar = () => {
         }
     };
 
-    const navItems = ['INICIO', 'UBICACIÓN', 'HORARIOS', 'A DOMICILIO', 'CONTACTO'];
+    const navItems = [
+        { label: t('nav_home'), hash: '#hero' },
+        { label: t('nav_location'), hash: '#location' },
+        { label: t('nav_hours'), hash: '#hours' },
+        { label: t('nav_delivery'), hash: '#delivery' },
+        { label: t('nav_contact'), hash: '#contact' }
+    ];
 
-    const getHash = (item) => {
-        switch (item) {
-            case 'INICIO': return '#hero';
-            case 'UBICACIÓN': return '#location';
-            case 'HORARIOS': return '#hours'; // Although Hours is inside Layout, we can scroll to layout or maybe add id to hours title if needed. But it's in location section. Ideally we add id="hours" too.
-            // Wait, previous LandingPage edit didn't add id="hours". Let's assume #location covers it or user scrolls. 
-            // Actually, for better UX let's map 'HORARIOS' to '#delivery' area or '#location'. 
-            // Let's keep it consistent.
-            case 'A DOMICILIO': return '#delivery';
-            case 'CONTACTO': return '#contact';
-            default: return '#hero';
-        }
-    };
+    // Removed getHash as it is now part of navItems object
 
     return (
         <nav className={`landing-nav ${scrolled || isOpen ? 'scrolled' : 'transparent'} ${isOpen ? 'open' : ''}`}>
@@ -55,41 +52,53 @@ const Navbar = () => {
                 {/* Header Container */}
                 <div className="nav-content">
 
-                    {/* Left Section: Mobile Menu Button + Brand Title */}
+                    {/* Left Section: Mobile Menu Button */}
                     <div className="nav-left-section">
-                        <button onClick={() => setIsOpen(!isOpen)} className="nav-btn-mobile md:hidden">
+                        <button onClick={() => setIsOpen(!isOpen)} className="nav-btn-mobile">
                             {isOpen ? <X size={30} /> : <Menu size={30} />}
                         </button>
                     </div>
 
                     {/* Center/Main Section: Desktop Menu Links */}
                     <div className="nav-menu-section desktop-only">
-                        {navItems.map((item, idx) => {
-                            const hash = getHash(item);
-                            return (
-                                <button key={idx} onClick={() => handleNavClick(hash)}
-                                    className="nav-link-btn">
-                                    {item}
-                                </button>
-                            );
-                        })}
+                        {navItems.map((item, idx) => (
+                            <button key={idx} onClick={() => handleNavClick(item.hash)}
+                                className="nav-link-btn">
+                                {item.label}
+                            </button>
+                        ))}
 
                         <Link to="/menu" target="_blank" rel="noopener noreferrer" className="no-underline">
                             <button className="nav-link-btn btn-order-style">
-                                VER CARTA
+                                {t('view_menu_btn')}
                             </button>
                         </Link>
+
+                        <div className="ml-4">
+                            <LanguageSelector currentLang={language} onLanguageChange={setLanguage} />
+                        </div>
                     </div>
 
-                    {/* Right Section: Brand Logo */}
+                    {/* Logo Section (Centered in CSS) */}
                     <div className="nav-logo-section">
                         <img 
                             src={theme.brand.logoHeader || theme.brand.logoFallback} 
                             alt="Logo" 
                             className="nav-logo-right"
                             onError={(e) => e.target.src = theme.brand.logoFallback} 
-                            onClick={() => navigate('/')} 
+                            onClick={() => {
+                                if (location.pathname === '/') {
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                } else {
+                                    navigate('/');
+                                }
+                            }}
                         />
+                    </div>
+
+                    {/* Right Section: Mobile Language Selector */}
+                    <div className="nav-right-section mobile-only">
+                        <LanguageSelector currentLang={language} onLanguageChange={setLanguage} />
                     </div>
                 </div>
             </div>
@@ -97,24 +106,23 @@ const Navbar = () => {
             {/* Mobile Sidebar/Drawer */}
             <div className={`nav-mobile-sidebar ${isOpen ? 'open' : ''}`}>
                 {navItems.map((item, idx) => {
-                    const hash = getHash(item);
                     let Icon = null;
-                    if (item === 'UBICACIÓN') Icon = MapPin;
-                    else if (item === 'HORARIOS') Icon = Clock;
-                    else if (item === 'A DOMICILIO') Icon = Bike;
-                    else if (item === 'CONTACTO') Icon = Phone;
+                    if (item.hash === '#location') Icon = MapPin;
+                    else if (item.hash === '#hours') Icon = Clock;
+                    else if (item.hash === '#delivery') Icon = Bike;
+                    else if (item.hash === '#contact') Icon = Phone;
 
                     return (
-                        <button key={idx} onClick={() => handleNavClick(hash)} className="nav-mobile-item">
+                        <button key={idx} onClick={() => handleNavClick(item.hash)} className="nav-mobile-item">
                             {Icon && <Icon size={24} color="var(--color-primary)" />}
-                            {item}
+                            {item.label}
                         </button>
                     );
                 })}
                 <div className="mt-auto mb-5">
                     <Link to="/menu" target="_blank" rel="noopener noreferrer" className="no-underline" onClick={() => setIsOpen(false)}>
                         <button className="nav-mobile-order-btn">
-                            <Utensils size={28} /> VER CARTA
+                            <Utensils size={28} /> {t('view_menu_btn')}
                         </button>
                     </Link>
                 </div>

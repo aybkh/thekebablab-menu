@@ -17,7 +17,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    height: 60px; /* Force consistent height for sticky calculations */
+    height: 70px; /* Force consistent height for header */
 }
 
 .mobile-menu-btn {
@@ -86,7 +86,7 @@
 
 .category-section-header {
     position: sticky;
-    top: 60px; /* Offset to stay below main header on all devices */
+    top: 68px; /* Slightly overlap to avoid sub-pixel gaps */
     background-image: linear-gradient(rgba(244, 145, 102, 0.555), rgba(244, 145, 102, 0.555)), url('/ladrillo.webp');
     background-blend-mode: multiply;
     background-size: 150px;
@@ -254,7 +254,7 @@
 /* Tablet & Mobile Overrides for POS Layout */
 @media (max-width: 1024px) {
     .mobile-header {
-        height: 60px;
+        height: 70px;
         padding: 0 15px;
     }
 
@@ -263,7 +263,7 @@
     }
 
     .category-section-header {
-        top: 60px; /* Match mobile header height */
+        top: 68px; /* Match mobile overlap */
         padding: 12px 0;
         margin-bottom: 20px;
     }
@@ -281,10 +281,10 @@
     .order-panel {
         position: fixed;
         right: 0;
-        top: 60px; /* Below mobile header */
+        top: 68px; /* Below mobile header with overlap */
         width: 85%;
         max-width: 380px;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 68px);
         transform: translateX(100%);
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 2000;

@@ -9,10 +9,12 @@ import { MapPin, Phone, Instagram, ChevronLeft, ChevronRight } from 'lucide-reac
 import '../styles/LandingPage.css'; 
 import { useTenant } from '../context/TenantContext';
 import { useSiteConfig } from '../context/SiteConfigContext';
+import { useLanguage } from '../context/LanguageContext';
 
 
 const LandingPage = () => {
     const { theme } = useTenant();
+    const { t } = useLanguage();
     const { siteConfig, isLoading: configLoading } = useSiteConfig();
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
     const [currentBanner, setCurrentBanner] = useState(0);
@@ -95,14 +97,14 @@ const LandingPage = () => {
                                     <button 
                                         onClick={(e) => { e.stopPropagation(); prevHeroMedia(); }} 
                                         className="hero-arrow-btn hero-arrow-prev"
-                                        aria-label="Anterior"
+                                        aria-label={t('hero_prev')}
                                     >
                                         <ChevronLeft size={24} />
                                     </button>
                                     <button 
                                         onClick={(e) => { e.stopPropagation(); nextHeroMedia(); }} 
                                         className="hero-arrow-btn hero-arrow-next"
-                                        aria-label="Siguiente"
+                                        aria-label={t('hero_next')}
                                     >
                                         <ChevronRight size={24} />
                                     </button>
@@ -111,14 +113,14 @@ const LandingPage = () => {
                         </div>
 
                         <p className="hero-subtitle">
-                            {theme.seo.description}
+                            {t('hero_subtitle')}
                         </p>
 
                         <div className="hero-buttons">
                             <Link to="/menu" className="hero-link-wrapper">
                                 {/* NEW BUTTON STYLE: Hero Badge Style (Outline Gold + Glass) */}
                                 <button className="hero-main-btn">
-                                    VER CARTA
+                                    {t('view_menu_btn')}
                                 </button>
                             </Link>
                         </div>
@@ -197,7 +199,7 @@ const LandingPage = () => {
             <section id="location" className="location-section">
                 <div className="max-w-[1200px] mx-auto">
                     <div className="section-head mb-12">
-                        <h2>UBICACIÓN</h2>
+                        <h2>{t('location_title')}</h2>
                     </div>
 
                     <div className="location-stack-container">
@@ -218,7 +220,7 @@ const LandingPage = () => {
                                 </div>
                                 <a href={theme.contact.mapsIframe} target="_blank" rel="noreferrer"
                                     className="map-view-btn">
-                                    VER MAPA ➔
+                                    {t('view_map_btn')} ➔
                                 </a>
                             </div>
                         </div>
@@ -230,7 +232,7 @@ const LandingPage = () => {
             <section id="hours" className="location-section">
                 <div className="max-w-[1200px] mx-auto">
                     <div className="section-head mb-12">
-                        <h2>HORARIOS</h2>
+                        <h2>{t('hours_title')}</h2>
                     </div>
                     <div className="location-stack-container">
                         <HoursCard />
@@ -262,7 +264,7 @@ const LandingPage = () => {
                         <p className="m-0">{theme.brand.footerText}</p>
                         <p className="footer-dev-text">
                             <a href="https://ayoubjerari.com" target="_blank" rel="noreferrer" className="dev-link">
-                                DESIGNED & DEVELOPED BY <span className="dev-name">AYOUBDEV</span>
+                                {t('footer_dev_by')} <span className="dev-name">AYOUBDEV</span>
                             </a>
                         </p>
                     </div>

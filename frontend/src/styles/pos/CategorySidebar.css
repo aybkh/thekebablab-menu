@@ -7,23 +7,34 @@
     border-right: 4px solid var(--color-border);
     position: fixed;
     left: 0;
-    top: 60px; /* Positioned below main header */
-    height: calc(100vh - 60px); 
+    top: 68px; /* Slightly overlap to avoid sub-pixel gaps */
+    height: calc(100vh - 68px); 
     z-index: 50;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-overflow-style: none; /* IE & Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
-.brand-title.desktop-only {
+.category-sidebar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
 
+.brand-title {
+    padding: 20px 10px;
     text-align: center;
     border-bottom: 2px solid var(--color-border);
     background-color: var(--color-sidebar);
     position: sticky;
     top: 0;
     z-index: 60;
+}
+
+.category-section-header {
+    position: sticky;
+    top: 68px; /* Slightly overlap to avoid sub-pixel gaps */
 }
 
 .brand-logo {
