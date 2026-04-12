@@ -70,6 +70,10 @@
         {
           "src": "/products/tenders-de-pollo.webp",
           "label": "Tenders"
+        },
+        {
+          "src": "/products/6a8217ed-6ac3-4c1f-8575-966cd1af8dbd.webp",
+          "label": "Ensalada mixta"
         }
       ]
     },
@@ -304,7 +308,25 @@
     }
   ],
   "posConfig": {
-    "tables": ["S1", "S2", "S3", "S4", "S5", "S6", "SS1", "SS2", "SS3", "SS4", "SS5", "PP1", "PP2", "PP3", "PP4", "PP5", "CAJA"],
+    "tables": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "SS1",
+      "SS2",
+      "SS3",
+      "SS4",
+      "SS5",
+      "PP1",
+      "PP2",
+      "PP3",
+      "PP4",
+      "PP5",
+      "CAJA"
+    ],
     "takeawayCount": 19
   }
 }
