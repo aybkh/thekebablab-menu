@@ -302,5 +302,9 @@
       "label": "12:00 - 23:00",
       "closed": false
     }
-  ]
+  ],
+  "posConfig": {
+    "tables": ["S1", "S2", "S3", "S4", "S5", "S6", "SS1", "SS2", "SS3", "SS4", "SS5", "PP1", "PP2", "PP3", "PP4", "PP5", "CAJA"],
+    "takeawayCount": 19
+  }
 }
