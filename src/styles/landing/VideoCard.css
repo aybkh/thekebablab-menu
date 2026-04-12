@@ -49,6 +49,7 @@
     background: #000;
     overflow: hidden;
     border-radius: 26px;
+    isolation: isolate; /* Improve clipping reliability */
 }
 
 .video-inner-container video {
@@ -56,6 +57,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    border-radius: inherit; /* Ensure video respects container radius */
 }
 
 .video-gradient-overlay {
