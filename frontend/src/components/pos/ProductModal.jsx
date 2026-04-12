@@ -109,17 +109,48 @@ const ProductModal = ({ isOpen, onClose, originalProduct, category, onScrollToSa
         return (base + menuExtra + drinkExtra + sauceExtra + batidoExtra + pizzaExtra + extrasTotal).toFixed(2);
     };
 
-    const SUPLEMENTOS_LIST = [
-        { key: "extra_meat", price: soloCarnePrice },
-        { key: "no_lettuce", price: soloCarnePrice },
-        { key: "goat_cheese", price: 1.50 },
-        { key: "feta_cheese", price: 1.00 },
-        { key: "fried_egg", price: 1.00 },
-        { key: "bacon", price: 1.00 },
-        { key: "fries_inside", price: 1.00 },
-        { key: "jalapenos", price: 0.50 },
-        { key: "extra_cheddar", price: 0.50 }
-    ];
+    // Suplementos filtrados por categoría
+    const getSuplementosList = () => {
+        const cat = (category?.name || '').toLowerCase();
+        
+        if (cat.includes('dürüm') || cat.includes('durum') || cat.includes('pita')) {
+            return [
+                { key: "extra_meat", price: soloCarnePrice },
+                { key: "no_lettuce", price: soloCarnePrice },
+                { key: "goat_cheese", price: 1.50 },
+                { key: "feta_cheese", price: 1.00 },
+                { key: "fries_inside", price: 1.00 },
+            ];
+        }
+        if (cat.includes('taco')) {
+            return [
+                { key: "extra_meat", price: soloCarnePrice },
+                { key: "extra_cheddar", price: 0.50 },
+            ];
+        }
+        if (cat.includes('hamburguesa')) {
+            return [
+                { key: "fried_egg", price: 1.00 },
+                { key: "bacon", price: 1.00 },
+                { key: "jalapenos", price: 0.50 },
+            ];
+        }
+        if (cat.includes('plato')) {
+            return [
+                { key: "extra_meat", price: soloCarnePrice },
+                { key: "no_lettuce", price: soloCarnePrice },
+                { key: "goat_cheese", price: 1.50 },
+                { key: "feta_cheese", price: 1.00 },
+            ];
+        }
+        // Default para Combo Box, Bocadillos, etc.
+        return [
+            { key: "extra_meat", price: soloCarnePrice },
+            { key: "goat_cheese", price: 1.50 },
+        ];
+    };
+
+    const SUPLEMENTOS_LIST = getSuplementosList();
 
     const needsSuplementos = ["Dürüm", "Pita", "Tacos", "Hamburguesas", "Platos", "Bocadillos", "Combo Box"].includes(category?.name) || 
                              currentProduct.name.toLowerCase().includes("taco") || 
