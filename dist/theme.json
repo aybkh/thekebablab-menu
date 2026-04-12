@@ -1,0 +1,37 @@
+{
+    "restaurantName": "The Kebab",
+    "restaurantSuffix": "Lab",
+    "seo": {
+        "title": "The Kebab Lab | Dale un GIRO al Kebab en Blanes",
+        "description": "Descubre los mejores Kebabs, French Tacos, Pizza, Pita, Hamburguesas y Durums en Blanes",
+        "keywords": "kebab blanes, french tacos, pizzas artesanas, durum, comida rapida, halal, delivery blanes, the kebab lab blanes",
+        "favicon": "/images/kebab-logo.webp"
+    },
+    "brand": {
+        "logoHeader": "/images/kebab-logo.webp",
+        "logoFallback": "/images/kebab-logo.webp",
+        "footerText": "© 2026 The Kebab Lab."
+    },
+    "contact": {
+        "address": "Carrer de Sant Vicenç Ferrer, 37, 17300 Blanes, Girona",
+        "mapsIframe": "https://www.google.com/maps?q=The%20Kebab%20Lab%20Carrer%20de%20Sant%20Vicenç%20Ferrer,%2037,%2017300%20Blanes,%20Girona&output=embed",
+        "phone": "+34 972 94 70 25"
+    },
+    "socials": {
+        "instagram": "https://www.instagram.com/the.kebab.lab/",
+        "tiktok": "https://www.tiktok.com/@the.kebab.lab",
+        "uberEats": "https://www.ubereats.com/store-browse-uuid/397ee274-d08d-4823-b6db-91a7533f679b?diningMode=DELIVERY",
+        "uberEatsLabel": "Pide en Uber Eats",
+        "glovo": "https://glovo.go.link/open?adjust_deeplink=glovoapp%3A%2F%2Fopen%3Flink_type%3Dstore%26store_id%3D518143&adjust_t=s321jkn",
+        "glovoLabel": "Pide en Glovo"
+    },
+    "colors": {
+        "bg-base": "#265b36",
+        "primary": "#D65A65",
+        "secondary": "#F1C40F",
+        "surface": "#FDFBF7",
+        "text-main": "#142818",
+        "text-on-bg": "#FFFFFF",
+        "ticket-bg": "#FAFAFA"
+    }
+}
