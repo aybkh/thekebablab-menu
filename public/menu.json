@@ -648,7 +648,7 @@
         {
           "id": 48,
           "name": "Tarta de Queso",
-          "price": 4.95,
+          "price": 4.96,
           "description": "Porci\u00F3n de tarta de queso suave y cremosa para terminar con un toque dulce.",
           "isAvailable": true,
           "image": "",
@@ -881,7 +881,7 @@
           "name": "Schweppes",
           "price": 2.5,
           "description": "Refresco individual fr\u00EDo (Schweppes).",
-          "isAvailable": false,
+          "isAvailable": true,
           "image": "",
           "alergenos": []
         },
