@@ -88,6 +88,7 @@
     box-shadow: 10px 10px 0px var(--color-shadow);
     position: relative;
     background: #000;
+    isolation: isolate; /* Improve clipping performance and reliability */
     transform: rotate(-2deg);
     transition: transform 0.3s ease;
     cursor: pointer;
@@ -143,6 +144,7 @@
     top: 0;
     left: 0;
     opacity: 0;
+    border-radius: inherit; /* Ensure image/video follows parent rounding */
     transition: opacity 1s ease-in-out;
 }
 
